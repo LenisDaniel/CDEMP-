@@ -1,0 +1,234 @@
+<!--
+fileName: queue_control (_main.tem.htm)
+ -->
+
+<script language="javascript" type="text/javascript" src="../js/ajax.js"></script>
+<script>
+
+	function initialize(){
+
+		setInterval(doLookUp(),10000);
+
+	} // function begin
+
+	function doLookUp(){
+		var qs="";
+
+		if (document.getElementById('cbo_services')){
+			var objService = document.getElementById('cbo_services');
+			var service_id = objService.options[objService.selectedIndex].value;
+			
+			if (service !="-1"){
+				qs = "&service_id=" + service_id;
+			} // if
+			
+		} // if 
+
+		var url = "../includes/ajax_req.inc.php?action=get_list" + qs;
+		
+		
+		//alert(url);
+		
+		httpXml.open('GET',url,true);
+
+		// SET STATE CHANGE FUNCTION
+		httpXml.onreadystatechange = updateList;
+
+		// SEND REQUEST TO THE SERVER
+		httpXml.send(null);
+
+
+	} // function doLookup
+
+	function updateList(){
+		
+		if (httpXml.readyState == 4) {
+			
+
+	   		var response = httpXml.responseText;
+	   		var output_list = "";
+	   		var serving_row = "";
+	   		var temp_serving_row = "init";
+	   		var temp_output_list = "init";
+
+	   		//alert(response);
+
+
+			var objJSON = eval("(" + response + ")");
+
+			output_list_header = "<div class='ds_table'>"+
+								 "<table class='table'>"+
+			 				     "<thead>"+
+							     "<tr>"+
+							     "<td><p>TURNO</p></td>"+
+							     "<td><p>NOMBRE</p></td>"+
+							     "</tr>";
+
+			serving_header = "<div class='ds_table'>"+
+							 "<table class='table'>"+
+			 				 "<thead>"+
+							 "<tr>"+
+							 "<td><p>TURNO</p></td>"+
+							 "<td><p>NOMBRE</p></td>"+
+							 "<td align='center'><p>ESTACION</p></td>"+
+							 "</tr>";
+
+
+			// CHECK QUEUE LIST
+			if (objJSON.queue_list.status =="NO RECORDS FOUND"){								
+				output_list = "<tr><td><span>NO HAY TURNOS REGISTRADOS</span></td></tr>";
+			}else{
+
+
+				for (i=0;i<objJSON.queue_list.sequential.length;i++){
+					output_list += "<tr><td><span>" + objJSON.queue_list.sequential[i] + "</span></td>"+
+								   "<td><span>" + objJSON.queue_list.name[i] + "</span></td>"+
+								   "</tr>";
+				} // for
+
+				output_list += "</thead></table></div>";
+
+			} // if
+
+			// WRITE QUEUE LIST DIV
+			document.getElementById('queue_list').innerHTML = output_list_header + output_list;
+
+
+			// BEGIN SERVING LIST
+			if (objJSON.serving_row.sequential){
+			
+				temp_serving_row = objJSON.serving_row;	
+					
+				
+											
+				for (i=0;i<objJSON.serving_row.sequential.length;i++){
+				
+					// CONSTRUCT TABLE
+					serving_row += "<tr><td><span>" + objJSON.serving_row.sequential[i] + "</span></td>"+
+							   "<td><span>" + objJSON.serving_row.name[i] + "</span></td>"+
+							   "<td align='center'><span>" + objJSON.serving_row.station[i] + "</span></td>"+
+							   "</tr>";
+
+											   
+					
+					
+				} // for
+				serving_row += "</thead></table></div>";
+			}else{
+				serving_row = "<tr><td><span>ESPERANDO ...</span></td></tr></thead></table></div>";
+			} // if
+
+			// WRITE SERVING DIV
+			document.getElementById('serving_row').innerHTML = serving_header + serving_row;
+
+
+			setInterval(doLookUp(),10000);
+
+		} // if
+
+
+
+	} // function updateList
+	
+	function callNext(station_id){
+			
+		
+		var objService = document.getElementById('cbo_servicess');
+		var service_id = objService.options[objService.selectedIndex].value;
+				
+		
+		var url = "../includes/ajax_req.inc.php?action=call_next_ajax&service_id=" + service_id + "&station_id=" + station_id;
+		
+		//alert(url);
+		
+		httpXml2.open('GET',url,true);
+
+		// SET STATE CHANGE FUNCTION
+		httpXml2.onreadystatechange = updateQueue;
+
+		// SEND REQUEST TO THE SERVER
+		httpXml2.send(null);
+
+
+	} // function 
+	
+	
+	function updateQueue(){
+	
+		if (httpXml2.readyState == 4) {
+			var idx = httpXml.responseText;			
+			
+			document.getElementById('div_buttons').innerHTML="<button type='button' class='btn btn_submit' onclick='setNewStatus(\"completed\"," + idx + ")'><i class='icon-add-user'></i><br />Completar</button><br><br>"+
+															 "<button type='button' class='btn btn_cancel' onclick='setNewStatus(\"noshow\"," + idx + ")'><i class='icon-remove-user'></i><br />No se presento</button><br><br>";																			
+							
+	   		
+	   		setInterval(doLookUp(),10000);
+
+		} // if
+
+	} // function updateQueue
+	
+	function setNewStatus(status,idx){
+				
+		var url = "../includes/ajax_req.inc.php?action=set_new_status&status=" + status + "&idx=" + idx;
+		
+		//alert(url);
+		
+		httpXml2.open('GET',url,false);
+
+		// SET STATE CHANGE FUNCTION
+		httpXml2.onreadystatechange = statusReady;
+
+		// SEND REQUEST TO THE SERVER
+		httpXml2.send(null);
+
+														 
+	} // function setStatus
+	
+	function statusReady(){
+
+		if (httpXml2.readyState == 4) {
+			var idx = httpXml.responseText;										
+					
+			document.getElementById('div_buttons').innerHTML="<button type='button' class='btn btn_submit' onclick='callNext({station_id})'><i class='icon-add-user'></i><br />siguiente</button><br><br>";																											   		
+	   		setInterval(doLookUp(),10000);
+
+		} // if
+	
+	} // function statusReady
+	
+
+
+</script>
+
+
+
+ 	<div class="container">
+		<div class="col-lg-7 table_container">
+			<div class="ds_header">
+				<span>SIRVIENDO <b>A</b></span>
+				<div class="sexy_div">&ensp;</div><!-- sexy div -->
+			</div><!-- ds_header -->
+			<div class="table-responsive ds_table" id="serving_row">
+				
+			</div><!-- table responsive -->
+
+
+         <div class="ds_header">
+				<span>QUEUE<b> LIST</b></span>
+				<div class="sexy_div"></div><!-- sexy div -->
+			</div><!-- ds_header -->
+			<div class="table-responsive ds_table queue_list" id="queue_list"></div><!-- table responsive -->
+		</div><!-- lg 7 -->
+
+      <div class="col-md-5">
+				<div class="buttons user_control_btns" id="div_buttons">
+				<button type="button" class="btn btn_submit" onclick="callNext({station_id})"><i class="icon-add-user"></i><br />siguiente</button><br><br>
+				<!--
+					<button type="submit" class="btn btn_submit"><i class="icon-add-user"></i><br />próximo</button><br><br>
+					<button type="reset" class="btn btn_cancel"><i class="icon-remove-user"></i><br />cancel</button>
+				-->
+				</div><!-- buttons -->
+		</div><!-- col lg 6 -->
+
+	</div><!-- container -->

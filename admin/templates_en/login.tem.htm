@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>{html_title}</title>
+		{meta_tags}
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/styles.css"  type="text/css"/>
+		<link rel="stylesheet" href="../css/bootstrap.css"  type="text/css" />
+		<!-- <link rel="stylesheet" href="../css/bootstrap-theme.css" type="text/css" /> -->
+      <link rel="stylesheet" href="../css/animate.css"  type="text/css"/>
+		<link rel="stylesheet" href="../css/Login-Pages.css" />
+		<link rel="stylesheet" href="../css/Theme-Monochrome-Light.css" />
+
+		<style media="screen">
+			.footer{display: none;}
+		</style>
+	</head>
+	<body class="admin_bkg">
+
+
+		<!-- SET CONTENT
+		================================================ -->
+      <div class="login_container animated zoomIn">
+		<div class="container">
+         <div class="col-md-12 center login_logo">
+            <img src="../images/logo.png" alt="" />
+         </div>
+
+         <div id="Login">
+            <form id="Login-Form" class="No-Bottom" action="#" method="post" onSubmit="return ValidateForm(this)">
+               <div id="Login-Message" class="Error">Test Message</div>
+               <input type="text" name="txt_username" id="" placeholder="Username" spellcheck="false" tabindex="1" />
+               <input type="password" name="txt_password" id="" placeholder="Password" spellcheck="false" tabindex="2" autofocus />
+
+               <input type="submit" value="ACCEDER" />
+            </form>
+         </div>
+		</div><!-- container -->
+   </div><!-- login_container -->
+
+
+		<!-- SET FOOTER
+		================================================ -->
+		<div class="container">
+			<div class="col-lg-12  footer">
+				<p>&#0169; Copyright 2015, First Bank. All Rights Reserved.  Developed by PRComputer Service, Corp.</p>
+				<img src="../images/poweredby.png" />
+			</div><!-- lg 12 -->
+		</div><!-- container  -->
+
+
+
+		<!-- JS
+		------------------------------------------------------------------------------>
+		<script src='../js/jquery-1.11.3.min.js' type='text/javascript'></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/bootstrap-select.js"></script>
+		<script type="text/javascript" src="../js/jquery.maskedinput.min.js"></script>
+      <script type="text/javascript">
+      //VALIDATE FORM
+      function ValidateForm(theForm){
+
+          if (theForm.txt_username.value == ""){
+            alert("Entre su nombre de usuario");
+            theForm.txt_username.focus();
+            return false;
+          } // if
+
+           if (theForm.txt_password.value == ""){
+            alert("Entre su contraseña");
+            theForm.txt_password.focus();
+            return false;
+          } // if
+        } // function ValidateForm
+      </script>
+	</body>
+</html>

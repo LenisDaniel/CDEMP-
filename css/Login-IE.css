@@ -1,0 +1,12 @@
+/**********************************************************
+// Login >> Internet Explorer Compatability
+**********************************************************/
+#Login input[type="checkbox"] { display: inline-block; }
+#Login input[type="password"],
+#Login input[type="text"] {
+	padding-top: 9px;
+	height: 25px;
+	}
+	
+#Login input[type="checkbox"]:checked + label span,
+#Login input[type="checkbox"] + label span { display: none; }

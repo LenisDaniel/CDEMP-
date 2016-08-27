@@ -1,0 +1,160 @@
+﻿/**********************************************************
+// Body >> Optional, Remove Before Inserting
+**********************************************************/
+body { background:url(../IMG/Background.jpg) top center repeat-x; }
+
+/**********************************************************
+// Login
+**********************************************************/
+#Login {
+	/*background-color: #FFF;*/
+	/*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+	color: #2b2b2b;
+	}
+
+#Login a        { color: #656565; }
+#Login a:hover  { color: #A0A0A0; }
+#Login a:active { color: #888888; }
+
+/**********************************************************
+// Login >> Input
+**********************************************************/
+::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: #fff !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff !important;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff !important;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff !important;
+}
+
+::-ms-input-placeholder { /* Edge */
+  color: #fff !important;
+}
+
+:placeholder-shown { /* Standard one last! */
+  color: #fff !important;
+}
+
+#Login input[type=password], #Login input[type=text] {
+	background-color: transparent !important;
+	box-shadow: 0px 1px 0px rgba(255, 250, 250, 0.3);
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	}
+
+#Login input[type=checkbox] + label span {
+	background-color: #EEEEEE;
+	}
+
+#Login input[type=checkbox]:checked + label span {
+	background: #EEEEEE url(../IMG/Monochrome-Dark/Icons.png) -30px -60px no-repeat;
+	}
+
+#Login input[type=submit]:active {/* box-shadow: inset 0 1px 2px #BBBBBB;*/ }
+#Login input[type=submit] {
+	color: #0A5031;
+	background-color: #9ad847;
+	/*box-shadow: inset 0 -1px #BBBBBB,
+				0 2px #BBBBBB,
+				0 3px #BBBBBB,
+				0 4px 2px rgba(0, 0, 0, 0);
+*/	}
+
+/**********************************************************
+// Login >> Top
+**********************************************************/
+#Login-Top {
+	background: #555;
+	/*text-shadow: 1px 1px 1px #FFFFFF;*/
+	filter: dropshadow(color=#FFFFFF, offx=1, offy=1);
+	color: #999999;
+	}
+
+#Login-Home,
+#Login-Back {
+	background-color: rgba(0, 0, 0, 0.05);
+	box-shadow: 1px 0 0 rgba(0, 0, 0, 0.3);
+	}
+
+#Login-Home    span { background: url(../IMG/Monochrome-Red/Icons.png) -30px   0px no-repeat;     }
+#Login-Back    span { background: url(../IMG/Monochrome-Red/Icons.png) -30px -30px no-repeat;     }
+#Login-Loading span { background: url(../IMG/Monochrome-Red/Loading.gif) center center no-repeat; }
+
+/**********************************************************
+// Login >> Social
+**********************************************************/
+#Login-Social {
+	background-color: #F5F5F5;
+	}
+
+#Login-Facebook span { background: url(../IMG/Monochrome-Light/Icons.png) 0px 0px no-repeat; }
+#Login-Facebook:active { box-shadow: inset 0 1px 2px #202020; }
+#Login-Facebook {
+	background-color: #333333;
+	/*box-shadow: inset 0 -1px #BBBBBB,
+				0 2px #BBBBBB,
+				0 3px #BBBBBB,
+				0 4px 2px rgba(0, 0, 0, 0);
+*/	}
+
+#Login-Twitter span { background: url(../IMG/Monochrome-Light/Icons.png) 0px -30px no-repeat; }
+#Login-Twitter:active { box-shadow: inset 0 1px 2px #202020; }
+#Login-Twitter {
+	background-color: #333333;
+	/*box-shadow: inset 0 -1px #BBBBBB,
+				0 2px #BBBBBB,
+				0 3px #BBBBBB,
+				0 4px 2px rgba(0, 0, 0, 0);
+*/	}
+
+#Login-Google span { background: url(../IMG/Monochrome-Light/Icons.png) 0px -60px no-repeat; }
+#Login-Google:active { box-shadow: inset 0 1px 2px #202020; }
+#Login-Google {
+	background-color: #333333;
+	/*box-shadow: inset 0 -1px #BBBBBB,
+				0 2px #BBBBBB,
+				0 3px #BBBBBB,
+				0 4px 2px rgba(0, 0, 0, 0);
+*/	}
+
+/**********************************************************
+// Login >> Message
+**********************************************************/
+#Login-Message.Error   { background-color: #BE3131; }
+#Login-Message.Warning { background-color: #BE7A31; }
+#Login-Message.Success { background-color: #46AB3C; }
+
+/**********************************************************
+// Login >> Field Error
+**********************************************************/
+#Login #Login-Form .Error {
+	background-color: #BE3131;
+	color: #FFFFFF;
+	}
+
+/**********************************************************
+// Login >> Form
+**********************************************************/
+#Login-Form {
+	}
+
+/**********************************************************
+// Login >> Bottom
+**********************************************************/
+#Login-Bottom a        { color: #656565; }
+#Login-Bottom a:hover  { color: #A0A0A0; }
+#Login-Bottom a:active { color: #888888; }
+
+#Login-Bottom {
+	background-color: #F5F5F5;
+	border-top: 1px solid #FFFFFF;
+	}

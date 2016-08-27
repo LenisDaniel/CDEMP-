@@ -1,0 +1,39 @@
+﻿img{
+	max-width:100%;
+	height: auto;
+}
+
+
+.disclaimer{
+	margin-top:10%;
+}
+
+
+.disclaimer p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #6456565;
+}
+
+
+.copy{
+	font-family:arial; color:#656565;font-size:12px;display:inline-block;padding-left:20px;
+}
+
+.pwrby{
+	font-family:arial; color:#656565;font-size:12px;display:inline-block;float:right;padding-right:20px;
+}
+
+
+
+
+
+@media screen and (max-width:900px){
+	 .copy, .pwrby{
+	  display:block;
+	  text-align: center;
+	  float: none;
+	}
+	
+	
+}

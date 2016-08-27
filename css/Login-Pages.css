@@ -1,0 +1,297 @@
+﻿/****************************
+//LOGO
+******************************/
+.logoWrap{
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+
+.logo{
+   margin:0 auto;
+}
+
+
+/**********************************************************
+// Login >> Resets
+**********************************************************/
+#Login table { border-collapse: collapse; border-spacing: 0; }
+#Login input:focus, #Login select:focus { outline: none; }
+#Login ol, #Login ul { margin: 0; padding: 0; list-style: none; }
+#Login a img { border: none; }
+
+/**********************************************************
+// Login
+**********************************************************/
+#Login {
+	margin: auto;
+	width: 100%;
+	min-width: 200px;
+	max-width: 460px;
+	font: 13px Arial, Verdana, sans-serif;
+	overflow: hidden;
+	cursor: default;
+	}
+
+#welcomeMsg{
+	margin: auto;
+	width: 100%;
+	min-width: 200px;
+	max-width: 400px;
+	font: 14px Arial, Verdana, sans-serif;
+	font-weight:bold;
+	color: #fff;
+}
+
+#footMsg{
+	margin: auto;
+	width: 100%;
+	min-width: 200px;
+	max-width: 400px;
+	font: 12px Arial, Verdana, sans-serif;
+	font-weight:bold;
+	color: #fff;
+}
+
+
+#Login a { text-decoration: underline; }
+
+#Login .Right { text-align: right; }
+#Login .Left  { text-align: left;  }
+#Login .Clear { clear: both;       }
+
+/**********************************************************
+// Login >> Input
+**********************************************************/
+#Login input[type=checkbox] { display: none; }
+#Login input[type=password], #Login input[type=text] {
+	margin-top: 15px;
+	padding: 10px 10px 10px 15px;
+	width: 100%;
+	height: 50px;
+	font-size: 16px;
+	display: block;
+	border: none;
+	text-transform: none !important;
+}
+
+#Login input[type=checkbox] + label span {
+	margin-top: -3px;
+	width: 20px;
+	height: 20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	}
+
+#Login input[type=submit]:hover  { opacity: 0.9; }
+#Login input[type=submit]:active { top: 3px; }
+#Login input[type=submit] {
+	margin: 40px auto 0 auto;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size:15px;
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: uppercase;
+	position: relative;
+	border: none;
+	}
+
+/**********************************************************
+// Login >> Top
+**********************************************************/
+#Login-Top {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	overflow: hidden;
+	}
+
+#Login-Title {
+	font-size:15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFF;
+	text-align:center;
+}
+
+
+.skip p {
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #333333;
+	text-align: right;
+	margin-right: 20px;
+
+	}
+
+
+#Login-Home:active,
+#Login-Back:active {
+	margin-top: 1px;
+	}
+
+#Login-Home:hover,
+#Login-Back:hover {
+	opacity: 1;
+	}
+
+#Login-Home,
+#Login-Back {
+	width: 60px;
+	height: 60px;
+	text-indent: 60px;
+	overflow: hidden;
+	-webkit-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+	opacity: 0.5;
+	display: block;
+	float: left;
+	}
+
+#Login-Home span,
+#Login-Back span {
+	margin: 15px;
+	width: 30px;
+	height: 30px;
+	text-indent: 30px;
+	overflow: hidden;
+	display: block;
+	}
+
+#Login-Loading {
+	width: 60px;
+	height: 60px;
+	float: right;
+	}
+
+#Login-Loading span {
+	margin: 15px;
+	width: 30px;
+	height: 30px;
+	display: none;
+	}
+
+/**********************************************************
+// Login >> Social
+**********************************************************/
+#Login-Social {
+	padding: 17px 0 20px 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	}
+
+#Login-Social ul {
+	margin: auto;
+	width: 96%;
+	}
+
+#Login-Social li {
+	margin: 0 2% 0 3%;
+	width: 28%;
+	min-width: 40px;
+	display: block;
+	float: left;
+	}
+
+#Login-Social a:hover  { opacity: 0.9; }
+#Login-Social a:active { top: 3px; }
+#Login-Social a {
+	padding-top: 5px;
+	width: 100%;
+	height: 35px;
+	line-height: 40px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	display: block;
+	}
+
+#Login-Social a span {
+	margin: auto;
+	width: 30px;
+	height: 30px;
+	text-indent: 30px;
+	overflow: hidden;
+	display: block;
+	}
+
+/**********************************************************
+// Login >> Message
+**********************************************************/
+#Login-Message {
+	margin: 15px auto 0 auto;
+	width: 100%;
+	min-height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size:15px;
+	display: none;
+	color: #FFF;
+	}
+
+/**********************************************************
+// Login >> Form
+**********************************************************/
+#Login-Form {
+	padding: 0 5%;
+	padding-bottom: 20px;
+	width: 100%;
+	}
+
+#Login-Form-Sub {
+	margin-top: 10px;
+	width: 100%;
+	line-height: 30px;
+	}
+
+#Login-Form-Sub .Section {
+	width: 50%;
+	min-height: 30px;
+	float: left;
+	}
+
+#Login-Form-Sub .Section-Alt {
+	width: 100%;
+	min-height: 30px;
+	float: left;
+	}
+
+#Login-Form.No-Bottom { border-bottom: 0; }
+
+/**********************************************************
+// Login >> Bottom
+**********************************************************/
+#Login-Bottom a { font-weight: bold; }
+#Login-Bottom {
+	padding: 10px 10px 10px 10px;
+	min-height: 20px;
+	line-height: 20px;
+	font-size:15px;
+	text-align: center;
+	}
+
+/**********************************************************
+// Login >> Media Queries
+**********************************************************/
+@media all and (max-width: 350px) {
+	#Login-Form-Sub .Section { width: 100%; }
+	#Login-Title { font-size:15px; }
+	#Login {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		}
+}

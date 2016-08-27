@@ -1,0 +1,273 @@
+/*
+	BASE.INC.LESS
+	WRITTEN BY. LUIS MARTINEZ LANDRAU
+	JUL-28-2015 / 4:23PM
+*/
+
+
+//SET COLOR SWATCH  ////////////////////////////////////
+@txtColor:			#666;
+@txtWhite:	 		(lighten(@txtColor, 100%)); // #fff
+@default_green: 	#118653;
+@light_green: 		#9ad847;
+@darker_green: 	darken(@default_green, 12%);
+@default_red:		#FF565B;
+@default_opacity: 	0.5;
+@themeColor:		@default_green;
+
+//SET FONTS AND TEXT PROPERTIES ///////////////////////
+@primary_font:		'chaletbook_regular';
+@primary_fontBold: 	'chaletBook_bold';
+@defaultTxt_size:	14px;
+@generalTxt:		@defaultTxt_size;
+@headTxt:			@defaultTxt_size + 22px;
+@subheadTxt: 		@defaultTxt_size + 10px;
+@smallTxt:	 		@defaultTxt_size - 2px;
+@txt_height:		20px;
+
+//SET ICONS FOR THIS PROJECT (remember to change(add/remove))
+@icon-sign-in2: 	"\21";
+@icon-globe5: 		"\22";
+@icon-caret-down: 	"\23";
+@icon-caret-up: 	"\24";
+@icon-caret-left: 	"\25";
+@icon-caret-right: 	"\26";
+@icon-sort-desc: 	"\27";
+@icon-history4: 	"\28";
+@icon-phone6: 		"\29";
+@icon-sort22: 		"\54a";
+@icon-in-alt: 		"\2a";
+@icon-clock10: 		"\2b";
+@icon-switch5: 		"\2c";
+@icon-power-cord: 	"\31";
+@icon-printer3: 	"\33";
+@icon-remove-user: 	"\35";
+@icon-add-user: 	"\36";
+@icon-globe2: 		"\38";
+@icon-check: 		"\3b";
+@icon-power: 		"\3c";
+@icon-plus: 		"\afe";
+@icon-primitive-dot:"\240";
+@icon-dot-single:	"\c90";
+
+//SET PAGE PROPERTIES ////////////////////////////////
+@defaultRadius:		5px; // border radius
+@defaultBorder: 	1px solid rgba(255, 255, 255, 0.3);
+@fontsUrl: 			"../fonts/";
+@font1_folder:		"chalet_book/";
+@icons_folder:		"font_icons/";
+@imgUrl: 			"../images/";
+@inputWidth: 		542px;
+@defaultMargin:	 	20px 0;
+@defaultTransition:	all 0.2s ease-out;
+@defaultShadow: 	0 0 20px rgba(0, 0, 0,0.2);
+@field_shadow: 		-5px 0px 0px @default_green - #222;
+
+
+//SET SOME PARAMETRIC MIXINS (misc. styles)
+.bkg_color(@bkg_color:@themeColor){
+	background-color: @bkg_color;
+}
+
+.txtSize(@fontSize: @generalTxt){
+	font-size: @fontSize;
+}
+
+.txtTransform(@txtTransform: uppercase;){
+	text-transform: @txtTransform;
+}
+
+.txtRegular(){
+	font-family: @primary_font;
+}
+
+.txtBold(){
+	font-family: @primary_fontBold;
+	font-weight: normal !important;
+}
+
+.txtHeight(@line_height: @txt_height){
+	line-height: @line_height;
+}
+
+.fontIcon{
+	font-family:'fontIcons';
+}
+
+.borderRadius(@radius: @defaultRadius){
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+.border(@border: @defaultBorder){
+	border: @defaultBorder;
+}
+
+.defaultPadding(@defaultPadding:30px 85px){
+    padding: @defaultPadding;
+}
+
+.defaultMargin(@defaultMargin: @defaultMargin){
+    margin: @defaultMargin;
+}
+
+.boxShadow(@defaultShadow: @defaultShadow){
+	box-shadow: @defaultShadow;
+}
+
+.field_shadow(@inputShadow: @field_shadow){
+	box-shadow: @inputShadow;
+}
+
+
+.transition(@transitions: @defaultTransition){
+	transition: @transitions;
+	-webkit-transition: @transitions;
+	-moz-transition: @transitions;
+	-o-transition: @transitions;
+	-ms-transition: @transitions;
+}
+
+.opacity(@opacity: @defaultOpacity;){
+	opacity: @opacity;
+}
+
+.center{
+	text-align: center !important;
+}
+
+.text_left{
+	text-align: left;
+}
+
+.text_right{
+	text-align: right;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.inputWidth(@inputWidth: 100%){
+	width: @inputWidth;
+}
+
+.field_config(){
+    .borderRadius(6px);
+    position: relative;
+    display: block;
+    outline: none;
+    border: none;
+    font-family: @primary_font;
+    text-transform: uppercase;
+    .transition;
+        &:hover,&:focus,&:active{
+        	.field_shadow();
+        }//hover
+}//strokeField_config
+
+.btn_config(){
+	border: none;
+	.borderRadius(6px) !important;
+	.transition;
+		&:hover{
+			.transition;
+			.field_shadow();
+		}//hover
+}//btn_config
+
+.btn_tile_config(){
+	border: none;
+	height: 247.5px;
+	width: 223.5px;
+	.borderRadius(0px) !important;
+	color: @txtWhite;
+	.txtSize(24px) !important;
+	.txtBold !important;
+	.transition;
+	.defaultMargin(0 10px 0 10px);
+}//btn_config
+
+//radio button configuration
+.radio_config(){
+	[type="radio"] {
+	  border: 0;
+	  clip: rect(0 0 0 0);
+	  height: 1px; margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+
+	[type="radio"] + span {
+	  display: block;
+		  &:before{
+		  	  content: '';
+			  display: inline-block;
+			  width: 1.9em;
+			  height: 1.9em;
+			  vertical-align: top;
+			  border-radius: 3em;
+			  border: 0.22em solid #fff;
+			  position: relative;
+			  left: -20px;
+		  }//before
+	}//[type="radio"] + span
+
+	[type="radio"]:checked + span:before {
+		content: url("@{imgUrl}bullet.svg");
+	}
+
+	/* One radio button per line */
+	label {
+	  display: block;
+	  cursor: pointer;
+	  line-height: 1.9;
+	  padding-bottom: 10px;
+	  .txtRegular() !important;
+	  .txtSize;
+	}
+}//radio_config()
+
+i {
+	.fontIcon;//icon font family
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	//Better Font Rendering
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+//SET THE PROJECT ICONS
+.icon-primitive-dot:before{content:@icon-primitive-dot}
+.icon-sign-in2:before{content:@icon-sign-in2}
+.icon-globe5:before{content:@icon-globe5}
+.icon-caret-down:before{content:@icon-caret-down}
+.icon-caret-up:before{content:@icon-caret-up}
+.icon-caret-left:before{content:@icon-caret-left}
+.icon-caret-right:before{content:@icon-caret-right}
+.icon-sort-desc:before{content:@icon-sort-desc}
+.icon-history4:before{content:@icon-history4}
+.icon-phone6:before{content:@icon-phone6}
+.icon-sort22:before{content:@icon-sort22}
+.icon-in-alt:before{content:@icon-in-alt}
+.icon-clock10:before{content:@icon-clock10}
+.icon-switch5:before{content:@icon-switch5}
+.icon-power-cord:before{content:@icon-power-cord}
+.icon-printer3:before{content:@icon-printer3}
+.icon-remove-user:before{content:@icon-remove-user}
+.icon-add-user:before{content:@icon-add-user}
+.icon-globe2:before{content:@icon-globe2}
+.icon-check:before{content:@icon-check}
+.icon-power:before{content:@icon-power}
+.icon-plus:before{content:@icon-plus}
+.icon-dot-single:before{content: @icon-dot-single}
+// PROJECT STYLES CONFIGURATION ENDS HERE

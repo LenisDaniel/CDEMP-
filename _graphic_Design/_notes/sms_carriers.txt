@@ -1,0 +1,273 @@
+* Aircel     India     number@aircel.co.in     Not working for some reason
+* Airtel     India     number@airtelap.com     Not working for some reason
+* Airtel     Karnataka, India     number@airtelkk.com     Not working for some reason
+* Ahra Samaneh Iranian Co. ( ???? ?????? ???????? )     Iran     (missing?)     [1]
+* Airfire Mobile     USA     number@sms.airfiremobile.com     [2]
+* Alaska Communications     USA     number@msg.acsalaska.com     [3]
+* Aliant     Canada     number@sms.wirefree.informe.ca
+* Alltel (Allied Wireless)     USA     number@sms.alltelwireless.com (SMS)
+* number@mms.alltelwireless.com (MMS)
+* Verizon Wireless(merger with Alltel was completed in November 2009)[1]     USA     number@message.Alltel.com[2] (SMS & MMS)
+* number@text.wireless.alltel.com (SMS) number@mms.alltel.net (MMS)[4]
+* Altiria     Spain     info@altiria.com[3]     SMS masivo
+* Ameritech     USA     number@paging.acswireless.com     [5]
+* Amitas Digital     Australia          [6]
+* Andhra Pradesh AirTel     India     91number@airtelap.com     [7]
+* Andhra Pradesh Idea Cellular     India     number@ideacellular.net     [8]
+* Api4SMS     Austria     number@members.api4sms.net     Requires Login SMS Gateway
+* aql     UK     number@text.aql.com[4]     [9]     44 7766 40 41 42     address text
+* SourceSMS     UK          [10]     address text
+* AT&T Wireless     USA     domestic-number@txt.att.net (SMS),
+* domestic-number@mms.att.net (MMS) (Note: This gateway fails to handle complete phone numbers; the country code must be omitted, leaving only the ten-digit NANP number.)[5]
+* Requires login[6]     121 111[7]     address text
+* address (subject) text
+* AT&T grandfathered customers (originally AT&T, then Cingular, now AT&T Wireless). Officially offline since June 10, 2010, under AT&T ticket CM20100610_10186966.     USA     number@mmode.com          121     address text
+* AT&T Mobility (formerly Cingular)     USA     number@mms.att.net
+* number@txt.att.net
+* number@cingularme.com
+* number@mobile.mycingular.com
+* AT&T Enterprise Paging     USA     number@page.att.net
+* AT&T Global Smart Messaging Suite - Powered By Soprano     USA     number@sms.smartmessagingsuite.com     [8]
+* AU by KDDI     Japan     number@ezweb.ne.jp     [11]
+* Bell Mobility & Solo Mobile     Canada     number@txt.bell.ca or
+* number@txt.bellmobility.ca [12]
+* BellSouth     USA     number@bellsouth.cl     [13]
+* blablaSMS     International          [14]
+* Bluegrass Cellular     USA     number@sms.bluecell.com (SMS)
+* number@mms.myblueworks.com (MMS) [15]
+* Bluesky Communications     American Samoa, USA     number@psms.bluesky.as
+* Boost Mobile     USA     number@myboostmobile.com
+* Bouygues Telecom (company)     France     number@mms.bouyguestelecom.fr
+* Box Internet Services SMS Gateway     Switzerland     number@sms.boxis.net (SMS)
+* number@mms.boxis.net (MMS)
+* SMS Gateway + SMS API [9]
+* SFR     France     number@sfr.fr
+* BudgetSMS.net     International          Requires Login SMS Gateway
+* BulkSMS.com     International     number@bulksms.net     Requires Login SMS Gateway API
+* Bulletin.net     International     InternationalFormattednumber@bulletinmessenger.net     Requires Login [16]
+* C Beyond (All Page Wireless)          number@cbeyond.sprintpcs.com
+* Cellcom     USA     number@cellcom.quiktxt.com
+* Cellular South     USA     number@csouth1.com
+* Centennial Wireless     USA, Puerto Rico, and the U.S. Virgin Islands (merging with AT&T Wireless)     number@cwemail.com     [17]
+* Chariton Valley Wireless     USA     number@sms.cvalley.net
+* Chennai Skycell / Airtel     India     919840number@airtelchennai.com     [18]
+* Chennai RPG Cellular     India     9841number@rpgmail.net     [19]
+* China Mobile     China     number@139.com
+* Cincinnati Bell     Cincinnati, Ohio, USA     number@gocbw.com (SMS)
+* number@mms.gocbw.com (MMS)
+* Cingular (Postpaid)     USA     number@cingular.com
+* number@mobile.mycingular.com [20] (must be logged in prior to visiting this link)
+* Cingular (GoPhone prepaid)     USA     number@cingulartext.com (SMS)     Not working-GoPhone is now AT&T
+* Claro     Brazil     number@clarotorpedo.com.br     [21] (registration not required)
+* Claro     Nicaragua     number@ideasclaro-ca.com     [22]
+* Claro     Peru          [23]
+* Claro     Puerto Rico     number@vtexto.com     [24]
+* Cleartalk     USA     number@sms.cleartalk.us     [25]
+* Claro     Colombia     number@iclaro.com.co     [26]
+* Connection Software (CSoft)     United Kingdom     number@itsarrived.net     [27]          Subject and Body are concatenated into the text message
+* Cricket     USA     number@sms.mycricket.com (SMS)
+* number@mms.mycricket.com (MMS) [28]
+* C Spire Wireless     USA     number@cspire1.com     [29]
+* Accessyou     Hong Kong     number@messaging.accessyou.com (MMS)     [30]
+* CSL     Hong Kong     number@mgw.mmsc1.hkcsl.com (MMS)     [31]
+* CTI Móvil (Now Claro)     Argentina     number@sms.ctimovil.com.ar     [32]
+* CTI Móvil (Now Claro)     Paraguay          [33]
+* CTI Móvil (Now Claro)     Uruguay          [34]
+* Delhi Airtel     India     919810number@airtelmail.com     [35]
+* Delhi Hutch     India     9811number@delhi.hutch.co.in     [36]
+* Digicel (Dominica)     Dominica     (no-area-code)number@digitextdm.com     [37]
+* E-Plus     Germany     0number@smsmail.eplus.de     [38]
+* Edge Wireless     USA     number@sms.edgewireless.com     [39]
+* Element Mobile     USA     number@SMS.elementmobile.net
+* Emtel     Mauritius     number@emtelworld.net     [40]
+* Esendex     UK     number@echoemail.net     [41]
+* Esendex     USA     number@echoemail.net     [42]
+* Esendex     Spain     number@esendex.net     [43]
+* Eventis     Moldova          [44]
+* Fido     Canada     number@sms.fido.ca (as of June 2012)     [45] ( Rogers' Web server is faster )
+* Firmensms     Austria     0043number@subdomain.firmensms.at     Requires Login SMS Gateway
+* Freebie SMS     Europe     number@smssturen.com     [46] ( Message in subject line )
+* General Communications Inc.     Alaska, USA     number@mobile.gci.net     [47]
+* Globalstar (satellite)     International     number@msg.globalstarusa.com     [48]
+* Globul     Bulgaria     35989number@sms.globul.bg     [49]
+* Goa Airtel     India     919890number@airtelmail.com     [50]
+* Goa BPL Mobile     India     9823number@bplmobile.com     [51]
+* Goa Idea Cellular     India     number@ideacellular.net     [52]
+* Golden State Cellular     California, USA     number@gscsms.com     [53]
+* Gujarat Idea Cellular     India     number@ideacellular.net     [54]
+* Gujarat Airtel     India     919898number@airtelmail.com     [55]
+* Gujarat Celforce / Fascel     India     9825number@celforce.com     [56]
+* Haryana Airtel     India     919896number@airtelmail.com     [57]
+* Haryana Escotel     India     9812number@escotelmobile.com     [58]
+* Hawaiian Telcom Wireless     Hawaii, USA     number@hawaii.sprintpcs.com
+* Hay Systems Ltd (HSL)     UK     number@sms.haysystems.com[10]     [59]
+* Helio     South Korea and USA     number@myhelio.com
+* Himachai Pradesh Airtel     India     919816number@airtelmail.com
+* ICE     Costa Rica     number@sms.ice.cr          1001     address : (subject) text
+* Iridium (satellite)     International     number@msg.iridium.com[11]     [60]
+* i wireless (T-Mobile)     Midwest, USA     number.iws@iwspcs.net     [61]
+* i-wireless (Sprint PCS)     USA     number@iwirelesshometext.com     [62]
+* Kajeet     USA     number@mobile.kajeet.net
+* Karnataka Airtel     India     919845number@airtelkk.com     [63]
+* Kerala Airtel     India     919895number@airtelkerala.com     [64]
+* Kerala BPL Mobile     India     9846number@bplmobile.com     [65]
+* Kerala Escotel     India     9847number@escotelmobile.com     [66]
+* Kolkata Airtel     India     919831number@airtelkol.com     [67]
+* Koodo Mobile     Canada     number@msg.telus.com     [68]
+* LongLines     USA     number@text.longlines.com     [69]
+* Loop (BPL Mobile)     Mumbai, India     number@loopmobile.co.in
+* Lynx Mobility     Canada     number@sms.lynxmobility.com     [70]
+* M1     Singapore     number@m1.com.sg     [71]
+* Madhya Pradesh Airtel     India     919893number@airtelmail.com     [72]
+* Maharashtra Airtel     India     919890number@airtelmail.com     [73]
+* Maharashtra BPL Mobile     India     9823number@bplmobile.com     [74]
+* Maharashtra Idea Cellular     India     number@ideacellular.net     [75]
+* Más Móvil     Panama     number@cwmovil.com     [76]
+* Mediaburst     UK     number@sms.mediaburst.co.uk     [77]
+* Ncell(Previously Mero Mobile)[12]     Nepal     977number@sms.ncell.com.np (Requires registration)     [78]
+* Meteor     Ireland     number@sms.mymeteor.ie (SMS) (Not currently valid)
+* number@mms.mymeteor.ie (MMS) [79]
+* MetroPCS     USA     number@mymetropcs.com
+* Moldcell     Moldova          [80]
+* Mobiltel     Bulgaria     35988number@sms.mtel.net     [81]
+* Mobitel     Sri Lanka     number@sms.mobitel.lk     [82] Mobitel no longer offers email2sms.
+* Movistar     Argentina     number@sms.movistar.net.ar     [83]
+* Movistar     Colombia     number@movistar.com.co     [84]
+* Movistar     Spain     0number@movistar.net     [85]
+* Movistar     Spain and Latin America     number@movimensaje.com.ar
+* Movistar     Uruguay     95number@sms.movistar.com.uy
+* MTN     South Africa     number@sms.co.za     [86]
+* MTS Mobility     Canada     number@text.mtsmobility.com     [87]
+* Mumbai Airtel     India     919892number@airtelmail.com     [88]
+* Mumbai BPL Mobile     India     9821number@bplmobile.com     [89]
+* My-Cool-SMS     United Kingdom     number@my-cool-sms.com     [90]
+* Nepal Telecom     Nepal          [91]
+* Nextech     USA     number@sms.nextechwireless.com     [92]
+* Nextel     USA     number@messaging.nextel.com     [93]
+* Nextel     Mexico     number@msgnextel.com.mx     [94]
+* Nextel     Argentina     TwoWay.11number@nextel.net.ar     [95]
+* NTT DoCoMo     Japan     number@docomo.ne.jp     [96]
+* O2     Germany     0number@o2online.de     [97]
+* OgVodafone     Iceland     number@sms.is     [98]
+* Orange Moldova     Moldova          [99]
+* Orange     Netherlands     0number@sms.orange.nl     [100]
+* Orange     Switzerland          [101]
+* Orange     United Kingdom     number@orange.net     [102]
+* Page Plus Cellular (Verizon MVNO)     USA     number@vtext.com (SMS)
+* number@vzwpix.com (MMS) [103]
+* Panacea Mobile     Worldwide     number@api.panaceamobile.com (SMS)     [104] (requires login)          subject: username password
+* body: the message
+* Pioneer Cellular     USA     nine-digit-number@zsend.com
+* Personal     Argentina     number@alertas.personal.com.ar (call for activation)     [105] [106]
+* Plus     Poland     +number@text.plusgsm.pl (+48domestic-number@text.plusgsm.pl)     [107]
+* Pocket Wireless     Texas, USA     number@sms.pocket.com
+* Pondicherry BPL Mobile     India     9843number@bplmobile.com     [108]
+* PC Telecom     Canada     number@mobiletxt.ca
+* Punjab Airtel     India     919815number@airtelmail.com     [109]
+* Qwest Wireless     USA     number@qwestmp.com     [110]
+* Red Pocket Mobile (AT&T MVNO)     USA     number@txt.att.net (SMS)
+* number@mms.att.net (MMS)
+* Rogers Wireless     Canada and USAlog     number@pcs.rogers.com or 1number@mms.rogers.com     Requires Login [111]          Name (subject) text (Note: Subject must be in plain text, not Q-encoded as described in RFC 2047.)
+* RoutoMessaging     Worldwide     number@email2sms.routomessaging.com     [112]          Subject: Sender ID (Originating Address who is sending the message) Body: the message (Note: plain text emails supported)
+* SaskTel     Canada     number@sms.sasktel.com
+* number@pcs.sasktelmobility.com [113]
+* Sendega     Norway     number@sendega.com (registration required)     [114]          Content support: subject, body or subject + body. Settings available from website (login required)
+* Setar Mobile email (Aruba)     Aruba     number@mas.aw (297domestic-number@mas.aw)     [115]
+* Siminn     Iceland     number@box.is     [116]
+* Simple Mobile     USA     number@smtext.com     [117]
+* SMS Broadcast     Australia     number@send.smsbroadcast.com.au     [118]
+* SMS Central     Australia     number@sms.smscentral.com.au     Requires Login [119]
+* SMS4Free     USA          [120]
+* SMSPUP
+* (Earn points by participation in marketing/promotions)
+* Australia     domestic-number@smspup.com     Requires Login [121]
+* Softbank     Japan     number@softbank.ne.jp     N/A[13]
+* Starhub Enterprise Messaging Solution (powered by Soprano)     Singapore     number@starhub-enterprisemessaging.com(sms@starhub-enterprisemessaging.com )     [122]
+* Southernlinc     USA     number@page.southernlinc.com (SMS)
+* South Central Communications     USA     number@rinasms.com (SMS)     [123]
+* Spikko     Israel     number@SpikkoSMS.com     [124]
+* Sprint (PCS)     USA     number@messaging.sprintpcs.com (SMS)
+* number@pm.sprint.com (MMS)
+* [125] requires login     6245     address message
+* Nextel (Sprint)     USA     number@messaging.nextel.com (Rich Messaging)
+* number@page.nextel.com (SMS) [126]
+* requires login
+* Straight Talk     USA     number@vtext.com (SMS)
+* number@txt.att.net (SMS if using the AT&T SIM) number@tmomail.net (MMS or SMS when using the T-Mobile SIM, begin 'number' with 1 then phone number) number@mypixmessages.com (MMS) number@mms.att.net (MMS & SMS) number@mmst5.tracfone.com (T-Mobile SIM MMS & SMS)
+* Sunrise Communications     Switzerland     number@gsm.sunrise.ch     [127] (registration required)
+* Swisscom     Switzerland          [128] [129] [130]
+* Synergy Communications     South Africa     number@syncom.co.za     [131]
+* Syringa Wireless     USA     number@rinasms.com
+* TeletopiaSMS     Norway     number@sms.teletopiasms.no (registration required)     [132]          Content settings available from website
+* T-Mobile     USA     number@tmomail.net (MMS or SMS) --number can and by default properly begins with "1" (the US country code)     [133]     500[14]     address text
+* address/subject/text
+* address#subject#text
+* T-Mobile (Optus Zoo)     Australia     0number@optusmobile.com.au     [134]
+* T-Mobile     Austria     number@sms.t-mobile.at (43676domestic-number@sms.t-mobile.at)     [135]
+* T-Mobile     Croatia     number@sms.t-mobile.hr (385domestic-number@sms.t-mobile.hr)     [136]     100     address##subject#text
+* T-Mobile     Germany     number@t-mobile-sms.de     [137]
+* T-Mobile     Netherlands     31number@gin.nl     [138]
+* Tamil Nadu Airtel     India     919894number@airtelmobile.com     [139]
+* Tamil Nadu Aircel     India     9842number@airsms.com     [140]
+* Tamil Nadu BPL Mobile     India     919843number@bplmobile.com     [141]
+* Tele2     Sweden     0number@sms.tele2.se     [142]
+* Telecom New Zealand     New Zealand     number@etxt.co.nz     [143]
+* Teleflip     USA     number@teleflip.com     [144]
+* Telekom Srbija     Serbia          [145]
+* CS Networks     Serbia     gateway@cs-networks.net     [146]
+* Telstra Integrated Messaging (powered by Soprano)     Australia     sms@tim.telstra.com(mobile@sms.tim.telstra.com)     [147]
+* All Australian Mobile Networks Free 10 SMS to try (powered by IT Company)     Australia     number@sms.itcompany.com.au     [148]
+* Telus Mobility     Canada and USA     number@msg.telus.com (SMS)
+* number@mms.telusmobility.com (MMS) [149]
+* TellusTalk     Europe     number@esms.nu     [150]
+* TextOver     UK     Log in to TextOver for details     [151]
+* TextAnywhere     UK          [152]
+* Thuraya (satellite)     International          [153]
+* Tigo (Formerly Ola)     Colombia     number@sms.tigo.com.co     [154]
+* TIM     Italy     0number@timnet.com     [155]
+* TracFone (prepaid)     USA, Puerto Rico, and the U.S. Virgin Islands     direct: number@mmst5.tracfone.com
+* indirect: number@txt.att.net
+* number@tmomail.net
+* number@vtext.com
+* number@email.uscc.net
+* number@message.alltel.com
+* Txtlocal     UK     number@txtlocal.co.uk     [156]
+* UkraineCalling     International          [157]
+* Unicel     USA     number@utext.com     [158]
+* UniMóvil Corporation     UK     number@viawebsms.com     [159]
+* Unité     Moldova          [160]
+* US Cellular     USA     number@email.uscc.net (SMS)
+* number@mms.uscc.net (MMS) [161]
+* USA Mobility     USA     number@usamobility.net (SMS)     [162]
+* UTBox     Australia     number@sms.utbox.net     [163]
+* Uttar Pradesh West Escotel     India     9837number@escotelmobile.com     [164]
+* Verizon Wireless     USA     number@vtext.com (SMS)
+* number@vzwpix.com (MMS) [165]     6245     address (subject) text
+* Viaero     USA     number@viaerosms.com (SMS)
+* number@mmsviaero.com (MMS) [166]
+* Vivo     Brazil     number@torpedoemail.com.br     [167] (registration required)
+* Virgin Mobile     Canada     number@vmobile.ca
+* Virgin Mobile     USA     number@vmobl.com (SMS)[15]
+* number@vmpix.com (MMS)[16]
+* Virgin Mobile     United Kingdom     number@vxtras.com     Does not appear to work [168]
+* Vodacom     South Africa     number@voda.co.za     [169] (registration required)
+* Vodafone     Germany     0number@vodafone-sms.de     [170]
+* Vodafone     Italy     3**number@sms.vodafone.it
+* Vodafone     International          [171] (registration required)
+* Vodafone     Chuugoku/Western, Japan     number@n.vodafone.ne.jp     [172]
+* Vodafone     Hokkaido, Japan     number@d.vodafone.ne.jp     [173]
+* Vodafone     Hokuriku/Central North, Japan     number@r.vodafone.ne.jp     [174]
+* Vodafone     Kansai/West, including Osaka, Japan     number@k.vodafone.ne.jp     [175]
+* Vodafone     Kanto/Koushin/East, including Tokyo, Japan     number@t.vodafone.ne.jp     [176]
+* Vodafone     Kyuushu/Okinawa Japan     number@q.vodafone.ne.jp     [177]
+* Vodafone     Skikoku, Japan     number@s.vodafone.ne.jp     [178]
+* Vodafone     Touhoku/Niigata/North, Japan     number@h.vodafone.ne.jp     [179]
+* Vodafone     Spain     0number@vodafone.es     [180]
+* Vodafone     New Zealand     number@mtxt.co.nz     [181]
+* Voyager Mobile     United States     number@text.voyagermobile.com
+* West Central Wireless     USA     number@sms.wcc.net     [182]
+* Willcom     Japan     number@pdx.ne.jp
+* number@di.pdx.ne.jp (di) number@dj.pdx.ne.jp (dj) number@dk.pdx.ne.jp (dk) [183]
+* Wind Mobile     Canada     number@txt.windmobile.ca          4000 [17]     address text
+* XIT Communications     USA - Texas     number@sms.xit.net     [184]
+* Polkomtel     Poland     +48number@text.plusgsm.pl     [185]
