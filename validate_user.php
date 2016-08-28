@@ -86,7 +86,7 @@ function get_user($email,$pwd){
                 
           mysqli_free_result($result);    
           $_SESSION['loged_user'] = $loged_user; 
-          header('location:display_page.php?tpl=appointments');
+          header('location:display_page.php?tpl=dashboard');
           exit();
     }else{                
         return 0;
