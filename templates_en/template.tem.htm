@@ -4,7 +4,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Metronic | Admin Dashboard Template</title>
+<title>CDEMP | {page_title}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="" name="description"/>
@@ -289,29 +289,29 @@
 					</a>
 					<ul class="sub-menu">
 						<li class="active">
-							<a href="display_page.php?tpl=portfolio">
+							<a href="display_page.php?tpl=portfolio&cat=1">
 							<i class="icon-feed"></i>
 							<!-- <span class="badge badge-warning badge-roundless">new</span> -->Portfolio</a>
 						</li>
 						
 						<li>
-							<a href="display_page.php?tpl=blog">
+							<a href="display_page.php?tpl=blog&cat=1">
 							<i class="icon-speech"></i>
 							Blog</a>
 						</li>	
 						
 						<li>
-							<a href="display_page.php?tpl=about">
+							<a href="display_page.php?tpl=about&cat=1">
 							<i class="icon-users"></i>
 							About Us</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=contact">
+							<a href="display_page.php?tpl=contact&cat=1">
 							<i class="icon-envelope-open"></i>
 							Contact Us</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=calendar">
+							<a href="display_page.php?tpl=calendar&cat=1">
 							<i class="icon-calendar"></i>
 							<!-- <span class="badge badge-danger">14</span> -->Calendar</a>
 						</li>
@@ -325,42 +325,42 @@
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Incidents</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Grades</a>
 						</li><li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Groups</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Courses</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Teachers</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Parents</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Tecnicians</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Problems</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Manage Messages</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=2">
 							Reports</a>
 						</li>
 					</ul>
@@ -373,11 +373,11 @@
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=3">
 							View Incidents</a>
 						</li>
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=3">
 							Manage Parents</a>
 						</li>
 					</ul>
@@ -390,7 +390,7 @@
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=4">
 							Manage Incidents</a>
 						</li>
 					</ul>
@@ -403,7 +403,7 @@
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="display_page.php?tpl=profile">
+							<a href="display_page.php?tpl=profile&cat=5">
 							All Incidents</a>
 						</li>
 					</ul>
@@ -537,21 +537,21 @@
 
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Dashboard <small>dashboard & statistics</small>
+			&nbsp{title_script} <small></small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="index.html">Home</a>
+						<a href="display_page.php?tpl=dashboard">Home</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#">Dashboard</a>
-						<i class="fa fa-angle-right"></i>
+						<a>{category}</a>
+						<i class="fa fa-angle-right" style="{display_arrow}"></i>
 					</li>
 					<li>
-						<a href="#">Dashboard</a>
+						<a href="display_page.php?tpl={title_script}">{title_script}</a>
 					</li>
 				</ul>
 				<!-- <div class="page-toolbar">

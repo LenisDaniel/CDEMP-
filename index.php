@@ -13,7 +13,7 @@ if(isset($_GET['id'])){
 		$objusers->updateMemberActive($id, 1);
 		}
 	}
-}	
+}
 
 //*****************************************************************************************************************************************
 // main
@@ -35,9 +35,14 @@ if (isset($_SESSION['errmsg'])){
 $content = $objtemplate->open("templates_en/login.tem.htm");
 $vdisclaimer = "";
 //****************************************************************************************************************************************
+if(isset($_COOKIE['email'])){
+	$objtemplate->set_content("email", $_COOKIE['email']);
+}
+if(isset($_COOKIE['pass'])){
+	$objtemplate->set_content("pass", $_COOKIE['pass']);
+}
 
-//$objtemplate->set_content("welcome",$contact);
-//$objtemplate->set_content("disclaimer",$vdisclaimer);
+
 //$objtemplate->set_content("change_lang",$change_lang);
 //$objtemplate->set_content("software_version",$software_version);
 //$objtemplate->set_content("today_date",$today_date);

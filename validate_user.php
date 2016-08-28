@@ -10,9 +10,12 @@ ob_start();
 //require_once("includes/loadconfig.inc.php");
 require_once("includes/class.mydbcon.inc.php");
 require_once("includes/class.template.inc.php");
-
 $objmydbcon = new classmydbcon();
 $objtemplate = new classTemplate();
+
+if(isset($_POST['remember'])){
+  $rm = $_POST['remember']; 
+}
 
 function get_permissions($privilege_group){
 	global $link;
@@ -55,13 +58,13 @@ function get_user($email,$pwd){
     global $lang;
     global $objmydbcon;
     global $objtemplate;
-    
+    global $rm;
+
     $sqlquery = "SELECT * FROM users WHERE email = '$email' AND active = 1 AND password = '" . md5($pwd) . "'"; 
     // echo $sqlquery;
     // exit;
     //$sqlquery = "SELECT * FROM users WHERE email = '$email' AND active = 1 AND password = '$pwd'";
-    if(!$result = $objmydbcon->get_result_set($sqlquery)){
-        
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){        
     	  return false;
     }else if(mysqli_num_rows($result)>0){
           
@@ -79,7 +82,19 @@ function get_user($email,$pwd){
               $loged_user['city'] = $rs['city'];
               $loged_user['state'] = $rs['state'];
               $loged_user['active'] = $rs['active'];
-                          
+              
+              if($rm == 1){
+
+                 $cookie_name = "email";
+                 $cookie_value = $loged_user['email'];
+
+                 $cookie_name1 = "pass";
+                 $cookie_value1 = $loged_user['password'];
+
+                 setcookie($cookie_name, $cookie_value, time() +(86400 * 30), "/");
+                 setcookie($cookie_name1, $cookie_value1, time() +(86400 * 30), "/");
+              }
+
           }else{                            
               $loged_user['name'] = UNKNOWN;
           } // if isset

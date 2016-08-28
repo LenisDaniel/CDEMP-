@@ -41,9 +41,41 @@ if (isset($_SESSION['errmsg'])){
 #*******************************************************************************
 // OPEN CONTENT PAGE
 if (!isset($_GET["tpl"])){
-	// set default page
+	// set default page	
 	$_GET['tpl'] = 'main';
 } // if isset
+else{
+	$title_name = $_GET['tpl'];
+}
+
+if(isset($_GET["cat"])){
+	$cat = $_GET["cat"];	
+
+	if($cat == 1){
+		$objtemplate->set_content("category", "Public");
+		$objtemplate->set_content("display_arrow", "");
+	}
+	else if($cat == 2){		
+		$objtemplate->set_content("category", "Administrator");
+		$objtemplate->set_content("display_arrow", "");
+	}
+	else if($cat == 3){		
+		$objtemplate->set_content("category", "Technicians");
+		$objtemplate->set_content("display_arrow", "");
+	}
+	else if($cat == 4){
+		$objtemplate->set_content("category", "Teachers");
+		$objtemplate->set_content("display_arrow", "");
+	}
+	else if($cat == 5){
+		$objtemplate->set_content("category", "Parents");
+		$objtemplate->set_content("display_arrow", "");
+	}
+	
+}else{	
+	$objtemplate->set_content("category", "");
+	$objtemplate->set_content("display_arrow", "display: none");
+}
 
 $tpl = sanitize($_GET['tpl']);
 $objtemplate->set_content("tpl",$tpl);
@@ -64,7 +96,9 @@ if ($main_tpl == ""){
 $meta_tags = "<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
 			  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />";
 
-$objtemplate->set_content("html_title","1STBANK - QUEUE SYSTEM");
+$objtemplate->set_content("page_title", ucfirst($title_name));
+$objtemplate->set_content("title_script", ucfirst($title_name));
+
 $objtemplate->set_content("meta_tags","$meta_tags");
 $objtemplate->set_content("meta_descr","");
 $objtemplate->set_content("meta_keywords","");
