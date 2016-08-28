@@ -7,7 +7,7 @@ Date : 2006.11.27  Time : 1:00 pm
 
 class classmydbcon{
 	# Development
-	var $dbhost="31.220.104.1";
+	var $dbhost="mysql.hostinger.es";
 	var $db="u186334426_cdemp";
 	var $uname="u186334426_cdemp";
 	var $pwd="cdemp2016";
