@@ -90,10 +90,14 @@ if(isset($_GET["cat"])){
 	$category_active = "dashboard_active";
 }
 
+
 $objtemplate->set_content("category", $category);
 $objtemplate->set_content("display_arrow", $display_arrow);
 $objtemplate->set_content($category_active, "start active open");
-$objtemplate->set_content($link_active, "active");
+if(isset($link_active)){
+	$objtemplate->set_content($link_active, "active");
+}
+
 
 
 $tpl = sanitize($_GET['tpl']);
