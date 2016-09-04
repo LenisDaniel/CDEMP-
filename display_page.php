@@ -68,8 +68,8 @@ if(isset($_GET["cat"])){
 	else if($cat == 3){		
 		$category = "Technicians";
 		$display_arrow = "";
-		$category_active = "technicians_active";
-		$link_active = $script_name . "_t";
+		$category_active = "tecnicians_active";
+		$link_active = $script_name . "_tec";
 	}
 	else if($cat == 4){
 		$category = "Teacher";
