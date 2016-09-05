@@ -86,7 +86,7 @@ if(isset($_GET["cat"])){
 	
 }else{	
 	$category = "";
-	$display_arrow = "display: none";
+	$display_arrow = "style='display: none'";
 	$category_active = "dashboard_active";
 }
 
@@ -130,26 +130,28 @@ $objtemplate->set_content("loged_user", $_SESSION['loged_user']['first_name'] . 
 
 switch ($_SESSION['loged_user']['role_idx']){
 	case '2':		
-		$objtemplate->set_content("blockDate", "style='display:none'");
-		$objtemplate->set_content("dashboard","style='display:none'");
-		$objtemplate->set_content("nannies", "style='display:none'");
-		$objtemplate->set_content("admintools","style='display:none'");
-		$objtemplate->set_content("settings", "style='display:none'");
-		$objtemplate->set_content("reports", "style='display:none'");
+		$objtemplate->set_content("administrator_visible", "style='display:none'");
+		$objtemplate->set_content("teachers_visible","style='display:none'");
+		$objtemplate->set_content("parents_visible", "style='display:none'");		
 		break;
 
 	case '3':		
-		$objtemplate->set_content("addAppointment", "style='display:none'");
-		$objtemplate->set_content("dashboard","style='display:none'");
-		$objtemplate->set_content("admintools","style='display:none'");
-		$objtemplate->set_content("clients","style='display:none'");
-		$objtemplate->set_content("settings", "style='display:none'");
-		$objtemplate->set_content("reports", "style='display:none'");
-		$objtemplate->set_content("addapp","style='display:none'");
+		$objtemplate->set_content("administrator_visible", "style='display:none'");
+		$objtemplate->set_content("tecnicians_visible","style='display:none'");
+		$objtemplate->set_content("parents_visible", "style='display:none'");
+		break;
+
+	case '4':		
+		$objtemplate->set_content("administrator_visible", "style='display:none'");
+		$objtemplate->set_content("tecnicians_visible","style='display:none'");
+		$objtemplate->set_content("teachers_visible", "style='display:none'");
 		break;	
 
-	default:		
-		
+	default:
+		$objtemplate->set_content("administrator_visible", "");		
+		$objtemplate->set_content("administrator_visible", "");
+		$objtemplate->set_content("tecnicians_visible","");
+		$objtemplate->set_content("teachers_visible", "");
 		break;
 }
 
