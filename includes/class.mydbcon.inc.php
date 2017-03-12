@@ -10,7 +10,7 @@ class classmydbcon{
 	var $dbhost="31.220.104.1";
 	var $db="u186334426_cdemp";
 	var $uname="u186334426_cdemp";
-	var $pwd="cdemp2016";
+	var $pwd="ElPerro085";
 	var $link="";
 	var $error="";
 
