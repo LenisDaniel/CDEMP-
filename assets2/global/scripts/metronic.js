@@ -679,11 +679,11 @@ var Metronic = function () {
             return isRTL;
         },
 
-        getAssetsPath: function () {
+        getassetsPath: function () {
             return assetsPath;
         },    
 
-        setAssetsPath: function(path) {
+        setassetsPath: function(path) {
             assetsPath = path;
         },
 

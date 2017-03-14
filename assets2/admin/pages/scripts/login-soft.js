@@ -26,7 +26,7 @@ var Login = function () {
 	                }
 	            },
 
-	            invalidHandler: function (event, validator) { //display error alert on form submit   
+	            invalidHandler: function (event, validator) { //display error alert on form submit
 	                $('.alert-danger', $('.login-form')).show();
 	            },
 
@@ -78,7 +78,7 @@ var Login = function () {
 	                }
 	            },
 
-	            invalidHandler: function (event, validator) { //display error alert on form submit   
+	            invalidHandler: function (event, validator) { //display error alert on form submit
 
 	            },
 
@@ -125,8 +125,8 @@ var Login = function () {
 	var handleRegister = function () {
 
 		function format(state) {
-            if (!state.id) return state.text; // optgroup
-            return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
+            if (!state.id.toLowerCase()) return state.text; // optgroup
+            return "<img class='flag' src='../../../global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
         }
 
 
@@ -153,7 +153,7 @@ var Login = function () {
 	            focusInvalid: false, // do not focus the last invalid input
 	            ignore: "",
 	            rules: {
-	                
+
 	                fullname: {
 	                    required: true
 	                },
@@ -192,7 +192,7 @@ var Login = function () {
 	                }
 	            },
 
-	            invalidHandler: function (event, validator) { //display error alert on form submit   
+	            invalidHandler: function (event, validator) { //display error alert on form submit
 
 	            },
 
@@ -207,7 +207,7 @@ var Login = function () {
 	            },
 
 	            errorPlacement: function (error, element) {
-	                if (element.attr("name") == "tnc") { // insert checkbox errors after the container                  
+	                if (element.attr("name") == "tnc") { // insert checkbox errors after the container
 	                    error.insertAfter($('#register_tnc_error'));
 	                } else if (element.closest('.input-icon').size() === 1) {
 	                    error.insertAfter(element.closest('.input-icon'));
@@ -240,14 +240,14 @@ var Login = function () {
 	            jQuery('.register-form').hide();
 	        });
 	}
-    
+
     return {
         //main function to initiate the module
         init: function () {
-        	
+
             handleLogin();
             handleForgetPassword();
-            handleRegister();    
+            handleRegister();
         }
 
     };

@@ -35,8 +35,8 @@ var ComponentsDropdowns = function () {
         });
 
         function format(state) {
-            if (!state.id) return state.text; // optgroup
-            return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
+            if (!state.id.toLowerCase()) return state.text; // optgroup
+            return "<img class='flag' src='../../../global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
         }
         $("#select2_sample4").select2({
             placeholder: "Select a Country",
@@ -151,8 +151,8 @@ var ComponentsDropdowns = function () {
         });
 
         function format(state) {
-            if (!state.id) return state.text; // optgroup
-            return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
+            if (!state.id.toLowerCase()) return state.text; // optgroup
+            return "<img class='flag' src='../../../global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
         }
         $("#select2_sample_modal_4").select2({
             allowClear: true,
@@ -248,7 +248,7 @@ var ComponentsDropdowns = function () {
 
     return {
         //main function to initiate the module
-        init: function () {            
+        init: function () {
             handleSelect2();
             handleSelect2Modal();
             handleMultiSelect();

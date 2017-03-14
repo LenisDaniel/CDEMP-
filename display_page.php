@@ -20,7 +20,7 @@ $lang = "en";
 if (!$objmydbcon = new classmydbcon){
 	echo "Error connecting to DB";
 	exit;
-} // if  
+} // if
 
 // INSTANTIATE TEMPLATE CLASS
 $objtemplate = new classTemplate;
@@ -29,7 +29,7 @@ $objtemplate = new classTemplate;
 $objqueue = new classQueue;
 
 //Verificamos si existe session para presentar el dashboard
-if(isset($_SESSION['loged_user'])){	
+if(isset($_SESSION['loged_user'])){
 
 #*******************************************************************************
 // CHECK FOR ERR MSG
@@ -41,7 +41,7 @@ if (isset($_SESSION['errmsg'])){
 #*******************************************************************************
 // OPEN CONTENT PAGE
 if (!isset($_GET["tpl"])){
-	// set default page	
+	// set default page
 	$_GET['tpl'] = 'main';
 } // if isset
 else{
@@ -51,7 +51,7 @@ else{
 }
 
 if(isset($_GET["cat"])){
-	$cat = $_GET["cat"];	
+	$cat = $_GET["cat"];
 
 	if($cat == 1){
 		$category = "Public";
@@ -65,7 +65,7 @@ if(isset($_GET["cat"])){
 		$category_active = "administrator_active";
 		$link_active = $script_name;
 	}
-	else if($cat == 3){		
+	else if($cat == 3){
 		$category = "Technicians";
 		$display_arrow = "";
 		$category_active = "tecnicians_active";
@@ -83,12 +83,13 @@ if(isset($_GET["cat"])){
 		$category_active = "parents_active";
 		$link_active = $script_name . "_p";
 	}
-	
-}else{	
+
+}else{
 	$category = "";
 	$display_arrow = "style='display: none'";
 	$category_active = "dashboard_active";
 }
+
 
 
 $objtemplate->set_content("category", $category);
@@ -104,7 +105,7 @@ $tpl = sanitize($_GET['tpl']);
 $objtemplate->set_content("tpl",$tpl);
 $content = $objtemplate->open("templates_$lang/".$tpl.".tem.htm");
 
-  
+
 if (file_exists("includes/" . $tpl . ".inc.php")){
 	include("includes/" . $tpl . ".inc.php");
 } // if
@@ -129,26 +130,26 @@ $objtemplate->set_content("meta_keywords","");
 $objtemplate->set_content("loged_user", $_SESSION['loged_user']['first_name'] . " " . $_SESSION['loged_user']['last_name']);
 
 switch ($_SESSION['loged_user']['role_idx']){
-	case '2':		
+	case '2':
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("teachers_visible","style='display:none'");
-		$objtemplate->set_content("parents_visible", "style='display:none'");		
+		$objtemplate->set_content("parents_visible", "style='display:none'");
 		break;
 
-	case '3':		
+	case '3':
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("tecnicians_visible","style='display:none'");
 		$objtemplate->set_content("parents_visible", "style='display:none'");
 		break;
 
-	case '4':		
+	case '4':
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("tecnicians_visible","style='display:none'");
 		$objtemplate->set_content("teachers_visible", "style='display:none'");
-		break;	
+		break;
 
 	default:
-		$objtemplate->set_content("administrator_visible", "");		
+		$objtemplate->set_content("administrator_visible", "");
 		$objtemplate->set_content("administrator_visible", "");
 		$objtemplate->set_content("tecnicians_visible","");
 		$objtemplate->set_content("teachers_visible", "");

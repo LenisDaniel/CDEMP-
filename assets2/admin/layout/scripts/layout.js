@@ -3,9 +3,9 @@ Core script to handle the entire theme and core functions
 **/
 var Layout = function () {
 
-    var layoutImgPath = Metronic.getAssetsPath() + 'admin/layout/img/';
+    var layoutImgPath = Metronic.getassetsPath() + 'admin/layout/img/';
 
-    var layoutCssPath = Metronic.getAssetsPath() + 'admin/layout/css/';
+    var layoutCssPath = Metronic.getassetsPath() + 'admin/layout/css/';
 
     //* BEGIN:CORE HANDLERS *//
     // this function handles responsive layout on screen size resize or mobile device rotate.
