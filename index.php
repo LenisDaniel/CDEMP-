@@ -49,4 +49,5 @@ if(isset($_COOKIE['pass'])){
 $objtemplate->set_content("form_action","validate_user.php");
 $objtemplate->parsedata($content,1);
 session_destroy();
+
 ?>
