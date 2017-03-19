@@ -89,6 +89,7 @@ if ($offers_list[0]['idx']>0) {
 		$offers_data .= "</li>";
 	} //end for
 	$objtemplate->set_content("offers_list",$offers_data);
+	
 } //end if
 
 

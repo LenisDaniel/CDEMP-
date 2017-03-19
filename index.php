@@ -47,6 +47,7 @@ if(isset($_COOKIE['pass'])){
 //$objtemplate->set_content("software_version",$software_version);
 //$objtemplate->set_content("today_date",$today_date);
 $objtemplate->set_content("form_action","validate_user.php");
+$objtemplate->set_content("dinamic_year", date("Y"));
 $objtemplate->parsedata($content,1);
 session_destroy();
 

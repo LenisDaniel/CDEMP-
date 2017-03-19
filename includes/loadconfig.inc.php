@@ -26,8 +26,8 @@ function get_date($lang,$months,$wdays){
 $provider = "";
 
 if (!isset($_SESSION['portalconfig'])){
-    $_SESSION['portalconfig']['valid_domain'] = "localhost";//"bmjent.ebusiness-sense.com";
-    $_SESSION['portalconfig']['root_path'] = "/bmj_enterprise/";
+    $_SESSION['portalconfig']['valid_domain'] = "localhost:8080/cdemp-/";//"bmjent.ebusiness-sense.com";
+    $_SESSION['portalconfig']['root_path'] = "/cdemp-/";
 } // if !isset session portalconfig
 
 if (!isset($_SESSION['lang'])){

@@ -124,6 +124,7 @@ $objtemplate->set_content("page_title", ucwords($title_name));
 $objtemplate->set_content("title_script", ucwords($title_name));
 $objtemplate->set_content("title_script_real", $script_name);
 
+
 $objtemplate->set_content("meta_tags","$meta_tags");
 $objtemplate->set_content("meta_descr","");
 $objtemplate->set_content("meta_keywords","");
@@ -157,6 +158,8 @@ switch ($_SESSION['loged_user']['role_idx']){
 }
 
 $objtemplate->set_content("content",$objtemplate->parsedata($content));
+$objtemplate->set_content("dinamic_year", date('Y'));
+
 //$objtemplate->set_content("disclaimer",$disclaimer);
 $objtemplate->parsedata($tpl,1);
 
