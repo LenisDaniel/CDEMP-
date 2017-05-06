@@ -7,19 +7,19 @@ Date : 2006.11.27  Time : 1:00 pm
 
 class classmydbcon{
 	# Development servidor Hostinger
-	// var $dbhost="31.220.104.1";
-	// var $db="u186334426_cdemp";
-	// var $uname="u186334426_cdemp";
-	// var $pwd="ElPerro085";
-	// var $link="";
-	// var $error="";
-
-	var $dbhost="localhost";
-	var $db="u186334426_cdemp";
-	var $uname="root";
-	var $pwd="xf6C4FBPqNCMNGRG";
+	var $dbhost="192.185.16.243";
+	var $db="cdempadm_cdemp";
+	var $uname="cdempadm_cdemp";
+	var $pwd="cdemp2017";
 	var $link="";
 	var $error="";
+
+	// var $dbhost="localhost";
+	// var $db="u186334426_cdemp";
+	// var $uname="root";
+	// var $pwd="xf6C4FBPqNCMNGRG";
+	// var $link="";
+	// var $error="";
 
 
 	# class constructor
