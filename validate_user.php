@@ -101,7 +101,7 @@ function get_user($email,$pwd){
                 
           mysqli_free_result($result);    
           $_SESSION['loged_user'] = $loged_user; 
-          header('location:display_page.php?tpl=dashboard');
+          header('location:display_page.php?tpl=incidents');
           exit();
     }else{                
         return 0;
@@ -131,7 +131,7 @@ switch ($validate_response){
          exit;
     case 0 :
          if ($lang == "sp"){
-             $errmsg = "El nombre de usuario o contraseña esta incorrecto.<BR>Trata de nuevo.";
+             $errmsg = "El nombre de usuario o contraseï¿½a esta incorrecto.<BR>Trata de nuevo.";
          }else if ($lang =="en"){
              $errmsg = "User name or password is incorrect.<br>Please try again.";
          }

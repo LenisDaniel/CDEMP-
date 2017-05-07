@@ -87,7 +87,7 @@ if(isset($_GET["cat"])){
 }else{
 	$category = "";
 	$display_arrow = "style='display: none'";
-	$category_active = "dashboard_active";
+	$category_active = "incidents_active";
 }
 
 
@@ -134,13 +134,13 @@ switch ($_SESSION['loged_user']['role_idx']){
 	case '2':
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("teachers_visible","style='display:none'");
-		$objtemplate->set_content("parents_visible", "style='display:none'");
+		$objtemplate->set_content("students_visible", "style='display:none'");
 		break;
 
 	case '3':
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("tecnicians_visible","style='display:none'");
-		$objtemplate->set_content("parents_visible", "style='display:none'");
+		$objtemplate->set_content("students_visible", "style='display:none'");
 		break;
 
 	case '4':

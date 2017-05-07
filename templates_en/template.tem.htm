@@ -66,8 +66,8 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="display_page.php?tpl=dashboard">
-			<img src="assets2/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
+			<a href="display_page.php?tpl=incidents">
+			<img src="assets2/admin/layout/img/logo-big.png" style="margin-top: 0px" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -269,10 +269,10 @@
 					</form>
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
-				<li class="{dashboard_active}">
-					<a href="display_page.php?tpl=dashboard">
+				<li class="{incidents_active}">
+					<a href="display_page.php?tpl=incidents">
 					<i class="icon-home"></i>
-					<span class="title">Dashboard</span>
+					<span class="title">Home</span>
 					</a>					
 				</li>	
 				
@@ -406,10 +406,10 @@
 						</li>
 					</ul>
 				</li>
-				<li class="{parents_active}" {parents_visible}>
+				<li class="{students_active}" {students_visible}>
 					<a href="javascript:;">
 					<i class="fa fa-users" aria-hidden="true"></i>
-					<span class="title">Parents</span>
+					<span class="title">Students</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
@@ -555,7 +555,7 @@
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="display_page.php?tpl=dashboard">Home</a>
+						<a href="display_page.php?tpl=incidents">Home</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
@@ -1243,7 +1243,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 {dinamic_year} &copy; CDEMP by All Rights Reserved
+		 {dinamic_year} &copy; CDEMP All Rights Reserved.
 	</div>
 	<div class="page-footer-tools">
 		<span class="go-top">
