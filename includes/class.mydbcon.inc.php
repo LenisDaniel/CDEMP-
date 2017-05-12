@@ -6,7 +6,7 @@ Date : 2006.11.27  Time : 1:00 pm
 */
 
 class classmydbcon{
-	# Development servidor Hostinger
+
 	var $dbhost="192.185.16.243";
 	var $db="cdempadm_cdemp";
 	var $uname="cdempadm_cdemp";
