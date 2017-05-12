@@ -1,9 +1,6 @@
 <?php
 //error_reporting(0);
-/* file name : index.php
-	programmed by :  Luis R. Martinez
-   date : 06.19.2003
-*/
+
 require_once("includes/class.users.inc.php");
 $objusers = new classUsers;
 
