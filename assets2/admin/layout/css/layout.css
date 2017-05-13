@@ -88,6 +88,11 @@ Page Header
 .page-header.navbar .page-logo .logo-default {
   margin: 16px 0 0 0;
 }
+
+.logo-default {
+  width:140px;
+}
+
 .page-header.navbar .page-logo .logo-mini {
   display: none;
   margin-left: 5px;

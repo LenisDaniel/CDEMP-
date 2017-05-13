@@ -60,7 +60,7 @@ function get_user($email,$pwd){
     global $objtemplate;
     global $rm;
 
-    $sqlquery = "SELECT * FROM users WHERE email = '$email' AND active = 1 AND password = '" . md5($pwd) . "'"; 
+    $sqlquery = "SELECT * FROM master_users WHERE email = '$email' AND active = 1 AND password = '" . md5($pwd) . "'";
     // echo $sqlquery;
     // exit;
     //$sqlquery = "SELECT * FROM users WHERE email = '$email' AND active = 1 AND password = '$pwd'";

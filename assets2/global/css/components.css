@@ -164,10 +164,10 @@ h6.block {
 /* Links */
 a {
   text-shadow: none;
-  color: #428bca;
+  color: #e63d51;
 }
 a:hover {
-  color: #2a6496;
+  color: #9d1111;
 }
 a:focus, a:hover, a:active {
   outline: 0;
