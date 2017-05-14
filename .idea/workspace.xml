@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c6731a6-fe35-4e1b-9c23-f44f8dbb85ed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validate_user.php" afterPath="$PROJECT_DIR$/validate_user.php" />
-    </list>
+    <list default="true" id="2c6731a6-fe35-4e1b-9c23-f44f8dbb85ed" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,12 +96,12 @@
         <entry file="file://$PROJECT_DIR$/validate_user.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="605">
-              <caret line="166" column="29" lean-forward="true" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
+              <caret line="166" column="29" lean-forward="false" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
               <folding>
-                <marker date="1494690883810" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-                <marker date="1494690883810" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-                <marker date="1494690883810" expanded="true" signature="1145:1172" ph="Select last_... " />
-                <marker date="1494690883810" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
+                <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
+                <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
+                <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
+                <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -369,16 +367,15 @@
       <workItem from="1494099083782" duration="2153000" />
       <workItem from="1494157130158" duration="4813000" />
       <workItem from="1494240580305" duration="1617000" />
-      <workItem from="1494690858858" duration="31000" />
+      <workItem from="1494690858858" duration="294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8819000" />
+    <option name="totallyTimeSpent" value="9082000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25026852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -482,10 +479,10 @@
         <state relative-caret-position="2266">
           <caret line="103" column="60" lean-forward="false" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
           <folding>
-            <marker date="1494690883810" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690883810" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690883810" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690883810" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
+            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
+            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
+            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
+            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -553,10 +550,10 @@
         <state relative-caret-position="2266">
           <caret line="103" column="60" lean-forward="false" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
           <folding>
-            <marker date="1494690883810" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690883810" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690883810" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690883810" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
+            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
+            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
+            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
+            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -624,10 +621,10 @@
         <state relative-caret-position="2266">
           <caret line="103" column="60" lean-forward="true" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
           <folding>
-            <marker date="1494690883810" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690883810" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690883810" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690883810" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
+            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
+            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
+            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
+            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -728,10 +725,10 @@
         <state relative-caret-position="2266">
           <caret line="103" column="60" lean-forward="false" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
           <folding>
-            <marker date="1494690883810" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690883810" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690883810" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690883810" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
+            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
+            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
+            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
+            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -893,12 +890,12 @@
     <entry file="file://$PROJECT_DIR$/validate_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
-          <caret line="166" column="29" lean-forward="true" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
+          <caret line="166" column="29" lean-forward="false" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
           <folding>
-            <marker date="1494690883810" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690883810" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690883810" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690883810" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
+            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
+            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
+            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
+            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
