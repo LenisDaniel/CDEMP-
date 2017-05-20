@@ -1,8 +1,6 @@
 <?php
 /*
 file name: validate_user.php
-Programmed by : Luis R. Martinez Rojas
-Date : 06.19.2003
 */
 session_start();
 ob_start();
