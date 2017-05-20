@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c6731a6-fe35-4e1b-9c23-f44f8dbb85ed" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class.teacher_courses.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/teacher_courses.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_en/teacher_courses.tem.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/display_page.php" afterPath="$PROJECT_DIR$/display_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/template.tem.htm" afterPath="$PROJECT_DIR$/templates_en/template.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,57 +19,81 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="cdempadm_cdemp@192.185.16.243" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="cdempadm_cdemp@192.185.16.243" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="cdempadm_cdemp" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="class.teacher_courses.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/class.teacher_courses.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display_page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/display_page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2156">
-              <caret line="98" column="54" lean-forward="false" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="incidents.tem.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates_en/incidents.tem.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+            <state relative-caret-position="132">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="e#5#11#0" expanded="true" />
-                <element signature="e#11#17#0" expanded="true" />
+                <element signature="e#7#97#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_students.tem.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
+      <file leaf-file-name="teacher_courses.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/teacher_courses.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <folding>
+                <element signature="e#6#96#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacher_courses.tem.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates_en/teacher_courses.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_parents.tem.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates_en/manage_parents.tem.htm">
+      <file leaf-file-name="display_page.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/display_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="430">
+              <caret line="109" column="66" lean-forward="true" selection-start-line="109" selection-start-column="66" selection-end-line="109" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -70,34 +102,9 @@
       <file leaf-file-name="template.tem.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1562">
-              <caret line="71" column="59" lean-forward="false" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+            <state relative-caret-position="282">
+              <caret line="359" column="81" lean-forward="true" selection-start-line="359" selection-start-column="81" selection-end-line="359" selection-end-column="81" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.mydbcon.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validate_user.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/validate_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="166" column="29" lean-forward="true" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
-              <folding>
-                <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-                <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-                <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
-                <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -106,40 +113,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>par</find>
-      <find>parent</find>
-      <find>parents</find>
-      <find>a</find>
-      <find>all</find>
-      <find>all rig</find>
-      <find>all right</find>
-      <find>all rights</find>
-      <find>all rights r</find>
-      <find>all rights re</find>
-      <find>all rights res</find>
-      <find>all rights reser</find>
-      <find>all rights reservd</find>
-      <find>all rights reserv</find>
-      <find>all rights reserve</find>
-      <find>all rights reserved</find>
-      <find>ball rights reserved</find>
-      <find>byall rights reserved</find>
-      <find>by all rights reserved</find>
+      <find>manage_g</find>
+      <find>manage_gr</find>
+      <find>manage_gra</find>
+      <find>manage_grad</find>
+      <find>manage_grade</find>
+      <find>manage_grades</find>
       <find>d</find>
-      <find>das</find>
-      <find>dash</find>
-      <find>dashboar</find>
-      <find>dashboard</find>
-      <find>home</find>
-      <find>tpl=home</find>
-      <find>tpl=incidents</find>
-      <find>l</find>
-      <find>logo</find>
-      <find>logo1</find>
+      <find>disp</find>
+      <find>display_none</find>
+      <find>display_non</find>
+      <find>display_no</find>
+      <find>display_n</find>
+      <find>display_</find>
+      <find>display</find>
+      <find>display:</find>
+      <find>display:n</find>
+      <find>display:none</find>
+      <find>manage_tecnicians</find>
+      <find>b</find>
+      <find>brea</find>
+      <find>bread</find>
+      <find>breadc</find>
+      <find>breadcr</find>
+      <find>breadcrub</find>
+      <find>breadcru</find>
+      <find>breadcru-</find>
+      <find>breadcrum</find>
+      <find>breadcrumb</find>
+      <find>reports</find>
+      <find>teacher_courses</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/templates_en/template.tem.htm" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -147,11 +157,16 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/github.php" />
         <option value="$PROJECT_DIR$/templates_en/home.tem.htm" />
-        <option value="$PROJECT_DIR$/display_page.php" />
         <option value="$PROJECT_DIR$/templates_en/incidents.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
-        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/validate_user.php" />
+        <option value="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
+        <option value="dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.master_users" />
+        <option value="dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.master_grades" />
+        <option value="$PROJECT_DIR$/includes/class.teacher_courses.inc.php" />
+        <option value="$PROJECT_DIR$/includes/teacher_courses.inc.php" />
+        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
+        <option value="$PROJECT_DIR$/templates_en/teacher_courses.tem.htm" />
+        <option value="$PROJECT_DIR$/display_page.php" />
       </list>
     </option>
   </component>
@@ -162,13 +177,15 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpServers">
-    <servers />
+    <servers>
+      <server host="localhost" id="5d46b55e-98a3-4ef3-9aef-6776b14a0dd7" name="localhost" port="8080" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1932" />
+    <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
@@ -186,6 +203,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,20 +214,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates_sp" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,30 +245,21 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets2" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Pictures" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="database.data.extractors.current" value="SQL Inserts" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -364,79 +360,108 @@
       <workItem from="1494240580305" duration="1617000" />
       <workItem from="1494690858858" duration="294000" />
       <workItem from="1494762224741" duration="31000" />
+      <workItem from="1494845918934" duration="70000" />
+      <workItem from="1494935331900" duration="542000" />
+      <workItem from="1494935888841" duration="626000" />
+      <workItem from="1495236414768" duration="13377000" />
+      <workItem from="1495250282340" duration="366000" />
+      <workItem from="1495250747673" duration="695000" />
+      <workItem from="1495275066616" duration="1673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9113000" />
+    <option name="totallyTimeSpent" value="26462000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25377154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27228788" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19871107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18045112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27228788" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19065522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18045112" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="71" column="59" lean-forward="false" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2156">
-          <caret line="98" column="54" lean-forward="false" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/incidents.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="e#5#11#0" expanded="true" />
-            <element signature="e#11#17#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -444,7 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -452,143 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="69" column="81" lean-forward="false" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validate_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="103" column="60" lean-forward="false" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
-          <folding>
-            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2156">
-          <caret line="98" column="54" lean-forward="false" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/incidents.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="e#5#11#0" expanded="true" />
-            <element signature="e#11#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_parents.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validate_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="103" column="60" lean-forward="false" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
-          <folding>
-            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="69" column="81" lean-forward="false" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2156">
-          <caret line="98" column="54" lean-forward="true" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/incidents.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="e#5#11#0" expanded="true" />
-            <element signature="e#11#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_parents.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,12 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2266">
           <caret line="103" column="60" lean-forward="true" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
-          <folding>
-            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -609,7 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1518">
           <caret line="69" column="81" lean-forward="false" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,7 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,7 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6028">
           <caret line="274" column="49" lean-forward="false" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,7 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,7 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,12 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2266">
           <caret line="103" column="60" lean-forward="false" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
-          <folding>
-            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,7 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,10 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="e#5#11#0" expanded="true" />
-            <element signature="e#11#17#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="69" column="81" lean-forward="false" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6028">
           <caret line="274" column="49" lean-forward="false" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,22 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/blank.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2156">
-          <caret line="98" column="54" lean-forward="false" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,42 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/incidents.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="e#5#11#0" expanded="true" />
-            <element signature="e#11#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.users.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2970">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="71" column="59" lean-forward="false" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,12 +647,275 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
           <caret line="166" column="29" lean-forward="true" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.appointments">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.master_incidents">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.master_cities">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.master_grades">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.master_users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.master_courses">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.schedules_teacher">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a542d75e/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7/cdempadm_cdemp.course_teacher">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.course_teacher">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.course_teacher</OriginalElement>
+          <nodes>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.course_teacher</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="137.0" y="59.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.SCHEMA:cdempadm_cdemp">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.SCHEMA:cdempadm_cdemp</OriginalElement>
+          <nodes>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.daily_records</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.events</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_grades</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.users_log</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.course_teacher</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_users</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_zipcode</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_classification</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_week_days</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.schedules_teacher</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_day_hours</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_courses</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_incidents</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_states</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.appointments</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_sections</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_notes</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_area</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_roles</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_cities</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.scholar_period</node>
+            <node x="" y="">7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.TABLE:cdempadm_cdemp.master_day_status</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.42641705668226737" x="1267.0" y="543.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/teacher_courses.inc.php" />
+    <entry file="file://$PROJECT_DIR$/includes/class.users.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1494690948111" expanded="true" signature="502:581" ph="select menu_... privilege_group_permissions" />
-            <marker date="1494690948111" expanded="true" signature="1054:1143" ph="Insert Into clients_log... " />
-            <marker date="1494690948111" expanded="true" signature="1145:1172" ph="Select last_... " />
-            <marker date="1494690948111" expanded="true" signature="1503:1602" ph="SELECT * FRO... users" />
+            <marker date="1489338942501" expanded="true" signature="1105:1433" ph="INSERT INTO users... " />
+            <marker date="1489338942501" expanded="true" signature="2201:2364" ph="SELECT u.idx... users" />
+            <marker date="1489338942501" expanded="true" signature="3628:3660" ph="SELECT * FRO... users" />
+            <marker date="1489338942501" expanded="true" signature="5180:5492" ph="UPDATE users... " />
+            <marker date="1489338942501" expanded="true" signature="10667:10713" ph="UPDATE users... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/dashboard.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.teacher_courses.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/blank.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5225">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.template.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/common_functions.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="359" column="81" lean-forward="true" selection-start-line="359" selection-start-column="81" selection-end-line="359" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/teacher_courses.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/teacher_courses.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/incidents.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="69" lean-forward="true" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="109" column="66" lean-forward="true" selection-start-line="109" selection-start-column="66" selection-end-line="109" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

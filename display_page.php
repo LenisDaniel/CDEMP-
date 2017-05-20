@@ -48,6 +48,7 @@ else{
 	$title_name = str_replace('_', ' ', $_GET['tpl']);
 	$script_name = $_GET['tpl'];
 
+
 }
 
 if(isset($_GET["cat"])){
@@ -60,6 +61,7 @@ if(isset($_GET["cat"])){
 		$link_active = $script_name;
 	}
 	else if($cat == 2){
+
 		$category = "Administrator";
 		$display_arrow = "";
 		$category_active = "administrator_active";
@@ -96,7 +98,9 @@ $objtemplate->set_content("category", $category);
 $objtemplate->set_content("display_arrow", $display_arrow);
 $objtemplate->set_content($category_active, "start active open");
 if(isset($link_active)){
+
 	$objtemplate->set_content($link_active, "active");
+
 }
 
 
@@ -123,6 +127,8 @@ $meta_tags = "<meta http-equiv='content-type' content='text/html; charset=UTF-8'
 $objtemplate->set_content("page_title", ucwords($title_name));
 $objtemplate->set_content("title_script", ucwords($title_name));
 $objtemplate->set_content("title_script_real", $script_name);
+
+
 
 
 $objtemplate->set_content("meta_tags","$meta_tags");
