@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c6731a6-fe35-4e1b-9c23-f44f8dbb85ed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/contact.inc.php" afterPath="$PROJECT_DIR$/includes/contact.inc.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -159,6 +159,7 @@
         <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/teacher_courses.tem.htm" />
         <option value="$PROJECT_DIR$/display_page.php" />
+        <option value="$PROJECT_DIR$/includes/contact.inc.php" />
       </list>
     </option>
   </component>
@@ -358,7 +359,7 @@
       <workItem from="1495236414768" duration="13377000" />
       <workItem from="1495250282340" duration="366000" />
       <workItem from="1495250747673" duration="695000" />
-      <workItem from="1495275066616" duration="1863000" />
+      <workItem from="1495275066616" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -374,11 +375,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495277000437</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sometido el código">
+      <created>1495277080669</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1495277080669</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26652000" />
+    <option name="totallyTimeSpent" value="26950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -466,7 +474,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se creo el view y la tabla para los asociar maestros a los cursos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se creo el view y la tabla para los asociar maestros a los cursos" />
+    <MESSAGE value="Sometido el código" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sometido el código" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -478,13 +487,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates_en/incidents.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -928,6 +930,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="69" lean-forward="true" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="e#6#11#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
