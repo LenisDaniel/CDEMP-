@@ -2,7 +2,6 @@
 session_start();
 
 require_once('class.mydbcon.inc.php');
-
 $objmydbcon = new classmydbcon;
 
 class classUsers{
@@ -77,7 +76,7 @@ class classUsers{
 	//En esta funcion obtenemos todos los usuarios con role de cliente para el manejo de los Administradores.
 	function get_all_clients($role){
 		global $objmydbcon;
-		global $objusers;
+
 		$i = 0;
 		$sqlquery = "SELECT u.idx, u.name, u.contact_email, u.tel1, mmt.mem_type_descr, u.active FROM users u 
 		INNER JOIN mast_member_type mmt ON mmt.idx = u.member
@@ -130,7 +129,7 @@ class classUsers{
 	function get_info($field){
 		global $objmydbcon;
 		global $objusers;
-		global $ex;	
+		global $ex;
 
 		if (isset($this->ex[$field])){	
 			
