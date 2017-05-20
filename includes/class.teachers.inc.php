@@ -62,6 +62,24 @@ class Teachers{
     function manage_teacher_info($id = 0, $first_name = "", $last_name = "", $second_surname = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0){
         global $objmydbcon;
 
+//        echo $id . "<br/>";
+//        echo $first_name . "<br/>";
+//        echo $last_name . "<br/>";
+//        echo $second_surname . "<br/>";
+//        echo $password . "<br/>";
+//        echo $email . "<br/>";
+//        echo $address1 . "<br/>";
+//        echo $address2 . "<br/>";
+//        echo $phone_1 . "<br/>";
+//        echo $phone_2 . "<br/>";
+//        echo $cities_dd . "<br/>";
+//        echo $states_dd . "<br/>";
+//        echo $zipcode . "<br/>";
+//        echo $active . "<br/>";
+//        echo $role_idx . "<br/>";
+//
+//        exit;
+
         if(!$active == "1"){
             $active = 0;
         }
@@ -87,12 +105,14 @@ class Teachers{
 
         }else{
 
-            $sqlinsert = "INSERT INTO master_users (first_name, last_name, second_surname, password, email, address1, address2, address2, phone_1, phone_2, zipcode, city, state, zipcode, active, role_idx) 
-			VALUES('$first_name', '$last_name', '$second_surname', '$password', '$email', '$address1', '$address2', '$phone_1', '$phone_2', '$cities_dd', '$states_dd', '$zipcode', '$active', '$role_idx')";
+
+
+            $sqlinsert = "INSERT INTO master_users (first_name, last_name, second_surname, password, email, address1, address2, phone_1, phone_2, zipcode, city, state, active, role_idx) 
+			              VALUES('$first_name', '$last_name', '$second_surname', '$password', '$email', '$address1', '$address2', '$phone_1', '$phone_2', '$zipcode', '$cities_dd', '$states_dd', '$active', '$role_idx')";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=manage_clients&cat=2&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=manage_teachers&cat=2&edit=" . base64_encode($last_id));
                 return true;
             }else{
                 return false;

@@ -63,9 +63,12 @@ $objteachers = new Teachers();
 
     if(isset($_GET['cid'])){
 
+//        print_r($_POST);
+//        exit;
+
         $id = base64_decode($_GET['cid']);
         $first_name = $_POST['first_name'];
-        $last_name = $_POST['$last_name'];
+        $last_name = $_POST['last_name'];
         $second_surname = $_POST['second_surname'];
         $password = $_POST['password'];
         $email = $_POST['email'];
@@ -73,11 +76,13 @@ $objteachers = new Teachers();
         $address2 = $_POST['address2'];
         $phone_1 = $_POST['phone_1'];
         $phone_2 = $_POST['phone_2'];
-        $cities_dd = $_POST['cities_dd'];
-        $states_dd = $_POST['states_dd'];
+        $cities_dd = $_POST['city'];
+        $states_dd = $_POST['state'];
         $zipcode = $_POST['zipcode'];
         $active = $_POST['active'];
         $role_idx = 3;
+
+
 
         $objteachers->manage_teacher_info($id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
 
