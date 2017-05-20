@@ -1,8 +1,5 @@
 <?php
-/* file name : display_page.php
-	programmed by :  Luis R. Martinez
-   date : 02.27.2003
-*/
+
 set_time_limit(0); // SET TIME OUT TO UNLIMITED (0)
 session_start();
 
@@ -45,6 +42,7 @@ if (!isset($_GET["tpl"])){
 	$_GET['tpl'] = 'main';
 } // if isset
 else{
+
 	$title_name = str_replace('_', ' ', $_GET['tpl']);
 	$script_name = $_GET['tpl'];
 
@@ -92,25 +90,21 @@ if(isset($_GET["cat"])){
 	$category_active = "incidents_active";
 }
 
-
-
 $objtemplate->set_content("category", $category);
 $objtemplate->set_content("display_arrow", $display_arrow);
 $objtemplate->set_content($category_active, "start active open");
+
 if(isset($link_active)){
 
 	$objtemplate->set_content($link_active, "active");
 
 }
 
-
-
 $tpl = sanitize($_GET['tpl']);
 $objtemplate->set_content("tpl",$tpl);
 $content = $objtemplate->open("templates_$lang/".$tpl.".tem.htm");
 
-
-if (file_exists("includes/" . $tpl . ".inc.php")){
+if(file_exists("includes/" . $tpl . ".inc.php")){
 	include("includes/" . $tpl . ".inc.php");
 } // if
 $main_tpl = "";
