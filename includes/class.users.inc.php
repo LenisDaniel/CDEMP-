@@ -153,7 +153,7 @@ class Users{
     }
 
 
-    function get_cities($teacher_city = 0){
+    function get_cities($user_city = 0){
         global $objmydbcon;
         $cities_dd = "";
 
@@ -170,7 +170,7 @@ class Users{
                 $val = $rs['city_id'];
                 $disp = $rs['name'];
 
-                if($teacher_city == $val){
+                if($user_city == $val){
 
                     $sel_option = "selected";
 
@@ -193,7 +193,7 @@ class Users{
 
     }
 
-    function get_state($teacher_state = 0){
+    function get_state($user_state = 0){
         global $objmydbcon;
         $states_dd = "";
 
@@ -205,7 +205,7 @@ class Users{
                 $val = $rs['state_idx'];
                 $disp = $rs['state_descr'];
 
-                if($teacher_state == $val){
+                if($user_state == $val){
                     $sel_option = "selected";
                 }else{
                     $sel_option = "";
@@ -216,6 +216,31 @@ class Users{
             return 0;
         }
         return $states_dd;
+    }
+
+    function get_zipcodes($user_zipcode = ""){
+        global $objmydbcon;
+        $zipcodes_dd = "";
+
+        $sqlquery = "SELECT * FROM master_zipcode ORDER BY zip ASC";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['zip_id'];
+                $disp = $rs['zip'];
+
+                if($user_zipcode == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $zipcodes_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $zipcodes_dd;
     }
 
 }

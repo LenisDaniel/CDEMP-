@@ -26,7 +26,7 @@ $objteachers = new Teachers();
         $objtemplate->set_content("states_dd", $objteachers->get_state($objteachers->get_user_info('state')));
         $objtemplate->set_content("phone_1", $objteachers->get_user_info('phone_1'));
         $objtemplate->set_content("phone_2", $objteachers->get_user_info('phone_2'));
-        $objtemplate->set_content("zipcode", $objteachers->get_user_info('zipcode'));
+        $objtemplate->set_content("zipcodes_dd", $objteachers->get_zipcodes($objteachers->get_user_info('zipcode')));
 
         if($objteachers->get_user_info('active') == 1){
             $objtemplate->set_content("option1", "checked");
@@ -39,8 +39,10 @@ $objteachers = new Teachers();
         $objtemplate->set_content("form_action", "display_page.php?tpl=manage_teachers&cid=".base64_encode(0));
         $objtemplate->set_content("cities_dd", $objteachers->get_cities(0));
         $objtemplate->set_content("states_dd", $objteachers->get_state(0));
+        $objtemplate->set_content("zipcodes_dd", $objteachers->get_zipcodes(0));
         $objtemplate->set_content("form_title", "Create New Teacher");
         $objtemplate->set_content("send_button", "Submit");
+        $objtemplate->set_content("option1", "checked");
 
     }
 
@@ -79,7 +81,7 @@ $objteachers = new Teachers();
         $active = $_POST['active'];
         $role_idx = 3;
 
-        $objteachers->manage_user_info('manage_teachers', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
+        //$objteachers->manage_user_info('manage_teachers', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
 
     }
 

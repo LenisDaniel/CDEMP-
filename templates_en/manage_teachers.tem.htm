@@ -16,7 +16,7 @@
 	</div>
 	<div class="portlet-body form">
 		<!-- BEGIN FORM-->
-		<form action="{form_action}" method="POST" class="form-horizontal">
+		<form id="teachers_form" action="{form_action}" method="POST" class="form-horizontal">
 			<div class="form-body">
 				<h3 class="form-section">Teacher Info</h3>
 				<div class="row">
@@ -24,174 +24,177 @@
 						<div class="form-group">
 							<label class="control-label col-md-3">First Name:</label>
 							<div class="col-md-9">
-								<input type="text" name="first_name" id="first_name" class="form-control" placeholder="" value="{first_name}">
-								
-							</div>
-						</div>
-						</div>
-						<!--/span-->
-						<div class="col-md-6">
-							<div class="form-group">
-							<label class="control-label col-md-3">Last Name:</label>
-								<div class="col-md-9">
-									<input type="text" name="last_name" id="last_name" class="form-control" placeholder="" value="{last_name}">
+								<input type="text" name="first_name" id="first_name" class="form-control" placeholder="" value="{first_name}" required>
 
-								</div>
 							</div>
-						</div>
-							<!--/span-->
-						</div>
-						<!--/row-->
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="control-label col-md-3">Last Surname:</label>
-									<div class="col-md-9">
-										<input type="text" name="second_surname" id="second_surname" class="form-control" placeholder="" value="{second_surname}">
-
-									</div>
-								</div>
-								</div>
-								<!--/span-->
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-3">Email:</label>
-										<div class="col-md-9">
-											<input type="email" name="email" id="email" class="form-control" placeholder="" value="{email}">
-										</div>
-									</div>
-								</div>
-								<!--/span-->
-							</div>
-							<!--/row-->
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-3">Password:</label>
-										<div class="col-md-9">
-											<input type="text" name="password" id="password" class="form-control" placeholder="" value="{password}">
-										</div>
-									</div>
-								</div>
-								<!--/span-->
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-3">Active?:</label>
-										<div class="col-md-9">
-											<div class="radio-list">
-												<label class="radio-inline">
-													<input type="radio" name="active" value="1" {option1}/>
-													Yes
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="active" value="2" {option2}/>
-                                                    No
-                                                </label>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!--/span-->
-									</div>
-									<h3 class="form-section">Contact Info</h3>
-									<!--/row-->
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="control-label col-md-3">Address 1:</label>
-												<div class="col-md-9">
-													<input type="text" name="address1" id="address1" class="form-control" value="{address1}">
-												</div>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="control-label col-md-3">Address 2:</label>
-												<div class="col-md-9">
-													<input type="text" name="address2" id="address2" class="form-control" value="{address2}">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="control-label col-md-3">City:</label>
-												<div class="col-md-9">
-													<select class="form-control" name="city" id="city">
-														<option>--Select One--</option>
-                                                        {cities_dd}
-													</select>
-												</div>
-											</div>
-										</div>
-										<!--/span-->
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="control-label col-md-3">State:</label>
-												<div class="col-md-9">
-													<select class="form-control" name="state" id="state">
-														<option value="-1">--Select One--</option>
-                                                        {states_dd}
-													</select>
-												</div>
-											</div>
-										</div>
-										<!--/span-->
-									</div>
-									<!--/row-->
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="control-label col-md-3">Phone 1:</label>
-												<div class="col-md-9">
-													<input type="text" name="phone_1" id="phone_1" class="form-control" value="{phone_1}">
-												</div>
-											</div>
-										</div>
-										<!--/span-->
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="control-label col-md-3">Phone 2:</label>
-												<div class="col-md-9">
-													<input type="text" name="phone_2" id="phone_2" class="form-control" value="{phone_2}">
-												</div>
-											</div>
-										</div>
-										<!--/span-->
-									</div>
-									<!--/row-->
-									<!--/row-->
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="control-label col-md-3">Zipcode:</label>
-												<div class="col-md-9">
-													<input type="text" name="zipcode" id="zipcode" class="form-control" value="{zipcode}">
-												</div>
-											</div>
-										</div>										
-									</div>
-									<!--/row-->
-								</div>
-								<div class="form-actions">
-									<div class="row">
-										<div class="col-md-6">
-											<div class="row">
-												<div class="col-md-offset-3 col-md-9">
-													<button type="submit" class="btn green">{send_button}</button>
-													<button type="button" class="btn default">Cancel</button>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-6">
-										</div>
-									</div>
-								</div>
-							</form>
-							<!-- END FORM-->
 						</div>
 					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Last Name:</label>
+							<div class="col-md-9">
+								<input type="text" name="last_name" id="last_name" class="form-control" value="{last_name}" required>
+
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Last Surname:</label>
+							<div class="col-md-9">
+								<input type="text" name="second_surname" id="second_surname" class="form-control" placeholder="" value="{second_surname}">
+
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Email:</label>
+							<div class="col-md-9">
+								<input type="email" name="email" id="email" class="form-control" placeholder="" value="{email}" required>
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Password:</label>
+							<div class="col-md-9">
+								<input type="text" name="password" id="password" class="form-control" placeholder="" value="{password}" required>
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Active?:</label>
+							<div class="col-md-9">
+								<div class="radio-list">
+									<label class="radio-inline">
+										<input type="radio" name="active" value="1" {option1}/>
+										Yes
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="active" value="2" {option2}/>
+										No
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<h3 class="form-section">Contact Info</h3>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Address 1:</label>
+							<div class="col-md-9">
+								<input type="text" name="address1" id="address1" class="form-control" value="{address1}" required>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Address 2:</label>
+							<div class="col-md-9">
+								<input type="text" name="address2" id="address2" class="form-control" value="{address2}">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">City:</label>
+							<div class="col-md-9">
+								<select class="form-control" name="city" id="city" required>
+									<option value="-1">--Select One--</option>
+									{cities_dd}
+								</select>
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">State:</label>
+							<div class="col-md-9">
+								<select class="form-control" name="state" id="state" required>
+									<option value="-1">--Select One--</option>
+									{states_dd}
+								</select>
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Phone 1:</label>
+							<div class="col-md-9">
+								<input type="text" name="phone_1" id="phone_1" class="form-control phone_mask" value="{phone_1}" required>
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Phone 2:</label>
+							<div class="col-md-9">
+								<input type="text" name="phone_2" id="phone_2" class="form-control phone_mask" value="{phone_2}">
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label col-md-3">Zipcode:</label>
+							<div class="col-md-9">
+								<select class="form-control" name="zipcode" id="zipcode" required>
+									<option value="-1">--Select City First--</option>
+									{zipcodes_dd}
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/row-->
+			</div>
+			<div class="form-actions">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-offset-3 col-md-9">
+								<button type="submit" class="btn green">{send_button}</button>
+								<button type="button" class="btn default">Cancel</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>
 
 
 
@@ -199,93 +202,146 @@
 
 
 <div class="row">
-				<div class="col-md-12">
-					<!-- BEGIN EXAMPLE TABLE PORTLET-->
-					<div class="portlet box red">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-globe"></i>Teachers List
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="table-toolbar">
-								<div class="row">
-									<div class="col-md-6">
-										<!-- <div class="btn-group">
-											<button id="sample_editable_1_new" class="btn green">
-											Add New <i class="fa fa-plus"></i>
-											</button>
-										</div> -->
-									</div>
-									<div class="col-md-6">
-										<div class="btn-group pull-right">
-										<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-										</button>
-										<ul class="dropdown-menu pull-right">
-											<li>
-												<a href="#">
-												Print </a>
-											</li>
-											<li>
-												<a href="#">
-												Save as PDF </a>
-											</li>
-											<li>
-												<a href="#">
-												Export to Excel </a>
-											</li>
-										</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-							<tr>
-                                <th>
-                                    ID
-                                </th>
-								<th>
-									 Teacher Name
-								</th>
-								<th>
-									 Email
-								</th>
-								<th>
-									 Phone
-								</th>
-								<th>
-									 City
-								</th>
-								<th>
-									 Status
-								</th>
-								<th>
-									 Joined
-								</th>
-							</tr>
-							</thead>
-							<tbody>
-
-                            {teachers_td}
-
-							</tbody>
-							</table>
-						</div>
-					</div>
-					<!-- END EXAMPLE TABLE PORTLET-->
+	<div class="col-md-12">
+		<!-- BEGIN EXAMPLE TABLE PORTLET-->
+		<div class="portlet box red">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-globe"></i>Teachers List
+				</div>
+				<div class="tools">
+					<a href="javascript:;" class="collapse">
+					</a>
+					<a href="#portlet-config" data-toggle="modal" class="config">
+					</a>
+					<a href="javascript:;" class="reload">
+					</a>
+					<a href="javascript:;" class="remove">
+					</a>
 				</div>
 			</div>
+			<div class="portlet-body">
+				<div class="table-toolbar">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- <div class="btn-group">
+                                <button id="sample_editable_1_new" class="btn green">
+                                Add New <i class="fa fa-plus"></i>
+                                </button>
+                            </div> -->
+						</div>
+						<div class="col-md-6">
+							<div class="btn-group pull-right">
+								<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+								</button>
+								<ul class="dropdown-menu pull-right">
+									<li>
+										<a href="#">
+											Print </a>
+									</li>
+									<li>
+										<a href="#">
+											Save as PDF </a>
+									</li>
+									<li>
+										<a href="#">
+											Export to Excel </a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<table class="table table-striped table-bordered table-hover" id="sample_1">
+					<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							Teacher Name
+						</th>
+						<th>
+							Email
+						</th>
+						<th>
+							Phone
+						</th>
+						<th>
+							City
+						</th>
+						<th>
+							Status
+						</th>
+						<th>
+							Joined
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+
+					{teachers_td}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- END EXAMPLE TABLE PORTLET-->
+	</div>
+
+	<script>
+
+        $(document).ready(function(){
+
+            $('.phone_mask').mask('000-000-0000');
+
+
+			$('#teachers_form').submit(function(){
+
+			    if($('#city').val() === '-1'){
+			        alert('Please select one city!');
+			        return false;
+				}
+
+                if($('#state').val() === '-1'){
+                    alert('Please select one State!');
+                    return false;
+                }
+
+                if($('#zipcode').val() === '-1'){
+                    alert('Please select one Zipcode!');
+                    return false;
+                }
+
+			});
+
+			$('#city').change(function(){
+
+			    var city_id = $('#city').val();
+
+                $.ajax({
+
+                    url: 'includes/ajax.filter_zipcodes.php',
+                    method: 'POST',
+                    data: {'city_id': city_id},
+
+                    success:  function (response) {
+
+                        $('#zipcode').html(response);
+
+                    }
+
+                });
+
+            });
+
+        });
+
+	</script>
+
+
+</div>
+
 
 
 
