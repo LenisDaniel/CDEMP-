@@ -230,7 +230,7 @@ class Users{
                 $val = $rs['zip_id'];
                 $disp = $rs['zip'];
 
-                if($user_zipcode == $val){
+                if($user_zipcode == $disp){
                     $sel_option = "selected";
                 }else{
                     $sel_option = "";

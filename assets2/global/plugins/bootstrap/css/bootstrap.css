@@ -2384,6 +2384,14 @@ output {
 .form-control::-webkit-input-placeholder {
   color: #777;
 }
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
+
+
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {

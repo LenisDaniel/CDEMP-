@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ALL);
 set_time_limit(0); // SET TIME OUT TO UNLIMITED (0)
 session_start();
 
