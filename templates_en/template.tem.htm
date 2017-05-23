@@ -14,7 +14,7 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
 <link href="assets2/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="assets2/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-<link href="assets2/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets2/global/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="assets2/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 <link href="assets2/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
 <!-- END GLOBAL MANDATORY STYLES -->
@@ -45,6 +45,12 @@
 <link href="assets2/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
 <link href="assets2/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 <link href="assets2/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+
+	<!--initialize jquery-->
+	<script src="assets2/global/plugins/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="assets2/global/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="assets2/global/plugins/jquery.mask.min.js" type="text/javascript"></script>
+
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>
@@ -67,7 +73,7 @@
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="display_page.php?tpl=incidents">
-			<img src="assets2/admin/layout/img/logo.png" style="margin-top: 2px" alt="logo" class="logo-default"/>
+			<img src="assets2/admin/layout/img/logo.png" style="margin-top: -1px" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -356,21 +362,22 @@
 							<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
 							Manage Tecnicians</a>
 						</li>
-						<!--<li class="{manage_problems}">-->
-							<!--<a href="display_page.php?tpl=manage_problems&cat=2">-->
+						<li class="{assign_courses}">
+							<a href="display_page.php?tpl=assign_courses&cat=2">
+							<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+							Assign Courses</a>
+						</li>
+						<!--<li class="{manage_messages}">-->
+							<!--<a href="display_page.php?tpl=manage_messages&cat=2">-->
 							<!--<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>-->
-							<!--Manage Problems</a>-->
+							<!--Manage Messages</a>-->
 						<!--</li>-->
-						<li class="{manage_messages}">
-							<a href="display_page.php?tpl=manage_messages&cat=2">
-							<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-							Manage Messages</a>
-						</li>
-						<li class="{reports}">
-							<a href="display_page.php?tpl=reports&cat=2">
-							<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-							Reports</a>
-						</li>
+						<!--<li class="{reports}">-->
+							<!--<a href="display_page.php?tpl=reports&cat=2">-->
+							<!--<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>-->
+							<!--Reports</a>-->
+						<!--</li>-->
+
 					</ul>
 				</li>
 				<li class="{tecnicians_active}" {tecnicians_visible}>
@@ -573,14 +580,11 @@
 				</div> -->
 			</div>
 			<!-- END PAGE HEADER-->
-
-
-
-
 			{content}
+        </div>
+    </div>
 
-
-
+</div>
 
 	<!-- BEGIN QUICK SIDEBAR -->
 	<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
@@ -1251,6 +1255,7 @@
 		</span>
 	</div>
 </div>
+
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
@@ -1258,8 +1263,7 @@
 <script src="assets2/global/plugins/respond.min.js"></script>
 <script src="assets2/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
-<script src="assets2/global/plugins/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="assets2/global/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
 <!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 <script src="assets2/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
 <script src="assets2/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -1321,6 +1325,7 @@
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <script>
+
 jQuery(document).ready(function() {    
    Metronic.init(); // init metronic core componets
    Layout.init(); // init layout
@@ -1344,7 +1349,9 @@ jQuery(document).ready(function() {
    
 
 });
+
 </script>
+
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" serverName="CDEMP HOSTGATOR">
     <serverData>
       <paths name="Accion Social">
         <serverdata>
@@ -16,7 +16,28 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="CDEMP HOSTGATOR">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/CDEMP-" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="GHK Helpdesk">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Lenis Web Server">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Okie Dokie">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

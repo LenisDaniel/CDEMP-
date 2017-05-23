@@ -1,8 +1,8 @@
 <?php
-//error_reporting(0);
+error_reporting(E_ERROR);
 
 require_once("includes/class.users.inc.php");
-$objusers = new classUsers;
+$objusers = new Users;
 
 if(isset($_GET['id'])){
 	if(isset($_GET['active'])){
