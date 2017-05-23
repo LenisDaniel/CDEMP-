@@ -1,4 +1,4 @@
-require = 'template.inc.php';
+<link href="contact.inc.php"type="text/php">
 <div class="row">
 	<div class="col-md-12">
 		<script>
@@ -9,7 +9,7 @@ require = 'template.inc.php';
 
 				map = new google.maps.Map(document.getElementById('map'), {
 					center: {lat: 18.356531, lng: -66.012556},
-					zoom: 17
+					zoom: 8
 				});
 
 				var marker = new google.maps.Marker({
@@ -28,8 +28,7 @@ require = 'template.inc.php';
 			<div class="col-md-6">
 				<div class="space20">
 				</div>
-				<h3 class="form-section">{Heading Title}</h3>
-				<p>
+				<h3 class="form-section">Contact us</h3>
 					Please let us know about your experience with CDEMP.
 				</p>
 				<div class="well">
@@ -72,35 +71,40 @@ require = 'template.inc.php';
 						<div class="space20">
 						</div>
 						<!-- BEGIN FORM-->
-						<form action="#">
+                        <?php include('contact.inc.php'); ?>
+                        <form id="contact" action = "<?=$_SERVER['PHP_SELF'];?>" method = $_POST>
+                            <ul>
 							<h3 class="form-section">Please leave your Feedback</h3>
-                            <form method = $_GET>
 							<p>
 								Please give us a feedback.
 							</p>
 							<div class="form-group">
 								<div class="input-icon">
 									<i class="fa fa-check"></i>
-									<input type="text" class="form-control" placeholder="Subject">
+									<input name= "Subject" type="text" class="form-control" placeholder="Subject" value="" autofocus>
+                                    <span class="error"><?=$subject_error?></span>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="input-icon">
 									<i class="fa fa-user"></i>
-									<input type="text" class="form-control" placeholder="Name">
+									<input name = "Name" type="text" class="form-control" placeholder="Name" value="">
+                                    <span class="error"><?=$name_error?></span>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="input-icon">
 									<i class="fa fa-envelope"></i>
-									<input type="password" class="form-control" placeholder="Email">
+									<input name = "Email" type="text" class="form-control" placeholder="Email" value="">
+                                    <span class="error"><?=$email_error?></span>
 								</div>
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" rows="3=6" placeholder="Feedback"></textarea>
+								<textarea name = "Feedback" class="form-control" rows="3=6" placeholder="Type your message here...."></textarea>
 							</div>
 							<button type="submit" class="btn green">Submit</button>
 						</form>
+                            </ul>
 						<!-- END FORM-->
 					</div>
 				</div>

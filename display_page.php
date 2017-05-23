@@ -94,7 +94,8 @@ if(isset($_GET["cat"])){
 
 $objtemplate->set_content("category", $category);
 $objtemplate->set_content("display_arrow", $display_arrow);
-$objtemplate->set_content($category_active, "start active open");
+    /** @var TYPE_NAME $objtemplate */
+    $objtemplate->set_content($category_active, "start active open");
 if(isset($link_active)){
 	$objtemplate->set_content($link_active, "active");
 }
