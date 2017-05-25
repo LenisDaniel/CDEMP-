@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 set_time_limit(0); // SET TIME OUT TO UNLIMITED (0)
 session_start();
 
@@ -92,13 +92,13 @@ if(isset($_GET["cat"])){
 
 $objtemplate->set_content("category", $category);
 $objtemplate->set_content("display_arrow", $display_arrow);
-<<<<<<< HEAD
+
     /** @var TYPE_NAME $objtemplate */
     $objtemplate->set_content($category_active, "start active open");
-=======
+
 $objtemplate->set_content($category_active, "start active open");
 
->>>>>>> origin/development
+
 if(isset($link_active)){
 
 	$objtemplate->set_content($link_active, "active");
