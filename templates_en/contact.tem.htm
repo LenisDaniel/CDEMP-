@@ -1,4 +1,3 @@
-<link href="contact.inc.php"type="text/php">
 <div class="row">
 	<div class="col-md-12">
 		<script>
@@ -21,8 +20,7 @@
             }
 		</script>
 		<div class="row">
-			<div id="map" class="gmaps margin-bottom-40" style="height:400px;">
-			</div>
+			<div id="map" class="gmaps margin-bottom-40" style="height:400px;"></div>
 		</div>
 		<div class="row margin-bottom-20">
 			<div class="col-md-6">
@@ -39,30 +37,25 @@
 						San Lorenzo, PR 00754<br>
 						<address> <abbr title="Phone">Phone:</abbr> (787)903-2176 </address>
 
-						<strong>Email</strong><br>
-						<a href="mailto:#">
-							info@cdemp-pr.com </a>
+						<strong>Email</strong>
+						<br>
+						<a href="mailto:#">info@cdemp-pr.com</a>
 					</address>
 					<ul class="social-icons margin-bottom-10">
 						<li>
-							<a href="#" data-original-title="facebook" class="facebook">
-							</a>
+							<a href="#" data-original-title="facebook" class="facebook"></a>
 						</li>
 						<li>
-							<a href="#" data-original-title="linkedin" class="linkedin">
-							</a>
+							<a href="#" data-original-title="linkedin" class="linkedin"></a>
 						</li>
 						<li>
-							<a href="#" data-original-title="twitter" class="twitter">
-							</a>
+							<a href="#" data-original-title="twitter" class="twitter"></a>
 						</li>
 						<li>
-							<a href="#" data-original-title="youtube" class="youtube">
-							</a>
+							<a href="#" data-original-title="youtube" class="youtube"></a>
 						</li>
 						<li>
-							<a href="#" data-original-title="instagram" class="instagram">
-							</a>
+							<a href="#" data-original-title="instagram" class="instagram"></a>
 						</li>
 					</ul>
 				</div>
@@ -74,35 +67,32 @@
 
 				<form id="contact" action="includes/contact.inc.php" method="POST">
 
-						<h3 class="form-section">Please leave your Feedback</h3>
-						<p>
-							Please give us a feedback.
-						</p>
-						<div class="form-group">
-							<div class="input-icon">
-								<i class="fa fa-check"></i>
-								<input name= "subject" type="text" class="form-control" placeholder="Subject" value="" autofocus>
-								<span class="error"><?=$subject_error?></span>
-							</div>
+					<h3 class="form-section">Please leave your Feedback</h3>
+					<p>
+						Please give us a feedback.
+					</p>
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="fa fa-check"></i>
+							<input type="text" name="subject" class="form-control" placeholder="Subject" autofocus>
 						</div>
-						<div class="form-group">
-							<div class="input-icon">
-								<i class="fa fa-user"></i>
-								<input name = "name" type="text" class="form-control" placeholder="Name" value="">
-								<span class="error"><?=$name_error?></span>
-							</div>
+					</div>
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="fa fa-user"></i>
+							<input type="text" name="name" class="form-control" placeholder="Name">
 						</div>
-						<div class="form-group">
-							<div class="input-icon">
-								<i class="fa fa-envelope"></i>
-								<input name = "email" type="text" class="form-control" placeholder="Email" value="">
-								<span class="error"><?=$email_error?></span>
-							</div>
+					</div>
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="fa fa-envelope"></i>
+							<input type="text" name="email" class="form-control" placeholder="Email">
 						</div>
-						<div class="form-group">
-							<textarea name = "feedback" class="form-control" rows="3=6" placeholder="Type your message here...."></textarea>
-						</div>
-						<button type="submit" class="btn green">Submit</button>
+					</div>
+					<div class="form-group">
+						<textarea name="message" class="form-control" rows="5" placeholder="Type your message here...."></textarea>
+					</div>
+					<button type="submit" class="btn green">Submit</button>
 				</form>
 
 				<!-- END FORM-->
@@ -111,5 +101,4 @@
 	</div>
 </div>
 <!-- END PAGE CONTENT-->
-</div>
-</div>
+
