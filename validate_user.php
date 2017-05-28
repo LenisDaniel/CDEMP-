@@ -99,7 +99,7 @@ function get_user($email,$pwd){
                 
           mysqli_free_result($result);    
           $_SESSION['loged_user'] = $loged_user; 
-          header('location:display_page.php?tpl=incidents');
+          header('location:display_page.php?tpl=events');
           exit();
     }else{                
         return 0;

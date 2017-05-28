@@ -87,7 +87,7 @@ if(isset($_GET["cat"])){
 }else{
 	$category = "";
 	$display_arrow = "style='display: none'";
-	$category_active = "incidents_active";
+	$category_active = "events_active";
 }
 
 $objtemplate->set_content("category", $category);
