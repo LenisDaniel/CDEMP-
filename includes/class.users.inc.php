@@ -59,7 +59,7 @@ class Users{
 
     }
 
-    function manage_user_info($tpl_uri = 0, $id = 0, $first_name = "", $last_name = "", $second_surname = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0){
+    function manage_user_info($tpl_uri = 0, $id = 0, $first_name = "", $last_name = "", $second_surname = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0, $parent_1 = "", $parent_2 = "", $phone_1_carrier = "", $phone_2_carrier = ""){
         global $objmydbcon;
 
 //        echo $id . "<br/>";
@@ -90,8 +90,11 @@ class Users{
         if($id > 0){
 
             $sqlupdate = "UPDATE master_users SET first_name = '$first_name', last_name = '$last_name', second_surname = '$second_surname', password = '$password', email = '$email',
-			address1 = '$address1', address2 = '$address2', phone_1 = '$phone_1', phone_2 = '$phone_2', city = '$cities_dd', state = '$states_dd', zipcode = '$zipcode', active = '$active', role_idx = '$role_idx'
+			address1 = '$address1', address2 = '$address2', phone_1 = '$phone_1', phone_2 = '$phone_2', city = '$cities_dd', state = '$states_dd', zipcode = '$zipcode', active = '$active', role_idx = '$role_idx',
+			parent_1 = '$parent_1', parent_2 = '$parent_2', phone_1_carrier = '$phone_1_carrier', phone_2_carrier = '$phone_2_carrier'
 			WHERE idx = $id";
+
+
 
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($id));
@@ -102,8 +105,8 @@ class Users{
 
         }else{
 
-            $sqlinsert = "INSERT INTO master_users (first_name, last_name, second_surname, password, email, address1, address2, phone_1, phone_2, zipcode, city, state, active, role_idx) 
-			              VALUES('$first_name', '$last_name', '$second_surname', '$password', '$email', '$address1', '$address2', '$phone_1', '$phone_2', '$zipcode', '$cities_dd', '$states_dd', '$active', '$role_idx')";
+            $sqlinsert = "INSERT INTO master_users (first_name, last_name, second_surname, password, email, address1, address2, phone_1, phone_2, zipcode, city, state, active, role_idx, parent_1, parent_2, phone_1_carrier, phone_2_carrier) 
+			              VALUES('$first_name', '$last_name', '$second_surname', '$password', '$email', '$address1', '$address2', '$phone_1', '$phone_2', '$zipcode', '$cities_dd', '$states_dd', '$active', '$role_idx', '$parent_1', '$parent_2', '$phone_1_carrier', '$phone_2_carrier')";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
@@ -152,7 +155,6 @@ class Users{
 
     }
 
-
     function get_cities($user_city = 0){
         global $objmydbcon;
         $cities_dd = "";
@@ -160,9 +162,7 @@ class Users{
         $sqlquery = "SELECT * FROM master_cities";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
-
             return false;
-
         }else if(mysqli_num_rows($results)>0){
 
             while($rs = mysqli_fetch_assoc($results)){
@@ -179,18 +179,13 @@ class Users{
                     $sel_option = "";
 
                 }
-
                 $cities_dd .= "<option value='$val' $sel_option>" . $disp . "</option>";
             }
-
         }else{
-
             return 0;
-
         }
 
         return $cities_dd;
-
     }
 
     function get_state($user_state = 0){
@@ -230,7 +225,7 @@ class Users{
                 $val = $rs['zip_id'];
                 $disp = $rs['zip'];
 
-                if($user_zipcode == $disp){
+                if($user_zipcode == $val){
                     $sel_option = "selected";
                 }else{
                     $sel_option = "";
@@ -241,6 +236,31 @@ class Users{
             return 0;
         }
         return $zipcodes_dd;
+    }
+
+    function get_carriers($user_carrier = ""){
+        global $objmydbcon;
+        $carriers_dd = "";
+
+        $sqlquery = "SELECT * FROM mast_carriers";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['idx'];
+                $disp = $rs['carrier_descr'];
+
+                if($user_carrier == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $carriers_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $carriers_dd;
     }
 
 }

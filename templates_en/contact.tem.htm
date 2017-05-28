@@ -4,20 +4,21 @@
             var map;
 
             function initMap() {
-                var latLng = new google.maps.LatLng(18.356531, -66.012556);
+                var latLng = new google.maps.LatLng(18.356950, -66.012527);
 
                 map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 18.356531, lng: -66.012556},
+                    center: {lat: 18.356950, lng: -66.012527},
                     zoom: 8
                 });
 
                 var marker = new google.maps.Marker({
                     position: latLng,
-                    title:"Hello World!",
+                    title:"CDEMP Directions",
                     visible: true
                 });
                 marker.setMap(map);
             }
+
 		</script>
 		<div class="row">
 			<div id="map" class="gmaps margin-bottom-40" style="height:400px;"></div>
@@ -32,10 +33,11 @@
 				<div class="well">
 					<h4>Address</h4>
 					<address>
-						<strong>CDEMP, Inc.</strong><br>
-						Jard. de Cerro Gordo calle 4<br>
-						San Lorenzo, PR 00754<br>
-						<address> <abbr title="Phone">Phone:</abbr> (787)903-2176 </address>
+						<strong>CDEMP</strong>
+						<br>
+						Calle Girasol A42 Villa Margarita<br>
+						Trujillo Alto, PR 00977<br>
+						<address>Phone: (787)516-9494 </address>
 
 						<strong>Email</strong>
 						<br>
@@ -73,12 +75,6 @@
 					</p>
 					<div class="form-group">
 						<div class="input-icon">
-							<i class="fa fa-check"></i>
-							<input type="text" name="subject" class="form-control" placeholder="Subject" autofocus>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="input-icon">
 							<i class="fa fa-user"></i>
 							<input type="text" name="name" class="form-control" placeholder="Name">
 						</div>
@@ -90,11 +86,16 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<div class="input-icon">
+							<i class="fa fa-check"></i>
+							<input type="text" name="subject" class="form-control" placeholder="Subject" autofocus>
+						</div>
+					</div>
+					<div class="form-group">
 						<textarea name="message" class="form-control" rows="5" placeholder="Type your message here...."></textarea>
 					</div>
 					<button type="submit" class="btn green">Submit</button>
 				</form>
-
 				<!-- END FORM-->
 			</div>
 		</div>

@@ -32,7 +32,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
     $mail->SMTPSecure = 'ssl';
 
 
-    $mail->setFrom('lenis.daniel@gmail.com', 'Cdemp Personal');
+    $mail->setFrom('info@cdemp-pr.com', 'Cdemp Personal');
 
     $mail->addAddress($email);
 
