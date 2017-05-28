@@ -1,121 +1,105 @@
 <div class="row">
 	<div class="col-md-12">
 		<script>
-			var map;
+            var map;
 
-			function initMap() {
-				var latLng = new google.maps.LatLng(18.356531, -66.012556);
+            function initMap() {
+                var latLng = new google.maps.LatLng(18.356950, -66.012527);
 
-				map = new google.maps.Map(document.getElementById('map'), {
-					center: {lat: 18.356531, lng: -66.012556},
-					zoom: 17
-				});
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 18.356950, lng: -66.012527},
+                    zoom: 8
+                });
 
-				var marker = new google.maps.Marker({
-					position: latLng,
-					title:"Hello World!",
-					visible: true
-				});
-				marker.setMap(map);
-			}
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    title:"CDEMP Directions",
+                    visible: true
+                });
+                marker.setMap(map);
+            }
+
 		</script>
 		<div class="row">
-			<div id="map" class="gmaps margin-bottom-40" style="height:400px;">
-			</div>
+			<div id="map" class="gmaps margin-bottom-40" style="height:400px;"></div>
 		</div>
 		<div class="row margin-bottom-20">
 			<div class="col-md-6">
 				<div class="space20">
 				</div>
-				<h3 class="form-section">Contacts</h3>
-				<p>
-					Lorem ipsum dolor sit amet, Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat consectetuer adipiscing elit.
-				</p>
+				<h3 class="form-section">Contact us</h3>
+				Please let us know about your experience with CDEMP.
+
 				<div class="well">
 					<h4>Address</h4>
 					<address>
-						<strong>Loop, Inc.</strong><br>
-						795 Park Ave, Suite 120<br>
-						San Francisco, CA 94107<br>
-						<abbr title="Phone">P:</abbr> (234) 145-1810 </address>
-						<address>
-							<strong>Email</strong><br>
-							<a href="mailto:#">
-								first.last@email.com </a>
-							</address>
-							<ul class="social-icons margin-bottom-10">
-								<li>
-									<a href="#" data-original-title="facebook" class="facebook">
-									</a>
-								</li>
-								<li>
-									<a href="#" data-original-title="github" class="github">
-									</a>
-								</li>
-								<li>
-									<a href="#" data-original-title="Goole Plus" class="googleplus">
-									</a>
-								</li>
-								<li>
-									<a href="#" data-original-title="linkedin" class="linkedin">
-									</a>
-								</li>
-								<li>
-									<a href="#" data-original-title="rss" class="rss">
-									</a>
-								</li>
-								<li>
-									<a href="#" data-original-title="skype" class="skype">
-									</a>
-								</li>
-								<li>
-									<a href="#" data-original-title="twitter" class="twitter">
-									</a>
-								</li>
-								<li>
-									<a href="#" data-original-title="youtube" class="youtube">
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="space20">
-						</div>
-						<!-- BEGIN FORM-->
-						<form action="#">
-							<h3 class="form-section">Feedback</h3>
-							<p>
-								Lorem ipsum dolor sit amet, Ut wisi enim ad minim veniam, quis nostrud exerci. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat consectetuer
-							</p>
-							<div class="form-group">
-								<div class="input-icon">
-									<i class="fa fa-check"></i>
-									<input type="text" class="form-control" placeholder="Subject">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="input-icon">
-									<i class="fa fa-user"></i>
-									<input type="text" class="form-control" placeholder="Name">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="input-icon">
-									<i class="fa fa-envelope"></i>
-									<input type="password" class="form-control" placeholder="Email">
-								</div>
-							</div>
-							<div class="form-group">
-								<textarea class="form-control" rows="3=6" placeholder="Feedback"></textarea>
-							</div>
-							<button type="submit" class="btn green">Submit</button>
-						</form>
-						<!-- END FORM-->
-					</div>
+						<strong>CDEMP</strong>
+						<br>
+						Calle Girasol A42 Villa Margarita<br>
+						Trujillo Alto, PR 00977<br>
+						<address>Phone: (787)516-9494 </address>
+
+						<strong>Email</strong>
+						<br>
+						<a href="mailto:#">info@cdemp-pr.com</a>
+					</address>
+					<ul class="social-icons margin-bottom-10">
+						<li>
+							<a href="#" data-original-title="facebook" class="facebook"></a>
+						</li>
+						<li>
+							<a href="#" data-original-title="linkedin" class="linkedin"></a>
+						</li>
+						<li>
+							<a href="#" data-original-title="twitter" class="twitter"></a>
+						</li>
+						<li>
+							<a href="#" data-original-title="youtube" class="youtube"></a>
+						</li>
+						<li>
+							<a href="#" data-original-title="instagram" class="instagram"></a>
+						</li>
+					</ul>
 				</div>
 			</div>
+			<div class="col-md-6">
+				<div class="space20">
+				</div>
+				<!-- BEGIN FORM-->
+
+				<form id="contact" action="includes/contact.inc.php" method="POST">
+
+					<h3 class="form-section">Please leave your Feedback</h3>
+					<p>
+						Please give us a feedback.
+					</p>
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="fa fa-user"></i>
+							<input type="text" name="name" class="form-control" placeholder="Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="fa fa-envelope"></i>
+							<input type="text" name="email" class="form-control" placeholder="Email">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="fa fa-check"></i>
+							<input type="text" name="subject" class="form-control" placeholder="Subject" autofocus>
+						</div>
+					</div>
+					<div class="form-group">
+						<textarea name="message" class="form-control" rows="5" placeholder="Type your message here...."></textarea>
+					</div>
+					<button type="submit" class="btn green">Submit</button>
+				</form>
+				<!-- END FORM-->
+			</div>
 		</div>
-		<!-- END PAGE CONTENT-->
 	</div>
 </div>
+<!-- END PAGE CONTENT-->
+
