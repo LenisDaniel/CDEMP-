@@ -26,7 +26,7 @@ function get_date($lang,$months,$wdays){
 $provider = "";
 
 if (!isset($_SESSION['portalconfig'])){
-    $_SESSION['portalconfig']['valid_domain'] = "localhost:8080/cdemp-/";//"bmjent.ebusiness-sense.com";
+    $_SESSION['portalconfig']['valid_domain'] = "localhost:8080/cdemp-/";
     $_SESSION['portalconfig']['root_path'] = "/cdemp-/";
 } // if !isset session portalconfig
 
@@ -83,23 +83,23 @@ switch ($lang){
          define("USER_ACCN","[Cuenta de Usuario]");
          define("GUEST","Invitado");
          define("UNKNOWN","Desconocido");
-         define("SELECT_OPTION","Seleccione una Opción");
+         define("SELECT_OPTION","Seleccione una Opciï¿½n");
          define("ALL_OPTIONS","Todos");
          define("VALUES_NOT_FOUND","Valores no encontrados");
-         define("YES","Sí");
-         define("ADDRESS_TYPE_PHYSICAL","Física");
+         define("YES","Sï¿½");
+         define("ADDRESS_TYPE_PHYSICAL","Fï¿½sica");
          define("ADDRESS_TYPE_POSTAL","Postal");
          define("EMPTY_RECORD_SET","No records encontrados");
          define("NO","No");
          define("NOTSYNCRONIZED","** No ha Sincronizado");
-         define("TITLE_VERSION","Versión");
-         define("SYNCHRONIZATION_SUCCEED","Sincronización fue exitosa.");
-   		 define("SYNCHRO_FAIL","Sincronizació falló.");
-   		 define("SYNCHRO_FILE_NOT_FOUND","Archivo de sincronización no fue encontrado");
+         define("TITLE_VERSION","Versiï¿½n");
+         define("SYNCHRONIZATION_SUCCEED","Sincronizaciï¿½n fue exitosa.");
+   		 define("SYNCHRO_FAIL","Sincronizaciï¿½ fallï¿½.");
+   		 define("SYNCHRO_FILE_NOT_FOUND","Archivo de sincronizaciï¿½n no fue encontrado");
 		 define("STORE","Tienda");
 		 define("NET_SALES","Ventas Neta");
 		 define("GROSS_SALES","Ventas Bruta");
-		 define("LAST_POLLED","Ultima Interrogación");
+		 define("LAST_POLLED","Ultima Interrogaciï¿½n");
 		 define("FROM","Desde");
 		 define("TO","Hasta");
 		 if (!isset($_SESSION['today_date_sp'])){
@@ -127,7 +127,7 @@ if (isset($_POST)){
 if ($lang == "sp"){
     $change_lang = "<a href='change_lang.php?lang=en$qs'>English Version</a>";
 }else if ($lang == "en"){
-    $change_lang = "<a href='change_lang.php?lang=sp$qs'>Versión en español</a>";
+    $change_lang = "<a href='change_lang.php?lang=sp$qs'>Versiï¿½n en espaï¿½ol</a>";
 } // if $lang ==
 
 if (!isset($_SESSION['loged_user'])){

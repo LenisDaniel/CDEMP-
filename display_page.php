@@ -5,7 +5,6 @@ session_start();
 
 require_once("includes/class.template.inc.php");
 require_once("includes/common_functions.inc.php");
-require_once("includes/class.queue.inc.php");
 require_once("includes/class.mydbcon.inc.php");
 
 
@@ -21,9 +20,6 @@ if (!$objmydbcon = new classmydbcon){
 
 // INSTANTIATE TEMPLATE CLASS
 $objtemplate = new classTemplate;
-
-// INSTANTIATE QUEUE CLASS
-$objqueue = new classQueue;
 
 //Verificamos si existe session para presentar el dashboard
 if(isset($_SESSION['loged_user'])){
@@ -45,7 +41,6 @@ else{
 
 	$title_name = str_replace('_', ' ', $_GET['tpl']);
 	$script_name = $_GET['tpl'];
-
 
 }
 
