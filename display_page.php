@@ -64,20 +64,26 @@ if(isset($_GET["cat"])){
 		$category = "Technicians";
 		$display_arrow = "";
 		$category_active = "tecnicians_active";
-		$link_active = $script_name . "_tec";
+		$link_active = $script_name;
 	}
 	else if($cat == 4){
 		$category = "Teacher";
 		$display_arrow = "";
 		$category_active = "teachers_active";
-		$link_active = $script_name . "_tea";
+		$link_active = $script_name;
 	}
 	else if($cat == 5){
-		$category = "Parents";
+		$category = "Students";
 		$display_arrow = "";
-		$category_active = "parents_active";
-		$link_active = $script_name . "_p";
+		$category_active = "students_active";
+		$link_active = $script_name;
 	}
+    else if($cat == 6){
+        $category = "Settings";
+        $display_arrow = "";
+        $category_active = "settings_active";
+        $link_active = $script_name;
+    }
 
 }else{
 	$category = "";

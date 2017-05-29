@@ -8,4 +8,4 @@
 //Ya la clase de base de datos y la de template estan referenciadas en display_page
 
 
-$objtemplate->set_content('title', "Esto esta funcionando");
+$objtemplate->set_content('title', "Assign Courses");
