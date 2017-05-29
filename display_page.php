@@ -141,25 +141,28 @@ switch ($_SESSION['loged_user']['role_idx']){
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("teachers_visible","style='display:none'");
 		$objtemplate->set_content("students_visible", "style='display:none'");
+		$objtemplate->set_content("settings_visible", "style='display:none'");
 		break;
 
 	case '3':
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("tecnicians_visible","style='display:none'");
 		$objtemplate->set_content("students_visible", "style='display:none'");
+        $objtemplate->set_content("settings_visible", "style='display:none'");
 		break;
 
 	case '4':
 		$objtemplate->set_content("administrator_visible", "style='display:none'");
 		$objtemplate->set_content("tecnicians_visible","style='display:none'");
 		$objtemplate->set_content("teachers_visible", "style='display:none'");
+        $objtemplate->set_content("settings_visible", "style='display:none'");
 		break;
 
 	default:
 		$objtemplate->set_content("administrator_visible", "");
-		$objtemplate->set_content("administrator_visible", "");
 		$objtemplate->set_content("tecnicians_visible","");
 		$objtemplate->set_content("teachers_visible", "");
+        $objtemplate->set_content("settings_visible", "");
 		break;
 }
 
