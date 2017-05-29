@@ -32,7 +32,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
     $mail->SMTPSecure = 'ssl';
 
 
-    $mail->setFrom('lenis.daniel@gmail.com', 'Cdemp Personal');
+    $mail->setFrom('info@cdemp-pr.com', 'Cdemp Personal');
 
     $mail->addAddress($email);
 
@@ -52,7 +52,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
         echo 'Message could not be sent.';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
-        header("location: ../display_page.php?tpl=incidents&msg=1");
+        header("location: ../display_page.php?tpl=events&msg=1");
         //echo 'Message has been sent';
     }
 

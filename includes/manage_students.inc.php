@@ -1,4 +1,5 @@
 <?php
+    error_reporting(E_ALL);
     /**
      * Created by PhpStorm.
      * File: manage_students.inc.php
@@ -6,49 +7,54 @@
      * Date: 5/20/2017
      * Time: 11:31 PM
      */
+
     require_once("class.students.inc.php");
-    $objstudents= new classStudents();
+    $objstudents = new Students();
     
-    
-    
-   $objtemplate->set_content("client_td", $objstudents->get_all_clients(1));
+    $objtemplate->set_content("students_td", $objstudents->get_all_users(4, "manage_students"));
     
     if(isset($_GET['edit'])){
     
         $idx = base64_decode($_GET['edit']);
-        $objstudents->get_client($idx);
+        $objstudents->get_user($idx);
         $objtemplate->set_content("form_action", "display_page.php?tpl=manage_students&cid=".base64_encode($idx));
         $objtemplate->set_content("form_title", "Update Student Info");
         $objtemplate->set_content("send_button", "Update");
     
         //aqui llenamos el formulario con la info de la base de datos
-        $objtemplate->set_content("first_name", $objstudents->get_info('first_name'));
-        $objtemplate->set_content("last_name", $objstudents->get_info('last_name'));
-        $objtemplate->set_content("second_surname", $objstudents->get_info('second_surname'));
-        $objtemplate->set_content("email", $objstudents->get_info('email'));
-        $objtemplate->set_content("password", $objstudents->get_info('password'));
-        $objtemplate->set_content("address1", $objstudents->get_info('address1'));
-        $objtemplate->set_content("address2", $objstudents->get_info('address2'));
-        $objtemplate->set_content("cities_dd", $objstudents->get_cities($objstudents->get_info('city')));
-        $objtemplate->set_content("states_dd", $objstudents->get_state($objstudents->get_info('state')));
-        $objtemplate->set_content("phone_1", $objstudents->get_info('phone_1'));
-        $objtemplate->set_content("phone_2", $objstudents->get_info('phone_2'));
-        $objtemplate->set_content("zipcode", $objstudents->get_info('zipcode'));
-    
-        if($objstudents->get_info('active') == 1){
+        $objtemplate->set_content("first_name", $objstudents->get_user_info('first_name'));
+        $objtemplate->set_content("last_name", $objstudents->get_user_info('last_name'));
+        $objtemplate->set_content("second_surname", $objstudents->get_user_info('second_surname'));
+        $objtemplate->set_content("email", $objstudents->get_user_info('email'));
+        $objtemplate->set_content("password", $objstudents->get_user_info('password'));
+        $objtemplate->set_content("address1", $objstudents->get_user_info('address1'));
+        $objtemplate->set_content("address2", $objstudents->get_user_info('address2'));
+        $objtemplate->set_content("cities_dd", $objstudents->get_cities($objstudents->get_user_info('city')));
+        $objtemplate->set_content("states_dd", $objstudents->get_state($objstudents->get_user_info('state')));
+        $objtemplate->set_content("parent_1", $objstudents->get_user_info('parent_1'));
+        $objtemplate->set_content("parent_2", $objstudents->get_user_info('parent_2'));
+        $objtemplate->set_content("phone_1", $objstudents->get_user_info('phone_1'));
+        $objtemplate->set_content("phone_2", $objstudents->get_user_info('phone_2'));
+        $objtemplate->set_content("zipcodes_dd", $objstudents->get_zipcodes($objstudents->get_user_info('zipcode')));
+        $objtemplate->set_content("carriers_dd", $objstudents->get_carriers($objstudents->get_user_info('phone_1_carrier')));
+
+        if($objstudents->get_user_info('active') == 1){
             $objtemplate->set_content("option1", "checked");
         }else{
             $objtemplate->set_content("option2", "checked");
         }
     
     }else{
-        //exit("entre 2");
+
         $objtemplate->set_content("form_action", "display_page.php?tpl=manage_students&cid=".base64_encode(0));
-        $objtemplate->set_content("form_title", "Create New Student");
         $objtemplate->set_content("cities_dd", $objstudents->get_cities(0));
         $objtemplate->set_content("states_dd", $objstudents->get_state(0));
-    
+        $objtemplate->set_content("zipcodes_dd", $objstudents->get_zipcodes(0));
+        $objtemplate->set_content("carriers_dd", $objstudents->get_carriers(0));
+
+        $objtemplate->set_content("form_title", "Create New Student");
         $objtemplate->set_content("send_button", "Submit");
+        $objtemplate->set_content("option1", "checked");
     
     }
 
@@ -88,15 +94,16 @@
         $states_dd = $_POST['state'];
         $zipcode = $_POST['zipcode'];
         $active = $_POST['active'];
-        $role_idx = 3;
+        $role_idx = 4;
+
+        $parent_1 = $_POST['parent_1'];
+        $phone_1_carrier = $_POST['phone_1_carrier'];
+        $parent_2 = $_POST['parent_2'];
+        $phone_2_carrier = $_POST['phone_2_carrier'];
     
-    
-    
-        $objstudents->manage_client_info($id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
+        $objstudents->manage_user_info('manage_students', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, $phone_1_carrier, $phone_2_carrier);
     
     }
-
-
 
 
 ?>
