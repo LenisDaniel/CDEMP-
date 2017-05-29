@@ -1,35 +1,35 @@
 <?php
 
 error_reporting(E_ALL);
-require_once("class.technicians.inc.php");
+require_once("class.tecnicians.inc.php");
 
-$objtechnicians = new Technicians();
+$objtecnicians = new Tecnicians();
 
-$objtemplate->set_content("technician_td", $objtechnicians->get_all_users(2, 'manage_technicians'));
+$objtemplate->set_content("technician_td", $objtecnicians->get_all_users(2, 'manage_technicians'));
 
 if(isset($_GET['edit'])){
 
     $idx = base64_decode($_GET['edit']);
-    $objtechnicians->get_user($idx);
+    $objtecnicians->get_user($idx);
     $objtemplate->set_content("form_action", "display_page.php?tpl=manage_technicians&cid=".base64_encode($idx));
     $objtemplate->set_content("form_title", "Update Technician Info");
     $objtemplate->set_content("send_button", "Update");
 
     //aqui llenamos el formulario con la info de la base de datos
-    $objtemplate->set_content("first_name", $objtechnicians->get_user_info('first_name'));
-    $objtemplate->set_content("last_name", $objtechnicians->get_user_info('last_name'));
-    $objtemplate->set_content("second_surname", $objtechnicians->get_user_info('second_surname'));
-    $objtemplate->set_content("email", $objtechnicians->get_user_info('email'));
-    $objtemplate->set_content("password", $objtechnicians->get_user_info('password'));
-    $objtemplate->set_content("address1", $objtechnicians->get_user_info('address1'));
-    $objtemplate->set_content("address2", $objtechnicians->get_user_info('address2'));
-    $objtemplate->set_content("cities_dd", $objtechnicians->get_cities($objtechnicians->get_user_info('city')));
-    $objtemplate->set_content("states_dd", $objtechnicians->get_state($objtechnicians->get_user_info('state')));
-    $objtemplate->set_content("phone_1", $objtechnicians->get_user_info('phone_1'));
-    $objtemplate->set_content("phone_2", $objtechnicians->get_user_info('phone_2'));
-    $objtemplate->set_content("zipcodes_dd", $objtechnicians->get_zipcodes($objtechnicians->get_user_info('zipcode')));
+    $objtemplate->set_content("first_name", $objtecnicians->get_user_info('first_name'));
+    $objtemplate->set_content("last_name", $objtecnicians->get_user_info('last_name'));
+    $objtemplate->set_content("second_surname", $objtecnicians->get_user_info('second_surname'));
+    $objtemplate->set_content("email", $objtecnicians->get_user_info('email'));
+    $objtemplate->set_content("password", $objtecnicians->get_user_info('password'));
+    $objtemplate->set_content("address1", $objtecnicians->get_user_info('address1'));
+    $objtemplate->set_content("address2", $objtecnicians->get_user_info('address2'));
+    $objtemplate->set_content("cities_dd", $objtecnicians->get_cities($objtecnicians->get_user_info('city')));
+    $objtemplate->set_content("states_dd", $objtecnicians->get_state($objtecnicians->get_user_info('state')));
+    $objtemplate->set_content("phone_1", $objtecnicians->get_user_info('phone_1'));
+    $objtemplate->set_content("phone_2", $objtecnicians->get_user_info('phone_2'));
+    $objtemplate->set_content("zipcodes_dd", $objtecnicians->get_zipcodes($objtecnicians->get_user_info('zipcode')));
 
-    if($objtechnicians->get_user_info('active') == 1){
+    if($objtecnicians->get_user_info('active') == 1){
         $objtemplate->set_content("option1", "checked");
     }else{
         $objtemplate->set_content("option2", "checked");
@@ -38,9 +38,9 @@ if(isset($_GET['edit'])){
 }else{
 
     $objtemplate->set_content("form_action", "display_page.php?tpl=manage_technicians&cid=".base64_encode(0));
-    $objtemplate->set_content("cities_dd", $objtechnicians->get_cities(0));
-    $objtemplate->set_content("states_dd", $objtechnicians->get_state(0));
-    $objtemplate->set_content("zipcodes_dd", $objtechnicians->get_zipcodes(0));
+    $objtemplate->set_content("cities_dd", $objtecnicians->get_cities(0));
+    $objtemplate->set_content("states_dd", $objtecnicians->get_state(0));
+    $objtemplate->set_content("zipcodes_dd", $objtecnicians->get_zipcodes(0));
     $objtemplate->set_content("form_title", "Create New Technician");
     $objtemplate->set_content("send_button", "Submit");
     $objtemplate->set_content("option1", "checked");
@@ -82,6 +82,6 @@ if(isset($_GET['cid'])){
     $active = $_POST['active'];
     $role_idx = 2;
 
-    //$objtechnicians->manage_user_info('manage_technicians', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
+    //$objtecnicians->manage_user_info('manage_technicians', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
 
 }
