@@ -5,13 +5,13 @@ require_once("class.tecnicians.inc.php");
 
 $objtecnicians = new Tecnicians();
 
-$objtemplate->set_content("technician_td", $objtecnicians->get_all_users(2, 'manage_technicians'));
+$objtemplate->set_content("technician_td", $objtecnicians->get_all_users(2, 'manage_tecnicians'));
 
 if(isset($_GET['edit'])){
 
     $idx = base64_decode($_GET['edit']);
     $objtecnicians->get_user($idx);
-    $objtemplate->set_content("form_action", "display_page.php?tpl=manage_technicians&cid=".base64_encode($idx));
+    $objtemplate->set_content("form_action", "display_page.php?tpl=manage_tecnicians&cid=".base64_encode($idx));
     $objtemplate->set_content("form_title", "Update Technician Info");
     $objtemplate->set_content("send_button", "Update");
 
@@ -37,7 +37,7 @@ if(isset($_GET['edit'])){
 
 }else{
 
-    $objtemplate->set_content("form_action", "display_page.php?tpl=manage_technicians&cid=".base64_encode(0));
+    $objtemplate->set_content("form_action", "display_page.php?tpl=manage_tecnicians&cid=".base64_encode(0));
     $objtemplate->set_content("cities_dd", $objtecnicians->get_cities(0));
     $objtemplate->set_content("states_dd", $objtecnicians->get_state(0));
     $objtemplate->set_content("zipcodes_dd", $objtecnicians->get_zipcodes(0));
@@ -82,6 +82,6 @@ if(isset($_GET['cid'])){
     $active = $_POST['active'];
     $role_idx = 2;
 
-    //$objtecnicians->manage_user_info('manage_technicians', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
+    $objtecnicians->manage_user_info('manage_tecnicians', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
 
 }
