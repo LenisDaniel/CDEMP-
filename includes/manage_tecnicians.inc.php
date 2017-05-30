@@ -5,7 +5,7 @@ require_once("class.tecnicians.inc.php");
 
 $objtecnicians = new Tecnicians();
 
-$objtemplate->set_content("technician_td", $objtecnicians->get_all_users(2, 'manage_tecnicians'));
+$objtemplate->set_content("technician_td", $objtecnicians->get_all_users($role = 2, $tpl_uri = 'manage_tecnicians'));
 
 if(isset($_GET['edit'])){
 
