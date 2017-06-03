@@ -11,13 +11,13 @@ require_once("class.config_records.inc.php");
 
 $objconfig = new ConfigRecords();
 
-$objtemplate->set_content("week_td", $objconfig->get_all_config('set_week_day', 'master_week_day'));
+$objtemplate->set_content("week_td", $objconfig->get_all_config('set_week_day', 'week_day'));
 
 if(isset($_GET['edit'])){
 
     $idx = base64_decode($_GET['edit']);
     $objconfig->get_config($idx, "master_week_day");
-    $objtemplate->set_content("form_action", "display_page.php?tpl=master_week_day&cid=".base64_encode($idx));
+    $objtemplate->set_content("form_action", "display_page.php?tpl=week_day&cid=".base64_encode($idx));
     $objtemplate->set_content("form_title", "Update Week Info");
     $objtemplate->set_content("send_button", "Update");
 
@@ -31,7 +31,7 @@ if(isset($_GET['edit'])){
 
 }else{
 
-    $objtemplate->set_content("form_action", "display_page.php?tpl=master_week_day&cid=".base64_encode(0));
+    $objtemplate->set_content("form_action", "display_page.php?tpl=week_day&cid=".base64_encode(0));
     $objtemplate->set_content("form_title", "Create New Week");
     $objtemplate->set_content("send_button", "Submit");
     $objtemplate->set_content("option1", "checked");

@@ -23,6 +23,20 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group required">
+                            <label class="control-label col-md-3">Semester #:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="semester" id="semester">
+                                    <option value="-1">--Select One--</option>
+                                    <option value="Semester 1" {selected1}>Semester 1</option>
+                                    <option value="Semester 2" {selected2}>Semester 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">Start Date:</label>
                             <div class="col-md-9">
                                 <input type="text" name="start_date" id="start_date" class="form-control" placeholder="Start Date" value="{start_date}" required>
@@ -89,7 +103,7 @@
         <div class="portlet box red">
             <div class="portlet-title">
                 <div class="caption">
-                    <i class="fa fa-globe"></i>Notes List
+                    <i class="fa fa-globe"></i>Scholar Period List
                 </div>
                 <div class="tools">
                     <a href="javascript:;" class="collapse">
@@ -139,6 +153,9 @@
                     <tr>
                         <th>
                             ID
+                        </th>
+                        <th>
+                            Semester
                         </th>
                         <th>
                             Start Date

@@ -73,7 +73,7 @@ class ConfigRecords
             $sqlupdate = "UPDATE $table SET $field1 = '$descr', active = '$active' WHERE $field2 = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;
@@ -85,7 +85,7 @@ class ConfigRecords
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;
@@ -131,6 +131,31 @@ class ConfigRecords
 
         }
 
+    }
+
+    function get_courses($courses_selected = 0){
+        global $objmydbcon;
+        $counses_dd = "";
+
+        $sqlquery = "SELECT * FROM master_course";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['course_id'];
+                $disp = $rs['course_descr'];
+
+                if($courses_selected == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $counses_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $counses_dd;
     }
 
 }

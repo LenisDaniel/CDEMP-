@@ -34,6 +34,7 @@ class Scholar_Period{
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[1]. "</td>";
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[2]. "</td>";
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[3]. "</td>";
+                $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[4]. "</td>";
                 $this->scholar_period_td_info .= "</tr>";
 
             }
@@ -45,7 +46,7 @@ class Scholar_Period{
 
     }
 
-    function manage_scholar_period_info($tpl_uri = 0, $id = 0, $start_date = "", $end_date = 0, $active = 0){
+    function manage_scholar_period_info($tpl_uri = 0, $id = 0, $semester= "", $start_date = "", $end_date = 0, $active = 0){
         global $objmydbcon;
 
         //        echo $table . "<br>";
@@ -63,10 +64,10 @@ class Scholar_Period{
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE scholar_period SET start_date = '$start_date', end_date = '$end_date', active = '$active' WHERE scholar_period_id = $id";
+            $sqlupdate = "UPDATE scholar_period SET semester = '$semester', start_date = '$start_date', end_date = '$end_date', active = '$active' WHERE scholar_period_id = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=6&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=6");
                 return true;
             }else{
                 return false;
@@ -74,11 +75,11 @@ class Scholar_Period{
 
         }else{
 
-            $sqlinsert = "INSERT INTO scholar_period(start_date, end_date, active)VALUES('$start_date', '$end_date', $active)";
+            $sqlinsert = "INSERT INTO scholar_period(semester, start_date, end_date, active)VALUES('$semester', '$start_date', '$end_date', $active)";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=6&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=6");
                 return true;
             }else{
                 return false;
