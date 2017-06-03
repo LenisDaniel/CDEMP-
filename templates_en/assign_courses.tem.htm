@@ -4,7 +4,7 @@
             <div class="form-group">
                 <label class="control-label col-md-3">Select Teacher:</label>
                 <div class="col-md-9">
-                    <select class="form-control" name="teacher" id="teacher" required>
+                    <select class="form-control" name="teacher" id="teacher">
                         <option value="-1">--Select One--</option>
                         {teachers_dd}
                     </select>
@@ -40,6 +40,15 @@
         afterDeselect: function(values){
             alert("Deselect value: "+values);
         }
+    });
+
+    $(document).ready(function(){
+
+        $('#teacher').change(function(){
+            var teacher_id = $('#teacher').val();
+            window.location.replace("display_page.php?tpl=assign_courses&edit="+teacher_id);
+        });
+
     });
 
 </script>
