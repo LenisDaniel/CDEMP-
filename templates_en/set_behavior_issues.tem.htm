@@ -1,1 +1,219 @@
-<h2>Behavior Issues</h2>
+
+<div class="portlet box red">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-list"></i>{form_title}
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse">
+            </a>
+            <a href="#portlet-config" data-toggle="modal" class="config">
+            </a>
+            <a href="javascript:;" class="reload">
+            </a>
+            <a href="javascript:;" class="remove">
+            </a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form id="admins_form" action="{form_action}" method="POST" class="form-horizontal">
+            <div class="form-body">
+                <h3 class="form-section">Behaviors Issues</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label class="control-label col-md-3">Behavior Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="behavior" id="behavior" class="form-control" placeholder="Behavior" value="{behavior}" required>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Classification:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="classification_dd" id="classification_dd" required>
+                                    <option value="-1">--Select One--</option>
+                                    {classification_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--/row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label class="control-label col-md-3">Active?:</label>
+                            <div class="col-md-9">
+                                <div class="radio-list">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="active" value="1" {option1}/>
+                                        Yes
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="active" value="2" {option2}/>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/span-->
+
+
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn green">{send_button}</button>
+                                <a href="display_page.php?tpl=set_behavior_issues&cat=6"><button type="button" class="btn default">Cancel</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-globe"></i>Behavior Issues List
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse">
+                    </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config">
+                    </a>
+                    <a href="javascript:;" class="reload">
+                    </a>
+                    <a href="javascript:;" class="remove">
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <div class="btn-group">
+                                <button id="sample_editable_1_new" class="btn green">
+                                Add New <i class="fa fa-plus"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="#">
+                                            Print </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Save as PDF </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Export to Excel </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover" >
+                    <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Behavior Issue
+                        </th>
+                        <th>
+                            Classification
+                        </th>
+                        <th>
+                            Active
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {behaviors_td}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('.phone_mask').mask('000-000-0000');
+
+
+            $('#technicians_form').submit(function(){
+
+                if($('#city').val() === '-1'){
+                    alert('Please select one city!');
+                    return false;
+                }
+
+                if($('#state').val() === '-1'){
+                    alert('Please select one State!');
+                    return false;
+                }
+
+                if($('#zipcode').val() === '-1'){
+                    alert('Please select one Zipcode!');
+                    return false;
+                }
+
+            });
+
+            $('#city').change(function(){
+
+                var city_id = $('#city').val();
+
+                $.ajax({
+
+                    url: 'includes/ajax.filter_zipcodes.php',
+                    method: 'POST',
+                    data: {'city_id': city_id},
+
+                    success:  function (response) {
+
+                        $('#zipcode').html(response);
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+</div>
