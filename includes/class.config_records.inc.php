@@ -135,7 +135,7 @@ class ConfigRecords
 
     function get_courses($courses_selected = 0){
         global $objmydbcon;
-        $counses_dd = "";
+        $courses_dd = "";
 
         $sqlquery = "SELECT * FROM master_course";
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
@@ -145,17 +145,20 @@ class ConfigRecords
                 $val = $rs['course_id'];
                 $disp = $rs['course_descr'];
 
-                if($courses_selected == $val){
+                if(in_array($val, $courses_selected)){
                     $sel_option = "selected";
                 }else{
                     $sel_option = "";
                 }
-                $counses_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+
+                $courses_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+
             }
+
         }else{
             return 0;
         }
-        return $counses_dd;
+        return $courses_dd;
     }
 
 }

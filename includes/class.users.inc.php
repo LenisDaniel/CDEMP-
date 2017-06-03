@@ -263,29 +263,4 @@ class Users{
         return $carriers_dd;
     }
 
-    function get_teachers($teacher_selected = ""){
-        global $objmydbcon;
-        $teachers_dd = "";
-
-        $sqlquery = "SELECT * FROM master_users WHERE role_idx = 3";
-        if(!$results = $objmydbcon->get_result_set($sqlquery)){
-            return false;
-        }else if(mysqli_num_rows($results)>0){
-            while($rs = mysqli_fetch_assoc($results)){
-                $val = $rs['idx'];
-                $disp = $rs['first_name'] . " " . $rs['last_name'] . " " . $rs['second_surname'];
-
-                if($teacher_selected == $val){
-                    $sel_option = "selected";
-                }else{
-                    $sel_option = "";
-                }
-                $teachers_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
-            }
-        }else{
-            return 0;
-        }
-        return $teachers_dd;
-    }
-
 }

@@ -12,6 +12,7 @@
             </div>
         </div>
     </div>
+    <input type="hidden" id="teacher_value" value="{teacher_id}"/>
 </form>
 <br/>
 <br/>
@@ -35,18 +36,47 @@
         cssClass: "custom-size",
 
         afterSelect: function(values){
-            alert("Select value: "+values);
+
+            var teacher_value = $("#teacher_value").val();
+
+            $.ajax({
+
+                url: "includes/ajax.assign_courses.php",
+                method: "POST",
+                data: {'action': "insert", 'teacher_value': teacher_value, 'course_id': values},
+
+                success: function(response){
+                    alert(response);
+                }
+
+            });
+
         },
         afterDeselect: function(values){
-            alert("Deselect value: "+values);
+
+            var teacher_value = $("#teacher_value").val();
+
+            $.ajax({
+
+                url: "includes/ajax.assign_courses.php",
+                method: "POST",
+                data: {'action': "delete", 'teacher_value': teacher_value, 'course_id': values},
+
+                success: function(response){
+                    alert(response);
+                }
+
+            });
+
         }
+
     });
 
     $(document).ready(function(){
 
         $('#teacher').change(function(){
             var teacher_id = $('#teacher').val();
-            window.location.replace("display_page.php?tpl=assign_courses&edit="+teacher_id);
+            window.location.replace("display_page.php?tpl=assign_courses&cat=2&edit="+teacher_id);
         });
 
     });
