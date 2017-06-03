@@ -15,9 +15,9 @@ class classmydbcon{
 //	var $error="";
 
 	 var $dbhost="localhost";
-	 var $db="u186334426_cdemp";
+	 var $db="cdemp20170601";
 	 var $uname="root";
-	 var $pwd="xf6C4FBPqNCMNGRG";
+	 var $pwd="Lancer10e4578da7";
 	 var $link="";
 	 var $error="";
 
