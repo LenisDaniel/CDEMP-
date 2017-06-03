@@ -73,7 +73,7 @@ class ConfigRecords
             $sqlupdate = "UPDATE $table SET $field1 = '$descr', active = '$active' WHERE $field2 = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;
@@ -85,7 +85,7 @@ class ConfigRecords
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;

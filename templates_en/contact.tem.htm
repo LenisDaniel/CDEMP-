@@ -1,5 +1,6 @@
 <div class="row">
 	<div class="col-md-12">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEtXfFnw1USe65JWPogRy3qRyLop7yUwk&callback=initMap"	async defer></script>
 		<script>
             var map;
 
@@ -8,7 +9,7 @@
 
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 18.356950, lng: -66.012527},
-                    zoom: 8
+                    zoom: 15
                 });
 
                 var marker = new google.maps.Marker({
@@ -18,6 +19,7 @@
                 });
                 marker.setMap(map);
             }
+
 
 		</script>
 		<div class="row">
