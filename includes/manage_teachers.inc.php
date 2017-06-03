@@ -81,7 +81,7 @@ $objteachers = new Teachers();
         $active = $_POST['active'];
         $role_idx = 3;
 
-        //$objteachers->manage_user_info('manage_teachers', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx);
+        $objteachers->manage_user_info('manage_teachers', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
 
     }
 

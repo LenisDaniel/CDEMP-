@@ -94,10 +94,8 @@ class Users{
 			parent_1 = '$parent_1', parent_2 = '$parent_2', phone_1_carrier = '$phone_1_carrier', phone_2_carrier = '$phone_2_carrier'
 			WHERE idx = $id";
 
-
-
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;
@@ -110,7 +108,7 @@ class Users{
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;
@@ -192,7 +190,9 @@ class Users{
         global $objmydbcon;
         $states_dd = "";
 
-        $sqlquery = "SELECT * FROM master_states";
+        $sqlquery = "SELECT * FROM master_state";
+
+
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results)>0){
@@ -261,6 +261,31 @@ class Users{
             return 0;
         }
         return $carriers_dd;
+    }
+
+    function get_teachers($teacher_selected = ""){
+        global $objmydbcon;
+        $teachers_dd = "";
+
+        $sqlquery = "SELECT * FROM master_users WHERE role_idx = 3";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['idx'];
+                $disp = $rs['first_name'] . " " . $rs['last_name'] . " " . $rs['second_surname'];
+
+                if($teacher_selected == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $teachers_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $teachers_dd;
     }
 
 }

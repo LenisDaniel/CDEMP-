@@ -133,4 +133,29 @@ class ConfigRecords
 
     }
 
+    function get_courses($courses_selected = 0){
+        global $objmydbcon;
+        $counses_dd = "";
+
+        $sqlquery = "SELECT * FROM master_course";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['course_id'];
+                $disp = $rs['course_descr'];
+
+                if($courses_selected == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $counses_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $counses_dd;
+    }
+
 }

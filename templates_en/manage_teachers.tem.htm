@@ -24,14 +24,14 @@
 						<div class="form-group required">
 							<label class="control-label col-md-3">First Name:</label>
 							<div class="col-md-9">
-								<input type="text" name="first_name" id="first_name" class="form-control" placeholder="" value="{first_name}" required>
+								<input type="text" name="first_name" id="first_name" class="form-control" placeholder="" value="{first_name}" autofocus required>
 
 							</div>
 						</div>
 					</div>
 					<!--/span-->
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">Last Name:</label>
 							<div class="col-md-9">
 								<input type="text" name="last_name" id="last_name" class="form-control" value="{last_name}" required>
@@ -54,7 +54,7 @@
 					</div>
 					<!--/span-->
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">Email:</label>
 							<div class="col-md-9">
 								<input type="email" name="email" id="email" class="form-control" placeholder="" value="{email}" required>
@@ -66,7 +66,7 @@
 				<!--/row-->
 				<div class="row">
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">Password:</label>
 							<div class="col-md-9">
 								<input type="text" name="password" id="password" class="form-control" placeholder="" value="{password}" required>
@@ -97,7 +97,7 @@
 				<!--/row-->
 				<div class="row">
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">Address 1:</label>
 							<div class="col-md-9">
 								<input type="text" name="address1" id="address1" class="form-control" value="{address1}" required>
@@ -115,7 +115,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">City:</label>
 							<div class="col-md-9">
 								<select class="form-control" name="city" id="city" required>
@@ -127,7 +127,7 @@
 					</div>
 					<!--/span-->
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">State:</label>
 							<div class="col-md-9">
 								<select class="form-control" name="state" id="state" required>
@@ -142,7 +142,7 @@
 				<!--/row-->
 				<div class="row">
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">Phone 1:</label>
 							<div class="col-md-9">
 								<input type="text" name="phone_1" id="phone_1" class="form-control phone_mask" value="{phone_1}" required>
@@ -164,7 +164,7 @@
 				<!--/row-->
 				<div class="row">
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group required">
 							<label class="control-label col-md-3">Zipcode:</label>
 							<div class="col-md-9">
 								<select class="form-control" name="zipcode" id="zipcode" required>
@@ -183,7 +183,7 @@
 						<div class="row">
 							<div class="col-md-offset-3 col-md-9">
 								<button type="submit" class="btn green">{send_button}</button>
-								<button type="button" class="btn default">Cancel</button>
+								<a href="display_page.php?tpl=manage_teachers&cat=2"><button type="button" class="btn default">Cancel</button></a>
 							</div>
 						</div>
 					</div>
