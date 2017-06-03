@@ -5,7 +5,7 @@ require_once("class.config_records.inc.php");
 
 $objconfig = new ConfigRecords();
 
-$objtemplate->set_content("grades_td", $objconfig->get_all_config('manage_grades', 'grade'));
+$objtemplate->set_content("grades_td", $objconfig->get_all_config('manage_grades', 'grade', 2));
 
 if(isset($_GET['edit'])){
 
@@ -55,6 +55,6 @@ if(isset($_GET['cid'])) {
     $grade = $_POST['grade'];
     $active = $_POST['active'];
 
-    $objconfig->manage_config_info('manage_grades', "grade", $id, $grade, $active);
+    $objconfig->manage_config_info('manage_grades', "grade", $id, $grade, $active, 2);
 
 }

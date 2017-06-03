@@ -13,7 +13,7 @@ class ConfigRecords
         $this->field_info = array();
     }
 
-    function get_all_config($tpl_uri = "", $table_name = ""){
+    function get_all_config($tpl_uri = "", $table_name = "", $cat = 0){
         global $objmydbcon;
 
         $table = "master_" . $table_name;
@@ -33,7 +33,7 @@ class ConfigRecords
                 $idu = base64_encode($this->config_info[0]);
 
                 $this->config_td_info .= "<tr id='tr$i' class='odd gradeX'>";
-                $this->config_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=2&edit=$idu'>" . $this->config_info[0]. "</a></td>";
+                $this->config_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=$cat&edit=$idu'>" . $this->config_info[0]. "</a></td>";
                 $this->config_td_info .= "<td>" . $this->config_info[1]. "</td>";
                 $this->config_td_info .= "<td>" . $this->config_info[2]. "</td>";
                 $this->config_td_info .= "</tr>";
@@ -47,7 +47,7 @@ class ConfigRecords
 
     }
 
-    function manage_config_info($tpl_uri = 0, $table_name = "", $id = 0, $descr = "", $active = ""){
+    function manage_config_info($tpl_uri = 0, $table_name = "", $id = 0, $descr = "", $active = "", $cat = 0){
         global $objmydbcon;
 
         $table = "master_" . $table_name;
@@ -73,7 +73,7 @@ class ConfigRecords
             $sqlupdate = "UPDATE $table SET $field1 = '$descr', active = '$active' WHERE $field2 = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                header("location: display_page.php?tpl=$tpl_uri&cat=$cat");
                 return true;
             }else{
                 return false;
@@ -85,7 +85,7 @@ class ConfigRecords
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                header("location: display_page.php?tpl=$tpl_uri&cat=$cat");
                 return true;
             }else{
                 return false;

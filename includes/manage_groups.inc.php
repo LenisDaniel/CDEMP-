@@ -5,7 +5,7 @@ require_once("class.config_records.inc.php");
 
 $objconfig = new ConfigRecords();
 
-$objtemplate->set_content("groups_td", $objconfig->get_all_config('manage_groups', 'group'));
+$objtemplate->set_content("groups_td", $objconfig->get_all_config('manage_groups', 'group', 2));
 
 if(isset($_GET['edit'])){
 
@@ -55,6 +55,6 @@ if(isset($_GET['cid'])) {
     $group = $_POST['group'];
     $active = $_POST['active'];
 
-    $objconfig->manage_config_info('manage_groups', "group", $id, $group, $active);
+    $objconfig->manage_config_info('manage_groups', "group", $id, $group, $active, 2);
 
 }

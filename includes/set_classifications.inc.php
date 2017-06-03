@@ -5,7 +5,7 @@ require_once("class.config_records.inc.php");
 
 $objbehavior = new ConfigRecords();
 
-$objtemplate->set_content("classifications_td", $objbehavior->get_all_config('set_classifications', 'classification'));
+$objtemplate->set_content("classifications_td", $objbehavior->get_all_config('set_classifications', 'classification', 6));
 
 if(isset($_GET['edit'])){
 
@@ -55,6 +55,6 @@ if(isset($_GET['cid'])) {
     $classification = $_POST['classification'];
     $active = $_POST['active'];
 
-    $objbehavior->manage_config_info('set_classifications', "classification", $id, $classification, $active);
+    $objbehavior->manage_config_info('set_classifications', "classification", $id, $classification, $active, 6);
 
 }

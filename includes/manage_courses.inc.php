@@ -5,7 +5,7 @@ require_once("class.config_records.inc.php");
 
 $objconfig = new ConfigRecords();
 
-$objtemplate->set_content("courses_td", $objconfig->get_all_config('manage_courses', 'course'));
+$objtemplate->set_content("courses_td", $objconfig->get_all_config('manage_courses', 'course', 2));
 
 if(isset($_GET['edit'])){
 
@@ -55,6 +55,6 @@ if(isset($_GET['cid'])) {
     $course = $_POST['course'];
     $active = $_POST['active'];
 
-    $objconfig->manage_config_info('manage_courses', "course", $id, $course, $active);
+    $objconfig->manage_config_info('manage_courses', "course", $id, $course, $active, 2);
 
 }
