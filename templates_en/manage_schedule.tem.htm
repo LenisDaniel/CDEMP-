@@ -1,1 +1,273 @@
-<h3>Manage Schedule</h3>
+
+<div class="portlet box red">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-list"></i>{form_title}
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse">
+            </a>
+            <a href="#portlet-config" data-toggle="modal" class="config">
+            </a>
+            <a href="javascript:;" class="reload">
+            </a>
+            <a href="javascript:;" class="remove">
+            </a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form id="schedule_form" action="{form_action}" method="POST" class="form-horizontal">
+            <div class="form-body">
+                <h3 class="form-section">Set Schedule</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Grade:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="grade" id="grade" required>
+                                    <option value="-1">--Select Grade--</option>
+                                    {grades_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Group:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="group" id="group" required>
+                                    <option value="-1">--Select Group--</option>
+                                    {groups_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Course:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="course" id="course" required>
+                                    <option value="-1">--Select Course--</option>
+                                    {courses_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Week Day:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="week_day" id="week_day" required>
+                                    <option value="-1">--Select Week Day--</option>
+                                    {week_days_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Day Hour:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="day_hour" id="day_hour" required>
+                                    <option value="-1">--Select Day Hour--</option>
+                                    {day_hours_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Teacher:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="teacher" id="teacher" required>
+                                    <option value="-1">--Select All to filter available teachers--</option>
+                                    {teachers_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn green">{send_button}</button>
+                                <button type="button" class="btn default">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-globe"></i>Schedule List
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse">
+                    </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config">
+                    </a>
+                    <a href="javascript:;" class="reload">
+                    </a>
+                    <a href="javascript:;" class="remove">
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <div class="btn-group">
+                                <button id="sample_editable_1_new" class="btn green">
+                                Add New <i class="fa fa-plus"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="#">
+                                            Print </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Save as PDF </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Export to Excel </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover" id="sample_1">
+                    <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Grade
+                        </th>
+                        <th>
+                            Course
+                        </th>
+                        <th>
+                            Week Day
+                        </th>
+                        <th>
+                            Day Hour
+                        </th>
+                        <th>
+                            Teacher
+                        </th>
+                        <th>
+                            Created Date
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {schedules_td}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+
+            $('#schedule_form').submit(function(){
+
+                if($('#grade').val() === '-1'){
+                    alert('Please select one grade!');
+                    return false;
+                }
+
+                if($('#group').val() === '-1'){
+                    alert('Please select one group!');
+                    return false;
+                }
+
+                if($('#course').val() === '-1'){
+                    alert('Please select one course!');
+                    return false;
+                }
+
+                if($('#week_day').val() === '-1'){
+                    alert('Please select one week day!');
+                    return false;
+                }
+
+                if($('#day_hour').val() === '-1'){
+                    alert('Please select one day hour!');
+                    return false;
+                }
+
+                if($('#teacher').val() === '-1'){
+                    alert('Please select one teacher!');
+                    return false;
+                }
+
+            });
+
+            $('#day_hour').change(function(){
+
+                var city_id = $('#city').val();
+
+                $.ajax({
+
+                    url: 'includes/ajax.filter_zipcodes.php',
+                    method: 'POST',
+                    data: {'city_id': city_id},
+
+                    success:  function (response) {
+
+                        $('#zipcode').html(response);
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+</div>
