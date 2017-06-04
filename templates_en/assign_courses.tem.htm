@@ -1,31 +1,51 @@
-<form action="display_page.php?tpl=assign_courses&cat=2" method="post">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label class="control-label col-md-3">Select Teacher:</label>
-                <div class="col-md-9">
-                    <select class="form-control" name="teacher" id="teacher">
-                        <option value="-1">--Select One--</option>
-                        {teachers_dd}
-                    </select>
-                </div>
-            </div>
+<div class="portlet box red">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-list"></i>{form_title}
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse">
+            </a>
+            <a href="#portlet-config" data-toggle="modal" class="config">
+            </a>
+            <a href="javascript:;" class="reload">
+            </a>
+            <a href="javascript:;" class="remove">
+            </a>
         </div>
     </div>
-    <input type="hidden" id="teacher_value" value="{teacher_id}"/>
-</form>
-<br/>
-<br/>
-<br/>
+    <div class="portlet-body form">
+        <br/>
+        <br/>
+        <form action="display_page.php?tpl=assign_courses&cat=2" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Select Teacher:</label>
+                        <div class="col-md-9">
+                            <select class="form-control" name="teacher" id="teacher">
+                                <option value="-1">--Select One--</option>
+                                {teachers_dd}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="teacher_value" value="{teacher_id}"/>
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <select multiple="multiple" id="my-select" class="ms-container" name="my-select[]">
+            {courses_dd}
+        </select>
+        <br/>
+        <br/>
+    </div>
+</div>
 
-<select multiple="multiple" id="my-select" class="ms-container" name="my-select[]">
-    <!--<option value='elem_1' selected>elem 1</option>-->
-    <!--<option value='elem_2'>elem 2</option>-->
-    <!--<option value='elem_3'>elem 3</option>-->
-    <!--<option value='elem_4'>elem 4</option>-->
-    <!--<option value='elem_5' selected>elem 5</option>-->
-    {courses_dd}
-</select>
+
+
 
 <script>
 

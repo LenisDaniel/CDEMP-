@@ -54,23 +54,17 @@ class ConfigRecords
         $field1 = $table_name . "_descr";
         $field2 = $table_name . "_id";
 
-//        echo $table . "<br>";
-//        echo $field1 . "<br>";
-//        echo $field2 . "<br>";
-//        echo $tpl_uri . "<br>";
-//        echo $descr . "<br>";
-//        echo $id . "<br>";
-//        echo $active . "<br>";
-//
-//        exit;
-
         if(!$active == "1"){
             $active = 0;
         }
 
+        if($table_name == 'group'){
+            $grade_id = $this->get_grade_id($descr);
+        }
+
         if($id > 0){
 
-            $sqlupdate = "UPDATE $table SET $field1 = '$descr', active = '$active' WHERE $field2 = $id";
+            $sqlupdate = "UPDATE $table SET $field1 = '$descr', grade_id = '$grade_id', active = '$active' WHERE $field2 = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=$cat");
@@ -81,7 +75,7 @@ class ConfigRecords
 
         }else{
 
-            $sqlinsert = "INSERT INTO $table ($field1, active)VALUES('$descr', $active)";
+            $sqlinsert = "INSERT INTO $table ($field1, grade_id, active)VALUES('$descr', '$grade_id', $active)";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
@@ -159,6 +153,26 @@ class ConfigRecords
             return 0;
         }
         return $courses_dd;
+    }
+
+    function get_grade_id($group){
+        global $objmydbcon;
+
+        $grade_prefix = explode("-", $group);
+        $grade = $grade_prefix[0];
+
+        $sqlquery = "SELECT grade_id FROM master_grade WHERE grade_descr = $grade";
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results) > 0){
+            $rs = mysqli_fetch_assoc($results);
+            extract($rs);
+        }else{
+            return false;
+        }
+
+        return $grade_id;
     }
 
 }

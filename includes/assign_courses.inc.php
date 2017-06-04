@@ -26,6 +26,7 @@ if(isset($_GET['edit']) && $_GET['edit'] > 0){
     $objtemplate->set_content("courses_dd", $objconfig->get_courses(0));
 
 }
+$objtemplate->set_content("form_title", "Select a Teacher and assign courses");
 
 
 

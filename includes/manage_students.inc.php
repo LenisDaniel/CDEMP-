@@ -3,7 +3,7 @@
     /**
      * Created by PhpStorm.
      * File: manage_students.inc.php
-     * User: Christian J. Negron Garcia
+     * User: Lenis Daniel Rivera
      * Date: 5/20/2017
      * Time: 11:31 PM
      */
@@ -37,6 +37,7 @@
         $objtemplate->set_content("phone_2", $objstudents->get_user_info('phone_2'));
         $objtemplate->set_content("zipcodes_dd", $objstudents->get_zipcodes($objstudents->get_user_info('zipcode')));
         $objtemplate->set_content("carriers_dd", $objstudents->get_carriers($objstudents->get_user_info('phone_1_carrier')));
+        $objtemplate->set_content("groups_dd", $objstudents->get_groups($objstudents->get_group_info($idx)));
 
         if($objstudents->get_user_info('active') == 1){
             $objtemplate->set_content("option1", "checked");
@@ -51,6 +52,7 @@
         $objtemplate->set_content("states_dd", $objstudents->get_state(0));
         $objtemplate->set_content("zipcodes_dd", $objstudents->get_zipcodes(0));
         $objtemplate->set_content("carriers_dd", $objstudents->get_carriers(0));
+        $objtemplate->set_content("groups_dd", $objstudents->get_groups(0));
 
         $objtemplate->set_content("form_title", "Create New Student");
         $objtemplate->set_content("send_button", "Submit");
@@ -76,9 +78,6 @@
 //    }
     
     if(isset($_GET['cid'])){
-
-//        print_r($_POST);
-//        exit;
     
         $id = base64_decode($_GET['cid']);
         $first_name = $_POST['first_name'];
@@ -95,13 +94,16 @@
         $zipcode = $_POST['zipcode'];
         $active = $_POST['active'];
         $role_idx = 4;
+        $group = $_POST['group'];
 
         $parent_1 = $_POST['parent_1'];
         $phone_1_carrier = $_POST['phone_1_carrier'];
         $parent_2 = $_POST['parent_2'];
         $phone_2_carrier = $_POST['phone_2_carrier'];
     
-        $objstudents->manage_user_info('manage_students', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, $phone_1_carrier, $phone_2_carrier);
+        if($lst_id = $objstudents->manage_user_info('manage_students', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, $phone_1_carrier, $phone_2_carrier)){
+            $objstudents->assign_group($group, $lst_id);
+        }
     
     }
 

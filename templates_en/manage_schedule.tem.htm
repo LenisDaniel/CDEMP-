@@ -39,26 +39,14 @@
                             <label class="control-label col-md-3">Group:</label>
                             <div class="col-md-9">
                                 <select class="form-control" name="group" id="group" required>
-                                    <option value="-1">--Select Group--</option>
+                                    <option value="-1">--Select Grade First--</option>
                                     {groups_dd}
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Course:</label>
-                            <div class="col-md-9">
-                                <select class="form-control" name="course" id="course" required>
-                                    <option value="-1">--Select Course--</option>
-                                    {courses_dd}
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -78,8 +66,21 @@
                             <label class="control-label col-md-3">Day Hour:</label>
                             <div class="col-md-9">
                                 <select class="form-control" name="day_hour" id="day_hour" required>
-                                    <option value="-1">--Select Day Hour--</option>
+                                    <option value="-1">--Select the options above first--</option>
                                     {day_hours_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Course:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="course" id="course" required>
+                                    <option value="-1">--Select the options above first--</option>
+                                    {courses_dd}
                                 </select>
                             </div>
                         </div>
@@ -105,7 +106,7 @@
                         <div class="row">
                             <div class="col-md-offset-3 col-md-9">
                                 <button type="submit" class="btn green">{send_button}</button>
-                                <button type="button" class="btn default">Cancel</button>
+                                <a href="display_page.php?tpl=manage_schedule&cat=2"><button type="button" class="btn default">Reset</button></a>
                             </div>
                         </div>
                     </div>
@@ -179,6 +180,9 @@
                             Grade
                         </th>
                         <th>
+                            Group
+                        </th>
+                        <th>
                             Course
                         </th>
                         <th>
@@ -209,7 +213,6 @@
     <script>
 
         $(document).ready(function(){
-
 
             $('#schedule_form').submit(function(){
 
@@ -245,29 +248,115 @@
 
             });
 
+            $('#group, #week_day, #week_day, #day_hour, #course, #teacher').prop('disabled', true);
+
+            $('#grade').change(function(){
+
+                if($('#grade').val() !== '-1'){
+
+                    $('#week_day, #week_day, #day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                    $('#group').prop('disabled', false).val('-1');
+
+                    var grade = $('#grade').val();
+                    $.ajax({
+                        url: 'includes/ajax.manage_schedule.php',
+                        method: 'POST',
+                        data: {'action': 'get_groups', 'grade': grade},
+
+                        success:  function (response) {
+
+                            $('#group').html(response);
+
+                        }
+                    });
+                }else{
+                    $('#group, #week_day, #week_day, #day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                }
+
+            });
+
+            $('#group').change(function(){
+                if($('#group').val() !== '-1'){
+                    $('#week_day').prop('disabled', false).val('-1');
+                    $('#day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                }else{
+                    $('#week_day, #day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                }
+            });
+
+            $('#week_day').change(function(){
+
+                 var grade = $('#grade').val();
+                 var group = $('#group').val();
+                 var week_day = $('#week_day').val();
+
+                 if(week_day !== '-1'){
+                     $('#day_hour').prop('disabled', false).val('-1');
+                     $('#course, #teacher').prop('disabled', true).val('-1');
+                     $.ajax({
+                         url: 'includes/ajax.manage_schedule.php',
+                         method: 'POST',
+                         data: {'action': 'get_day_hours', 'grade': grade, 'group': group, 'week_day': week_day},
+
+                         success:  function (response) {
+
+                             $('#day_hour').html(response);
+
+                         }
+                     });
+                 }else{
+                     $('#day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                 }
+            });
+
             $('#day_hour').change(function(){
 
-                var city_id = $('#city').val();
+                var group = $('#group').val();
 
-                $.ajax({
+                if($('#day_hour').val() !== '-1'){
+                    $('#course').prop('disabled', false);
+                    $('#teacher').prop('disabled', true).val('-1');
+                    $.ajax({
+                        url: 'includes/ajax.manage_schedule.php',
+                        method: 'POST',
+                        data: {'action': 'get_courses', 'group': group},
 
-                    url: 'includes/ajax.filter_zipcodes.php',
-                    method: 'POST',
-                    data: {'city_id': city_id},
+                        success:  function (response) {
 
-                    success:  function (response) {
+                            $('#course').html(response);
 
-                        $('#zipcode').html(response);
+                        }
+                    });
+                }else{
+                    $('#course, #teacher').prop('disabled', true).val('-1');
+                }
+            });
 
-                    }
+            $('#course').change(function(){
 
-                });
+                var week_day = $('#week_day').val();
+                var day_hour = $('#day_hour').val();
+                var course = $('#course').val();
 
+                if(course !== '-1' && week_day !== '-1' && day_hour !== '-1' && course !== '-1'){
+                    $('#teacher').prop('disabled', false);
+                    $.ajax({
+                        url: 'includes/ajax.manage_schedule.php',
+                        method: 'POST',
+                        data: {'action': 'get_teachers', 'week_day': week_day, 'day_hour': day_hour, 'course': course},
+
+                        success:  function (response) {
+                            //alert(response);
+                           $('#teacher').html(response);
+
+                        }
+                    });
+                }else{
+                    $('#teacher').prop('disabled', true).val('-1');
+                }
             });
 
         });
 
     </script>
-
-
 </div>

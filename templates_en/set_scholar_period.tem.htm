@@ -23,13 +23,10 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group required">
-                            <label class="control-label col-md-3">Semester #:</label>
+                            <label class="control-label col-md-3">Scholar Year:</label>
                             <div class="col-md-9">
-                                <select class="form-control" name="semester" id="semester">
-                                    <option value="-1">--Select One--</option>
-                                    <option value="Semester 1" {selected1}>Semester 1</option>
-                                    <option value="Semester 2" {selected2}>Semester 2</option>
-                                </select>
+                                <input type="text" name="scholar_year" id="scholar_year" class="form-control" placeholder="Scholar Year" value="{scholar_year}" required>
+
                             </div>
                         </div>
                     </div>
@@ -155,7 +152,7 @@
                             ID
                         </th>
                         <th>
-                            Semester
+                            Scholar Year
                         </th>
                         <th>
                             Start Date

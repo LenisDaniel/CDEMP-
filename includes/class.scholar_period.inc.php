@@ -46,7 +46,7 @@ class Scholar_Period{
 
     }
 
-    function manage_scholar_period_info($tpl_uri = 0, $id = 0, $semester= "", $start_date = "", $end_date = 0, $active = 0){
+    function manage_scholar_period_info($tpl_uri = 0, $id = 0, $scholar_year= "", $start_date = "", $end_date = 0, $active = 0){
         global $objmydbcon;
 
         //        echo $table . "<br>";
@@ -64,7 +64,7 @@ class Scholar_Period{
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE scholar_period SET semester = '$semester', start_date = '$start_date', end_date = '$end_date', active = '$active' WHERE scholar_period_id = $id";
+            $sqlupdate = "UPDATE scholar_period SET scholar_year = '$scholar_year', start_date = '$start_date', end_date = '$end_date', active = '$active' WHERE scholar_period_id = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=6");
@@ -75,7 +75,7 @@ class Scholar_Period{
 
         }else{
 
-            $sqlinsert = "INSERT INTO scholar_period(semester, start_date, end_date, active)VALUES('$semester', '$start_date', '$end_date', $active)";
+            $sqlinsert = "INSERT INTO scholar_period(scholar_year, start_date, end_date, active)VALUES('$scholar_year', '$start_date', '$end_date', $active)";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();

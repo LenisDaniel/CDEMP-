@@ -91,7 +91,19 @@
                             </div>
                         </div>
                     </div>
-                    <!--/span-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group required">
+                                <label class="control-label col-md-3">Assign Group:</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" name="group" id="group">
+                                        <option>--Select One--</option>
+                                        {groups_dd}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <h3 class="form-section">Address Info</h3>
                 <!--/row-->
@@ -230,7 +242,7 @@
                         <div class="row">
                             <div class="col-md-offset-3 col-md-9">
                                 <button type="submit" class="btn green">{send_button}</button>
-                                <button type="button" class="btn default">Cancel</button>
+                                <a href="display_page.php?tpl=manage_students&cat=2"><button type="button" class="btn default">Cancel</button></a>
                             </div>
                         </div>
                     </div>
@@ -353,6 +365,11 @@
 
             if($('#zipcode').val() === '-1'){
                 alert('Please select one Zipcode!');
+                return false;
+            }
+
+            if($('#group').val() === '-1'){
+                alert('Please assing one Group!');
                 return false;
             }
 

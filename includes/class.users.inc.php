@@ -62,23 +62,6 @@ class Users{
     function manage_user_info($tpl_uri = 0, $id = 0, $first_name = "", $last_name = "", $second_surname = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0, $parent_1 = "", $parent_2 = "", $phone_1_carrier = "", $phone_2_carrier = ""){
         global $objmydbcon;
 
-//        echo $id . "<br/>";
-//        echo $first_name . "<br/>";
-//        echo $last_name . "<br/>";
-//        echo $second_surname . "<br/>";
-//        echo $password . "<br/>";
-//        echo $email . "<br/>";
-//        echo $address1 . "<br/>";
-//        echo $address2 . "<br/>";
-//        echo $phone_1 . "<br/>";
-//        echo $phone_2 . "<br/>";
-//        echo $cities_dd . "<br/>";
-//        echo $states_dd . "<br/>";
-//        echo $zipcode . "<br/>";
-//        echo $active . "<br/>";
-//        echo $role_idx . "<br/>";//
-//        exit;
-
         if(!$active == "1"){
             $active = 0;
         }
@@ -95,8 +78,8 @@ class Users{
 			WHERE idx = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2");
-                return true;
+                //header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                return $id;
             }else{
                 return false;
             }
@@ -109,7 +92,7 @@ class Users{
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
                 header("location: display_page.php?tpl=$tpl_uri&cat=2");
-                return true;
+                return $last_id;
             }else{
                 return false;
             }

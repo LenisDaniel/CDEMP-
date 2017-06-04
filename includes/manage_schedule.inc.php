@@ -13,29 +13,16 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("form_action", "display_page.php?tpl=manage_schedule&cid=".base64_encode($idx));
     $objtemplate->set_content("form_title", "Update Schedule Info");
     $objtemplate->set_content("send_button", "Update");
-
-    //aqui llenamos el formulario con la info de la base de datos
-
     $objtemplate->set_content("grades_dd", $objschedule->get_grades($objschedule->get_schedule_info('grade_id')));
-    $objtemplate->set_content("groups_dd", $objschedule->get_groups($objschedule->get_schedule_info('group_id')));
-    $objtemplate->set_content("courses_dd", $objschedule->get_courses_1($objschedule->get_schedule_info('course_id')));
     $objtemplate->set_content("week_days_dd", $objschedule->get_week_days($objschedule->get_schedule_info('week_day_id')));
-    $objtemplate->set_content("day_hours_dd", $objschedule->get_day_hours($objschedule->get_schedule_info('day_hour_id')));
-    //$objtemplate->set_content("teachers_dd", $objschedule->get_teachers($objschedule->get_schedule_info('teacher_id')));
-
 
 }else{
 
     $objtemplate->set_content("form_action", "display_page.php?tpl=manage_schedule&cid=".base64_encode(0));
     $objtemplate->set_content("form_title", "Create New Schedule Item");
     $objtemplate->set_content("send_button", "Submit");
-
     $objtemplate->set_content("grades_dd", $objschedule->get_grades(0));
-    $objtemplate->set_content("groups_dd", $objschedule->get_groups(0));
-    $objtemplate->set_content("courses_dd", $objschedule->get_courses_1(0));
     $objtemplate->set_content("week_days_dd", $objschedule->get_week_days(0));
-    $objtemplate->set_content("day_hours_dd", $objschedule->get_day_hours(0));
-    //$objtemplate->set_content("teachers_dd", $objschedule->get_teachers(0));
 
 }
 
