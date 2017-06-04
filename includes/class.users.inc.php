@@ -94,10 +94,8 @@ class Users{
 			parent_1 = '$parent_1', parent_2 = '$parent_2', phone_1_carrier = '$phone_1_carrier', phone_2_carrier = '$phone_2_carrier'
 			WHERE idx = $id";
 
-
-
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;
@@ -110,7 +108,7 @@ class Users{
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return true;
             }else{
                 return false;
@@ -192,7 +190,9 @@ class Users{
         global $objmydbcon;
         $states_dd = "";
 
-        $sqlquery = "SELECT * FROM master_states";
+        $sqlquery = "SELECT * FROM master_state";
+
+
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results)>0){

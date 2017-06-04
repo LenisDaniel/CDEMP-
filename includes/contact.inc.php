@@ -31,16 +31,12 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
     $mail->Password = 'cdemp2017';
     $mail->SMTPSecure = 'ssl';
 
-
-    $mail->setFrom('info@cdemp-pr.com', 'Cdemp Personal');
-
+    $mail->setFrom('info@cdemp-pr.com', 'CDEMP Response');
     $mail->addAddress($email);
 
 
     //$mail->addAddress('lenis.daniel@gmail.com');
     $mail->addReplyTo('info@cdemp-pr.com', 'Information');
-
-    //$mail->addAttachment('pdfs/filename_'.$id.'.pdf', 'plan_transicion.pdf'); // Add attachments
 
     $mail->isHTML(true);
 
@@ -52,8 +48,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
         echo 'Message could not be sent.';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
-        header("location: ../display_page.php?tpl=incidents&msg=1");
-        //echo 'Message has been sent';
+        header("location: ../display_page.php?tpl=events&msg=1");
     }
 
 }
