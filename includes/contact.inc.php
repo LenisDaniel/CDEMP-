@@ -22,14 +22,14 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
 
     $mail = new PHPMailer();
     //$mail->SMTPDebug = 1;
-    $mail->isSMTP();
+    //$mail->isSMTP();
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'mail.cdemp-pr.com';
     $mail->SMTPAuth = true;
     $mail->Port = 25;
     $mail->Username = 'info@cdemp-pr.com';
     $mail->Password = 'cdemp2017';
-    $mail->SMTPSecure = 'ssl';
+    //$mail->SMTPSecure = 'ssl';
 
     $mail->setFrom('info@cdemp-pr.com', 'CDEMP Response');
     $mail->addAddress($email);
