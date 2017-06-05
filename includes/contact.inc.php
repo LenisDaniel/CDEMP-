@@ -1,5 +1,5 @@
 <?php
-phpinfo();
+echo phpinfo();
 //error_reporting(E_ALL);
 /**
  * Created by PhpStorm.
