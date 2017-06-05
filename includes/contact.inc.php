@@ -15,10 +15,6 @@ $email = $name = $message = $subject = "";
 
 if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
 
-
-    echo 'entre';
-    exit;
-
     $email = $_POST['email'];
     $name = $_POST['name'];
     $message = $_POST['message'];
@@ -57,8 +53,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
 
 }
 
-echo 'entre';
-exit;
+
 
 
 
