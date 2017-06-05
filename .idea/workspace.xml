@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" afterPath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/contact.inc.php" afterPath="$PROJECT_DIR$/includes/contact.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/contact.tem.htm" afterPath="$PROJECT_DIR$/templates_en/contact.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,22 +86,40 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-              <folding />
+              <folding>
+                <marker date="1496671423779" expanded="true" signature="137:1674" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="483:560" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="657:798" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="717:762" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="768:789" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="859:885" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="949:1113" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1002:1067" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1073:1095" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1171:1342" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1214:1299" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1305:1324" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1389:1414" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1447:1489" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1534:1646" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1567:1615" ph="..." />
+                <marker date="1496671423779" expanded="true" signature="1621:1637" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.inc.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contact.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="-220">
+              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.tem.htm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.tem.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
@@ -211,10 +226,10 @@
         <option value="$PROJECT_DIR$/assets2/global/css/materialize.css" />
         <option value="$PROJECT_DIR$/templates_en/my_courses.tem.htm" />
         <option value="$PROJECT_DIR$/includes/my_courses.inc.php" />
-        <option value="$PROJECT_DIR$/includes/contact.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
-        <option value="$PROJECT_DIR$/includes/contact.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/contact.tem.htm" />
+        <option value="$PROJECT_DIR$/includes/contact.inc.php" />
+        <option value="$PROJECT_DIR$/includes/contact.inc.php" />
       </list>
     </option>
   </component>
@@ -473,7 +488,7 @@
       <workItem from="1496660202979" duration="1544000" />
       <workItem from="1496661792469" duration="22000" />
       <workItem from="1496662930090" duration="252000" />
-      <workItem from="1496671239183" duration="157000" />
+      <workItem from="1496671239183" duration="339000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -500,7 +515,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111044000" />
+    <option name="totallyTimeSpent" value="111226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1016,15 +1031,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496671423779" expanded="true" signature="137:1674" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="483:560" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="657:798" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="717:762" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="768:789" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="859:885" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="949:1113" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1002:1067" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1073:1095" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1171:1342" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1214:1299" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1305:1324" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1389:1414" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1447:1489" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1534:1646" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1567:1615" ph="..." />
+            <marker date="1496671423779" expanded="true" signature="1621:1637" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,6 +1057,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="134" lean-forward="false" selection-start-line="2" selection-start-column="134" selection-end-line="2" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>

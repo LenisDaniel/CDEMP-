@@ -9,7 +9,7 @@
 
 require_once("class.phpmailer.php");
 require_once("class.smtp.php");
-
+$mail = new PHPMailer();
 
 $email = $name = $message = $subject = "";
 
@@ -20,7 +20,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
     $message = $_POST['message'];
     $subject = $_POST['subject'];
 
-    $mail = new PHPMailer();
+
     //$mail->SMTPDebug = 1;
     //$mail->isSMTP();
     $mail->CharSet = 'UTF-8';
