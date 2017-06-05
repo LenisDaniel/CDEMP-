@@ -84,8 +84,8 @@
       <file leaf-file-name="contact.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1210">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="-345">
+              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -94,8 +94,8 @@
       <file leaf-file-name="contact.tem.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="47" />
+            <state relative-caret-position="462">
+              <caret line="72" column="76" lean-forward="true" selection-start-line="72" selection-start-column="76" selection-end-line="72" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -467,7 +467,7 @@
       <workItem from="1496570254356" duration="38704000" />
       <workItem from="1496622705874" duration="701000" />
       <workItem from="1496625530959" duration="1322000" />
-      <workItem from="1496660202979" duration="1009000" />
+      <workItem from="1496660202979" duration="1191000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -494,7 +494,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110078000" />
+    <option name="totallyTimeSpent" value="110260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -506,7 +506,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27228788" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1016,16 +1016,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="47" />
+        <state relative-caret-position="462">
+          <caret line="72" column="76" lean-forward="true" selection-start-line="72" selection-start-column="76" selection-end-line="72" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="-345">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding />
         </state>
       </provider>
