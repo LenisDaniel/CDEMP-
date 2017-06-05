@@ -84,8 +84,18 @@
       <file leaf-file-name="contact.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="286">
+              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.tem.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -457,7 +467,7 @@
       <workItem from="1496570254356" duration="38704000" />
       <workItem from="1496622705874" duration="701000" />
       <workItem from="1496625530959" duration="1322000" />
-      <workItem from="1496660202979" duration="378000" />
+      <workItem from="1496660202979" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -484,7 +494,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109447000" />
+    <option name="totallyTimeSpent" value="109689000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -725,7 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1005,10 +1014,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        <state relative-caret-position="286">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding />
         </state>
       </provider>
