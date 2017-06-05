@@ -9,11 +9,11 @@
 
 require_once("class.phpmailer.php");
 require_once("class.smtp.php");
-require("PHPMailerAutoload.php");
+
 
 $email = $name = $message = $subject = "";
 
-
+if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
 
     $email = $_POST['email'];
     $name = $_POST['name'];
@@ -51,7 +51,7 @@ $email = $name = $message = $subject = "";
         header("location: ../display_page.php?tpl=events&msg=1");
     }
 
-
+}
 
 
 
