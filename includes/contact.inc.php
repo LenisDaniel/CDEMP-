@@ -22,7 +22,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
 
     $mail = new PHPMailer();
     //$mail->SMTPDebug = 1;
-    //$mail->isSMTP();
+    $mail->isSMTP();
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'mail.cdemp-pr.com';
     $mail->SMTPAuth = true;
