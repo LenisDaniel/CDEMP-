@@ -13,7 +13,7 @@ require("PHPMailerAutoload.php");
 
 $email = $name = $message = $subject = "";
 
-if(isset($_POST)){
+
 
     $email = $_POST['email'];
     $name = $_POST['name'];
@@ -51,7 +51,7 @@ if(isset($_POST)){
         header("location: ../display_page.php?tpl=events&msg=1");
     }
 
-}
+
 
 
 
