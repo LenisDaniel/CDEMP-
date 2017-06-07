@@ -100,9 +100,17 @@
         $phone_1_carrier = $_POST['phone_1_carrier'];
         $parent_2 = $_POST['parent_2'];
         $phone_2_carrier = $_POST['phone_2_carrier'];
+
+
+
+        if($id > 0){
+            $action = 1;
+        }else{
+            $action = 0;
+        }
     
         if($lst_id = $objstudents->manage_user_info('manage_students', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, $phone_1_carrier, $phone_2_carrier)){
-            $objstudents->assign_group($group, $lst_id);
+            $objstudents->assign_group($group, $lst_id, $action);
         }
     
     }

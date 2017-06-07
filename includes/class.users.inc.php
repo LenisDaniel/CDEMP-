@@ -91,7 +91,7 @@ class Users{
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                //header("location: display_page.php?tpl=$tpl_uri&cat=2");
                 return $last_id;
             }else{
                 return false;
