@@ -13,8 +13,16 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
     $group_id = $_GET['group_id'];
     $course_id = $_GET['course_id'];
     $teacher_id = $_SESSION['loged_user']['idx'];
+    $header = array();
+    $header_columns = "";
+    $body_rows = "";
 
     $students = get_students_list($group_id);
+    //    echo '<pre>';
+    //    print_r($students);
+    //    echo '</pre>';
+    //    exit;
+
     $i = 0;
     foreach($students as $value){
             $i++;
@@ -25,6 +33,31 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
             $student_td_info .= "<td>" . get_incidents(0, $i) . "</td>";
             $student_td_info .= "<td class='action-buttons'><button type='button' class='btn btn-success' onclick='insert_grade($i)'><i class='fa fa-pencil-square-o'></i></button></td>";
             $student_td_info .= "</tr>";
+
+            $body_rows .= "<tr class='odd gradeX'>";
+            $body_rows .= "<td id='td_$i'><input type='hidden' id='student_id_$i' name='student_id_$i' value='$value'>" . $value . "</td>";
+            $body_rows .= "<td>" . get_student_name($value) . "</td>";
+
+            //Ciclo que busque nota en cada examen creado y cree el td
+            $grade_idx = create_header();
+            for($j = 0; $j < count($grade_idx); $j++){
+                $idx = $grade_idx[$j][0];
+                $sqlquery = "SELECT tn.note_id, mn.note_descr FROM trans_notes tn INNER JOIN master_notes mn ON mn.note_id = tn.note_id WHERE student_id = $value AND note_identifier = $idx";
+                if($result = $objmydbcon->get_result_set($sqlquery)){
+                    if(mysqli_num_rows($result) > 0){
+                        $rs = mysqli_fetch_assoc($result);
+                        extract($rs);
+                        $body_rows .= "<td>" . $note_descr . "</td>";
+                    }
+                }else{
+                    return 0;
+                }
+            }
+            $body_rows .= "<td>" .get_percentage($grade_id, $group_id, $course_id, $teacher_id, $value). "</td>";
+            $body_rows .= "</tr>";
+
+            //Abajo se hace el promedio total
+
     }
 
     $objtemplate->set_content('students_list', $student_td_info);
@@ -32,6 +65,17 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
     $objtemplate->set_content('group', $group_id);
     $objtemplate->set_content('course', $course_id);
     $objtemplate->set_content('teacher', $teacher_id);
+
+    //Se crea el header de las notas que estan creadas e la base de datos
+    $header = create_header();
+    for($i = 0; $i < count($header); $i++){
+        $header_columns .= "<th>".$header[$i][1]."</th>";
+    }
+    $header_columns .= "<th>Total Percentage</th>";
+    $objtemplate->set_content('header_columns', $header_columns);
+
+    //Aquí creamos el contenido de la tabla
+    $objtemplate->set_content('students_grades', $body_rows);
 
 }
 
@@ -243,5 +287,55 @@ function validate_today_info($grade_id = 0, $group_id = 0, $course_id = 0, $teac
     }else{
         return false;
     }
+
+}
+
+//echo "<pre>";
+//print_r(create_header());
+//echo "</pre>";
+//exit;
+
+function create_header(){
+    global $objmydbcon;
+    $identifiers = array();
+    $identifiers_id = array();
+    $sqlquery = "SELECT grade_identifier_id, identifier_name FROM grade_identifier";
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }elseif(mysqli_num_rows($result)){
+        while($rs = mysqli_fetch_assoc($result)){
+            $identifiers[] = array_values($rs);
+        }
+    }else{
+        return "";
+    }
+
+    return $identifiers;
+
+}
+
+function get_percentage($grade_id = 0, $group_id = 0, $course_id = 0, $teacher_id = 0, $value = 0){
+    global $objmydbcon;
+
+    $sqlquery = "SELECT punctuation FROM trans_notes WHERE grade_id = $grade_id AND group_id = $group_id AND course_id = $course_id AND teacher_id = $teacher_id AND student_id = $value";
+    if(!$results = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }elseif(mysqli_num_rows($results)){
+        while($rs = mysqli_fetch_assoc($results)){
+            extract($rs);
+            $punctuation_total = explode("-", $punctuation);
+
+            $points = $points + $punctuation_total[0];
+            $max_points = $max_points + $punctuation_total[1];
+
+
+
+        }
+        $percentage = ($points / $max_points) * 100;
+    }else{
+        return "";
+    }
+
+    return $percentage;
 
 }

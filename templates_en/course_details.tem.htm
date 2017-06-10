@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col-md-12">
         <!-- BEGIN EXAMPLE TABLE PORTLET-->
@@ -21,39 +20,39 @@
             <div class="portlet-body">
 
                 <form action="includes/course_details.inc.php" method="post">
-                <div class="table-toolbar">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <!-- <div class="btn-group">
-                                <button id="sample_editable_1_new" class="btn green">
-                                Add New <i class="fa fa-plus"></i>
-                                </button>
-                            </div> -->
-                        </div>
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary pull-right">Submit</button>
-                            <div class="btn-group pull-right" style="margin-right: 10px">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="#">
-                                            Print </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Export to Excel </a>
-                                    </li>
-                                </ul>
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- <div class="btn-group">
+                                    <button id="sample_editable_1_new" class="btn green">
+                                    Add New <i class="fa fa-plus"></i>
+                                    </button>
+                                </div> -->
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                                <div class="btn-group pull-right" style="margin-right: 10px">
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="#">
+                                                Print </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Save as PDF </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Export to Excel </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div style="overflow: scroll">
+                    <div style="overflow: scroll">
 
                         <table class="table table-striped table-bordered table-hover table-responsive" id="students_table">
                             <thead>
@@ -82,7 +81,7 @@
                             </tbody>
                         </table>
 
-                </div>
+                    </div>
                     <input type="hidden" name="grade" id="grade" value="{grade}">
                     <input type="hidden" name="group" id="group" value="{group}">
                     <input type="hidden" name="course" id="course" value="{course}">
@@ -173,6 +172,82 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-globe"></i>Student Grades
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse">
+                    </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config">
+                    </a>
+                    <a href="javascript:;" class="reload">
+                    </a>
+                    <a href="javascript:;" class="remove">
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right" style="margin-right: 10px">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="#">
+                                            Print </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Save as PDF </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Export to Excel </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="overflow: scroll">
+                    <table class="table table-striped table-bordered table-hover table-responsive" id="">
+                        <thead>
+                        <tr>
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Student Name
+                            </th>
+                            {header_columns}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {students_grades}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
