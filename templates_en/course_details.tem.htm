@@ -20,8 +20,7 @@
             </div>
             <div class="portlet-body">
 
-                <form id="students_form" action="includes/course_details.inc.php" method="post">
-
+                <form action="includes/course_details.inc.php" method="post">
                 <div class="table-toolbar">
                     <div class="row">
                         <div class="col-md-6">
@@ -71,7 +70,9 @@
                                 <th>
                                     Incidents
                                 </th>
-
+                                <th>
+                                    Insert Grade
+                                </th>
                             </tr>
                             </thead>
                             <tbody>
@@ -86,26 +87,275 @@
                     <input type="hidden" name="group" id="group" value="{group}">
                     <input type="hidden" name="course" id="course" value="{course}">
                     <input type="hidden" name="teacher" id="teacher" value="{teacher}">
+                    <input type="hidden" name="form_action1" id="form_action1" value="1">
                 </form>
 
             </div>
         </div>
         <!-- END EXAMPLE TABLE PORTLET-->
+
+        <!--Aqui creamos el modal para insertar la nota-->
+        <div class="modal fade" id="create_grade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Insert Grades for Students</h4>
+                    </div>
+                    <form id="course_details_form" action="includes/course_details.inc.php" method="post">
+                        <div class="modal-body">
+                            <div class="form-group col-md-12">
+                                <label>Grade Identifier:</label>
+                                <div>
+                                    <select class="form-control" name="grade_identifiers" id="grade_identifiers">
+                                        <option value="-1">--Select One--</option>
+                                        {grade_identifiers_dd}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12" style="margin-top: 25px">
+                                <div class="col-md-4">
+                                    <label for="punctuation">Punctuation</label>
+                                    <input type="text" class="form-control" name="punctuation" id="punctuation" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="valor">Valor</label>
+                                    <input type="text" class="form-control" name="valor" id="valor" readonly required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="txt_grade">Grade</label>
+                                    <input type="text" class="form-control" name="txt_grade" id="txt_grade" readonly required>
+                                </div>
+                                <input type="hidden" name="grade0" id="grade0" value="">
+                                <input type="hidden" name="group0" id="group0" value="">
+                                <input type="hidden" name="course0" id="course0" value="">
+                                <input type="hidden" name="teacher0" id="teacher0" value="">
+                                <input type="hidden" name="student0" id="student0" value="">
+                                <input type="hidden" name="form_action2" id="form_action2" value="2">
+                            </div>
+                            <br/>
+                            <div class="row" style="clear: both">
+                                <div class="modal-footer" style="margin-top: 25px">
+                                    <button type="button" id="clear_grades" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" id="create_grade_name_btn" class="btn btn-success">Create Grade Name</button>
+                                    <button type="submit" class="btn btn-primary">Assign Grade</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!-- Small modal -->
+        <div class="modal fade bs-example-modal-sm" id="create_grade_name" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <form id="identifier_form">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="grade_name">Grade Name</label>
+                                <input type="text" class="form-control" id="grade_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="grade_name">Valor</label>
+                                <input type="text" class="form-control valor_value" id="grade_valor" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="clear_grade_name" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" id="submit_grade_name" class="btn btn-primary">Create Name</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
 <script>
 
-//    $(document).ready(function(){
-//
-//        $("#students_form").submit(function(){
-//
-//
-//
-//
-//
-//        });
-//
-//    });
+    $(document).ready(function(){
+
+        (function($) {
+            $.get = function(key)   {
+                key = key.replace(/[\[]/, '\\[');
+                key = key.replace(/[\]]/, '\\]');
+                var pattern = "[\\?&]" + key + "=([^&#]*)";
+                var regex = new RegExp(pattern);
+                var url = unescape(window.location.href);
+                var results = regex.exec(url);
+                if (results === null) {
+                    return null;
+                } else {
+                    return results[1];
+                }
+            }
+        })(jQuery);
+
+        var grade_insert =$.get("grade_insert");
+
+        if(grade_insert == 1){
+            alert("Grade assingned succesfully");
+        }
+        if(grade_insert == 2){
+            alert("Problems in process, try again");
+        }
+
+        $('.valor_value').mask('000');
+
+    });
+
+    function insert_grade(id){
+
+        grade0 = $('#grade').val();
+        group0 = $('#group').val();
+        course0 = $('#course').val();
+        teacher0 = $('#teacher').val();
+        student0 = $('#td_'+id).text();
+
+        $('#grade0').val(grade0);
+        $('#group0').val(group0);
+        $('#course0').val(course0);
+        $('#teacher0').val(teacher0);
+        $('#student0').val(student0);
+        $('#create_grade').modal('show');
+
+    }
+
+    //Calculate grade
+    $("#punctuation").blur(function(){
+
+        punctuation = $(this).val();
+        valor = $('#valor').val();
+        var pct = (punctuation / valor) * 100;
+
+        if(pct >= 90){
+            grade_descr = "A";
+        }else if(pct >= 80 && pct < 90){
+            grade_descr = "B";
+        }else if(pct >= 70 && pct < 80){
+            grade_descr = "C";
+        }else if(pct >= 60 && pct < 70){
+            grade_descr = "D";
+        }else{
+            grade_descr = "F";
+        }
+
+        $('#txt_grade').val(grade_descr);
+
+    });
+
+    $('#create_grade_name_btn').click(function(){
+        $('#create_grade_name').modal('show');
+    });
+
+    $('#submit_grade_name').click(function(){
+
+        if( $('#grade_name').val() == "" ){
+            alert("Grade name is required");
+            return false;
+        }
+
+        grade = $('#grade').val();
+        group = $('#group').val();
+        course = $('#course').val();
+        teacher = $('#teacher').val();
+        grade_name = $('#grade_name').val();
+        grade_valor = $('#grade_valor').val();
+
+        $.ajax({
+
+            url: "includes/ajax.grade_identifier.php",
+            method: "POST",
+            data: {'action': 'insert', 'grade': grade, 'group': group, 'course': course, 'teacher': teacher, 'grade_name': grade_name, 'grade_valor': grade_valor},
+
+            success: function(response){
+
+                if(response){
+                    $('#create_grade_name').modal('hide');
+                    $('#grade_name').val("");
+                    $('#grade_valor').val("");
+
+                    $.ajax({
+                        url: "includes/ajax.grade_identifier.php",
+                        method: "POST",
+                        data: {'action': 'recreate'},
+
+                        success: function(response){
+                            $('#grade_identifiers').html(response);
+                        }
+                    })
+
+                }else{
+                    alert("Problems creating, try again!");
+                }
+
+            }
+
+        });
+
+    });
+
+    $('#grade_identifiers').change(function(){
+
+        if( $('#grade_identifiers').val() > 0 ){
+
+            id = $('#grade_identifiers').val();
+            $.ajax({
+
+                url: "includes/ajax.get_valor.php",
+                method: "POST",
+                data: {'id': id},
+
+                success: function(response){
+                    $('#valor').val(response);
+                }
+
+            });
+
+        }
+
+    });
+
+    $('#course_details_form').submit(function(){
+
+        if($('#grade_identifiers').val() === '-1'){
+            alert('Grade Identifier is required');
+            return false;
+        }
+
+        if($('#punctuation').val() === ''){
+            alert('Punctuation is required');
+            return false;
+        }
+
+        if($('#valor').val() === ''){
+            alert('Valor is required');
+            return false;
+        }
+
+        if($('#txt_grade').val() === ''){
+            alert('Grade is required');
+            return false;
+        }
+
+    });
+
+    $('#clear_grades').click(function(){
+        $('#grade_identifiers').val('');
+        $('#punctuation').val('');
+        $('#valor').val('');
+        $('#txt_grade').val('');
+    });
+
+    $('#clear_grade_name').click(function(){
+        $('#grade_name').val('');
+        $('#grade_valor').val('');
+
+    });
 
 </script>

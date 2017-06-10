@@ -1,6 +1,10 @@
 <?php
+
+error_reporting(E_ERROR);
 require_once ("class.mydbcon.inc.php");
+require_once ("class.template.inc.php");
 $objmydbcon = new classmydbcon();
+$objtemplate = new classTemplate();
 
 
 if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_id'])){
@@ -15,10 +19,11 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
     foreach($students as $value){
             $i++;
             $student_td_info .= "<tr class='odd gradeX'>";
-            $student_td_info .= "<td><input type='hidden' id='student_id_$i' name='student_id_$i' value='$value'>" . $value . "</td>";
+            $student_td_info .= "<td id='td_$i'><input type='hidden' id='student_id_$i' name='student_id_$i' value='$value'>" . $value . "</td>";
             $student_td_info .= "<td>" . get_student_name($value) . "</td>";
             $student_td_info .= "<td>" . get_day_status(0, $i) . "</td>";
             $student_td_info .= "<td>" . get_incidents(0, $i) . "</td>";
+            $student_td_info .= "<td class='action-buttons'><button type='button' class='btn btn-success' onclick='insert_grade($i)'><i class='fa fa-pencil-square-o'></i></button></td>";
             $student_td_info .= "</tr>";
     }
 
@@ -30,7 +35,9 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
 
 }
 
-if(isset($_POST) && $_POST != ""){
+$objtemplate->set_content('grade_identifiers_dd', get_grade_identifiers());
+
+if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
 
     for($i = 1; $i <= ((count($_POST) - 4) /3); $i++){
 
@@ -56,6 +63,45 @@ if(isset($_POST) && $_POST != ""){
         }
 
     }
+
+}
+
+if(isset($_POST) && $_POST['form_action2'] == 2 && $_POST['punctuation'] != "" && $_POST['valor'] != "" && $_POST['txt_grade'] != ""){
+    extract($_POST);
+
+    $punctuation_value = $punctuation . "-" . $valor;
+
+    if($txt_grade == "A"){
+        $grade_id = 1;
+    }elseif($txt_grade == "B"){
+        $grade_id = 2;
+    }elseif($txt_grade == "C"){
+        $grade_id = 3;
+    }elseif($txt_grade == "D"){
+        $grade_id = 4;
+    }elseif($txt_grade == "F"){
+        $grade_id = 5;
+    }
+
+    $sqlinsert0 = "INSERT INTO trans_notes(grade_id, group_id, course_id, teacher_id, student_id, note_identifier, punctuation, note_id)VALUES($grade0, $group0, $course0, $teacher0, $student0, '$grade_identifiers', '$punctuation_value', $grade_id)";
+    if($objmydbcon->set_query($sqlinsert0)){
+        header('location: ../display_page.php?tpl=course_details&grade_id='.$grade0.'&group_id='.$group0.'&course_id='.$course0.'&grade_insert=1');
+    }else{
+        header('location: ../display_page.php?tpl=course_details&grade_id='.$grade0.'&group_id='.$group0.'&course_id='.$course0.'&grade_insert=2');
+    }
+
+//    echo "grado " . $grade0 . "<br>";
+//    echo "group " . $group0 . "<br>";
+//    echo "course " . $course0 . "<br>";
+//    echo "teacher " . $teacher0 . "<br>";
+//    echo "student " . $student0 . "<br>";
+//
+//    echo "grade identifier " . $grade_identifiers . "<br>";
+//    echo "punctuation " . $punctuation . "<br>";
+//    echo "valor " . $valor . "<br>";
+//    echo "grade " . $txt_grade . "<br>";
+//
+//    exit;
 
 }
 
@@ -103,7 +149,7 @@ function get_incidents($incident = 0, $position = 0){
 
     $sqlquery = "SELECT * FROM master_incidents";
     $incidents_dd = "<select id='incidents_$position' name='incidents_$position'>";
-    $incidents_dd .= "<option value='-1'>--Incidents Options--</option>";
+
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
     }else if(mysqli_num_rows($results)>0){
@@ -131,7 +177,7 @@ function get_day_status($day_status = 0, $position = 0){
 
     $sqlquery = "SELECT * FROM master_day_status";
     $day_status_dd = "<select id='day_status_$position' name='day_status_$position'>";
-    $day_status_dd .= "<option value='-1'>--Day Status Options--</option>";
+
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
     }else if(mysqli_num_rows($results)>0){
@@ -151,4 +197,26 @@ function get_day_status($day_status = 0, $position = 0){
         return 0;
     }
     return $day_status_dd;
+}
+
+function get_grade_identifiers(){
+    global $objmydbcon;
+    $identifiers_dd = "";
+
+    $sqlquery = "SELECT * FROM grade_identifier";
+
+    if(!$results = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }else if(mysqli_num_rows($results)>0){
+        while($rs = mysqli_fetch_assoc($results)){
+            $val = $rs['grade_identifier_id'];
+            $disp = $rs['identifier_name'];
+
+            $identifiers_dd .= "<option value='$val'>" .$disp . "</option>";
+        }
+
+    }else{
+        return 0;
+    }
+    return $identifiers_dd;
 }

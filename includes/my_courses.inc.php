@@ -20,7 +20,8 @@ if($_SESSION['loged_user']['role_idx'] == 3){
                      INNER JOIN master_day_hour dh ON dh.day_hour_id = st.day_hour_id
                      INNER JOIN master_users mu ON mu.idx = st.teacher_id
                      INNER JOIN scholar_period sp ON sp.active = 1
-                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date AND st.teacher_id = $idx AND wd.week_day_descr LIKE '%$day%'";
+                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date AND st.teacher_id = $idx";
+//                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date AND st.teacher_id = $idx AND wd.week_day_descr LIKE '%$day%'";
 
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
