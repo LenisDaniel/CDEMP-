@@ -49,18 +49,27 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
         $day_status_id = $_POST['day_status_'.$i];
         $incident_id = $_POST['incidents_'.$i];
 
-        $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id)
+        if( validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
+
+            $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id)
                       VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id)";
 
-        if($objmydbcon->set_query($sqlinsert)){
-            //do nothing
+            if($objmydbcon->set_query($sqlinsert)){
+                //do nothing
+            }else{
+                $flag = 1;
+                header('location: ../display_page.php?tpl=my_courses&cat=4&process=2');
+            }
+
+            if($flag == 0){
+                header('location: ../display_page.php?tpl=my_courses&cat=4&process=1');
+            }
+
         }else{
-            $flag = 1;
+            header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
         }
 
-        if($flag == 0){
-            header('location: ../display_page.php?tpl=my_courses&cat=4');
-        }
+
 
     }
 
@@ -219,4 +228,20 @@ function get_grade_identifiers(){
         return 0;
     }
     return $identifiers_dd;
+}
+
+
+function validate_today_info($grade_id = 0, $group_id = 0, $course_id = 0, $teacher_id = 0){
+    global $objmydbcon;
+    $today_date = date('Y-m-d');
+
+    $sqlquery = "SELECT daily_record_id FROM daily_records WHERE grade_id = $grade_id AND group_id = $group_id AND course_id = $course_id AND teacher_id = $teacher_id AND create_date LIKE '$today_date'";
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){
+        return "Connection Problems";
+    }elseif(mysqli_num_rows($result) > 0){
+        return true;
+    }else{
+        return false;
+    }
+
 }
