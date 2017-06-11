@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/7e9e6382-2f29-4fe6-a474-14a9dc18d8d7.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/ajax.grade_identifier.php" afterPath="$PROJECT_DIR$/includes/ajax.grade_identifier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/course_details.inc.php" afterPath="$PROJECT_DIR$/includes/course_details.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets2/global/plugins/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/assets2/global/plugins/bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets2/global/plugins/carousel-owl-carousel/assets/css/bootstrapTheme.css" afterPath="$PROJECT_DIR$/assets2/global/plugins/carousel-owl-carousel/assets/css/bootstrapTheme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/course_details.tem.htm" afterPath="$PROJECT_DIR$/templates_en/course_details.tem.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/template.tem.htm" afterPath="$PROJECT_DIR$/templates_en/template.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,35 +85,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course_details.tem.htm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="course_details.tem.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="431" column="44" lean-forward="true" selection-start-line="431" selection-start-column="44" selection-end-line="431" selection-end-column="44" />
+            <state relative-caret-position="429">
+              <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax.grade_identifier.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/ajax.grade_identifier.php">
+      <file leaf-file-name="contact.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state relative-caret-position="440">
+              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.tem.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="85" lean-forward="true" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
               <folding>
-                <marker date="1497180025019" expanded="true" signature="556:731" ph="INSERT INTO grade_identifier... " />
-                <marker date="1497180025019" expanded="true" signature="955:985" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:992" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1002" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1003" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1025" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1026" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1047" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1048" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1060" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1072" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1497180025019" expanded="true" signature="955:1073" ph="SELECT * FRO... grade_identifier" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.tem.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1120">
+              <caret line="1276" column="33" lean-forward="true" selection-start-line="1276" selection-start-column="33" selection-end-line="1276" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,22 +131,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>function get_co(</find>
-      <find>function get_c(</find>
-      <find>function get_(</find>
-      <find>function get_g(</find>
-      <find>function get_gr(</find>
-      <find>function get_gro(</find>
-      <find>function get_grou(</find>
-      <find>function get_group(</find>
-      <find>function get_groups(</find>
-      <find>get_group_info</find>
-      <find>search</find>
-      <find>table-striped</find>
       <find>table-scrollable</find>
       <find>portlet-body</find>
       <find>city</find>
-      <find>.</find>
       <find>$</find>
       <find>$.</find>
       <find>$.aja</find>
@@ -152,6 +148,19 @@
       <find>txt_grade</find>
       <find>$flag</find>
       <find>grade_identifiers_dd</find>
+      <find>.</find>
+      <find>.ta</find>
+      <find>.table</find>
+      <find>.table {</find>
+      <find>.table</find>
+      <find>q</find>
+      <find>j</find>
+      <find>jquery</find>
+      <find>jquery.</find>
+      <find>jquery.v</find>
+      <find>jquery.vm</find>
+      <find>jquery.vma</find>
+      <find>jquery.vmap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,7 +203,6 @@
         <option value="$PROJECT_DIR$/includes/manage_teachers.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.filter_zipcodes.php" />
         <option value="$PROJECT_DIR$/assets2/global/plugins/bootstrap/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/assets2/global/plugins/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/display_page.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" />
@@ -210,9 +218,7 @@
         <option value="$PROJECT_DIR$/includes/class.schedule.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.manage_schedule.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/assets2/global/css/materialize.css" />
-        <option value="$PROJECT_DIR$/templates_en/contact.tem.htm" />
         <option value="$PROJECT_DIR$/includes/class.users.inc.php" />
         <option value="$PROJECT_DIR$/includes/manage_students.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.students.inc.php" />
@@ -227,8 +233,11 @@
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/includes/class.mydbcon.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/my_courses.tem.htm" />
         <option value="$PROJECT_DIR$/includes/course_details.inc.php" />
-        <option value="$PROJECT_DIR$/templates_en/course_details.tem.htm" />
         <option value="$PROJECT_DIR$/includes/ajax.grade_identifier.php" />
+        <option value="$PROJECT_DIR$/templates_en/course_details.tem.htm" />
+        <option value="$PROJECT_DIR$/assets2/global/plugins/bootstrap/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
+        <option value="$PROJECT_DIR$/templates_en/contact.tem.htm" />
       </list>
     </option>
   </component>
@@ -496,7 +505,7 @@
       <workItem from="1496833746039" duration="1871000" />
       <workItem from="1496956665282" duration="4040000" />
       <workItem from="1497088417541" duration="36316000" />
-      <workItem from="1497173092548" duration="7139000" />
+      <workItem from="1497173092548" duration="8950000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -523,7 +532,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197306000" />
+    <option name="totallyTimeSpent" value="199117000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,7 +544,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -639,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="919">
           <caret line="4" column="109353" lean-forward="true" selection-start-line="4" selection-start-column="109353" selection-end-line="4" selection-end-column="109353" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets2/global/plugins/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="2390" column="1" lean-forward="true" selection-start-line="2390" selection-start-column="1" selection-end-line="2390" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -770,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.schedule.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
@@ -788,13 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13794">
           <caret line="646" column="20" lean-forward="false" selection-start-line="646" selection-start-column="20" selection-end-line="646" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="134" lean-forward="false" selection-start-line="2" selection-start-column="134" selection-end-line="2" selection-end-column="134" />
         </state>
       </provider>
     </entry>
@@ -858,13 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1672">
           <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1006,6 +987,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ajax.grade_identifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding>
+            <marker date="1497180025019" expanded="true" signature="556:731" ph="INSERT INTO grade_identifier... " />
+            <marker date="1497180025019" expanded="true" signature="955:985" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:992" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1002" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1003" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1025" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1026" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1047" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1048" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1060" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1072" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1497180025019" expanded="true" signature="955:1073" ph="SELECT * FRO... grade_identifier" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets2/global/plugins/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="2111" column="22" lean-forward="true" selection-start-line="2111" selection-start-column="22" selection-end-line="2111" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/course_details.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-35">
@@ -1038,32 +1048,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/ajax.grade_identifier.php">
+    <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-          <folding>
-            <marker date="1497180025019" expanded="true" signature="556:731" ph="INSERT INTO grade_identifier... " />
-            <marker date="1497180025019" expanded="true" signature="955:985" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:992" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1002" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1003" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1025" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1026" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1047" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1048" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1060" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1072" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1497180025019" expanded="true" signature="955:1073" ph="SELECT * FRO... grade_identifier" />
-          </folding>
+        <state relative-caret-position="429">
+          <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
+    <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="431" column="44" lean-forward="true" selection-start-line="431" selection-start-column="44" selection-end-line="431" selection-end-column="44" />
+        <state relative-caret-position="440">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="1276" column="33" lean-forward="true" selection-start-line="1276" selection-start-column="33" selection-end-line="1276" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="85" lean-forward="true" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
