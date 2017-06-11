@@ -341,14 +341,12 @@ function get_percentage($grade_id = 0, $group_id = 0, $course_id = 0, $teacher_i
             $points = $points + $punctuation_total[0];
             $max_points = $max_points + $punctuation_total[1];
 
-
-
         }
         $percentage = ($points / $max_points) * 100;
     }else{
         return "";
     }
 
-    return $percentage;
+    return number_format($percentage, 2);
 
 }
