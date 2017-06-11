@@ -39,24 +39,33 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
             $body_rows .= "<td>" . get_student_name($value) . "</td>";
 
             //Ciclo que busque nota en cada examen creado y cree el td
-            $grade_idx = create_header();
-            for($j = 0; $j < count($grade_idx); $j++){
-                $idx = $grade_idx[$j][0];
-                $sqlquery = "SELECT tn.note_id, mn.note_descr FROM trans_notes tn INNER JOIN master_notes mn ON mn.note_id = tn.note_id WHERE student_id = $value AND note_identifier = $idx";
-                if($result = $objmydbcon->get_result_set($sqlquery)){
-                    if(mysqli_num_rows($result) > 0){
-                        $rs = mysqli_fetch_assoc($result);
-                        extract($rs);
-                        $body_rows .= "<td>" . $note_descr . "</td>";
-                    }
-                }else{
-                    return 0;
-                }
-            }
-            $body_rows .= "<td>" .get_percentage($grade_id, $group_id, $course_id, $teacher_id, $value). "</td>";
-            $body_rows .= "</tr>";
+            if($grade_idx = create_header($grade_id, $group_id, $course_id)){
+                $insert_header = 1;
 
-            //Abajo se hace el promedio total
+                for($j = 0; $j < count($grade_idx); $j++){
+                    $idx = $grade_idx[$j][0];
+                    $sqlquery = "SELECT tn.note_id, mn.note_descr FROM trans_notes tn INNER JOIN master_notes mn ON mn.note_id = tn.note_id WHERE student_id = $value AND note_identifier = $idx";
+
+                    if($result = $objmydbcon->get_result_set($sqlquery)){
+                        if(mysqli_num_rows($result) > 0){
+                            $rs = mysqli_fetch_assoc($result);
+                            extract($rs);
+
+                            $body_rows .= "<td>" . $note_descr . "</td>";
+
+                        }else{
+                            $body_rows .= "<td>Not Assigned</td>";
+                        }
+                    }else{
+                        return 0;
+                    }
+
+                }
+
+                //Abajo se hace el promedio total
+                $body_rows .= "<td>" .get_percentage($grade_id, $group_id, $course_id, $teacher_id, $value). "</td>";
+                $body_rows .= "</tr>";
+            }
 
     }
 
@@ -67,19 +76,21 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
     $objtemplate->set_content('teacher', $teacher_id);
 
     //Se crea el header de las notas que estan creadas e la base de datos
-    $header = create_header();
-    for($i = 0; $i < count($header); $i++){
-        $header_columns .= "<th>".$header[$i][1]."</th>";
+    if($insert_header == 1){
+        $header = create_header($grade_id, $group_id, $course_id);
+        for($i = 0; $i < count($header); $i++){
+            $header_columns .= "<th>".$header[$i][1]."</th>";
+        }
+        $header_columns .= "<th>Total Percentage</th>";
+        $objtemplate->set_content('header_columns', $header_columns);
     }
-    $header_columns .= "<th>Total Percentage</th>";
-    $objtemplate->set_content('header_columns', $header_columns);
 
     //Aquí creamos el contenido de la tabla
     $objtemplate->set_content('students_grades', $body_rows);
 
 }
 
-$objtemplate->set_content('grade_identifiers_dd', get_grade_identifiers());
+$objtemplate->set_content('grade_identifiers_dd', get_grade_identifiers($grade_id, $group_id, $course_id, $teacher_id));
 
 if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
 
@@ -252,11 +263,11 @@ function get_day_status($day_status = 0, $position = 0){
     return $day_status_dd;
 }
 
-function get_grade_identifiers(){
+function get_grade_identifiers($grade_id = 0, $group_id = 0, $course_id = 0, $teacher_id = 0){
     global $objmydbcon;
     $identifiers_dd = "";
 
-    $sqlquery = "SELECT * FROM grade_identifier";
+    $sqlquery = "SELECT * FROM grade_identifier WHERE grade_id = $grade_id AND group_id = $group_id AND course_id = $course_id AND teacher_id = $teacher_id";
 
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
@@ -295,11 +306,13 @@ function validate_today_info($grade_id = 0, $group_id = 0, $course_id = 0, $teac
 //echo "</pre>";
 //exit;
 
-function create_header(){
+function create_header($grade = 0, $group = 0, $course = 0){
     global $objmydbcon;
+
     $identifiers = array();
     $identifiers_id = array();
-    $sqlquery = "SELECT grade_identifier_id, identifier_name FROM grade_identifier";
+    $sqlquery = "SELECT grade_identifier_id, identifier_name FROM grade_identifier WHERE grade_id = $grade AND group_id = $group AND course_id = $course";
+
     if(!$result = $objmydbcon->get_result_set($sqlquery)){
         return false;
     }elseif(mysqli_num_rows($result)){
@@ -307,7 +320,7 @@ function create_header(){
             $identifiers[] = array_values($rs);
         }
     }else{
-        return "";
+        return false;
     }
 
     return $identifiers;

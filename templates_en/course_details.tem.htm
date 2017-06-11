@@ -243,6 +243,7 @@
                         </thead>
                         <tbody>
                         {students_grades}
+
                         </tbody>
                     </table>
                 </div>
@@ -359,7 +360,7 @@
                     $.ajax({
                         url: "includes/ajax.grade_identifier.php",
                         method: "POST",
-                        data: {'action': 'recreate'},
+                        data: {'action': 'recreate', 'grade': grade, 'group': group, 'course': course, 'teacher': teacher},
 
                         success: function(response){
                             $('#grade_identifiers').html(response);

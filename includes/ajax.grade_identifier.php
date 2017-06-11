@@ -11,7 +11,8 @@ if(isset($_POST) && $_POST['action'] == 'insert'){
 
     }
 }else{
-    echo get_identifiers();
+    extract($_POST);
+    echo get_identifiers($grade, $group, $course, $teacher);
 }
 
 //Functions
@@ -28,10 +29,10 @@ function insert_grade_name($grade = 0, $group = 0, $course = 0, $teacher = 0, $g
 
 }
 
-function get_identifiers(){
+function get_identifiers($grade = 0, $group = 0, $course = 0, $teacher = 0){
     global $objmydbcon;
 
-    $sqlquery = "SELECT * FROM grade_identifier";
+    $sqlquery = "SELECT * FROM grade_identifier WHERE grade_id = $grade AND group_id = $group AND course_id = $course AND teacher_id = $teacher";
     $text = "--Select One--";
 
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
