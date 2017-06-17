@@ -39,9 +39,9 @@ if($_SESSION['loged_user']['role_idx'] == 3){
                                         <div class='col s12 m6'>
                                             <div class='card blue-grey darken-1'>
                                                 <div class='card-content white-text'>
-                                                    <span class='card-title'>$course_descr - $day_hour_descr - $group_descr</span>
+                                                    <span class='card-title'>$course_descr / $group_descr</span>
                                                     <p>
-                                                        Click to view your students in this class and start the direct communication with the parents and scholar council!
+                                                        <span style='font-size: 18px'><strong>$day_hour_descr</strong></span> 
                                                     </p>
                                                 </div>
                                                 <div class='card-action'>
@@ -56,9 +56,9 @@ if($_SESSION['loged_user']['role_idx'] == 3){
                                         <div class='col s12 m6'>
                                             <div class='card blue-grey darken-1'>
                                                 <div class='card-content white-text'>
-                                                    <span class='card-title'>$course_descr - $day_hour_descr - $group_descr</span>
+                                                    <span class='card-title'>$course_descr / $group_descr</span>
                                                     <p>
-                                                        Click to view your students in this class and start the direct communication with the parents and scholar council!
+                                                        <span style='font-size: 18px'><strong>$day_hour_descr</strong></span>
                                                     </p>
                                                 </div>
                                                 <div class='card-action'>
