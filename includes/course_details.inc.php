@@ -35,7 +35,7 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
             $student_td_info .= "</tr>";
 
             $body_rows .= "<tr class='odd gradeX'>";
-            $body_rows .= "<td id='td_$i'><input type='hidden' id='student_id_$i' name='student_id_$i' value='$value'>" . $value . "</td>";
+            $body_rows .= "<td id='tds_$i'><input type='hidden' id='student_id_$i' name='student_id_$i' value='$value'>" . $value . "</td>";
             $body_rows .= "<td>" . get_student_name($value) . "</td>";
 
             //Ciclo que busque nota en cada examen creado y cree el td
@@ -44,14 +44,14 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
 
                 for($j = 0; $j < count($grade_idx); $j++){
                     $idx = $grade_idx[$j][0];
-                    $sqlquery = "SELECT tn.note_id, mn.note_descr FROM trans_notes tn INNER JOIN master_notes mn ON mn.note_id = tn.note_id WHERE student_id = $value AND note_identifier = $idx";
+                    $sqlquery = "SELECT tn.note_id, tn.trans_notes_id, mn.note_descr FROM trans_notes tn INNER JOIN master_notes mn ON mn.note_id = tn.note_id WHERE student_id = $value AND note_identifier = $idx";
 
                     if($result = $objmydbcon->get_result_set($sqlquery)){
                         if(mysqli_num_rows($result) > 0){
                             $rs = mysqli_fetch_assoc($result);
                             extract($rs);
 
-                            $body_rows .= "<td>" . $note_descr . "</td>";
+                            $body_rows .= "<td id='$trans_notes_id' class='grade_selector'>" . $note_descr . "</td>";
 
                         }else{
                             $body_rows .= "<td>Not Assigned</td>";
@@ -104,10 +104,10 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
         $day_status_id = $_POST['day_status_'.$i];
         $incident_id = $_POST['incidents_'.$i];
 
-        if( validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
+        if( !validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
 
             $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id)
-                      VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id)";
+                          VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id)";
 
             if($objmydbcon->set_query($sqlinsert)){
                 //do nothing
@@ -123,8 +123,6 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
         }else{
             header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
         }
-
-
 
     }
 
@@ -290,7 +288,8 @@ function validate_today_info($grade_id = 0, $group_id = 0, $course_id = 0, $teac
     global $objmydbcon;
     $today_date = date('Y-m-d');
 
-    $sqlquery = "SELECT daily_record_id FROM daily_records WHERE grade_id = $grade_id AND group_id = $group_id AND course_id = $course_id AND teacher_id = $teacher_id AND create_date LIKE '$today_date'";
+    $sqlquery = "SELECT daily_record_id FROM daily_records WHERE grade_id = $grade_id AND group_id = $group_id AND course_id = $course_id AND teacher_id = $teacher_id AND create_date LIKE '%$today_date%'";
+
     if(!$result = $objmydbcon->get_result_set($sqlquery)){
         return "Connection Problems";
     }elseif(mysqli_num_rows($result) > 0){
