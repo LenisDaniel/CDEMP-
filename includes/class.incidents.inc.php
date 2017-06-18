@@ -12,7 +12,7 @@ class Incidents{
         $this->field_info = array();
     }
 
-    function get_all_incidents($role = 0, $tpl_uri = "", $teacher_id = 0){
+    function get_all_incidents($role = 0, $tpl_uri = "", $teacher_id = 0, $start = "", $end = "", $grade = 0, $group = 0, $course = 0){
         global $objmydbcon;
 
         $i = 0;
@@ -87,6 +87,84 @@ class Incidents{
                 break;
         }
         return $label_color;
+    }
+
+    function get_filter_grades($grade_id = 0){
+        global $objmydbcon;
+
+        $grades_dd = "";
+        $sqlquery = "SELECT * FROM master_grade";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['grade_id'];
+                $disp = $rs['grade_descr'];
+
+                if($grade_id == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+
+                $grades_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $grades_dd;
+    }
+
+    function get_filter_groups($group_id = 0){
+        global $objmydbcon;
+
+        $groups_dd = "";
+        $sqlquery = "SELECT * FROM master_group";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['group_id'];
+                $disp = $rs['group_descr'];
+
+                if($group_id == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+
+                $groups_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $groups_dd;
+    }
+
+    function get_filter_courses($course_id = 0){
+        global $objmydbcon;
+
+        $courses_dd = "";
+        $sqlquery = "SELECT * FROM master_course";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['course_id'];
+                $disp = $rs['course_descr'];
+
+                if($course_id == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+
+                $courses_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $courses_dd;
     }
 
 }

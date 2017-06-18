@@ -20,27 +20,55 @@
             <div class="portlet-body">
                 <div class="table-toolbar">
                     <div class="row">
-                        <div class="col-md-6">
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="btn-group pull-right" style="margin-right: 10px">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="#">
-                                            Print </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Export to Excel </a>
-                                    </li>
-                                </ul>
+                        <div class="form-group">
+                            <form action="includes/teacher_incidents.inc.php?filter=1" method="post">
+                                <div class="col-md-2 form-group">
+                                    <input class="form-control" id="from_date" name="from_date" type="text" placeholder="Start Date">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input class="form-control" id="to_date" name="to_date" type="text" placeholder="End Date">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <select class="form-control" id="sel_grade" name="sel_grade">
+                                        <option value="-1">Grade</option>
+                                        {grades_dd}
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <select class="form-control" id="sel_group" name="sel_group">
+                                        <option value="-1">Group</option>
+                                        {groups_dd}
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <select class="form-control" id="sel_course" name="sel_course">
+                                        <option value="-1">--Course--</option>
+                                        {courses_dd}
+                                    </select>
+                                </div>
+                                <div class="col-md-1 form-group">
+                                    <input type="submit" class="btn btn-primary" value="Filter" style="width: 100%">
+                                </div>
+                            </form>
+                            <div class="col-md-1">
+                                <div class="btn-group pull-right">
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="#">
+                                                Print </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Save as PDF </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Export to Excel </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -158,6 +186,11 @@
             });
 
         });
+
+        $("#from_date, #to_date").datepicker({
+            dateFormat: "yy-mm-dd"
+        });
+
     });
 
     $("#submit_incident_changes").click(function(){

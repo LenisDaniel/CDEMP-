@@ -180,30 +180,37 @@
                     </div>
                         <div class="modal-body">
                             <div class="form-group col-md-12">
-                                <div class="col-md-4">
+                                <div class="col-md-8">
+                                    <label for="student_name">Student:</label>
+                                    <input type="text" class="form-control" name="student_name_1" id="student_name_1" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="col-md-8">
                                     <label for="punctuation">Grade Identifier:</label>
-                                    <input type="text" class="form-control" name="grade_identifier" id="grade_identifier" required>
+                                    <input type="text" class="form-control" name="grade_identifier_1" id="grade_identifier_1" readonly>
                                 </div>
                             </div>
                             <div class="form-group col-md-12" style="margin-top: 25px">
                                 <div class="col-md-4">
                                     <label for="punctuation_1">Punctuation</label>
-                                    <input type="text" class="form-control" name="punctuation_1" id="punctuation_1" required>
+                                    <input type="text" class="form-control" name="punctuation_1" id="punctuation_1" value="" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="valor_1">Valor</label>
-                                    <input type="text" class="form-control" name="valor_1" id="valor_1" readonly required>
+                                    <input type="text" class="form-control" name="valor_1" id="valor_1" value="" readonly>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="txt_grade_1">Grade</label>
-                                    <input type="text" class="form-control" name="txt_grade_1" id="txt_grade_1" readonly required>
+                                    <input type="text" class="form-control" name="txt_grade_1" id="txt_grade_1" value="" readonly>
                                 </div>
                             </div>
+                            <input type="hidden" name="hdn_grade_1" id="hdn_grade_1" value="" readonly>
                             <br/>
                             <div class="row" style="clear: both">
                                 <div class="modal-footer" style="margin-top: 25px">
                                     <button type="button" id="clear_grades_1" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Edit Grade</button>
+                                    <button type="button" id="btn_edit_grade" class="btn btn-primary">Edit Grade</button>
                                 </div>
                             </div>
                         </div>
@@ -364,6 +371,29 @@
 
     });
 
+    //Calculate grade
+    $("#punctuation_1").blur(function(){
+
+        punctuation = $(this).val();
+        valor = $('#valor_1').val();
+        var pct = (punctuation / valor) * 100;
+
+        if(pct >= 90){
+            grade_descr = "A";
+        }else if(pct >= 80 && pct < 90){
+            grade_descr = "B";
+        }else if(pct >= 70 && pct < 80){
+            grade_descr = "C";
+        }else if(pct >= 60 && pct < 70){
+            grade_descr = "D";
+        }else{
+            grade_descr = "F";
+        }
+
+        $('#txt_grade_1').val(grade_descr);
+
+    });
+
     $('#create_grade_name_btn').click(function(){
         $('#create_grade_name').modal('show');
     });
@@ -474,8 +504,55 @@
     });
 
     $(document).on('click','.grade_selector', function(){
+
         var grade_id = this.id;
+        $("#hdn_grade_1").val(grade_id);
         $("#edit_grade").modal("show");
+
+        $.ajax({
+            url: "includes/ajax.edit_grades.php",
+            method: "POST",
+            data: {'action': 1, 'id': grade_id},
+
+            success: function(response){
+
+                obj = jQuery.parseJSON(response);
+                $("#student_name_1").val(obj[0]);
+                $("#grade_identifier_1").val(obj[1]);
+                $("#punctuation_1").val(obj[2]);
+                $("#valor_1").val(obj[3]);
+                $("#txt_grade_1").val(obj[4]);
+
+            }
+
+        });
+
+    });
+
+    $("#btn_edit_grade").click(function(){
+
+        grades_1 = $('#grade').val();
+        group_1 = $('#group').val();
+        course_1 = $('#course').val();
+
+        var grade_id = $("#hdn_grade_1").val();
+        var punctuation_1 = $("#punctuation_1").val();
+        var valor_1 = $("#valor_1").val();
+        var grade_1 = $("#txt_grade_1").val();
+
+        $.ajax({
+            url: "includes/ajax.edit_grades.php",
+            method: "POST",
+            data: {'action': 2, 'id': grade_id, 'punctuation_1': punctuation_1, 'valor_1': valor_1, 'grade_1': grade_1},
+
+            success: function(response){
+                //alert(response);
+                if(response === "done"){
+                    window.location.replace("display_page.php?tpl=course_details&grade_id="+grades_1+"&group_id="+group_1+"&course_id="+course_1);
+                }
+            }
+
+        });
 
     });
 
