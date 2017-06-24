@@ -21,12 +21,12 @@
                 <div class="table-toolbar">
                     <div class="row">
                         <div class="form-group">
-                            <form action="includes/teacher_incidents.inc.php?filter=1" method="post">
+                            <form id="filter_fields" action="display_page.php?tpl=teacher_incidents&filter=1" method="post">
                                 <div class="col-md-2 form-group">
-                                    <input class="form-control" id="from_date" name="from_date" type="text" placeholder="Start Date">
+                                    <input class="form-control" id="from_date" name="from_date" type="text" placeholder="Start Date" required>
                                 </div>
                                 <div class="col-md-2 form-group">
-                                    <input class="form-control" id="to_date" name="to_date" type="text" placeholder="End Date">
+                                    <input class="form-control" id="to_date" name="to_date" type="text" placeholder="End Date" required>
                                 </div>
                                 <div class="col-md-2 form-group">
                                     <select class="form-control" id="sel_grade" name="sel_grade">
@@ -187,8 +187,20 @@
 
         });
 
-        $("#from_date, #to_date").datepicker({
-            dateFormat: "yy-mm-dd"
+        $("#from_date").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function(selected) {
+                $("#to_date").datepicker("option","minDate", selected);
+            }
+
+        });
+
+        $("#to_date").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function(selected) {
+                $("#from_date").datepicker("option","maxDate", selected);
+            }
+
         });
 
     });
@@ -213,6 +225,22 @@
             }
 
         });
+
+    });
+
+    $("#filter_fields").submit(function(){
+
+        if($('#from_date').val() === ''){
+            alert('Please select both dates!');
+            return false;
+        }
+
+        if($('#to_date').val() === ''){
+            alert('Please select both dates!');
+            return false;
+        }
+
+
 
     });
 

@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+require_once("class.mydbcon.inc.php");
+$objmydbcon = new classmydbcon();
 
 class Incidents{
 
@@ -15,6 +18,30 @@ class Incidents{
     function get_all_incidents($role = 0, $tpl_uri = "", $teacher_id = 0, $start = "", $end = "", $grade = 0, $group = 0, $course = 0){
         global $objmydbcon;
 
+        $conditional = "";
+        $field = array('dr.create_date', 'dr.create_date', 'dr.grade_id', 'dr.group_id', 'dr.course_id');
+        $fields = array($start, $end, $grade, $group, $course);
+        for($i = 0; $i < 5; $i++){
+
+            if(!is_numeric($fields[$i])){
+                if($fields[$i] != ""){
+                    if($i == 0){
+                        $conditional .= " AND $field[$i] >= '$fields[$i]'";
+                    }else{
+                        $conditional .= " AND $field[$i] <= '$fields[$i]'";
+                    }
+                }else{
+                    $conditional .= "";
+                }
+            }else{
+                if($fields[$i] > 0){
+                    $conditional .= " AND $field[$i] = $fields[$i]";
+                }else{
+                    $conditional .= "";
+                }
+            }
+        }
+
         $i = 0;
         $sqlquery = "SELECT dr.daily_record_id, mu.first_name, mu.last_name, mu.second_surname,mgr.grade_descr, mg.group_descr, mc.course_descr, md.day_status_descr, mi.incident_descr, dr.create_date, mi.classification_id 
                      FROM daily_records dr
@@ -25,6 +52,7 @@ class Incidents{
                      INNER JOIN master_day_status md ON md.day_status_id = dr.day_status_id
                      INNER JOIN master_incidents mi ON mi.incident_id = dr.incident_id
                      WHERE dr.teacher_id = $teacher_id
+                     $conditional
                      ORDER BY dr.create_date DESC";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
@@ -112,6 +140,7 @@ class Incidents{
         }else{
             return 0;
         }
+
         return $grades_dd;
     }
 
@@ -138,6 +167,8 @@ class Incidents{
         }else{
             return 0;
         }
+
+
         return $groups_dd;
     }
 
@@ -164,6 +195,7 @@ class Incidents{
         }else{
             return 0;
         }
+
         return $courses_dd;
     }
 
