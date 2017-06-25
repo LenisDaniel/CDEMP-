@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.admins.inc.php");
 
 $objschedule = new Administrator();
