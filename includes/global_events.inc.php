@@ -21,6 +21,7 @@ if(isset($_GET['edit'])){
 
     $objtemplate->set_content("event_descr", $objevents->get_event_info('event_descr'));
     $objtemplate->set_content("event_details", $objevents->get_event_info('event_details'));
+    $objtemplate->set_content("event_date", $objevents->get_event_info('event_date'));
     $objtemplate->set_content("admin_id", $created_by);
 
     if($objevents->get_event_info('active') == 1){
@@ -62,8 +63,9 @@ if(isset($_GET['cid'])) {
     $course = $_POST['course'];
     $event_descr = $_POST['event_descr'];
     $event_details = $_POST['event_details'];
+    $event_date = $_POST['event_date'];
     $active = $_POST['active'];
 
-    $objevents->manage_event_info('global_events', $id, $created_by, $role_idx, $group, $course, $event_descr, $event_details, 1, $active);
+    $objevents->manage_event_info('global_events', $id, $created_by, $role_idx, $group, $course, $event_descr, $event_details, $event_date, 1, $active);
 
 }

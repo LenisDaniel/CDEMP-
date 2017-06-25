@@ -20,7 +20,17 @@
                             <label class="control-label col-md-1">Event Title:</label>
                             <div class="col-md-6">
                                 <input type="text" name="event_descr" id="event_descr" class="form-control" placeholder="" value="{event_descr}" required>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group required">
+                            <label class="control-label col-md-1">Event Date and Hour:</label>
+                            <div class="col-md-6">
+                                <input type="text" name="event_date" id="event_date" class="form-control"  value="{event_date}" required>
                             </div>
                         </div>
                     </div>
@@ -172,6 +182,9 @@
         })
     });
 
+    $('#event_date').datetimepicker({
+
+    });
 
 
 </script>

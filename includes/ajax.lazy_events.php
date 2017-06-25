@@ -115,6 +115,7 @@ if(!$results = $objmydbcon->get_result_set($sqlquery)){
 }
 
 echo $contents;
+
 function get_student_group($user_ids){
     global $objmydbcon;
     $sqlquery = "SELECT group_id FROM students_groups WHERE student_id = $user_ids";

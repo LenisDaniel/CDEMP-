@@ -144,7 +144,7 @@ var Index = function () {
                     title: 'Repeating Event',
                     start: new Date(y, m, d - 3, 16, 0),
                     allDay: false,
-                    backgroundColor: Metronic.getBrandColor('red')
+                    backgroundColor: Metronic.getBrandColor('blue')
                 }, {
                     title: 'Repeating Event',
                     start: new Date(y, m, d + 4, 16, 0),
