@@ -8,11 +8,11 @@ if($detect->isMobile()){
 
     if($_SESSION['loged_user']['role_idx'] == 4){
         $grp = get_student_group($user_ids);
-        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp ORDER BY e.created_date DESC";
+        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp ORDER BY e.created_date DESC LIMIT 30";
     }else if($_SESSION['loged_user']['role_idx'] == 3){
-        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids ORDER BY e.created_date DESC";
+        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids ORDER BY e.created_date DESC LIMIT 30";
     }else{
-        $conditional = "ORDER BY e.created_date DESC";
+        $conditional = "ORDER BY e.created_date DESC LIMIT 30";
     }
     $objtemplate->set_content('mobile', 1);
 }else{

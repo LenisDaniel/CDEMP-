@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/Mobile_Detect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/events.inc.php" afterPath="$PROJECT_DIR$/includes/events.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/events.tem.htm" afterPath="$PROJECT_DIR$/templates_en/events.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,23 +53,23 @@
       <file leaf-file-name="events.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/events.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+            <state relative-caret-position="352">
+              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
               <folding>
-                <marker date="1498479187581" expanded="true" signature="1140:1285" ph="SELECT e.*, events" />
-                <marker date="1498479187581" expanded="true" signature="1508:1820" ph="SELECT ei.in... event_interactions" />
-                <marker date="1498479187581" expanded="true" signature="3502:4837" ph="..." />
-                <marker date="1498479187581" expanded="true" signature="3541:4818" ph="..." />
-                <marker date="1498479187581" expanded="true" signature="3616:3670" ph="..." />
-                <marker date="1498479187581" expanded="false" signature="3758:3764" ph=" " />
-                <marker date="1498479187581" expanded="false" signature="3764:3770" ph=" " />
-                <marker date="1498479187581" expanded="true" signature="3881:3943" ph="..." />
-                <marker date="1498479187581" expanded="true" signature="3999:4573" ph="..." />
-                <marker date="1498479187581" expanded="true" signature="4111:4420" ph="..." />
-                <marker date="1498479187581" expanded="true" signature="4641:4706" ph="..." />
-                <marker date="1498479187581" expanded="false" signature="4736:4774" ph="..." />
-                <marker date="1498479187581" expanded="true" signature="5123:5179" ph="SELECT group... students_groups" />
-                <marker date="1498479187581" expanded="true" signature="5498:5544" ph="SELECT role_... master_users" />
+                <marker date="1498479675242" expanded="true" signature="1167:1312" ph="SELECT e.*, events" />
+                <marker date="1498479675242" expanded="true" signature="1535:1847" ph="SELECT ei.in... event_interactions" />
+                <marker date="1498479675242" expanded="true" signature="3529:4864" ph="..." />
+                <marker date="1498479675242" expanded="true" signature="3568:4845" ph="..." />
+                <marker date="1498479675242" expanded="true" signature="3643:3697" ph="..." />
+                <marker date="1498479675242" expanded="false" signature="3785:3791" ph=" " />
+                <marker date="1498479675242" expanded="false" signature="3791:3797" ph=" " />
+                <marker date="1498479675242" expanded="true" signature="3908:3970" ph="..." />
+                <marker date="1498479675242" expanded="true" signature="4026:4600" ph="..." />
+                <marker date="1498479675242" expanded="true" signature="4138:4447" ph="..." />
+                <marker date="1498479675242" expanded="true" signature="4668:4733" ph="..." />
+                <marker date="1498479675242" expanded="false" signature="4763:4801" ph="..." />
+                <marker date="1498479675242" expanded="true" signature="5150:5206" ph="SELECT group... students_groups" />
+                <marker date="1498479675242" expanded="true" signature="5525:5571" ph="SELECT role_... master_users" />
               </folding>
             </state>
           </provider>
@@ -242,8 +239,8 @@
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/includes/ajax.calendar_events.php" />
         <option value="$PROJECT_DIR$/templates_en/teacher_incidents.tem.htm" />
         <option value="$PROJECT_DIR$/includes/ajax.lazy_events.php" />
-        <option value="$PROJECT_DIR$/includes/events.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/events.tem.htm" />
+        <option value="$PROJECT_DIR$/includes/events.inc.php" />
       </list>
     </option>
   </component>
@@ -303,6 +300,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -345,7 +343,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -529,6 +526,7 @@
       <workItem from="1498428765314" duration="794000" />
       <workItem from="1498473734523" duration="2427000" />
       <workItem from="1498477732978" duration="1730000" />
+      <workItem from="1498479631466" duration="90000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -555,7 +553,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337441000" />
+    <option name="totallyTimeSpent" value="337531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -571,7 +569,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2717508" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1961895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19876416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17991407" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1029,7 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="237" column="7" lean-forward="true" selection-start-line="237" selection-start-column="7" selection-end-line="237" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,23 +1089,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/events.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="352">
+          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding>
-            <marker date="1498479187581" expanded="true" signature="1140:1285" ph="SELECT e.*, events" />
-            <marker date="1498479187581" expanded="true" signature="1508:1820" ph="SELECT ei.in... event_interactions" />
-            <marker date="1498479187581" expanded="true" signature="3502:4837" ph="..." />
-            <marker date="1498479187581" expanded="true" signature="3541:4818" ph="..." />
-            <marker date="1498479187581" expanded="true" signature="3616:3670" ph="..." />
-            <marker date="1498479187581" expanded="false" signature="3758:3764" ph=" " />
-            <marker date="1498479187581" expanded="false" signature="3764:3770" ph=" " />
-            <marker date="1498479187581" expanded="true" signature="3881:3943" ph="..." />
-            <marker date="1498479187581" expanded="true" signature="3999:4573" ph="..." />
-            <marker date="1498479187581" expanded="true" signature="4111:4420" ph="..." />
-            <marker date="1498479187581" expanded="true" signature="4641:4706" ph="..." />
-            <marker date="1498479187581" expanded="false" signature="4736:4774" ph="..." />
-            <marker date="1498479187581" expanded="true" signature="5123:5179" ph="SELECT group... students_groups" />
-            <marker date="1498479187581" expanded="true" signature="5498:5544" ph="SELECT role_... master_users" />
+            <marker date="1498479675242" expanded="true" signature="1167:1312" ph="SELECT e.*, events" />
+            <marker date="1498479675242" expanded="true" signature="1535:1847" ph="SELECT ei.in... event_interactions" />
+            <marker date="1498479675242" expanded="true" signature="3529:4864" ph="..." />
+            <marker date="1498479675242" expanded="true" signature="3568:4845" ph="..." />
+            <marker date="1498479675242" expanded="true" signature="3643:3697" ph="..." />
+            <marker date="1498479675242" expanded="false" signature="3785:3791" ph=" " />
+            <marker date="1498479675242" expanded="false" signature="3791:3797" ph=" " />
+            <marker date="1498479675242" expanded="true" signature="3908:3970" ph="..." />
+            <marker date="1498479675242" expanded="true" signature="4026:4600" ph="..." />
+            <marker date="1498479675242" expanded="true" signature="4138:4447" ph="..." />
+            <marker date="1498479675242" expanded="true" signature="4668:4733" ph="..." />
+            <marker date="1498479675242" expanded="false" signature="4763:4801" ph="..." />
+            <marker date="1498479675242" expanded="true" signature="5150:5206" ph="SELECT group... students_groups" />
+            <marker date="1498479675242" expanded="true" signature="5525:5571" ph="SELECT role_... master_users" />
           </folding>
         </state>
       </provider>
