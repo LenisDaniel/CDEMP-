@@ -1,13 +1,7 @@
 <div class="container" id="contenido">
-
-        {contenido}
-
+    {contenido}
 </div>
-
-
-<!--<script src="js/jquery.js"></script>-->
-<!--<script src="js/bootstrap.min.js"></script>-->
-<!--<script type="text/javascript" src="assets2/global/scripts/jquery.jscroll.js"></script>-->
+<input type="hidden" id="mobile" value="{mobile}"/>
 
 <script>
 
@@ -27,7 +21,6 @@
 
                 success: function(response){
 
-
                     $('#comments_div_'+id).prepend(response);
                     $('#message_text_'+id).val("");
 
@@ -36,47 +29,27 @@
             })
         });
 
+        if( $("#mobile").val() == 0 ){
+            var load = 0;
+            $(window).scroll(function() {
+                if($(window).scrollTop() + $(window).height() == $(document).height()) {
 
+                    load++;
+                    $.ajax({
+                        url: "includes/ajax.lazy_events.php",
+                        method: "POST",
+                        data: {'load': load},
 
-        //        $(window).scroll(function(){
-        //
-        //            if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        //
-        //                load++;
-        //                $.ajax({
-        //                    url: "includes/ajax.lazy_events.php",
-        //                    method: "POST",
-        //                    data: {'load': load},
-        //
-        //                    success: function(response){
-        //                        //alert(response);
-        //                        $('#contenido').append(response);
-        //                    }
-        //
-        //                });
-        //            }
-        //
-        //        });
+                        success: function(response){
+                            //alert(response);
+                            $('#contenido').append(response);
+                        }
 
-        var load = 0;
-        $(window).scroll(function() {
-            if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    });
 
-                load++;
-                $.ajax({
-                    url: "includes/ajax.lazy_events.php",
-                    method: "POST",
-                    data: {'load': load},
-
-                    success: function(response){
-                        //alert(response);
-                        $('#contenido').append(response);
-                    }
-
-                });
-
-            }
-        });
+                }
+            });
+        }
 
     });
 
