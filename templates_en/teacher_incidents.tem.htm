@@ -23,10 +23,10 @@
                         <div class="form-group">
                             <form id="filter_fields" action="display_page.php?tpl=teacher_incidents&filter=1" method="post">
                                 <div class="col-md-2 form-group">
-                                    <input class="form-control" id="from_date" name="from_date" type="text" placeholder="Start Date" required>
+                                    <input class="form-control" id="from_date" name="from_date" type="text" placeholder="Start Date">
                                 </div>
                                 <div class="col-md-2 form-group">
-                                    <input class="form-control" id="to_date" name="to_date" type="text" placeholder="End Date" required>
+                                    <input class="form-control" id="to_date" name="to_date" type="text" placeholder="End Date">
                                 </div>
                                 <div class="col-md-2 form-group">
                                     <select class="form-control" id="sel_grade" name="sel_grade">
@@ -230,17 +230,10 @@
 
     $("#filter_fields").submit(function(){
 
-        if($('#from_date').val() === ''){
+        if($('#from_date').val() === '' && $('#to_date').val() !== '' || $('#from_date').val() !== '' && $('#to_date').val() === ''){
             alert('Please select both dates!');
             return false;
         }
-
-        if($('#to_date').val() === ''){
-            alert('Please select both dates!');
-            return false;
-        }
-
-
 
     });
 

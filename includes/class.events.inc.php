@@ -63,17 +63,7 @@ class Events{
     function manage_event_info($tpl_uri = "", $id = 0, $created_by = 0, $role_idx = 0, $group_id = 0, $course_id = 0, $event_descr = "", $event_details = "", $event_date = "", $on_calendar = 0, $active = 0){
         global $objmydbcon;
 
-//        echo $event_descr . "<br>";
-//        echo $event_date . "<br>";
-//        //echo $role_idx . "<br>";
-////        echo $group_id . "<br>";
-////        echo $course_id . "<br>";
-////        echo $event_descr . "<br>";
-////        echo $event_details . "<br>";
-////        echo $on_calendar . "<br>";
-////        echo $active  . "<br>";
-////
-//        exit;
+
 
         if(!$active == "1"){
             $active = 0;

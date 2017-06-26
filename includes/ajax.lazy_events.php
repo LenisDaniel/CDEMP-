@@ -5,7 +5,7 @@ $objmydbcon = new classmydbcon;
 
 
 if(isset($_POST)){
-   $limit = $_POST['load'] * 2;
+   $limit = $_POST['load'] * 5;
 
 }
 
@@ -14,11 +14,11 @@ $user_ids = $_SESSION['loged_user']['idx'];
 
 if($_SESSION['loged_user']['role_idx'] == 4){
     $grp = get_student_group($user_ids);
-    $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp ORDER BY e.created_date DESC LIMIT $limit,2";
+    $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp ORDER BY e.created_date DESC LIMIT $limit,5";
 }else if($_SESSION['loged_user']['role_idx'] == 3){
-    $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids ORDER BY e.created_date DESC LIMIT $limit,2";
+    $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids ORDER BY e.created_date DESC LIMIT $limit,5";
 }else{
-    $conditional = "ORDER BY e.created_date DESC LIMIT $limit,2";
+    $conditional = "ORDER BY e.created_date DESC LIMIT $limit,5";
 }
 
 $i = 1;

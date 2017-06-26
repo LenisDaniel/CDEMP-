@@ -37,13 +37,32 @@
         });
 
 
+
+        //        $(window).scroll(function(){
+        //
+        //            if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        //
+        //                load++;
+        //                $.ajax({
+        //                    url: "includes/ajax.lazy_events.php",
+        //                    method: "POST",
+        //                    data: {'load': load},
+        //
+        //                    success: function(response){
+        //                        //alert(response);
+        //                        $('#contenido').append(response);
+        //                    }
+        //
+        //                });
+        //            }
+        //
+        //        });
+
         var load = 0;
-
-        $(window).scroll(function(){
-
+        $(window).scroll(function() {
             if($(window).scrollTop() + $(window).height() == $(document).height()) {
-                load++;
 
+                load++;
                 $.ajax({
                     url: "includes/ajax.lazy_events.php",
                     method: "POST",
@@ -55,16 +74,10 @@
                     }
 
                 });
+
             }
-
         });
-
-
-
 
     });
 
-
-
 </script>
-
