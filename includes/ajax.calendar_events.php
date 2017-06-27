@@ -3,14 +3,12 @@
 require_once("class.mydbcon.inc.php");
 $objmydbcon = new classmydbcon;
 
-$con = mysqli_connect('localhost','root','xf6C4FBPqNCMNGRG','u186334426_cdemp');
 extract($_POST);
-
 if($type == 'fetch')
 {
 
     $events = array();
-    $query = mysqli_query($con, "SELECT * FROM events WHERE on_calendar = 1");
+    $query = mysqli_query($objmydbcon->get_resource_link(), "SELECT * FROM events WHERE on_calendar = 1");
 
     while($fetch = mysqli_fetch_array($query, MYSQLI_ASSOC)){
 
@@ -19,6 +17,7 @@ if($type == 'fetch')
         $e['title'] = $fetch['event_descr'];
         $e['start'] = $fetch['event_date'];
         $e['allDay'] = false;
+        $e['backgroundColor'] = "green";
 
         array_push($events, $e);
     }

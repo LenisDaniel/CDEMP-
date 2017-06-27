@@ -4805,6 +4805,7 @@ Custimized Bootstrap Wells
 .well {
   background-color: #eee;
   border: 0;
+  height: 260px;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;

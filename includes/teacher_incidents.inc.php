@@ -2,10 +2,9 @@
 //error_reporting(E_ERROR);
 session_start();
 require_once("class.incidents.inc.php");
-require_once("class.template.inc.php");
 $objincidents = new Incidents();
-$objtemplate = new classTemplate();
 $id = $_SESSION['loged_user']['idx'];
+
 
 if(isset($_GET['filter'])){
 

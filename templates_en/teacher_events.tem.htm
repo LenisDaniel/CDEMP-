@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="control-label col-md-1">Group:</label>
+                            <label class="control-label col-md-2">Group:</label>
                             <div class="col-md-6">
                                 <select class="form-control" name="group" id="group" required>
                                     <option value="-1">--Select One--</option>
@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="control-label col-md-1">Course:</label>
+                            <label class="control-label col-md-2">Course:</label>
                             <div class="col-md-6">
                                 <select class="form-control" name="course" id="course" required>
                                     <option value="-1">--Select One--</option>
@@ -43,10 +43,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group required">
-                            <label class="control-label col-md-1">Event Title:</label>
+                            <label class="control-label col-md-2">Event Title:</label>
                             <div class="col-md-6">
                                 <input type="text" name="event_descr" id="event_descr" class="form-control" placeholder="" value="{event_descr}" required>
-
                             </div>
                         </div>
                     </div>
@@ -56,9 +55,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group required">
-                            <label class="control-label col-md-1">Content:</label>
-                            <div class="col-md-11">
-                                <textarea name="event_details" id="event_details">{event_details}</textarea>
+                            <label class="control-label col-md-2">Content:</label>
+                            <div class="col-md-9">
+                                <textarea name="event_details" class="form-control" id="event_details">{event_details}</textarea>
                             </div>
                         </div>
                     </div>
@@ -67,17 +66,17 @@
                 <!--/row-->
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="form-group required">
-                        <label class="control-label col-md-3">Active?:</label>
-                        <div class="col-md-9">
+                        <label class="control-label col-md-2">Active?:</label>
+                        <div class="col-md-6">
                             <div class="radio-list">
                                 <label class="radio-inline">
-                                    <input type="radio" name="active" value="1" {option1}/>
+                                    <input type="radio" class="form-control" name="active" value="1" {option1}/>
                                     Yes
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="active" value="2" {option2}/>
+                                    <input type="radio" class="form-control" name="active" value="2" {option2}/>
                                     No
                                 </label>
                             </div>
