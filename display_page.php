@@ -2,7 +2,7 @@
 error_reporting(E_ERROR);
 set_time_limit(0); // SET TIME OUT TO UNLIMITED (0)
 session_start();
-
+date_default_timezone_set("America/Puerto_Rico");
 require_once("includes/class.template.inc.php");
 require_once("includes/common_functions.inc.php");
 require_once("includes/class.mydbcon.inc.php");

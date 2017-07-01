@@ -15,10 +15,18 @@ class Incidents{
         $this->field_info = array();
     }
 
-    function get_all_incidents($role = 0, $tpl_uri = "", $teacher_id = 0, $start = "", $end = "", $grade = 0, $group = 0, $course = 0){
+    function get_all_incidents($role = 0, $tpl_uri = "", $id = 0, $start = "", $end = "", $grade = 0, $group = 0, $course = 0){
         global $objmydbcon;
 
         $conditional = "";
+        $conditinal1 = "";
+
+        if($role == 4){
+            $conditinal1 = "WHERE dr.student_id = $id";
+        }else{
+            $conditinal1 = "WHERE dr.teacher_id = $id";
+        }
+
         $field = array('dr.create_date', 'dr.create_date', 'dr.grade_id', 'dr.group_id', 'dr.course_id');
         $fields = array($start, $end, $grade, $group, $course);
         for($i = 0; $i < 5; $i++){
@@ -51,7 +59,7 @@ class Incidents{
                      INNER JOIN master_course mc ON mc.course_id = dr.course_id
                      INNER JOIN master_day_status md ON md.day_status_id = dr.day_status_id
                      INNER JOIN master_incidents mi ON mi.incident_id = dr.incident_id
-                     WHERE dr.teacher_id = $teacher_id
+                     $conditinal1
                      $conditional
                      ORDER BY dr.create_date DESC";
 

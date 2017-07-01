@@ -5,7 +5,7 @@ require_once ("class.mydbcon.inc.php");
 require_once ("class.template.inc.php");
 $objmydbcon = new classmydbcon();
 $objtemplate = new classTemplate();
-
+date_default_timezone_set("America/Puerto_Rico");
 
 if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_id'])){
 
@@ -104,8 +104,11 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
         $day_status_id = $_POST['day_status_'.$i];
         $incident_id = $_POST['incidents_'.$i];
 
-        if( !validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
+        if( validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
 
+            header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
+
+        }else{
             $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id)
                           VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id)";
 
@@ -119,9 +122,6 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
             if($flag == 0){
                 header('location: ../display_page.php?tpl=my_courses&cat=4&process=1');
             }
-
-        }else{
-            header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
         }
 
     }
