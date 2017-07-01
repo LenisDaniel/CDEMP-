@@ -76,6 +76,8 @@ var Calendar = function () {
                 initDrag(html);
             }
 
+
+
             $('#external-events div.external-event').each(function () {
                 initDrag($(this))
             });
@@ -103,8 +105,6 @@ var Calendar = function () {
                 success: function(response){
                     //alert(response);
                     json_events = response;
-
-
                 }
             });
 
@@ -192,7 +192,14 @@ var Calendar = function () {
                 //         allDay:false,
                 //     }
                 // ]
+
+                dayClick: function() {
+                    alert('a day has been clicked!');
+                }
+
             });
+
+
 
         }
 

@@ -1,23 +1,30 @@
 <?php
-
+session_start();
 require_once("class.mydbcon.inc.php");
 $objmydbcon = new classmydbcon;
+$idx = $_SESSION['loged_user']['idx'];
 
 extract($_POST);
 if($type == 'fetch')
 {
 
     $events = array();
-    $query = mysqli_query($objmydbcon->get_resource_link(), "SELECT * FROM events WHERE on_calendar = 1");
+    $query = mysqli_query($objmydbcon->get_resource_link(), "SELECT event_id, event_descr, event_date, type_id FROM events WHERE on_calendar = 1 UNION SELECT appointment_id, appointment_descr, appointment_time, type_id FROM appointments WHERE date_with = $idx OR created_by = $idx GROUP BY appointment_descr");
 
     while($fetch = mysqli_fetch_array($query, MYSQLI_ASSOC)){
+
+        if($fetch['type_id'] == 0){
+            $color = "blue";
+        }else{
+            $color = "green";
+        }
 
         $e = array();
         $e['id'] = $fetch['event_id'];
         $e['title'] = $fetch['event_descr'];
         $e['start'] = $fetch['event_date'];
-        $e['allDay'] = false;
-        $e['backgroundColor'] = "green";
+        $e['type_id'] = $fetch['type_id'];
+        $e['backgroundColor'] = $color;
 
         array_push($events, $e);
     }
