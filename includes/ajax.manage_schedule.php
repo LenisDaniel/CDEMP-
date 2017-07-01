@@ -16,16 +16,14 @@ if(isset($_POST)){
 
     }else if($action == "get_courses" && $group > 0){
 
-        echo get_courses($group);
+        echo get_courses($group, $only);
 
     }else if($action == "get_teachers" && $week_day > 0 && $day_hour > 0 && $course > 0){
 
-        echo get_teachers($week_day, $day_hour, $course);
+        echo get_teachers($week_day, $day_hour, $course, $only);
     }
 
 }
-
-
 
 function get_groups($grade = 0){
     global $objmydbcon;
@@ -92,7 +90,7 @@ function get_day_hours($grade = 0, $group = 0, $week_day = 0){
 
 }
 
-function get_courses($group = 0){
+function get_courses($group = 0, $only = 0){
     global $objmydbcon;
 
     $sqlquery_schedule = "SELECT course_id FROM schedules_teacher WHERE group_id = $group";
@@ -110,7 +108,12 @@ function get_courses($group = 0){
 
     $value_list = substr($values, 0, -1);
     if($filter != 0){
-        $conditional = "WHERE course_id NOT IN(" .$value_list. ")";
+        if($only == 1){
+            $conditional = "WHERE course_id IN(" .$value_list. ")";
+        }else{
+            $conditional = "WHERE course_id NOT IN(" .$value_list. ")";
+        }
+
     }else{
         $conditional = "";
     }
@@ -135,10 +138,14 @@ function get_courses($group = 0){
 
 }
 
-function get_teachers($week_day = 0, $day_hour = 0, $course = 0){
+function get_teachers($week_day = 0, $day_hour = 0, $course = 0, $only = 0){
     global $objmydbcon;
+    if($only == 1){
+        $sqlquery_schedule = "SELECT teacher_id FROM schedules_teacher WHERE course_id = $course";
+    }else{
+        $sqlquery_schedule = "SELECT teacher_id FROM schedules_teacher WHERE week_day_id = $week_day AND day_hour_id = $day_hour";
+    }
 
-    $sqlquery_schedule = "SELECT teacher_id FROM schedules_teacher WHERE week_day_id = $week_day AND day_hour_id = $day_hour";
     if(!$results0 = $objmydbcon->get_result_set($sqlquery_schedule)){
         return false;
     }else if(mysqli_num_rows($results0)>0){
@@ -154,7 +161,13 @@ function get_teachers($week_day = 0, $day_hour = 0, $course = 0){
     $value_list = substr($values, 0, -1);
 
     if($filter != 0){
-        $conditional = "WHERE teacher_id NOT IN(" .$value_list. ") AND course_id = $course";
+        if($only == 1){
+            $conditional = "WHERE teacher_id IN(" .$value_list. ") AND course_id = $course";
+        }else{
+            $conditional = "WHERE teacher_id NOT IN(" .$value_list. ") AND course_id = $course";
+        }
+
+
     }else{
         $conditional = "WHERE course_id = $course";
     }

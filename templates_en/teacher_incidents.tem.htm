@@ -237,4 +237,67 @@
 
     });
 
+
+    $('#sel_grade').change(function(){
+
+        if($('#sel_grade').val() !== '-1'){
+
+            var grade = $('#sel_grade').val();
+            $.ajax({
+                url: 'includes/ajax.manage_schedule.php',
+                method: 'POST',
+                data: {'action': 'get_groups', 'grade': grade},
+
+                success:  function (response) {
+
+                    $('#sel_group').html(response);
+
+                }
+            });
+        }
+
+    });
+
+    $('#sel_group').change(function(){
+
+        if($('#sel_group').val() !== '-1'){
+
+            var group = $('#sel_group').val();
+
+            $.ajax({
+                url: 'includes/ajax.manage_schedule.php',
+                method: 'POST',
+                data: {'action': 'get_courses', 'group': group, 'only': 1},
+
+                success:  function (response) {
+
+                    $('#sel_course').html(response);
+
+                }
+            });
+        }
+
+    });
+
+    $('#sel_course').change(function(){
+
+        if($('#sel_course').val() !== '-1'){
+
+            var course = $('#sel_course').val();
+
+            $.ajax({
+                url: 'includes/ajax.manage_schedule.php',
+                method: 'POST',
+                data: {'action': 'get_teachers', 'week_day': 1, 'day_hour': 1, 'course': course, 'only': 1},
+
+                success:  function (response) {
+
+                    $('#sel_teacher').html(response);
+
+                }
+            });
+        }
+
+    });
+
 </script>

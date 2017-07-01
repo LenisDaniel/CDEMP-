@@ -92,14 +92,6 @@ class Incidents{
         return $this->incidents_td_info;
     }
 
-
-
-
-
-
-
-
-
     function get_all_incidents_global($role = 0, $tpl_uri = "", $id = 0, $start = "", $end = "", $grade = 0, $group = 0, $course = 0){
         global $objmydbcon;
 
@@ -173,15 +165,6 @@ class Incidents{
         return $this->incidents_td_info;
     }
 
-
-
-
-
-
-
-
-
-
     function get_day_color($day_status = ""){
         switch($day_status){
             case "Present":
@@ -215,11 +198,17 @@ class Incidents{
         return $label_color;
     }
 
-    function get_filter_grades($grade_id = 0){
+    function get_filter_grades($grade_id = 0, $id = 0){
         global $objmydbcon;
 
+        $grade_list = $this->get_teacher_schedule($id)[0];
         $grades_dd = "";
-        $sqlquery = "SELECT * FROM master_grade";
+        if($id == 0){
+            $sqlquery = "SELECT * FROM master_grade";
+        }else{
+            $sqlquery = "SELECT * FROM master_grade WHERE grade_id IN($grade_list)";
+        }
+
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results)>0){
@@ -242,11 +231,17 @@ class Incidents{
         return $grades_dd;
     }
 
-    function get_filter_groups($group_id = 0){
+    function get_filter_groups($group_id = 0, $id = 0){
         global $objmydbcon;
 
+        $group_list = $this->get_teacher_schedule($id)[1];
         $groups_dd = "";
-        $sqlquery = "SELECT * FROM master_group";
+        if($id == 0){
+            $sqlquery = "SELECT * FROM master_group";
+        }else{
+            $sqlquery = "SELECT * FROM master_group WHERE group_id IN($group_list)";
+        }
+
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results)>0){
@@ -270,11 +265,18 @@ class Incidents{
         return $groups_dd;
     }
 
-    function get_filter_courses($course_id = 0){
+    function get_filter_courses($course_id = 0, $id = 0){
         global $objmydbcon;
 
+        $course_list = $this->get_teacher_schedule($id)[2];
         $courses_dd = "";
-        $sqlquery = "SELECT * FROM master_course";
+
+        if($id == 0){
+            $sqlquery = "SELECT * FROM master_course";
+        }else{
+            $sqlquery = "SELECT * FROM master_course WHERE course_id IN($course_list)";
+        }
+
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results)>0){
@@ -296,5 +298,101 @@ class Incidents{
 
         return $courses_dd;
     }
+
+
+    function get_filter_courses_student($course_id = 0, $id = 0){
+        global $objmydbcon;
+
+        $courses_dd = "";
+        $group = $this->get_student_group1($id);
+        $courses = $this->get_student_courses($group);
+
+        $sqlquery = "SELECT * FROM master_course WHERE course_id IN($courses)";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['course_id'];
+                $disp = $rs['course_descr'];
+
+                if($course_id == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+
+                $courses_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+
+        return $courses_dd;
+    }
+
+    function get_teacher_schedule($teacher_id = 0){
+        global $objmydbcon;
+
+        $grade = "";
+        $group = "";
+        $course = "";
+
+        $sqlquery = "SELECT grade_id, group_id, course_id FROM schedules_teacher WHERE teacher_id = $teacher_id";
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+
+                $grade .= $rs['grade_id'] . ",";
+                $group .= $rs['group_id'] . ",";
+                $course .= $rs['course_id'] . ",";
+            }
+        }else{
+            return 0;
+        }
+
+        return array( substr($grade, 0, -1), substr($group, 0, -1), substr($course, 0, -1) );
+    }
+
+
+    function get_student_group1($student_id = 0){
+        global $objmydbcon;
+
+        $sqlquery = "SELECT group_id FROM students_groups WHERE student_id = $student_id";
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }elseif(mysqli_num_rows($results) > 0 ){
+            while($rs = mysqli_fetch_assoc ($results)){
+                $student_group = $rs['group_id'];
+            }
+        }else{
+            return 0;
+        }
+        return $student_group;
+
+    }
+
+    function get_student_courses($group = 0){
+        global $objmydbcon;
+
+        $course = "";
+        $sqlquery = "SELECT course_id FROM schedules_teacher WHERE group_id = $group";
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $course .= $rs['course_id'] . ",";
+            }
+        }else{
+            return 0;
+        }
+
+        return substr($course, 0, -1);
+
+    }
+
 
 }

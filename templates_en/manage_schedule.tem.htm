@@ -319,7 +319,7 @@
                     $.ajax({
                         url: 'includes/ajax.manage_schedule.php',
                         method: 'POST',
-                        data: {'action': 'get_courses', 'group': group},
+                        data: {'action': 'get_courses', 'group': group, 'only': 0},
 
                         success:  function (response) {
 
@@ -343,7 +343,7 @@
                     $.ajax({
                         url: 'includes/ajax.manage_schedule.php',
                         method: 'POST',
-                        data: {'action': 'get_teachers', 'week_day': week_day, 'day_hour': day_hour, 'course': course},
+                        data: {'action': 'get_teachers', 'week_day': week_day, 'day_hour': day_hour, 'course': course, 'only':0},
 
                         success:  function (response) {
                             //alert(response);

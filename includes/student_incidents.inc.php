@@ -13,11 +13,11 @@ if(isset($_GET['filter'])){
     $course = $_POST['sel_course'];
 
     $objtemplate->set_content("students_incidents", $objincidents->get_all_incidents(4,"student_incidents", $id, $start, $end,0, 0, $course));
-    $objtemplate->set_content("courses_dd", $objincidents->get_filter_courses($course));
+    $objtemplate->set_content("courses_dd", $objincidents->get_filter_courses_student($course, $id));
 
 }else{
 
     $objtemplate->set_content("students_incidents", $objincidents->get_all_incidents(4,"student_incidents", $id, "", "", 0, 0, 0));
-    $objtemplate->set_content("courses_dd", $objincidents->get_filter_courses(0));
+    $objtemplate->set_content("courses_dd", $objincidents->get_filter_courses_student(0, $id));
 
 }
