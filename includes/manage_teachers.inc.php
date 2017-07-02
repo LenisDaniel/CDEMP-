@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.teachers.inc.php");
 
 $objteachers = new Teachers();
@@ -19,6 +19,7 @@ $objteachers = new Teachers();
         $objtemplate->set_content("last_name", $objteachers->get_user_info('last_name'));
         $objtemplate->set_content("second_surname", $objteachers->get_user_info('second_surname'));
         $objtemplate->set_content("email", $objteachers->get_user_info('email'));
+        $objtemplate->set_content("username", $objteachers->get_user_info('username'));
         $objtemplate->set_content("password", $objteachers->get_user_info('password'));
         $objtemplate->set_content("address1", $objteachers->get_user_info('address1'));
         $objtemplate->set_content("address2", $objteachers->get_user_info('address2'));
@@ -71,6 +72,7 @@ $objteachers = new Teachers();
         $second_surname = $_POST['second_surname'];
         $password = $_POST['password'];
         $email = $_POST['email'];
+        $email = $_POST['username'];
         $address1 = $_POST['address1'];
         $address2 = $_POST['address2'];
         $phone_1 = $_POST['phone_1'];
@@ -82,6 +84,6 @@ $objteachers = new Teachers();
         $role_idx = 3;
 
 
-        $objteachers->manage_user_info('manage_teachers', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
+        $objteachers->manage_user_info('manage_teachers', $id, $first_name, $last_name, $second_surname, $username, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
 
     }

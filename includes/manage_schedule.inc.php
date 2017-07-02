@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.schedule.inc.php");
 $objschedule = new Schedule();
 

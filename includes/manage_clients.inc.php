@@ -52,7 +52,7 @@ if(isset($_GET['cid'])){
 	$id = base64_decode($_GET['cid']);
 	$clientname = $_POST['man_clients_name'];
 	$user = $_POST['man_clients_username'];
-	$password = md5($_POST['man_clients_password']);
+	$password = $_POST['man_clients_password'];
 	$email = $_POST['man_clients_email'];
 	$phone1 = $_POST['man_clients_phone1'];
 	$phone2 = $_POST['man_clients_phone2'];

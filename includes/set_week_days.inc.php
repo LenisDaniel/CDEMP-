@@ -6,7 +6,7 @@
  * Time: 12:16 AM
  */
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.config_records.inc.php");
 
 $objconfig = new ConfigRecords();

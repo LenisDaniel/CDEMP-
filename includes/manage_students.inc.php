@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ALL);
+    error_reporting(E_ERROR);
     /**
      * Created by PhpStorm.
      * File: manage_students.inc.php
@@ -26,6 +26,7 @@
         $objtemplate->set_content("last_name", $objstudents->get_user_info('last_name'));
         $objtemplate->set_content("second_surname", $objstudents->get_user_info('second_surname'));
         $objtemplate->set_content("email", $objstudents->get_user_info('email'));
+        $objtemplate->set_content("username", $objstudents->get_user_info('username'));
         $objtemplate->set_content("password", $objstudents->get_user_info('password'));
         $objtemplate->set_content("address1", $objstudents->get_user_info('address1'));
         $objtemplate->set_content("address2", $objstudents->get_user_info('address2'));
@@ -85,6 +86,7 @@
         $second_surname = $_POST['second_surname'];
         $password = $_POST['password'];
         $email = $_POST['email'];
+        $username = $_POST['username'];
         $address1 = $_POST['address1'];
         $address2 = $_POST['address2'];
         $phone_1 = $_POST['phone_1'];
@@ -109,7 +111,7 @@
             $action = 0;
         }
     
-        if($lst_id = $objstudents->manage_user_info('manage_students', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, $phone_1_carrier, $phone_2_carrier)){
+        if($lst_id = $objstudents->manage_user_info('manage_students', $id, $first_name, $last_name, $second_surname, $username, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, $phone_1_carrier, $phone_2_carrier)){
             $objstudents->assign_group($group, $lst_id, $action);
         }
     

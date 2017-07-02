@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.mydbcon.inc.php");
 $objmydbcon = new classmydbcon;
 

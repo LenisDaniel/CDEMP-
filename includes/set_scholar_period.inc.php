@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.scholar_period.inc.php");
 
 $objbehavior = new Scholar_Period();

@@ -63,8 +63,17 @@
 					</div>
 					<!--/span-->
 				</div>
-				<!--/row-->
 				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group required">
+							<label class="control-label col-md-3">Username:</label>
+							<div class="col-md-9 input-icon right">
+								<i id="username_icon"></i>
+								<input type="text" name="username" id="username" class="form-control" placeholder="" value="{username}" required >
+								<input type="hidden" id="username_validate" value="0">
+							</div>
+						</div>
+					</div>
 					<div class="col-md-6">
 						<div class="form-group required">
 							<label class="control-label col-md-3">Password:</label>
@@ -73,25 +82,25 @@
 							</div>
 						</div>
 					</div>
-					<!--/span-->
-					<div class="col-md-6">
-						<div class="form-group">
-							<label class="control-label col-md-3">Active?:</label>
-							<div class="col-md-9">
-								<div class="radio-list">
-									<label class="radio-inline">
-										<input type="radio" name="active" value="1" {option1}/>
-										Yes
-									</label>
-									<label class="radio-inline">
-										<input type="radio" name="active" value="2" {option2}/>
-										No
-									</label>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group required">
+								<label class="control-label col-md-3">Active?:</label>
+								<div class="col-md-9">
+									<div class="radio-list">
+										<label class="radio-inline">
+											<input type="radio" name="active" value="1" {option1}/>
+											Yes
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="active" value="2" {option2}/>
+											No
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--/span-->
 				</div>
 				<h3 class="form-section">Contact Info</h3>
 				<!--/row-->
@@ -327,6 +336,39 @@
                     }
 
                 });
+
+            });
+
+            $('#username').blur(function(){
+
+                var username = $(this).val();
+
+                if(username != ""){
+                    $('#username_icon').removeClass();
+                    $.ajax({
+
+                        url: "includes/ajax.verify_username.php",
+                        method: "POST",
+                        data: {'username': username},
+
+                        success: function(response){
+
+                            if(response == 1){
+                                $('#username_icon').addClass('fa fa-exclamation tooltips').css('color', 'red');
+                                $('#username_validate').val(0);
+                            }else{
+                                $('#username_icon').addClass('fa fa-check tooltips').css('color', 'blue');
+                                $('#username_validate').val(1);
+                            }
+
+                        }
+
+                    });
+                }else{
+                    $('#username_icon').removeClass();
+                    $('#username_validate').val(0);
+                }
+
 
             });
 
