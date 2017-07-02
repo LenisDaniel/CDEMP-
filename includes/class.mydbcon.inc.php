@@ -14,19 +14,19 @@ class classmydbcon{
 //	var $link="";
 //	var $error="";
 
-	 var $dbhost="localhost";
-	 var $db="u186334426_cdemp";
-	 var $uname="root";
-	 var $pwd="xf6C4FBPqNCMNGRG";
-	 var $link="";
-	 var $error="";
+//	 var $dbhost="localhost";
+//	 var $db="u186334426_cdemp";
+//	 var $uname="root";
+//	 var $pwd="xf6C4FBPqNCMNGRG";
+//	 var $link="";
+//	 var $error="";
 
-//	var $dbhost="localhost";
-//	var $db="cdempadm_cdemp";
-//	var $uname="cdempadm_cdemp";
-//	var $pwd="cdemp2017";
-//	var $link="";
-//	var $error="";
+	var $dbhost="localhost";
+	var $db="cdempadm_cdemp";
+	var $uname="cdempadm_cdemp";
+	var $pwd="cdemp2017";
+	var $link="";
+	var $error="";
 
 
 	# class constructor

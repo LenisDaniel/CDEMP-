@@ -5,8 +5,8 @@ $objmydbcon = new classmydbcon;
 $idx = $_SESSION['loged_user']['idx'];
 
 extract($_POST);
-if($type == 'fetch')
-{
+
+if($type == 'fetch'){
 
     $events = array();
     $query = mysqli_query($objmydbcon->get_resource_link(), "SELECT event_id, event_descr, event_date, type_id FROM events WHERE on_calendar = 1 UNION SELECT appointment_id, appointment_descr, appointment_time, type_id FROM appointments WHERE date_with = $idx OR created_by = $idx GROUP BY appointment_descr");
@@ -32,6 +32,45 @@ if($type == 'fetch')
     echo json_encode($events);
 
 }
+
+if($type == 'detail'){
+    $data = array();
+    if($type_id == 1){
+        //events
+        $sqlquery = "SELECT event_descr, event_date, event_details FROM events WHERE event_id = $event_id";
+        if(!$result = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($result) > 0){
+            $rs = mysqli_fetch_assoc($result);
+            $data['title'] = $rs['event_descr'];
+            $data['date'] = $rs['event_date'];
+            $data['details'] = strip_tags($rs['event_details']);
+        }else{
+            echo $data;
+        }
+
+        echo json_encode($data);
+
+    }else{
+        //appointments
+        $sqlquery = "SELECT appointment_descr, appointment_time, appointment_details FROM appointments WHERE appointment_id = $event_id";
+        if(!$result = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($result) > 0){
+            $rs = mysqli_fetch_assoc($result);
+            $data['title'] = $rs['appointment_descr'];
+            $data['date'] = $rs['appointment_time'];
+            $data['details'] = $rs['appointment_details'];
+        }else{
+            echo $data;
+        }
+
+        echo json_encode($data);
+
+    }
+
+}
+
 
 if (!function_exists('json_last_error_msg')) {
     function json_last_error_msg() {

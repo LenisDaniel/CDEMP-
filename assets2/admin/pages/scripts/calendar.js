@@ -138,9 +138,6 @@ var Calendar = function () {
                     }
                 },
 
-
-
-
                 events: JSON.parse(json_events),
                 // events: [{
                 //         title: 'All Day Event',
@@ -193,13 +190,33 @@ var Calendar = function () {
                 //     }
                 // ]
 
-                dayClick: function() {
-                    alert('a day has been clicked!');
+                eventClick: function(event){
+
+                    var type_id = event.type_id;
+                    var id = event.id;
+
+                    $.ajax({
+                        url: 'includes/ajax.calendar_events.php',
+                        type: 'POST',
+                        data: {'type': 'detail', 'type_id': type_id, 'event_id': id},
+
+                        success: function(response){
+
+                            var data = JSON.parse(response)
+
+
+                            $('#myModal').modal('show');
+                            $('#title').val(data['title']);
+                            $('#date').val(data['date']);
+                            $('#description').text(data['details']);
+
+                        }
+
+                    });
+
                 }
 
             });
-
-
 
         }
 
