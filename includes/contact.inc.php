@@ -10,7 +10,7 @@
 
 require_once("class.phpmailer.php");
 require_once("class.smtp.php");
-require_once("PHPMailerAutoload.php");
+
 
 
 $email = $name = $message = $subject = "";

@@ -3,6 +3,9 @@
 error_reporting(E_ERROR);
 require_once ("class.mydbcon.inc.php");
 require_once ("class.template.inc.php");
+require_once ("class.phpmailer.php");
+require_once ("class.smtp.php");
+
 $objmydbcon = new classmydbcon();
 $objtemplate = new classTemplate();
 date_default_timezone_set("America/Puerto_Rico");
@@ -18,10 +21,6 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
     $body_rows = "";
 
     $students = get_students_list($group_id);
-    //    echo '<pre>';
-    //    print_r($students);
-    //    echo '</pre>';
-    //    exit;
 
     $i = 0;
     foreach($students as $value){
@@ -104,16 +103,19 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
         $day_status_id = $_POST['day_status_'.$i];
         $incident_id = $_POST['incidents_'.$i];
 
-        if( validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
+        //if( validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
 
-            header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
+            //header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
 
-        }else{
+        //}else{
             $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id)
                           VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id)";
 
             if($objmydbcon->set_query($sqlinsert)){
                 //Send Email & sms to parent
+                $contact_info = get_student_contact_info($student_id);
+                send_daily_email($contact_info, $student_id, $course_id, $teacher_id, $day_status_id, $incident_id);
+
             }else{
                 $flag = 1;
                 header('location: ../display_page.php?tpl=my_courses&cat=4&process=2');
@@ -122,7 +124,8 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
             if($flag == 0){
                 header('location: ../display_page.php?tpl=my_courses&cat=4&process=1');
             }
-        }
+
+        //}
 
     }
 
@@ -196,7 +199,7 @@ function get_student_name($id){
     }elseif(mysqli_num_rows($results) > 0 ){
         $rs = mysqli_fetch_assoc($results);
         extract($rs);
-        $name = $first_name . " " . $last_name . " " . $second_surname;
+        $name = $first_name . " " . $last_name;
     }else{
         return 0;
     }
@@ -348,4 +351,161 @@ function get_percentage($grade_id = 0, $group_id = 0, $course_id = 0, $teacher_i
 
     return number_format($percentage, 2);
 
+}
+
+function get_student_contact_info($student_id = 0){
+    global $objmydbcon;
+    $contact_info = array();
+    $sqlquery = "SELECT email, phone_1, phone_1_carrier, phone_2, phone_2_carrier FROM master_users WHERE idx = $student_id";
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }else if(mysqli_num_rows($result) > 0){
+        $rs = mysqli_fetch_assoc($result);
+        $contact_info['email'] = $rs['email'];
+        $contact_info['phone_1'] = $rs['phone_1'];
+        $contact_info['phone_1_carrier'] = $rs['phone_1_carrier'];
+        $contact_info['phone_2'] = $rs['phone_2'];
+        $contact_info['phone_2_carrier'] = $rs['phone_2_carrier'];
+    }else{
+        return 0;
+    }
+
+    return $contact_info;
+
+}
+
+function send_daily_email($contact_info = "", $student_id = 0, $course_id = 0, $teacher_id = 0, $day_status_id = 0, $incident_id = 0){
+
+    if($contact_info['phone_1_carrier'] != "" || $contact_info['phone_1_carrier'] > 1){
+        $carrier_string_1 = get_carrier($contact_info['phone_1_carrier']);
+        $sms_1 = str_replace("-","", $contact_info['phone_1']) . $carrier_string_1;
+    }
+    if($contact_info['phone_2_carrier'] != "" || $contact_info['phone_2_carrier'] > 1){
+        $carrier_string_2 = get_carrier($contact_info['phone_2_carrier']);
+        $sms_2 = str_replace("-","", $contact_info['phone_2']) . $carrier_string_2;
+    }
+
+    $directions = array($contact_info['email'], $sms_1, $sms_2);
+    $recipients = array();
+
+    for($i = 0; $i < 3; $i++){
+        if($directions[$i] != ""){
+            $recipients[] = $directions[$i];
+        }
+    }
+
+    $student_name = get_student_name($student_id);
+    $teacher_name = get_student_name($teacher_id);
+    $course_name = get_course_name($course_id);
+    $day_status_name = get_status_name($day_status_id);
+    $incident_id = get_incident_name($incident_id);
+    $date = date("d-M-Y");
+
+    $message  = "Date: $date </br>";
+    $message .= "Student: $student_name </br>";
+    $message .= "Teacher: $teacher_name </br>";
+    $message .= "Course: $course_name </br>";
+    $message .= "Day Status: $day_status_name </br>";
+    $message .= "Incidents: $incident_id </br>";
+
+    $message_1  = "Date: $date \n";
+    $message_1 .= "Student: $student_name \n";
+    $message_1 .= "Teacher: $teacher_name \n";
+    $message_1 .= "Course: $course_name \n";
+    $message_1 .= "Day Status: $day_status_name \n";
+    $message_1 .= "Incidents: $incident_id \n";
+
+    $mail = new PHPMailer();
+    //$mail->SMTPDebug = 1;
+    //$mail->isSMTP();
+    $mail->CharSet = 'UTF-8';
+    $mail->Host = 'mail.smtp2go.com';
+    $mail->SMTPAuth = true;
+    $mail->Port = 2525;
+    $mail->Username = 'lenis.daniel@gmail.com';
+    $mail->Password = '2bdrNC0hQ2hw';
+    $mail->SMTPSecure = 'ssl';
+    $mail->setFrom('info@cdemp-pr.com', 'CDEMP Daily Report');
+
+    foreach($recipients as $value){
+        $mail->addAddress($value);
+    }
+
+    //$mail->addAddress('lenis.daniel@gmail.com');
+    $mail->addReplyTo('info@cdemp-pr.com', 'Information');
+
+    $mail->isHTML(true);
+
+    $mail->Subject = "Student daily status report";
+    $mail->Body    = $message;
+    $mail->AltBody = $message_1;
+
+    if(!$mail->send()) {
+        //echo 'Message could not be sent.';
+        //echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+        //header("location: ../display_page.php?tpl=events&msg=1");
+    }
+
+}
+
+function get_carrier($carrier_id = 0){
+    global $objmydbcon;
+
+    $sqlquery = "SELECT email_string FROM mast_carriers WHERE idx = $carrier_id";
+
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }else if(mysqli_num_rows($result) > 0){
+        $rs = mysqli_fetch_assoc($result);
+    }else{
+        return 0;
+    }
+
+    return $rs['email_string'];
+}
+
+function get_course_name($course_id = 0){
+    global $objmydbcon;
+
+    $sqlquery = "SELECT course_descr FROM master_course WHERE course_id = $course_id";
+
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }else if(mysqli_num_rows($result) > 0){
+        $rs = mysqli_fetch_assoc($result);
+    }else{
+        return 0;
+    }
+    return $rs['course_descr'];
+}
+
+function get_status_name($day_status_id = 0){
+    global $objmydbcon;
+
+    $sqlquery = "SELECT day_status_descr FROM master_day_status WHERE $day_status_id";
+
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }else if(mysqli_num_rows($result) > 0){
+        $rs = mysqli_fetch_assoc($result);
+    }else{
+        return 0;
+    }
+    return $rs['day_status_descr'];
+}
+
+function get_incident_name($incident_id = 0){
+    global $objmydbcon;
+
+    $sqlquery = "SELECT incident_descr FROM master_incidents WHERE incident_id = $incident_id";
+
+    if(!$result = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }else if(mysqli_num_rows($result) > 0){
+        $rs = mysqli_fetch_assoc($result);
+    }else{
+        return 0;
+    }
+    return $rs['incident_descr'];
 }

@@ -28,7 +28,7 @@
                                 </div> -->
                             </div>
                             <div class="col-md-6">
-                                <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                                <button type="submit" id="submit_notifications" class="btn btn-primary pull-right">Submit</button>
                                 <div class="btn-group pull-right" style="margin-right: 10px">
                                     <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
                                     </button>
@@ -85,6 +85,7 @@
                     <input type="hidden" name="course" id="course" value="{course}">
                     <input type="hidden" name="teacher" id="teacher" value="{teacher}">
                     <input type="hidden" name="form_action1" id="form_action1" value="1">
+                    <img src="assets2/global/img/ajax-loader.gif" id="loading_image" class="ajax_loader" style="display:none">
                 </form>
 
             </div>
@@ -217,11 +218,11 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
     </div>
 </div>
 
-
+<!--<img src="assets2/global/img/ajax-loader.gif" id="loading_image" class="ajax_loader" >-->
+<!--<img src="assets2/global/img/ajax-loader.gif" id="loading_image" class="ajax_loader" style="display:none">-->
 
 
 
@@ -328,7 +329,7 @@
 
 
         $('.valor_value').mask('000');
-
+        $('#loading_image').hide();
     });
 
     function insert_grade(id){
@@ -554,6 +555,10 @@
 
         });
 
+    });
+
+    $("#submit_notifications").click(function(){
+        $('#loading_image').show();
     });
 
 

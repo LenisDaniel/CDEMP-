@@ -9498,4 +9498,14 @@ Transparent Button
   color: #888;
 }
 
+.ajax_loader{
+  margin: auto;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 

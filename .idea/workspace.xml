@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/notifications_items.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets2/global/img/ajax-loader.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/display_page.php" afterPath="$PROJECT_DIR$/display_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.appointments.inc.php" afterPath="$PROJECT_DIR$/includes/class.appointments.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets2/global/css/components.css" afterPath="$PROJECT_DIR$/assets2/global/css/components.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" afterPath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/contact.inc.php" afterPath="$PROJECT_DIR$/includes/contact.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/course_details.inc.php" afterPath="$PROJECT_DIR$/includes/course_details.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/global_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/global_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/student_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/student_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/teacher_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/teacher_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" afterPath="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/template.tem.htm" afterPath="$PROJECT_DIR$/templates_en/template.tem.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/course_details.tem.htm" afterPath="$PROJECT_DIR$/templates_en/course_details.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,24 +56,59 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="course_details.inc.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="course_details.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/course_details.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="115" column="44" lean-forward="false" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
+            <state relative-caret-position="572">
+              <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding>
-                <marker date="1499089306803" expanded="true" signature="2005:2179" ph="SELECT tn.no... trans_notes" />
-                <marker date="1499089306803" expanded="true" signature="4566:4798" ph="INSERT INTO daily_records... " />
-                <marker date="1499089306803" expanded="true" signature="5707:5935" ph="INSERT INTO trans_notes... " />
-                <marker date="1499089306803" expanded="true" signature="6838:6894" ph="SELECT stude... students_groups" />
-                <marker date="1499089306803" expanded="true" signature="7285:7360" ph="SELECT first... master_users" />
-                <marker date="1499089306803" expanded="true" signature="7809:7839" ph="SELECT * FRO... master_incidents" />
-                <marker date="1499089306803" expanded="true" signature="8653:8684" ph="SELECT * FRO... master_day_status" />
-                <marker date="1499089306803" expanded="true" signature="9549:9676" ph="SELECT * FRO... grade_identifier" />
-                <marker date="1499089306803" expanded="true" signature="10282:10468" ph="SELECT daily... daily_records" />
-                <marker date="1499089306803" expanded="true" signature="10908:11036" ph="SELECT grade... grade_identifier" />
-                <marker date="1499089306803" expanded="true" signature="11486:11647" ph="SELECT punct... trans_notes" />
+                <element signature="e#6472#6511#0#PHP" expanded="false" />
+                <element signature="e#10827#10842#0#PHP" expanded="false" />
+                <marker date="1499107160481" expanded="true" signature="1982:2156" ph="SELECT tn.no... trans_notes" />
+                <marker date="1499107160481" expanded="true" signature="4549:4781" ph="INSERT INTO daily_records... " />
+                <marker date="1499107160481" expanded="true" signature="5882:6110" ph="INSERT INTO trans_notes... " />
+                <marker date="1499107160481" expanded="true" signature="7013:7069" ph="SELECT stude... students_groups" />
+                <marker date="1499107160481" expanded="true" signature="7460:7535" ph="SELECT first... master_users" />
+                <marker date="1499107160481" expanded="true" signature="7960:7990" ph="SELECT * FRO... master_incidents" />
+                <marker date="1499107160481" expanded="true" signature="8804:8835" ph="SELECT * FRO... master_day_status" />
+                <marker date="1499107160481" expanded="true" signature="9700:9827" ph="SELECT * FRO... grade_identifier" />
+                <marker date="1499107160481" expanded="true" signature="10433:10619" ph="SELECT daily... daily_records" />
+                <marker date="1499107160481" expanded="true" signature="11059:11187" ph="SELECT grade... grade_identifier" />
+                <marker date="1499107160481" expanded="true" signature="11637:11798" ph="SELECT punct... trans_notes" />
+                <marker date="1499107160481" expanded="true" signature="12455:12549" ph="SELECT email... master_users" />
+                <marker date="1499107160481" expanded="true" signature="12455:12550" ph="SELECT email... master_users" />
+                <marker date="1499107160481" expanded="true" signature="12455:12558" ph="SELECT email... master_users" />
+                <marker date="1499107160481" expanded="true" signature="15798:15848" ph="SELECT email... mast_carriers" />
+                <marker date="1499107160481" expanded="true" signature="15798:15849" ph="SELECT email... mast_carriers" />
+                <marker date="1499107160481" expanded="true" signature="16187:16244" ph="SELECT cours... master_course" />
+                <marker date="1499107160481" expanded="true" signature="16187:16245" ph="SELECT cours... master_course" />
+                <marker date="1499107160481" expanded="true" signature="16584:16637" ph="SELECT day_s... master_day_status" />
+                <marker date="1499107160481" expanded="true" signature="16584:16638" ph="SELECT day_s... master_day_status" />
+                <marker date="1499107160481" expanded="true" signature="16985:17049" ph="SELECT incid... master_incidents" />
+                <marker date="1499107160481" expanded="true" signature="16985:17050" ph="SELECT incid... master_incidents" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course_details.tem.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="329" column="0" lean-forward="true" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="components.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets2/global/css/components.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="721">
+              <caret line="9507" column="12" lean-forward="true" selection-start-line="9507" selection-start-column="12" selection-end-line="9507" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/ajax.lazy_events.php" />
         <option value="$PROJECT_DIR$/templates_en/events.tem.htm" />
         <option value="$PROJECT_DIR$/includes/events.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/contact.tem.htm" />
@@ -212,7 +241,6 @@
         <option value="$PROJECT_DIR$/includes/manage_students.inc.php" />
         <option value="$PROJECT_DIR$/includes/manage_admins.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.users.inc.php" />
-        <option value="$PROJECT_DIR$/assets2/global/css/components.css" />
         <option value="$PROJECT_DIR$/includes/ajax.verify_username.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_students.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" />
@@ -222,9 +250,7 @@
         <option value="$PROJECT_DIR$/templates_en/calendar.tem.htm" />
         <option value="$PROJECT_DIR$/assets2/admin/pages/scripts/calendar.js" />
         <option value="$PROJECT_DIR$/includes/ajax.calendar_events.php" />
-        <option value="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/contact.inc.php" />
         <option value="$PROJECT_DIR$/display_page.php" />
         <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/includes/global_appointments.inc.php" />
@@ -232,7 +258,11 @@
         <option value="$PROJECT_DIR$/includes/teacher_appointments.inc.php" />
         <option value="$PROJECT_DIR$/includes/student_appointments.inc.php" />
         <option value="$PROJECT_DIR$/includes/notifications_items.php" />
+        <option value="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
+        <option value="$PROJECT_DIR$/includes/contact.inc.php" />
         <option value="$PROJECT_DIR$/includes/course_details.inc.php" />
+        <option value="$PROJECT_DIR$/assets2/global/css/components.css" />
+        <option value="$PROJECT_DIR$/templates_en/course_details.tem.htm" />
       </list>
     </option>
   </component>
@@ -353,13 +383,89 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDEMP-" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pictures" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -372,6 +478,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\CDEMP-\assets2\global\img" />
       <recent name="C:\xampp\htdocs\CDEMP-\assets2\global\scripts" />
       <recent name="C:\xampp\htdocs\CDEMP-\assets2\global\plugins\fullcalendar\fullcalendar" />
       <recent name="C:\xampp\htdocs\CDEMP-\includes" />
@@ -553,7 +660,7 @@
       <workItem from="1498957122313" duration="21000" />
       <workItem from="1498960033712" duration="349000" />
       <workItem from="1498985185461" duration="14925000" />
-      <workItem from="1499074107963" duration="13749000" />
+      <workItem from="1499074107963" duration="21607000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -580,7 +687,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437895000" />
+    <option name="totallyTimeSpent" value="445753000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -676,13 +783,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/includes/course_details.inc.php</url>
-          <line>287</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -691,13 +791,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates_en/teacher_events.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2673">
-          <caret line="233" column="7" lean-forward="true" selection-start-line="233" selection-start-column="7" selection-end-line="233" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/teacher_events.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -928,14 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets2/global/css/components.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="939">
-          <caret line="2401" column="11" lean-forward="false" selection-start-line="2401" selection-start-column="11" selection-end-line="2401" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/ajax.verify_username.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1024,14 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.smtp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18480">
@@ -1076,14 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1027">
           <caret line="70" column="62" lean-forward="false" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1204,22 +1273,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/contact.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/course_details.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="115" column="44" lean-forward="false" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
+        <state relative-caret-position="572">
+          <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
-            <marker date="1499089306803" expanded="true" signature="2005:2179" ph="SELECT tn.no... trans_notes" />
-            <marker date="1499089306803" expanded="true" signature="4566:4798" ph="INSERT INTO daily_records... " />
-            <marker date="1499089306803" expanded="true" signature="5707:5935" ph="INSERT INTO trans_notes... " />
-            <marker date="1499089306803" expanded="true" signature="6838:6894" ph="SELECT stude... students_groups" />
-            <marker date="1499089306803" expanded="true" signature="7285:7360" ph="SELECT first... master_users" />
-            <marker date="1499089306803" expanded="true" signature="7809:7839" ph="SELECT * FRO... master_incidents" />
-            <marker date="1499089306803" expanded="true" signature="8653:8684" ph="SELECT * FRO... master_day_status" />
-            <marker date="1499089306803" expanded="true" signature="9549:9676" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1499089306803" expanded="true" signature="10282:10468" ph="SELECT daily... daily_records" />
-            <marker date="1499089306803" expanded="true" signature="10908:11036" ph="SELECT grade... grade_identifier" />
-            <marker date="1499089306803" expanded="true" signature="11486:11647" ph="SELECT punct... trans_notes" />
+            <element signature="e#6472#6511#0#PHP" expanded="false" />
+            <element signature="e#10827#10842#0#PHP" expanded="false" />
+            <marker date="1499107160481" expanded="true" signature="1982:2156" ph="SELECT tn.no... trans_notes" />
+            <marker date="1499107160481" expanded="true" signature="4549:4781" ph="INSERT INTO daily_records... " />
+            <marker date="1499107160481" expanded="true" signature="5882:6110" ph="INSERT INTO trans_notes... " />
+            <marker date="1499107160481" expanded="true" signature="7013:7069" ph="SELECT stude... students_groups" />
+            <marker date="1499107160481" expanded="true" signature="7460:7535" ph="SELECT first... master_users" />
+            <marker date="1499107160481" expanded="true" signature="7960:7990" ph="SELECT * FRO... master_incidents" />
+            <marker date="1499107160481" expanded="true" signature="8804:8835" ph="SELECT * FRO... master_day_status" />
+            <marker date="1499107160481" expanded="true" signature="9700:9827" ph="SELECT * FRO... grade_identifier" />
+            <marker date="1499107160481" expanded="true" signature="10433:10619" ph="SELECT daily... daily_records" />
+            <marker date="1499107160481" expanded="true" signature="11059:11187" ph="SELECT grade... grade_identifier" />
+            <marker date="1499107160481" expanded="true" signature="11637:11798" ph="SELECT punct... trans_notes" />
+            <marker date="1499107160481" expanded="true" signature="12455:12549" ph="SELECT email... master_users" />
+            <marker date="1499107160481" expanded="true" signature="12455:12550" ph="SELECT email... master_users" />
+            <marker date="1499107160481" expanded="true" signature="12455:12558" ph="SELECT email... master_users" />
+            <marker date="1499107160481" expanded="true" signature="15798:15848" ph="SELECT email... mast_carriers" />
+            <marker date="1499107160481" expanded="true" signature="15798:15849" ph="SELECT email... mast_carriers" />
+            <marker date="1499107160481" expanded="true" signature="16187:16244" ph="SELECT cours... master_course" />
+            <marker date="1499107160481" expanded="true" signature="16187:16245" ph="SELECT cours... master_course" />
+            <marker date="1499107160481" expanded="true" signature="16584:16637" ph="SELECT day_s... master_day_status" />
+            <marker date="1499107160481" expanded="true" signature="16584:16638" ph="SELECT day_s... master_day_status" />
+            <marker date="1499107160481" expanded="true" signature="16985:17049" ph="SELECT incid... master_incidents" />
+            <marker date="1499107160481" expanded="true" signature="16985:17050" ph="SELECT incid... master_incidents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets2/global/css/components.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="9507" column="12" lean-forward="true" selection-start-line="9507" selection-start-column="12" selection-end-line="9507" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="329" column="0" lean-forward="true" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
