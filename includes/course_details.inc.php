@@ -113,7 +113,7 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
                           VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id)";
 
             if($objmydbcon->set_query($sqlinsert)){
-                //do nothing
+                //Send Email & sms to parent
             }else{
                 $flag = 1;
                 header('location: ../display_page.php?tpl=my_courses&cat=4&process=2');

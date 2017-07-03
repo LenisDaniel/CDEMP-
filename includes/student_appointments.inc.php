@@ -20,4 +20,6 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("appoint_place", $objappointments->get_appointment_info('appointment_place'));
     $objtemplate->set_content("appoint_details", $objappointments->get_appointment_info('appointment_details'));
 
+    $objappointments->set_as_viewed($idx);
+
 }

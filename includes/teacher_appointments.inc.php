@@ -27,6 +27,8 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("users_type", "style='display:none'");
     $objtemplate->set_content("user_list", "style='display:none'");
 
+    $objappointments->set_as_viewed($idx);
+
 }else{
 
     $objtemplate->set_content("form_action", "display_page.php?tpl=teacher_appointments&cid=".base64_encode(0));

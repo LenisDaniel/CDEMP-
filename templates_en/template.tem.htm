@@ -102,50 +102,36 @@
 		<div class="top-menu">
 			<ul class="nav navbar-nav pull-right">
 
+
 				<!-- BEGIN NOTIFICATION DROPDOWN -->
 				<li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<i class="icon-bell"></i>
-						<!-- <span class="badge badge-default">
-                        7 </span> -->
+						<span class="badge badge-default"> {notifications_badge} </span>
+
 					</a>
 					<ul class="dropdown-menu">
 						<li>
 							<p>
-								You have 0 new notifications
+								{notifications_qty}
 							</p>
 						</li>
 						<li>
 							<ul class="dropdown-menu-list scroller" style="height: 250px;">
 
-								<li>
-									<a href="#">
-									<span class="label label-sm label-icon label-success">
-									<i class="fa fa-plus"></i>
-									</span>
-										New user registered. <span class="time">
-									Just now </span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<span class="label label-sm label-icon label-danger">
-									<i class="fa fa-bolt"></i>
-									</span>
-										Server #12 overloaded. <span class="time">
-									15 mins </span>
-									</a>
-								</li>
+								{notifications_items}
+
 							</ul>
 						</li>
 						<li class="external">
-							<a href="#">
-								See all notifications <i class="m-icon-swapright"></i>
+							<a href="{appointments_uri}">
+								See all appointments <i class="m-icon-swapright"></i>
 							</a>
 						</li>
 					</ul>
 				</li>
 				<!-- END NOTIFICATION DROPDOWN -->
+
 
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">

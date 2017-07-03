@@ -210,4 +210,14 @@ class Appointments{
 
     }
 
+    function set_as_viewed($idx = 0){
+        global $objmydbcon;
+        $sqlupdate = "UPDATE appointments SET viewed = 1 WHERE appointment_id = $idx";
+        if($objmydbcon->set_query($sqlupdate)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
