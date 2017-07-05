@@ -64,7 +64,11 @@ class ConfigRecords
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE $table SET $field1 = '$descr', grade_id = '$grade_id', active = '$active' WHERE $field2 = $id";
+            if($table_name == 'group'){
+                $sqlupdate = "UPDATE $table SET $field1 = '$descr', grade_id = $grade_id, active = '$active' WHERE $field2 = $id";
+            }else{
+                $sqlupdate = "UPDATE $table SET $field1 = '$descr', active = '$active' WHERE $field2 = $id";
+            }
 
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=$cat");
@@ -75,7 +79,11 @@ class ConfigRecords
 
         }else{
 
-            $sqlinsert = "INSERT INTO $table ($field1, grade_id, active)VALUES('$descr', '$grade_id', $active)";
+            if($table_name == 'group'){
+                $sqlinsert = "INSERT INTO $table ($field1, grade_id, active)VALUES('$descr', $grade_id, $active)";
+            }else{
+                $sqlinsert = "INSERT INTO $table ($field1, active)VALUES('$descr', $active)";
+            }
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();

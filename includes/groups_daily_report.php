@@ -7,7 +7,6 @@ $message = "";
 $date = date("d-M-Y");
 $today_date = date("Y-m-d");
 
-
 $sqlquery = "SELECT group_id, group_descr FROM master_group";
 
 if(!$results = $objmydbcon->get_result_set($sqlquery)){
@@ -16,36 +15,49 @@ if(!$results = $objmydbcon->get_result_set($sqlquery)){
     while($rs = mysqli_fetch_assoc($results)){
         extract($rs);
 
-        $absences['total'] = get_absences($group_id, $today_date)['total'];
-        $absences['list'] = get_absences($group_id, $today_date)['list'];
+        $message .= "<strong><h2>Group $group_descr on $date </h2></strong>";
 
-        $tardiness['total'] = get_delays($group_id, $today_date)['total'];
-        $tardiness['list'] = get_delays($group_id, $today_date)['list'];
+        $sqlquery1 = "SELECT course_id FROM schedules_teacher WHERE group_id = $group_id";
+        if(!$results1 = $objmydbcon->get_result_set($sqlquery1)){
+            return false;
+        }else if(mysqli_num_rows($results1) > 0){
+            while($rs1 = mysqli_fetch_assoc($results1)){
+                extract($rs1);
 
-        $behavior['total'] = get_behaviors($group_id, $today_date)['total'];
-        $behavior['list'] = get_behaviors($group_id, $today_date)['list'];
+                $course_name = get_course_name($course_id);
+                $absences['total'] = get_absences($course_id, $today_date)['total'];
+                $absences['list'] = get_absences($course_id, $today_date)['list'];
 
-        $message .= "<strong><h2>Group $group_descr on $date </h2></strong>
-                     <strong><h3>Absences total: " . $absences['total'] . "</h3></strong>
-                     <strong>Absence student list: </strong> <br>
-                     " . $absences['list'] . "<br><br>
-                     <strong><h3>Tardiness total: " . $tardiness['total'] . "</h3></strong>
-                     <strong>Tardiness student list: </strong><br>
-                     " . $tardiness['list'] . "<br><br>
-                     <strong><h3>Behaviors total: " . $behavior['total'] . "</h3></strong>
-                     <strong>Behavior student list: </strong><br><br>
-                     " . $behavior['list'] . "<br><br>";
+                $tardiness['total'] = get_delays($course_id, $today_date)['total'];
+                $tardiness['list'] = get_delays($course_id, $today_date)['list'];
 
+                $behavior['total'] = get_behaviors($course_id, $today_date)['total'];
+                $behavior['list'] = get_behaviors($course_id, $today_date)['list'];
+
+                $message .= "<strong><h2>Course $course_name</h2></strong>
+                             <strong><h3>Absences total: " . $absences['total'] . "</h3></strong>
+                             <strong>Absence student list: </strong> <br>
+                             " . $absences['list'] . "<br><br>
+                             <strong><h3>Tardiness total: " . $tardiness['total'] . "</h3></strong>
+                             <strong>Tardiness student list: </strong><br>
+                             " . $tardiness['list'] . "<br><br>
+                             <strong><h3>Behaviors total: " . $behavior['total'] . "</h3></strong>
+                             <strong>Behavior student list: </strong><br><br>
+                             " . $behavior['list'] . "<br><br>";
+            }
+        }else{
+            //do nothing
+        }
     }
     send_email($message);
 }else{
     return 0;
 }
 
-function get_absences($group_id, $today_date){
+function get_absences($course_id, $today_date){
     global $objmydbcon;
 
-    $sqlquery = "SELECT student_id FROM daily_records WHERE day_status_id = 2 AND create_date LIKE '%$today_date%'";
+    $sqlquery = "SELECT student_id FROM daily_records WHERE day_status_id = 2 AND course_id = $course_id AND create_date LIKE '%$today_date%'";
     $absences = array();
     $student_list = "";
 
@@ -64,10 +76,10 @@ function get_absences($group_id, $today_date){
 
 }
 
-function get_delays($group_id, $today_date){
+function get_delays($course_id, $today_date){
     global $objmydbcon;
 
-    $sqlquery = "SELECT student_id FROM daily_records WHERE day_status_id = 3 AND create_date LIKE '%$today_date%'";
+    $sqlquery = "SELECT student_id FROM daily_records WHERE day_status_id = 3 AND course_id = $course_id AND create_date LIKE '%$today_date%'";
     $tardiness = array();
     $student_list = "";
 
@@ -85,10 +97,10 @@ function get_delays($group_id, $today_date){
     return $tardiness;
 }
 
-function get_behaviors($group_id, $today_date){
+function get_behaviors($course_id, $today_date){
     global $objmydbcon;
 
-    $sqlquery = "SELECT student_id FROM daily_records WHERE incident_id <> 1 AND create_date LIKE '%$today_date%'";
+    $sqlquery = "SELECT student_id FROM daily_records WHERE incident_id <> 1 AND course_id = $course_id AND create_date LIKE '%$today_date%'";
     $behavior = array();
     $student_list = "";
 
@@ -121,6 +133,20 @@ function get_students_name($id = 0){
         return 0;
     }
     return $name;
+}
+
+function get_course_name($id = 0){
+    global $objmydbcon;
+
+    $sqlquery = "SELECT course_descr FROM master_course WHERE course_id = $id";
+    if(!$results = $objmydbcon->get_result_set($sqlquery)){
+        return false;
+    }elseif(mysqli_num_rows($results) > 0 ){
+        $rs = mysqli_fetch_assoc($results);
+    }else{
+        return 0;
+    }
+    return $rs['course_descr'];
 }
 
 function get_administrators_emails(){
@@ -157,7 +183,6 @@ function send_email($message = ""){
     $mail->setFrom('info@cdemp-pr.com', 'CDEMP Daily Report');
 
     foreach($recipients as $value){
-
         $mail->addAddress($value);
     }
 
