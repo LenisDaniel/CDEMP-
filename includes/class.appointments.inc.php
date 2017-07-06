@@ -55,7 +55,7 @@ class Appointments{
                 }else{
                     $this->appoint_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=$cat&edit=$idu'><span class='label label-$day_color'>" . $this->appoint_info[0]. "</span></a></td>";
                 }
-                $this->appoint_td_info .= "<td>" . $this->appoint_info[11]. ' ' . $this->appoint_info[12]. "</td>";
+                $this->appoint_td_info .= "<td>" . $this->appoint_info[12]. ' ' . $this->appoint_info[13]. "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[3]. "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[4]. "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[5]. "</td>";
@@ -74,11 +74,15 @@ class Appointments{
     }
 
 
-    function manage_appoint_info($tpl_uri = "", $id = 0, $appoint_descr = "", $appoint_time = "", $appoint_place = "", $appoint_details = "", $users_list = "", $unique_number = 0, $creator = 0){
+    function manage_appoint_info($tpl_uri = "", $id = 0, $appoint_descr = "", $appoint_time = "", $appoint_place = "", $appoint_details = "", $users_list = "", $unique_number = 0, $creator = 0, $active = 0){
         global $objmydbcon;
 
         if($id <= 0){
             $unique_number = $this->get_max_number() + 1;
+        }
+
+        if($active != 1){
+            $active = 0;
         }
 
         if(strpos($users_list, ',')){
@@ -86,20 +90,21 @@ class Appointments{
             $list = explode(',', $users_list);
 
             foreach($list as $value){
-                $this->insert_appointments($tpl_uri,$id, $value, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, 0, $unique_number, $creator);
+                $this->insert_appointments($tpl_uri,$id, $value, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, 0, $unique_number, $creator, $active);
             }
 
         }else{
-            $this->insert_appointments($tpl_uri, $id, $users_list, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, 0, $unique_number, $creator);
+            $this->insert_appointments($tpl_uri, $id, $users_list, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, 0, $unique_number, $creator, $active);
         }
+
     }
 
-    function insert_appointments($tpl_uri = "", $id = 0, $users_list = 0, $appoint_descr = "", $appoint_time = "", $appoint_place = "", $appoint_details = "", $viewed = 0, $unique_number = 0, $creator = 0){
+    function insert_appointments($tpl_uri = "", $id = 0, $users_list = 0, $appoint_descr = "", $appoint_time = "", $appoint_place = "", $appoint_details = "", $viewed = 0, $unique_number = 0, $creator = 0, $active = 0){
         global $objmydbcon;
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE appointments SET appointment_descr = '$appoint_descr', appointment_time = '$appoint_time', appointment_place = '$appoint_place', appointment_details = '$appoint_details' WHERE unique_number = $unique_number";
+            $sqlupdate = "UPDATE appointments SET appointment_descr = '$appoint_descr', appointment_time = '$appoint_time', appointment_place = '$appoint_place', appointment_details = '$appoint_details', active = $active WHERE unique_number = $unique_number";
 
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=4");
@@ -110,7 +115,7 @@ class Appointments{
 
         }else{
 
-            $sqlinsert = "INSERT INTO appointments(unique_number, date_with, appointment_descr, appointment_time, appointment_place, appointment_details, viewed, created_by)VALUES($unique_number,'$users_list', '$appoint_descr', '$appoint_time', '$appoint_place', '$appoint_details', $viewed, $creator)";
+            $sqlinsert = "INSERT INTO appointments(unique_number, date_with, appointment_descr, appointment_time, appointment_place, appointment_details, viewed, created_by, active)VALUES($unique_number,'$users_list', '$appoint_descr', '$appoint_time', '$appoint_place', '$appoint_details', $viewed, $creator, $active)";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
