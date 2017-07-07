@@ -27,6 +27,8 @@
         $objtemplate->set_content("second_surname", $objstudents->get_user_info('second_surname'));
         $objtemplate->set_content("email", $objstudents->get_user_info('email'));
         $objtemplate->set_content("username", $objstudents->get_user_info('username'));
+        $objtemplate->set_content("db_username", $objstudents->get_user_info('username'));
+        $objtemplate->set_content("username_validate", 1);
         $objtemplate->set_content("password", $objstudents->get_user_info('password'));
         $objtemplate->set_content("address1", $objstudents->get_user_info('address1'));
         $objtemplate->set_content("address2", $objstudents->get_user_info('address2'));
@@ -54,29 +56,14 @@
         $objtemplate->set_content("zipcodes_dd", $objstudents->get_zipcodes(0));
         $objtemplate->set_content("carriers_dd", $objstudents->get_carriers(0));
         $objtemplate->set_content("groups_dd", $objstudents->get_groups(0));
-
+        $objtemplate->set_content("username_validate", 0);
         $objtemplate->set_content("form_title", "Create New Student");
         $objtemplate->set_content("send_button", "Submit");
         $objtemplate->set_content("option1", "checked");
     
     }
 
-//    if(isset($_GET['delete'])){
-//        $idx = base64_decode($_GET['delete']);
-//        header("location: display_page.php?tpl=manage_admins&id=".base64_encode($idx)."&del=1");
-//    }
-//
-//    if(isset($_GET['del'])){
-//
-//        $del = $_GET['del'];
-//        $id = base64_decode($_GET['id']);
-//        $role = 1;
-//
-//        if($del == 2){
-//            $objstudents->update_user_active($id, $role);
-//        }
-//
-//    }
+
     
     if(isset($_GET['cid'])){
     
