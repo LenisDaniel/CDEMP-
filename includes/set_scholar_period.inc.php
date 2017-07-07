@@ -30,7 +30,7 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("form_action", "display_page.php?tpl=set_scholar_period&cid=".base64_encode(0));
     $objtemplate->set_content("form_title", "Create New Scholar Period");
     $objtemplate->set_content("send_button", "Submit");
-    $objtemplate->set_content("option1", "checked");
+    $objtemplate->set_content("option2", "checked");
 
 }
 

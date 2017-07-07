@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets2/global/scripts/jquery.tinymce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets2/global/scripts/tinymce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/get_active_scholar_period.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/ajax.calendar_events.php" afterPath="$PROJECT_DIR$/includes/ajax.calendar_events.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/assign_courses.inc.php" afterPath="$PROJECT_DIR$/includes/assign_courses.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.appointments.inc.php" afterPath="$PROJECT_DIR$/includes/class.appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.behavior_issues.inc.php" afterPath="$PROJECT_DIR$/includes/class.behavior_issues.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.config_records.inc.php" afterPath="$PROJECT_DIR$/includes/class.config_records.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.events.inc.php" afterPath="$PROJECT_DIR$/includes/class.events.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.notes.inc.php" afterPath="$PROJECT_DIR$/includes/class.notes.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.scholar_period.inc.php" afterPath="$PROJECT_DIR$/includes/class.scholar_period.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.teachers.inc.php" afterPath="$PROJECT_DIR$/includes/class.teachers.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.users.inc.php" afterPath="$PROJECT_DIR$/includes/class.users.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/course_details.inc.php" afterPath="$PROJECT_DIR$/includes/course_details.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/events.inc.php" afterPath="$PROJECT_DIR$/includes/events.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/global_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/global_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_schedule.inc.php" afterPath="$PROJECT_DIR$/includes/manage_schedule.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/teacher_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/teacher_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/course_details.tem.htm" afterPath="$PROJECT_DIR$/templates_en/course_details.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/global_events.tem.htm" afterPath="$PROJECT_DIR$/templates_en/global_events.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/set_scholar_period.tem.htm" afterPath="$PROJECT_DIR$/templates_en/set_scholar_period.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" afterPath="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/template.tem.htm" afterPath="$PROJECT_DIR$/templates_en/template.tem.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/set_scholar_period.inc.php" afterPath="$PROJECT_DIR$/includes/set_scholar_period.inc.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,24 +55,44 @@
       <file leaf-file-name="set_scholar_period.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/set_scholar_period.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+            <state relative-caret-position="30">
+              <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.scholar_period.inc.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="class.scholar_period.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="68" column="158" lean-forward="false" selection-start-line="68" selection-start-column="158" selection-end-line="68" selection-end-column="158" />
+            <state relative-caret-position="481">
+              <caret line="62" column="72" lean-forward="true" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
               <folding>
-                <marker date="1499393247470" expanded="true" signature="395:445" ph="SELECT * FRO... scholar_period" />
-                <marker date="1499393247470" expanded="true" signature="395:489" ph="SELECT * FRO... scholar_period" />
-                <marker date="1499393247470" expanded="true" signature="1980:2133" ph="UPDATE schol... " />
-                <marker date="1499393247470" expanded="true" signature="2400:2530" ph="INSERT INTO scholar_period... " />
-                <marker date="1499393247470" expanded="true" signature="2913:2968" ph="SELECT * FRO... scholar_period" />
+                <marker date="1499425926253" expanded="true" signature="395:445" ph="SELECT * FRO... scholar_period" />
+                <marker date="1499425926253" expanded="true" signature="395:489" ph="SELECT * FRO... scholar_period" />
+                <marker date="1499425926253" expanded="true" signature="2044:2197" ph="UPDATE schol... " />
+                <marker date="1499425926253" expanded="true" signature="2464:2594" ph="INSERT INTO scholar_period... " />
+                <marker date="1499425926253" expanded="true" signature="2977:3032" ph="SELECT * FRO... scholar_period" />
+                <marker date="1499425926253" expanded="true" signature="3744:3816" ph="UPDATE schol... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.calendar_events.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding>
+                <marker date="1499426104602" expanded="true" signature="412:518" ph="SELECT event... events" />
+                <marker date="1499426104602" expanded="true" signature="412:550" ph="SELECT event... events" />
+                <marker date="1499426104602" expanded="true" signature="412:551" ph="SELECT event... events" />
+                <marker date="1499426104602" expanded="true" signature="412:563" ph="SELECT event... events" />
+                <marker date="1499426104602" expanded="true" signature="412:862" ph="SELECT event... " />
+                <marker date="1499426104602" expanded="true" signature="570:862" ph="SELECT appoi... appointments" />
+                <marker date="1499426104602" expanded="true" signature="1465:1540" ph="SELECT event... events" />
+                <marker date="1499426104602" expanded="true" signature="2036:2141" ph="SELECT appoi... appointments" />
               </folding>
             </state>
           </provider>
@@ -204,7 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/ajax.manage_schedule.php" />
         <option value="$PROJECT_DIR$/templates_en/teacher_incidents.tem.htm" />
         <option value="$PROJECT_DIR$/includes/student_incidents.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.incidents.inc.php" />
@@ -250,11 +248,12 @@
         <option value="$PROJECT_DIR$/templates_en/set_scholar_period.tem.htm" />
         <option value="$PROJECT_DIR$/includes/events.inc.php" />
         <option value="$PROJECT_DIR$/includes/global_appointments.inc.php" />
-        <option value="$PROJECT_DIR$/includes/ajax.calendar_events.php" />
         <option value="$PROJECT_DIR$/includes/class.appointments.inc.php" />
         <option value="$PROJECT_DIR$/includes/assign_courses.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.teachers.inc.php" />
+        <option value="$PROJECT_DIR$/includes/set_scholar_period.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.scholar_period.inc.php" />
+        <option value="$PROJECT_DIR$/includes/ajax.calendar_events.php" />
       </list>
     </option>
   </component>
@@ -582,7 +581,7 @@
       <workItem from="1499278666216" duration="6146000" />
       <workItem from="1499338743859" duration="14089000" />
       <workItem from="1499378081818" duration="15156000" />
-      <workItem from="1499425194368" duration="235000" />
+      <workItem from="1499425194368" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -609,7 +608,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="504796000" />
+    <option name="totallyTimeSpent" value="505537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,7 +628,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17937702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3265086" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265086" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1045,23 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="212" lean-forward="false" selection-start-line="15" selection-start-column="145" selection-end-line="15" selection-end-column="212" />
-          <folding>
-            <marker date="1499390477929" expanded="true" signature="412:518" ph="SELECT event... events" />
-            <marker date="1499390477929" expanded="true" signature="412:550" ph="SELECT event... events" />
-            <marker date="1499390477929" expanded="true" signature="412:551" ph="SELECT event... events" />
-            <marker date="1499390477929" expanded="true" signature="412:563" ph="SELECT event... events" />
-            <marker date="1499390477929" expanded="true" signature="412:794" ph="SELECT event... " />
-            <marker date="1499390477929" expanded="true" signature="570:794" ph="SELECT appoi... appointments" />
-            <marker date="1499390477929" expanded="true" signature="1397:1472" ph="SELECT event... events" />
-            <marker date="1499390477929" expanded="true" signature="1968:2073" ph="SELECT appoi... appointments" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/global_appointments.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1215,22 +1197,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/set_scholar_period.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+        <state relative-caret-position="30">
+          <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="68" column="158" lean-forward="false" selection-start-line="68" selection-start-column="158" selection-end-line="68" selection-end-column="158" />
+        <state relative-caret-position="481">
+          <caret line="62" column="72" lean-forward="true" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
           <folding>
-            <marker date="1499393247470" expanded="true" signature="395:445" ph="SELECT * FRO... scholar_period" />
-            <marker date="1499393247470" expanded="true" signature="395:489" ph="SELECT * FRO... scholar_period" />
-            <marker date="1499393247470" expanded="true" signature="1980:2133" ph="UPDATE schol... " />
-            <marker date="1499393247470" expanded="true" signature="2400:2530" ph="INSERT INTO scholar_period... " />
-            <marker date="1499393247470" expanded="true" signature="2913:2968" ph="SELECT * FRO... scholar_period" />
+            <marker date="1499425926253" expanded="true" signature="395:445" ph="SELECT * FRO... scholar_period" />
+            <marker date="1499425926253" expanded="true" signature="395:489" ph="SELECT * FRO... scholar_period" />
+            <marker date="1499425926253" expanded="true" signature="2044:2197" ph="UPDATE schol... " />
+            <marker date="1499425926253" expanded="true" signature="2464:2594" ph="INSERT INTO scholar_period... " />
+            <marker date="1499425926253" expanded="true" signature="2977:3032" ph="SELECT * FRO... scholar_period" />
+            <marker date="1499425926253" expanded="true" signature="3744:3816" ph="UPDATE schol... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <marker date="1499426104602" expanded="true" signature="412:518" ph="SELECT event... events" />
+            <marker date="1499426104602" expanded="true" signature="412:550" ph="SELECT event... events" />
+            <marker date="1499426104602" expanded="true" signature="412:551" ph="SELECT event... events" />
+            <marker date="1499426104602" expanded="true" signature="412:563" ph="SELECT event... events" />
+            <marker date="1499426104602" expanded="true" signature="412:862" ph="SELECT event... " />
+            <marker date="1499426104602" expanded="true" signature="570:862" ph="SELECT appoi... appointments" />
+            <marker date="1499426104602" expanded="true" signature="1465:1540" ph="SELECT event... events" />
+            <marker date="1499426104602" expanded="true" signature="2036:2141" ph="SELECT appoi... appointments" />
           </folding>
         </state>
       </provider>

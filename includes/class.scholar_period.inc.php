@@ -51,6 +51,8 @@ class Scholar_Period{
 
         if($active != 1){
             $active = 0;
+        }else{
+            $this->set_inactive_the_others($id);
         }
 
         if($id > 0){
@@ -113,6 +115,17 @@ class Scholar_Period{
 
         }
 
+    }
+
+    function set_inactive_the_others($id = 0){
+        global $objmydbcon;
+
+        $sqlupdate = "UPDATE scholar_period SET active = 0 WHERE scholar_period_id NOT IN($id)";
+        if($objmydbcon->set_query($sqlupdate)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
