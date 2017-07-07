@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_admins.inc.php" afterPath="$PROJECT_DIR$/includes/manage_admins.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_teachers.inc.php" afterPath="$PROJECT_DIR$/includes/manage_teachers.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_tecnicians.inc.php" afterPath="$PROJECT_DIR$/includes/manage_tecnicians.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" afterPath="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/manage_students.tem.htm" afterPath="$PROJECT_DIR$/templates_en/manage_students.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" afterPath="$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" afterPath="$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,8 +73,8 @@
       <file leaf-file-name="manage_admins.tem.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="379" column="55" lean-forward="true" selection-start-line="379" selection-start-column="55" selection-end-line="379" selection-end-column="55" />
+            <state relative-caret-position="738">
+              <caret line="392" column="6" lean-forward="true" selection-start-line="392" selection-start-column="6" selection-end-line="392" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -593,7 +586,7 @@
       <workItem from="1499278666216" duration="6146000" />
       <workItem from="1499338743859" duration="14089000" />
       <workItem from="1499378081818" duration="15156000" />
-      <workItem from="1499425194368" duration="3418000" />
+      <workItem from="1499425194368" duration="3527000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -620,7 +613,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="507979000" />
+    <option name="totallyTimeSpent" value="508088000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1234,8 +1227,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="379" column="55" lean-forward="true" selection-start-line="379" selection-start-column="55" selection-end-line="379" selection-end-column="55" />
+        <state relative-caret-position="738">
+          <caret line="392" column="6" lean-forward="true" selection-start-line="392" selection-start-column="6" selection-end-line="392" selection-end-column="6" />
           <folding />
         </state>
       </provider>
