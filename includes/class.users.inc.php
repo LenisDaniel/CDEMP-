@@ -26,7 +26,7 @@ class Users{
         $sqlquery = "SELECT mu.idx, mu.first_name, mu.last_name, mu.second_surname, mu.email, mu.phone_1, mc.name, mu.active, mu.created_date 
                      FROM master_users mu 
                      INNER JOIN master_cities mc on mc.city_id = mu.city
-                     WHERE role_idx = $role";
+                     WHERE role_idx = $role AND active = 1";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
@@ -62,7 +62,7 @@ class Users{
     function manage_user_info($tpl_uri = 0, $id = 0, $first_name = "", $last_name = "", $second_surname = "", $username = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0, $parent_1 = "", $parent_2 = "", $phone_1_carrier = "", $phone_2_carrier = ""){
         global $objmydbcon;
 
-        if(!$active == "1"){
+        if($active != 1){
             $active = 0;
         }
 

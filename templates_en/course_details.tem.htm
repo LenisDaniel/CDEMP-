@@ -47,6 +47,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <input type="text" class="form-control pull-right" style="width: 180px; margin-right: 20px;" id="day_status_date" name="day_status_date" placeholder="Forget Create?">
                             </div>
                         </div>
                     </div>
@@ -102,13 +103,21 @@
                     </div>
                     <form id="course_details_form" action="includes/course_details.inc.php" method="post">
                         <div class="modal-body">
+
+
                             <div class="form-group col-md-12">
-                                <label>Grade Identifier:</label>
-                                <div>
-                                    <select class="form-control" name="grade_identifiers" id="grade_identifiers">
-                                        <option value="-1">--Select One--</option>
-                                        {grade_identifiers_dd}
-                                    </select>
+                                <div class="col-md-6">
+                                    <label>Student Name:</label>
+                                    <input type="text" class="form-control" name="student_toassign" id="student_toassign" readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Grade Identifier:</label>
+                                    <div>
+                                        <select class="form-control" name="grade_identifiers" id="grade_identifiers">
+                                            <option value="-1">--Select One--</option>
+                                            {grade_identifiers_dd}
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group col-md-12" style="margin-top: 25px">
@@ -340,6 +349,8 @@
         teacher0 = $('#teacher').val();
         student0 = $('#td_'+id).text();
 
+        var student_toassign = $('#tdn_'+id).text();
+        $('#student_toassign').val(student_toassign);
         $('#grade0').val(grade0);
         $('#group0').val(group0);
         $('#course0').val(course0);
@@ -465,6 +476,12 @@
 
         }
 
+    });
+
+    $(function() {
+        $("#day_status_date").datepicker({
+            dateFormat: "yy-mm-dd"
+        });
     });
 
     $('#course_details_form').submit(function(){

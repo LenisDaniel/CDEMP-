@@ -27,7 +27,7 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
             $i++;
             $student_td_info .= "<tr class='odd gradeX'>";
             $student_td_info .= "<td id='td_$i'><input type='hidden' id='student_id_$i' name='student_id_$i' value='$value'>" . $value . "</td>";
-            $student_td_info .= "<td>" . get_student_name($value) . "</td>";
+            $student_td_info .= "<td id='tdn_$i'>" . get_student_name($value) . "</td>";
             $student_td_info .= "<td>" . get_day_status(0, $i) . "</td>";
             $student_td_info .= "<td>" . get_incidents(0, $i) . "</td>";
             $student_td_info .= "<td class='action-buttons'><button type='button' class='btn btn-success' onclick='insert_grade($i)'><i class='fa fa-pencil-square-o'></i></button></td>";
@@ -93,23 +93,42 @@ $objtemplate->set_content('grade_identifiers_dd', get_grade_identifiers($grade_i
 
 if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
 
-    for($i = 1; $i <= ((count($_POST) - 4) /3); $i++){
+    $grade_id = $_POST['grade'];
+    $group_id = $_POST['group'];
+    $course_id = $_POST['course'];
+    $teacher_id = $_POST['teacher'];
+    $forget_date = $_POST['day_status_date'];
+    $counter = 0;
 
-        $grade_id = $_POST['grade'];
-        $group_id = $_POST['group'];
-        $course_id = $_POST['course'];
-        $teacher_id = $_POST['teacher'];
-        $student_id = $_POST['student_id_'.$i];
-        $day_status_id = $_POST['day_status_'.$i];
-        $incident_id = $_POST['incidents_'.$i];
+    for($i = 0; $i < count($_POST); $i++){
+        if(array_key_exists("student_id_$i", $_POST)){
+            $counter++;
+        }
+    }
 
-        if( validate_today_info($grade_id, $group_id, $course_id, $teacher_id) ){
+    if(validate_today_info($grade_id, $group_id, $course_id, $teacher_id, $forget_date)){
 
-            header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
+        header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
 
-        }else{
-            $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id)
+    }else{
+
+        for($i = 1; $i <= $counter; $i++){
+
+            $student_id = $_POST['student_id_'.$i];
+            $day_status_id = $_POST['day_status_'.$i];
+            $incident_id = $_POST['incidents_'.$i];
+
+            if($forget_date != ""){
+
+                $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id, create_date)
+                          VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id, '$forget_date')";
+
+            }else{
+
+                $sqlinsert = "INSERT INTO daily_records(teacher_id, student_id, grade_id, group_id, course_id, day_status_id, incident_id)
                           VALUES ($teacher_id, $student_id, $grade_id, $group_id, $course_id, $day_status_id, $incident_id)";
+
+            }
 
             if($objmydbcon->set_query($sqlinsert)){
                 //Send Email & sms to parent
@@ -290,11 +309,19 @@ function get_grade_identifiers($grade_id = 0, $group_id = 0, $course_id = 0, $te
 }
 
 
-function validate_today_info($grade_id = 0, $group_id = 0, $course_id = 0, $teacher_id = 0){
+function validate_today_info($grade_id = 0, $group_id = 0, $course_id = 0, $teacher_id = 0, $forget_date = ""){
     global $objmydbcon;
+
     $today_date = date('Y-m-d');
 
-    $sqlquery = "SELECT daily_record_id FROM daily_records WHERE grade_id = $grade_id AND group_id = $group_id AND course_id = $course_id AND teacher_id = $teacher_id AND create_date LIKE '%$today_date%'";
+    if($forget_date != ""){
+        $verify_date = $forget_date;
+    }else{
+        $verify_date = $today_date;
+    }
+
+
+    $sqlquery = "SELECT daily_record_id FROM daily_records WHERE grade_id = $grade_id AND group_id = $group_id AND course_id = $course_id AND teacher_id = $teacher_id AND create_date LIKE '%$verify_date%'";
 
     if(!$result = $objmydbcon->get_result_set($sqlquery)){
         return "Connection Problems";

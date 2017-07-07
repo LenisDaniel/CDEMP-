@@ -1,6 +1,11 @@
 <?php
 require_once('Mobile_Detect.php');
+require_once('get_active_scholar_period.php');
 $detect = new Mobile_Detect;
+
+$limit_date = get_scholar_period();
+$limit_start = $limit_date['start'];
+$limit_end = $limit_date['end'];
 
 $user_ids = $_SESSION['loged_user']['idx'];
 
@@ -8,29 +13,32 @@ if($detect->isMobile()){
 
     if($_SESSION['loged_user']['role_idx'] == 4){
         $grp = get_student_group($user_ids);
-        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp ORDER BY e.created_date DESC LIMIT 30";
+        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' ORDER BY e.created_date DESC LIMIT 30";
     }else if($_SESSION['loged_user']['role_idx'] == 3){
-        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids ORDER BY e.created_date DESC LIMIT 30";
+        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' ORDER BY e.created_date DESC LIMIT 30";
     }else{
-        $conditional = "ORDER BY e.created_date DESC LIMIT 30";
+        $conditional = "WHERE e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' ORDER BY e.created_date DESC LIMIT 30";
     }
     $objtemplate->set_content('mobile', 1);
+
 }else{
 
     if($_SESSION['loged_user']['role_idx'] == 4){
         $grp = get_student_group($user_ids);
-        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp ORDER BY e.created_date DESC LIMIT 0,5";
+        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' ORDER BY e.created_date DESC LIMIT 0,5";
     }else if($_SESSION['loged_user']['role_idx'] == 3){
-        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids ORDER BY e.created_date DESC LIMIT 0,5";
+        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' ORDER BY e.created_date DESC LIMIT 0,5";
     }else{
-        $conditional = "ORDER BY e.created_date DESC LIMIT 0,5";
+        $conditional = "WHERE e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' ORDER BY e.created_date DESC LIMIT 0,5";
     }
     $objtemplate->set_content('mobile', 0);
+
 }
 
 $i = 1;
 $sqlquery = "SELECT e.*, mu.first_name, mu.last_name, mu.second_surname FROM events e JOIN master_users mu ON mu.idx = e.created_by             
              $conditional";
+
 
 if(!$results = $objmydbcon->get_result_set($sqlquery)){
     return false;

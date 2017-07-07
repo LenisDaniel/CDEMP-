@@ -54,7 +54,7 @@ class ConfigRecords
         $field1 = $table_name . "_descr";
         $field2 = $table_name . "_id";
 
-        if(!$active == "1"){
+        if($active != 1){
             $active = 0;
         }
 

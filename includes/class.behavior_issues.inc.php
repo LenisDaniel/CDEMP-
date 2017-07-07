@@ -57,7 +57,7 @@ class Behaviors{
 //        echo $active . "<br>";//
 //        exit;
 
-        if(!$active == "1"){
+        if($active != 1){
             $active = 0;
         }
 

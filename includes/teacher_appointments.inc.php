@@ -27,6 +27,12 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("users_type", "style='display:none'");
     $objtemplate->set_content("user_list", "style='display:none'");
 
+    if($objappointments->get_appointment_info('active') == 1){
+        $objtemplate->set_content("option1", "checked");
+    }else{
+        $objtemplate->set_content("option2", "checked");
+    }
+
     $objappointments->set_as_viewed($idx);
 
 }else{
@@ -34,46 +40,34 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("form_action", "display_page.php?tpl=teacher_appointments&cid=".base64_encode(0));
     $objtemplate->set_content("form_title", "Create Appointment");
     $objtemplate->set_content("send_button", "Submit");
-
+    $objtemplate->set_content("option1", "checked");
     $objtemplate->set_content("users_type_dd", $objappointments->get_users_type());
     $objtemplate->set_content("groups_dd", $objappointments->get_groups());
 
 }
 
-//    if(isset($_GET['delete'])){
-//        $idx = base64_decode($_GET['delete']);
-//        header("location: display_page.php?tpl=manage_admins&id=".base64_encode($idx)."&del=1");
-//    }
-//
-//    if(isset($_GET['del'])){
-//
-//        $del = $_GET['del'];
-//        $id = base64_decode($_GET['id']);
-//        $role = 1;
-//
-//        if($del == 2){
-//            $objusers->update_user_active($id, $role);
-//        }
-//
-//    }
+
+
 
 if(isset($_GET['cid'])) {
+
     $users_list = "";
 
-    for($i = 0; $i < count($_POST); $i++){
+    if($id <= 0){
+        for($i = 0; $i < count($_POST); $i++){
 
-        if(array_key_exists("chk_$i", $_POST)) {
+            if(array_key_exists("chk_$i", $_POST)) {
 
-            if($_POST['chk_'.$i] == 'on'){
-                $users_list .= $_POST['txt_name_'.$i] . ",";
+                if($_POST['chk_'.$i] == 'on'){
+                    $users_list .= $_POST['txt_name_'.$i] . ",";
+                }
+
             }
 
         }
-
-    }
-
-    if($users_list == ""){
-        header("location: display_page.php?tpl=global_appointments&cat=3&no_users=1");
+        if($users_list == ""){
+            header("location: display_page.php?tpl=global_appointments&cat=3&no_users=1");
+        }
     }
 
     $id = base64_decode($_GET['cid']);
@@ -83,7 +77,8 @@ if(isset($_GET['cid'])) {
     $appoint_details = $_POST['appoint_details'];
     $unique_number = $_POST['unique_number'];
     $list = substr($users_list, 0, -1);
+    $active = $_POST['active'];
 
-    $objappointments->manage_appoint_info('teacher_appointments', $id, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, $list, $unique_number, $creator);
+    $objappointments->manage_appoint_info('teacher_appointments', $id, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, $list, $unique_number, $creator, $active);
 
 }

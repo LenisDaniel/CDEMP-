@@ -18,7 +18,7 @@ class Scholar_Period{
         $i = 0;
         $sqlquery = "SELECT * 
                      FROM scholar_period                      
-                     WHERE active = 1";
+                     ";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
@@ -49,22 +49,13 @@ class Scholar_Period{
     function manage_scholar_period_info($tpl_uri = 0, $id = 0, $scholar_year= "", $start_date = "", $end_date = 0, $active = 0){
         global $objmydbcon;
 
-        //        echo $table . "<br>";
-        //        echo $field1 . "<br>";
-        //        echo $field2 . "<br>";
-        //        echo $tpl_uri . "<br>";
-        //        echo $descr . "<br>";
-        //        echo $id . "<br>";
-        //        echo $active . "<br>";
-        //        exit;
-
-        if(!$active == "1"){
+        if($active != 1){
             $active = 0;
         }
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE scholar_period SET scholar_year = '$scholar_year', start_date = '$start_date', end_date = '$end_date', active = '$active' WHERE scholar_period_id = $id";
+            $sqlupdate = "UPDATE scholar_period SET scholar_year = '$scholar_year', start_date = '$start_date', end_date = '$end_date', active = $active WHERE scholar_period_id = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=6");

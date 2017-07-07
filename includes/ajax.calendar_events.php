@@ -1,15 +1,19 @@
 <?php
 session_start();
 require_once("class.mydbcon.inc.php");
+require_once("get_active_scholar_period.php");
 $objmydbcon = new classmydbcon;
 $idx = $_SESSION['loged_user']['idx'];
+$limit_date = get_scholar_period();
+$limit_start = $limit_date['start'];
+$limit_end = $limit_date['end'];
 
 extract($_POST);
 
 if($type == 'fetch'){
 
     $events = array();
-    $query = mysqli_query($objmydbcon->get_resource_link(), "SELECT event_id, event_descr, event_date, type_id FROM events WHERE on_calendar = 1 UNION SELECT appointment_id, appointment_descr, appointment_time, type_id FROM appointments WHERE date_with = $idx OR created_by = $idx GROUP BY appointment_descr");
+    $query = mysqli_query($objmydbcon->get_resource_link(), "SELECT event_id, event_descr, event_date, type_id FROM events WHERE on_calendar = 1 AND created_date >= '$limit_start' AND created_date <= '$limit_end' UNION SELECT appointment_id, appointment_descr, appointment_time, type_id FROM appointments WHERE date_with = $idx OR created_by = $idx AND created_date >= '$limit_start' AND created_date <= '$limit_end' GROUP BY appointment_descr");
 
     while($fetch = mysqli_fetch_array($query, MYSQLI_ASSOC)){
 

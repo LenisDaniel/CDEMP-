@@ -2,7 +2,10 @@
 
 error_reporting(E_ERROR);
 require_once("class.schedule.inc.php");
+require_once("get_active_scholar_period.php");
 $objschedule = new Schedule();
+
+
 
 $objtemplate->set_content("schedules_td", $objschedule->get_all_schedules($tpl_uri = 'manage_schedule'));
 

@@ -19,7 +19,7 @@ class Appointments{
         $this->field_info = array();
     }
 
-    function get_all_appointments($tpl_uri = "", $role = 0, $creator = 0){
+    function get_all_appointments($tpl_uri = "", $role = 0, $creator = 0, $limit_start = "", $limit_end = ""){
         global $objmydbcon;
 
         $i = 0;
@@ -31,8 +31,7 @@ class Appointments{
             $cat = 4;
         }
 
-
-        $sqlquery = "SELECT a.*, mu.first_name, mu.last_name, mu.second_surname FROM appointments a JOIN master_users mu ON mu.idx = a.date_with WHERE date_with = $creator OR created_by = $creator";
+        $sqlquery = "SELECT a.*, mu.first_name, mu.last_name, mu.second_surname FROM appointments a JOIN master_users mu ON mu.idx = a.date_with WHERE date_with = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end' OR created_by = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end'";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
