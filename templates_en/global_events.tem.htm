@@ -119,18 +119,12 @@
                                 <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
                                 </button>
                                 <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="#">
-                                            Print </a>
+                                    <li id="export_to_excel">
+                                        <a>Export to Excel</a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Export to Excel </a>
-                                    </li>
+                                    <!--<li>-->
+                                    <!--<a>Save as PDF</a>-->
+                                    <!--</li>-->
                                 </ul>
                             </div>
                         </div>
@@ -183,6 +177,14 @@
 
     $('#event_date').datetimepicker({
         //hours12: true
+    });
+
+    $("#export_to_excel").click(function(event){
+        $(".table").table2excel({
+            name: "Global Events List",
+            filename: "global_events_list",
+            fileext: ".xls"
+        });
     });
 
 </script>

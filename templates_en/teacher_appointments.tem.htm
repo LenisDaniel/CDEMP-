@@ -175,18 +175,12 @@
                                 <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
                                 </button>
                                 <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="#">
-                                            Print </a>
+                                    <li id="export_to_excel">
+                                        <a>Export to Excel</a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Export to Excel </a>
-                                    </li>
+                                    <!--<li>-->
+                                    <!--<a>Save as PDF</a>-->
+                                    <!--</li>-->
                                 </ul>
                             </div>
                         </div>
@@ -258,6 +252,15 @@
         if(a === 1){
             alert("Please select almost one user to send the appointment");
         }
+
+        $("#export_to_excel").click(function(event){
+            $(".table").table2excel({
+                name: "Teacher Apppointments List",
+                filename: "teacher_appointments_list",
+                fileext: ".xls"
+            });
+        });
+
     });
 
     $('#users_type').change(function(){

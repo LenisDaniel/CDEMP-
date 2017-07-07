@@ -5,14 +5,8 @@
             <i class="fa fa-list"></i>{form_title}
         </div>
         <div class="tools">
-            <a href="javascript:;" class="collapse">
-            </a>
-            <!--<a href="#portlet-config" data-toggle="modal" class="config">-->
-            </a>
-            <a href="javascript:;" class="reload">
-            </a>
-            <!--<a href="javascript:;" class="remove">-->
-            </a>
+            <a href="javascript:;" class="collapse"></a>
+            <a href="javascript:;" class="reload"></a>
         </div>
     </div>
     <div class="portlet-body form">
@@ -26,7 +20,6 @@
                             <label class="control-label col-md-3">First Name:</label>
                             <div class="col-md-9">
                                 <input type="text" name="first_name" id="first_name" class="form-control" placeholder="" value="{first_name}" required>
-
                             </div>
                         </div>
                     </div>
@@ -36,7 +29,6 @@
                             <label class="control-label col-md-3">Last Name:</label>
                             <div class="col-md-9">
                                 <input type="text" name="last_name" id="last_name" class="form-control" value="{last_name}" required>
-
                             </div>
                         </div>
                     </div>
@@ -217,14 +209,8 @@
                     <i class="fa fa-globe"></i>Administrators List
                 </div>
                 <div class="tools">
-                    <a href="javascript:;" class="collapse">
-                    </a>
-                    <!--<a href="#portlet-config" data-toggle="modal" class="config">-->
-                    </a>
-                    <a href="javascript:;" class="reload">
-                    </a>
-                    <!--<a href="javascript:;" class="remove">-->
-                    </a>
+                    <a href="javascript:;" class="collapse"></a>
+                    <a href="javascript:;" class="reload"></a>
                 </div>
             </div>
             <div class="portlet-body">
@@ -242,18 +228,12 @@
                                 <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
                                 </button>
                                 <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="#">
-                                            Print </a>
+                                    <li id="export_to_excel">
+                                        <a>Export to Excel</a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Export to Excel </a>
-                                    </li>
+                                    <!--<li>-->
+                                        <!--<a>Save as PDF</a>-->
+                                    <!--</li>-->
                                 </ul>
                             </div>
                         </div>
@@ -384,6 +364,14 @@
                     $('#username_validate').val(0);
                 }
 
+            });
+
+            $("#export_to_excel").click(function(event){
+                $(".table").table2excel({
+                    name: "System administrator list",
+                    filename: "system_administrators_list",
+                    fileext: ".xls"
+                });
             });
 
         });
