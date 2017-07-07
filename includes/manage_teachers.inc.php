@@ -20,7 +20,7 @@ $objteachers = new Teachers();
         $objtemplate->set_content("second_surname", $objteachers->get_user_info('second_surname'));
         $objtemplate->set_content("email", $objteachers->get_user_info('email'));
         $objtemplate->set_content("username", $objteachers->get_user_info('username'));
-        $objtemplate->set_content("db_username", $objstudents->get_user_info('username'));
+        $objtemplate->set_content("db_username", $objteachers->get_user_info('username'));
         $objtemplate->set_content("username_validate", 1);
         $objtemplate->set_content("password", $objteachers->get_user_info('password'));
         $objtemplate->set_content("address1", $objteachers->get_user_info('address1'));

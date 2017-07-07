@@ -21,7 +21,7 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("second_surname", $objtecnicians->get_user_info('second_surname'));
     $objtemplate->set_content("email", $objtecnicians->get_user_info('email'));
     $objtemplate->set_content("username", $objtecnicians->get_user_info('username'));
-    $objtemplate->set_content("db_username", $objstudents->get_user_info('username'));
+    $objtemplate->set_content("db_username", $objtecnicians->get_user_info('username'));
     $objtemplate->set_content("username_validate", 1);
     $objtemplate->set_content("password", $objtecnicians->get_user_info('password'));
     $objtemplate->set_content("address1", $objtecnicians->get_user_info('address1'));

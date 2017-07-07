@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_admins.inc.php" afterPath="$PROJECT_DIR$/includes/manage_admins.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_students.inc.php" afterPath="$PROJECT_DIR$/includes/manage_students.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_teachers.inc.php" afterPath="$PROJECT_DIR$/includes/manage_teachers.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_tecnicians.inc.php" afterPath="$PROJECT_DIR$/includes/manage_tecnicians.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" afterPath="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" />
@@ -56,7 +56,58 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="manage_tecnicians.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/manage_tecnicians.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_tecnicians.tem.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="347" column="58" lean-forward="true" selection-start-line="347" selection-start-column="58" selection-end-line="347" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_admins.tem.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="379" column="55" lean-forward="true" selection-start-line="379" selection-start-column="55" selection-end-line="379" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_teachers.tem.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="357" column="69" lean-forward="true" selection-start-line="357" selection-start-column="69" selection-end-line="357" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_students.tem.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="442" column="16" lean-forward="false" selection-start-line="442" selection-start-column="16" selection-end-line="442" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -208,13 +259,13 @@
         <option value="$PROJECT_DIR$/includes/class.scholar_period.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.calendar_events.php" />
         <option value="$PROJECT_DIR$/includes/manage_students.inc.php" />
-        <option value="$PROJECT_DIR$/templates_en/manage_students.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/manage_admins.inc.php" />
-        <option value="$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/manage_teachers.inc.php" />
         <option value="$PROJECT_DIR$/includes/manage_tecnicians.inc.php" />
+        <option value="$PROJECT_DIR$/includes/manage_teachers.inc.php" />
+        <option value="$PROJECT_DIR$/includes/manage_admins.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" />
+        <option value="$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" />
+        <option value="$PROJECT_DIR$/templates_en/manage_students.tem.htm" />
+        <option value="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" />
       </list>
     </option>
   </component>
@@ -542,7 +593,7 @@
       <workItem from="1499278666216" duration="6146000" />
       <workItem from="1499338743859" duration="14089000" />
       <workItem from="1499378081818" duration="15156000" />
-      <workItem from="1499425194368" duration="2796000" />
+      <workItem from="1499425194368" duration="3418000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -569,7 +620,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="507357000" />
+    <option name="totallyTimeSpent" value="507979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -582,9 +633,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2009" y="-9" width="2018" height="1093" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2706767" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20339856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20339856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17937702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1124,46 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/manage_admins.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7118">
-          <caret line="380" column="54" lean-forward="true" selection-start-line="380" selection-start-column="54" selection-end-line="380" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="73" column="92" lean-forward="true" selection-start-line="73" selection-start-column="92" selection-end-line="73" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/manage_teachers.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="46" column="70" lean-forward="true" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="386" column="12" lean-forward="true" selection-start-line="386" selection-start-column="12" selection-end-line="389" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/manage_students.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1172,18 +1184,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/manage_teachers.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="22" column="61" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/manage_admins.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="23" column="84" lean-forward="true" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/manage_tecnicians.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="86" lean-forward="true" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
+        <state relative-caret-position="308">
+          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="442" column="16" lean-forward="false" selection-start-line="442" selection-start-column="16" selection-end-line="442" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="357" column="69" lean-forward="true" selection-start-line="357" selection-start-column="69" selection-end-line="357" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="102" column="58" lean-forward="true" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
+        <state relative-caret-position="100">
+          <caret line="347" column="58" lean-forward="true" selection-start-line="347" selection-start-column="58" selection-end-line="347" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="379" column="55" lean-forward="true" selection-start-line="379" selection-start-column="55" selection-end-line="379" selection-end-column="55" />
           <folding />
         </state>
       </provider>
