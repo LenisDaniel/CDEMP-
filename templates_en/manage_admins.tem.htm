@@ -231,7 +231,7 @@
                                     <li id="export_to_excel">
                                         <a>Export to Excel</a>
                                     </li>
-                                    <!--<li>-->
+                                    <!--<li id="export_to_pdf">-->
                                         <!--<a>Save as PDF</a>-->
                                     <!--</li>-->
                                 </ul>
@@ -240,7 +240,7 @@
                     </div>
                 </div>
                 <div style="overflow: scroll">
-                    <table class="table table-striped table-bordered table-hover table-scrollable" data-toggle="table" data-pagination="true">
+                    <table class="table table-striped table-bordered table-hover table-scrollable" id="admins_table" data-toggle="table" data-pagination="true">
                         <thead>
                         <tr>
                             <th>
@@ -372,6 +372,21 @@
                     filename: "system_administrators_list",
                     fileext: ".xls"
                 });
+            });
+
+            $("#export_to_pdf").click(function(){
+
+                $('#admins_table').tableExport({
+                    type:'pdf',
+                    ignoreColumn: [2,3],
+                    tableName: 'System administrator list',
+                    pdfLeftMargin:10,
+                    escape:'false',
+                    htmlContent:'false',
+                    pdfFontSize:7,
+                    //separator: ','
+                });
+
             });
 
         });
