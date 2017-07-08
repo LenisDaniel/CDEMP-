@@ -1,66 +1,63 @@
 
 <div class="portlet box red">
-
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-list"></i>Appointment Details
-        </div> <!-- portlet caption-->
+        </div>
         <div class="tools">
             <a href="javascript:;" class="collapse"></a>
             <a href="javascript:;" class="reload"></a>
-        </div> <!-- portlet tools-->
-    </div> <!-- portlet title-->
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <form id="appointments_form" action="{form_action}" method="POST" class="form-horizontal">
 
-    <div class="portlet-body">
-        <div class="row">
-            <form id="appointments_form" action="{form_action}" method="POST" class="form-horizontal">
-                <div class="form-body">
-                    <div class="col-md-8">
-                        <h3 class="form-section">Appointment Info</h3>
-
-                        <div class="row">
-                            <div class="form-group required">
-                                <label class="control-label col-md-4">Appointment Title:</label>
-                                <div class="col-md-7">
-                                    <input type="text" name="appoint_descr" id="appoint_descr" class="form-control" placeholder="" value="{appoint_descr}" required>
-                                </div>
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Appointment Title:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_descr" id="appoint_descr" class="form-control" placeholder="" value="{appoint_descr}" required>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="form-group required">
-                                <label class="control-label col-md-4">Time:</label>
-                                <div class="col-md-7">
-                                    <input type="text" name="appoint_time" id="appoint_time" class="form-control" placeholder="" value="{appoint_time}" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group required">
-                                <label class="control-label col-md-4">Place:</label>
-                                <div class="col-md-7">
-                                    <input type="text" name="appoint_place" id="appoint_place" class="form-control" placeholder="" value="{appoint_place}" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group required">
-                                <label class="control-label col-md-4">Appointment Details:</label>
-                                <div class="col-md-7">
-                                    <textarea name="appoint_details" id="appoint_details" class="form-control" rows="5" placeholder="" required>{appoint_details}</textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <input type="hidden" name="unique_number" value="{unique_number}">
-                        <br/>
-
-                    </div> <!-- col md 8-->
-
+                    </div>
                 </div>
-            </form> <!-- form-->
-        </div> <!-- row-->
-    </div> <!-- portlet body-->
-</div> <!-- portlet box-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Time:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_time" id="appoint_time" class="form-control" placeholder="" value="{appoint_time}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Place:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_place" id="appoint_place" class="form-control" placeholder="" value="{appoint_place}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Appointment Details:</label>
+                            <div class="col-md-9">
+                                <textarea name="appoint_details" id="appoint_details" rows="5" class="form-control" placeholder="" required>{appoint_details}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </form>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-md-12">

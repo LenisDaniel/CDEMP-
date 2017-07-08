@@ -67,6 +67,6 @@ if(isset($_GET['cid'])) {
     $event_details = $_POST['event_details'];
     $active = $_POST['active'];
 
-    $objevents->manage_event_info('teacher_events', $id, $created_by, $role_idx, $group, $course, $event_descr, $event_details, 0, $active);
+    $objevents->manage_event_info('teacher_events', $id, $created_by, $role_idx, $group, $course, $event_descr, $event_details, 0,0, $active);
 
 }

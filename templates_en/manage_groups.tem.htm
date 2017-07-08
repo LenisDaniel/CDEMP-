@@ -5,14 +5,8 @@
             <i class="fa fa-list"></i>{form_title}
         </div>
         <div class="tools">
-            <a href="javascript:;" class="collapse">
-            </a>
-            <!--<a href="#portlet-config" data-toggle="modal" class="config">-->
-            </a>
-            <a href="javascript:;" class="reload">
-            </a>
-            <!--<a href="javascript:;" class="remove">-->
-            </a>
+            <a href="javascript:;" class="collapse"></a>
+            <a href="javascript:;" class="reload"></a>
         </div>
     </div>
     <div class="portlet-body form">
@@ -23,10 +17,23 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group required">
-                            <label class="control-label col-md-3">Grade:</label>
+                            <label class="control-label col-md-3">Group:</label>
                             <div class="col-md-9">
                                 <input type="text" name="group" id="group" class="form-control" placeholder="Group" value="{group}" required>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 required">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Grade:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="grade" id="grade" required>
+                                    <option value="-1">--Select Grade--</option>
+                                    {grades_dd}
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -52,8 +59,6 @@
                 </div>
             </div>
             <!--/span-->
-
-
             <div class="form-actions">
                 <div class="row">
                     <div class="col-md-6">
@@ -64,11 +69,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </form>
-        <!-- END FORM-->
     </div>
 </div>
 
@@ -155,20 +158,10 @@
             $('.phone_mask').mask('000-000-0000');
 
 
-            $('#technicians_form').submit(function(){
+            $('#admins_form').submit(function(){
 
-                if($('#city').val() === '-1'){
-                    alert('Please select one city!');
-                    return false;
-                }
-
-                if($('#state').val() === '-1'){
-                    alert('Please select one State!');
-                    return false;
-                }
-
-                if($('#zipcode').val() === '-1'){
-                    alert('Please select one Zipcode!');
+                if($('#grade').val() === '-1'){
+                    alert('Please select associated grade!');
                     return false;
                 }
 

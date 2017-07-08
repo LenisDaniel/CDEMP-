@@ -1,8 +1,12 @@
 <?php
 
 require_once("class.mydbcon.inc.php");
+require_once('get_active_scholar_period.php');
 $objmydbcon = new classmydbcon;
 
+$limit_date = get_scholar_period();
+$limit_start = $limit_date['start'];
+$limit_end = $limit_date['end'];
 
 if(isset($_POST)){
    $limit = $_POST['load'] * 5;
@@ -14,11 +18,11 @@ $user_ids = $_SESSION['loged_user']['idx'];
 
 if($_SESSION['loged_user']['role_idx'] == 4){
     $grp = get_student_group($user_ids);
-    $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp ORDER BY e.created_date DESC LIMIT $limit,5";
+    $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT $limit,5";
 }else if($_SESSION['loged_user']['role_idx'] == 3){
-    $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids ORDER BY e.created_date DESC LIMIT $limit,5";
+    $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT $limit,5";
 }else{
-    $conditional = "ORDER BY e.created_date DESC LIMIT $limit,5";
+    $conditional = "WHERE e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT $limit,5";
 }
 
 $i = 1;

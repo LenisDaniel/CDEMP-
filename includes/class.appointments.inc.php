@@ -25,13 +25,14 @@ class Appointments{
         $i = 0;
         if($role == 1 || $role == 2){
             $cat = 3;
-        }else if($role == 4){
-            $cat = 5;
-        }else{
+        }else if($role == 3){
             $cat = 4;
+        }else{
+            $cat = 5;
         }
 
-        $sqlquery = "SELECT a.*, mu.first_name, mu.last_name, mu.second_surname FROM appointments a JOIN master_users mu ON mu.idx = a.date_with WHERE date_with = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end' OR created_by = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end'";
+
+        $sqlquery = "SELECT a.*, mu.first_name, mu.last_name, mu.second_surname FROM appointments a JOIN master_users mu ON mu.idx = a.date_with WHERE date_with = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end' AND a.active = 1 OR created_by = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end' AND a.active = 1";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
@@ -59,7 +60,14 @@ class Appointments{
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[4]. "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[5]. "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[6]. "</td>";
-                $this->appoint_td_info .= "<td>" . $this->appoint_info[7]. "</td>";
+
+                if($this->appoint_info[7] == 1){
+                    $viewed_1 = "Yes";
+                }else{
+                    $viewed_1 = "No";
+                }
+
+                $this->appoint_td_info .= "<td>" . $viewed_1 . "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[8]. "</td>";
                 $this->appoint_td_info .= "</tr>";
 
@@ -80,7 +88,9 @@ class Appointments{
             $unique_number = $this->get_max_number() + 1;
         }
 
-        if($active != 1){
+        if($active == 1){
+            $active = 1;
+        }else{
             $active = 0;
         }
 

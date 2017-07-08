@@ -62,7 +62,9 @@ class Users{
     function manage_user_info($tpl_uri = 0, $id = 0, $first_name = "", $last_name = "", $second_surname = "", $username = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0, $parent_1 = "", $parent_2 = "", $phone_1_carrier = "", $phone_2_carrier = ""){
         global $objmydbcon;
 
-        if($active != 1){
+        if($active == 1){
+            $active = 1;
+        }else{
             $active = 0;
         }
 

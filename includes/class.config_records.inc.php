@@ -47,19 +47,17 @@ class ConfigRecords
 
     }
 
-    function manage_config_info($tpl_uri = 0, $table_name = "", $id = 0, $descr = "", $active = "", $cat = 0){
+    function manage_config_info($tpl_uri = 0, $table_name = "", $id = 0, $descr = "", $active = "", $cat = 0, $grade_id = 0){
         global $objmydbcon;
 
         $table = "master_" . $table_name;
         $field1 = $table_name . "_descr";
         $field2 = $table_name . "_id";
 
-        if($active != 1){
+        if($active == 1){
+            $active = 1;
+        }else{
             $active = 0;
-        }
-
-        if($table_name == 'group'){
-            $grade_id = $this->get_grade_id($descr);
         }
 
         if($id > 0){
@@ -163,24 +161,31 @@ class ConfigRecords
         return $courses_dd;
     }
 
-    function get_grade_id($group){
+    function get_grades($grade_selected = 0){
         global $objmydbcon;
+        $grades_dd = "";
 
-        $grade_prefix = explode("-", $group);
-        $grade = $grade_prefix[0];
-
-        $sqlquery = "SELECT grade_id FROM master_grade WHERE grade_descr = $grade";
-
+        $sqlquery = "SELECT * FROM master_grade";
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
-        }else if(mysqli_num_rows($results) > 0){
-            $rs = mysqli_fetch_assoc($results);
-            extract($rs);
-        }else{
-            return false;
-        }
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['grade_id'];
+                $disp = $rs['grade_descr'];
 
-        return $grade_id;
+                if($grade_selected == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $grades_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $grades_dd;
     }
+
+
 
 }

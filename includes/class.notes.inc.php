@@ -57,7 +57,9 @@ class Notes{
         //        echo $active . "<br>";//
         //        exit;
 
-        if($active != 1){
+        if($active == 1){
+            $active = 1;
+        }else{
             $active = 0;
         }
 
@@ -66,7 +68,7 @@ class Notes{
             $sqlupdate = "UPDATE master_notes SET note_descr = '$note', note_range = '$note_range', active = '$active' WHERE note_id = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=6&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=6");
                 return true;
             }else{
                 return false;
@@ -78,7 +80,7 @@ class Notes{
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=6&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=6");
                 return true;
             }else{
                 return false;

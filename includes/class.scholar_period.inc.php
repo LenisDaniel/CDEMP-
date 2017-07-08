@@ -49,10 +49,10 @@ class Scholar_Period{
     function manage_scholar_period_info($tpl_uri = 0, $id = 0, $scholar_year= "", $start_date = "", $end_date = 0, $active = 0){
         global $objmydbcon;
 
-        if($active != 1){
-            $active = 0;
-        }else{
+        if($active == 1){
             $this->set_inactive_the_others($id);
+        }else{
+            $active = 0;
         }
 
         if($id > 0){

@@ -63,9 +63,9 @@ class Events{
     function manage_event_info($tpl_uri = "", $id = 0, $created_by = 0, $role_idx = 0, $group_id = 0, $course_id = 0, $event_descr = "", $event_details = "", $event_date = "", $on_calendar = 0, $active = 0){
         global $objmydbcon;
 
-
-
-        if($active != 1){
+        if($active == 1){
+            $active = 1;
+        }else{
             $active = 0;
         }
 
@@ -74,7 +74,7 @@ class Events{
             $sqlupdate = "UPDATE events SET group_id = '$group_id', course_id = '$course_id', event_descr = '$event_descr', event_details = '$event_details', event_date = '$event_date', active = '$active' WHERE event_id = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=4&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=4");
                 return true;
             }else{
                 return false;
@@ -86,7 +86,7 @@ class Events{
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=4&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=4");
                 return true;
             }else{
                 return false;
