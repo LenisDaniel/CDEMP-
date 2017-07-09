@@ -55,10 +55,11 @@ class Users{
                 $this->user_td_info .= "<td>" . $this->user_info[6]. "</td>";
                 if($role == 4){
                     $this->user_td_info .= "<td>" . $this->user_info[10]. "</td>";
+                    $this->user_td_info .= "<td>Active</td>";
                 }else{
                     $this->user_td_info .= "<td>Active</td>";
                 }
-                $this->user_td_info .= "<td>Active</td>";
+
                 $this->user_td_info .= "<td>" . $this->user_info[8]. "</td>";
                 $this->user_td_info .= "</tr>";
 
