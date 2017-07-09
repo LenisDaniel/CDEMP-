@@ -20,8 +20,9 @@ if($_SESSION['loged_user']['role_idx'] == 3){
                      INNER JOIN master_day_hour dh ON dh.day_hour_id = st.day_hour_id
                      INNER JOIN master_users mu ON mu.idx = st.teacher_id
                      INNER JOIN scholar_period sp ON sp.active = 1
-                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date AND st.teacher_id = $idx";
-//                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date AND st.teacher_id = $idx AND wd.week_day_descr LIKE '%$day%'";
+                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date AND st.teacher_id = $idx
+                     GROUP BY st.grade_id, st.group_id, st.course_id, st.day_hour_id, st.teacher_id";
+                     //WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date AND st.teacher_id = $idx AND wd.week_day_descr LIKE '%$day%'";
 
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
@@ -39,9 +40,12 @@ if($_SESSION['loged_user']['role_idx'] == 3){
                                         <div class='col s12 m6'>
                                             <div class='card blue-grey darken-1'>
                                                 <div class='card-content white-text'>
-                                                    <span class='card-title'>$course_descr / $group_descr</span>
+                                                    <span class='card-title'>Course: $course_descr</span>
+                                                    <p style='margin-bottom: 8px'>
+                                                        <span style='font-size: 18px;'>Group: <strong>$group_descr</strong></span> 
+                                                    </p>
                                                     <p>
-                                                        <span style='font-size: 18px'><strong>$day_hour_descr</strong></span> 
+                                                        <span style='font-size: 18px'>Mon-Fri:<strong> $day_hour_descr</strong></span> 
                                                     </p>
                                                 </div>
                                                 <div class='card-action'>
@@ -56,9 +60,12 @@ if($_SESSION['loged_user']['role_idx'] == 3){
                                         <div class='col s12 m6'>
                                             <div class='card blue-grey darken-1'>
                                                 <div class='card-content white-text'>
-                                                    <span class='card-title'>$course_descr / $group_descr</span>
+                                                    <span class='card-title'>Course: $course_descr</span>
+                                                    <p style='margin-bottom: 8px'>
+                                                        <span style='font-size: 18px;'>Group: <strong>$group_descr</strong></span> 
+                                                    </p>
                                                     <p>
-                                                        <span style='font-size: 18px'><strong>$day_hour_descr</strong></span>
+                                                        <span style='font-size: 18px'>Mon-Fri:<strong> $day_hour_descr</strong></span> 
                                                     </p>
                                                 </div>
                                                 <div class='card-action'>

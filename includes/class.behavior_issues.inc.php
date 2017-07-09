@@ -33,7 +33,7 @@ class Behaviors{
                 $this->behavior_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=6&edit=$idu'>" . $this->behavior_info[0]. "</a></td>";
                 $this->behavior_td_info .= "<td>" . $this->behavior_info[1]. "</td>";
                 $this->behavior_td_info .= "<td>" . $this->behavior_info[2]. "</td>";
-                $this->behavior_td_info .= "<td>" . $this->behavior_info[3]. "</td>";
+                $this->behavior_td_info .= "<td>Active</td>";
                 $this->behavior_td_info .= "</tr>";
 
             }

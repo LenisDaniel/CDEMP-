@@ -23,10 +23,20 @@ class Users{
         global $objmydbcon;
 
         $i = 0;
-        $sqlquery = "SELECT mu.idx, mu.first_name, mu.last_name, mu.second_surname, mu.email, mu.phone_1, mc.name, mu.active, mu.created_date 
-                     FROM master_users mu 
-                     INNER JOIN master_cities mc on mc.city_id = mu.city
-                     WHERE role_idx = $role AND active = 1";
+        if($role == 4){
+            $sqlquery = "SELECT mu.idx, mu.first_name, mu.last_name, mu.second_surname, mu.email, mu.phone_1, mc.name, mu.active, mu.created_date, sg.group_id, mg.group_descr
+                         FROM master_users mu 
+                         INNER JOIN master_cities mc on mc.city_id = mu.city
+                         JOIN students_groups sg ON sg.student_id = mu.idx
+                         JOIN master_group mg ON mg.group_id = sg.group_id
+                         WHERE mu.role_idx = $role AND mu.active = 1";
+        }else{
+            $sqlquery = "SELECT mu.idx, mu.first_name, mu.last_name, mu.second_surname, mu.email, mu.phone_1, mc.name, mu.active, mu.created_date 
+                         FROM master_users mu 
+                         INNER JOIN master_cities mc on mc.city_id = mu.city
+                         WHERE role_idx = $role AND active = 1";
+        }
+
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
@@ -43,7 +53,12 @@ class Users{
                 $this->user_td_info .= "<td>" . $this->user_info[4]. "</td>";
                 $this->user_td_info .= "<td>" . $this->user_info[5]. "</td>";
                 $this->user_td_info .= "<td>" . $this->user_info[6]. "</td>";
-                $this->user_td_info .= "<td>" . $this->user_info[7]. "</td>";
+                if($role == 4){
+                    $this->user_td_info .= "<td>" . $this->user_info[10]. "</td>";
+                }else{
+                    $this->user_td_info .= "<td>Active</td>";
+                }
+                $this->user_td_info .= "<td>Active</td>";
                 $this->user_td_info .= "<td>" . $this->user_info[8]. "</td>";
                 $this->user_td_info .= "</tr>";
 

@@ -33,7 +33,7 @@ class Notes{
                 $this->notes_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=6&edit=$idu'>" . $this->note_info[0]. "</a></td>";
                 $this->notes_td_info .= "<td>" . $this->note_info[1]. "</td>";
                 $this->notes_td_info .= "<td>" . $this->note_info[2]. "</td>";
-                $this->notes_td_info .= "<td>" . $this->note_info[3]. "</td>";
+                $this->notes_td_info .= "<td>Active</td>";
                 $this->notes_td_info .= "</tr>";
 
             }

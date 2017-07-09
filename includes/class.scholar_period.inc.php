@@ -34,7 +34,12 @@ class Scholar_Period{
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[1]. "</td>";
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[2]. "</td>";
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[3]. "</td>";
-                $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[4]. "</td>";
+                if($this->scholar_period_info[4] == 1){
+                    $this->scholar_period_td_info .= "<td>Active</td>";
+                }else{
+                    $this->scholar_period_td_info .= "<td>Inactive</td>";
+                }
+
                 $this->scholar_period_td_info .= "</tr>";
 
             }

@@ -35,7 +35,7 @@ class ConfigRecords
                 $this->config_td_info .= "<tr id='tr$i' class='odd gradeX'>";
                 $this->config_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=$cat&edit=$idu'>" . $this->config_info[0]. "</a></td>";
                 $this->config_td_info .= "<td>" . $this->config_info[1]. "</td>";
-                $this->config_td_info .= "<td>" . $this->config_info[2]. "</td>";
+                $this->config_td_info .= "<td>Active</td>";
                 $this->config_td_info .= "</tr>";
 
             }

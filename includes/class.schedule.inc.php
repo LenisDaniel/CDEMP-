@@ -33,7 +33,8 @@ class Schedule{
                      INNER JOIN master_day_hour dh ON dh.day_hour_id = st.day_hour_id
                      INNER JOIN master_users mu ON mu.idx = st.teacher_id
                      INNER JOIN scholar_period sp ON sp.active = 1
-                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date";
+                     WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date
+                     GROUP BY st.grade_id, st.group_id, st.course_id, st.day_hour_id, st.teacher_id";
 
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
@@ -50,6 +51,7 @@ class Schedule{
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[2]. "</td>";
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[3]. "</td>";
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[4]. "</td>";
+                //$this->schedule_td_info .= "<td>MON - FRI</td>";
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[5]. "</td>";
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[6] . " " .  $this->schedule_info[7] . " " .  $this->schedule_info[8]. "</td>";
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[9]. "</td>";
@@ -67,16 +69,14 @@ class Schedule{
 
     }
 
-    function manage_schedule_info($tpl_uri = 0, $id = 0, $grade = "", $group = "", $course = "", $week_day = "", $day_hour = "", $teacher = ""){
+    function manage_schedule_info($tpl_uri = 0, $id = 0, $grade = 0, $group = 0, $course = 0, $week_day = 0, $day_hour = 0, $teacher = 0){
         global $objmydbcon;
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE schedules_teacher SET grade_id = '$grade', group_id = '$group', course_id = '$course', 
-                          week_day_id = '$week_day', day_hour_id = '$day_hour', teacher_id = '$teacher'			
-			              WHERE schedule_id = $id";
+            $sqldelete = "DELETE FROM schedules_teacher WHERE grade_id = $grade AND group_id = $group AND course_id = $course AND day_hour_id = $day_hour AND teacher_id = $teacher";
 
-            if($objmydbcon->set_query($sqlupdate)){
+            if($objmydbcon->set_query($sqldelete)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=2");
             }else{
                 return false;
@@ -84,16 +84,36 @@ class Schedule{
 
         }else{
 
-            $sqlinsert = "INSERT INTO schedules_teacher (grade_id, group_id, course_id, week_day_id, day_hour_id, teacher_id) 
-			              VALUES('$grade', '$group', '$course', '$week_day', '$day_hour', '$teacher')";
+//            echo $week_day;
+//            exit;
 
-            if($objmydbcon->set_query($sqlinsert)){
-                $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2");
+            if($week_day == 6){
+                for($i = 1; $i < 6; $i++){
+
+                    $sqlinsert = "INSERT INTO schedules_teacher (grade_id, group_id, course_id, week_day_id, day_hour_id, teacher_id) 
+			              VALUES($grade, $group, $course, $week_day, $day_hour, $teacher)";
+
+                    if($objmydbcon->set_query($sqlinsert)){
+                        $last_id = $objmydbcon->get_last_id();
+                        header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                    }else{
+                        return false;
+                    }
+                }
             }else{
-                return false;
+                $sqlinsert = "INSERT INTO schedules_teacher (grade_id, group_id, course_id, week_day_id, day_hour_id, teacher_id) 
+			              VALUES($grade, $group, $course, $week_day, $day_hour, $teacher)";
+
+                if($objmydbcon->set_query($sqlinsert)){
+                    $last_id = $objmydbcon->get_last_id();
+                    header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                }else{
+                    return false;
+                }
             }
+
         }
+
     }
 
     function get_schedule($idx){
@@ -165,6 +185,39 @@ class Schedule{
         return $grades_dd;
     }
 
+    function get_groups($group_selected = 0){
+        global $objmydbcon;
+        $groups_dd = "";
+
+        $sqlquery = "SELECT * FROM master_group";
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+
+            while($rs = mysqli_fetch_assoc($results)){
+
+                $val = $rs['group_id'];
+                $disp = $rs['group_descr'];
+
+                if($group_selected == $val){
+
+                    $sel_option = "selected";
+
+                }else{
+
+                    $sel_option = "";
+
+                }
+                $groups_dd .= "<option value='$val' $sel_option>" . $disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+
+        return $groups_dd;
+    }
+
     function get_week_days($selected_week_day = ""){
         global $objmydbcon;
         $week_days_dd = "";
@@ -188,6 +241,87 @@ class Schedule{
             return 0;
         }
         return $week_days_dd;
+    }
+
+    function get_day_hours($selected_day_hour = ""){
+        global $objmydbcon;
+        $day_hours_dd = "";
+
+        $sqlquery = "SELECT * FROM master_day_hour";
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $val = $rs['day_hour_id'];
+                $disp = $rs['day_hour_descr'];
+
+                if($selected_day_hour == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $day_hours_dd .= "<option value='$val' $sel_option>" .$disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $day_hours_dd;
+    }
+
+    function get_courses($course_selected = 0){
+        global $objmydbcon;
+        $courses_dd = "";
+
+        $sqlquery = "SELECT * FROM master_course";
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+
+            while($rs = mysqli_fetch_assoc($results)){
+
+                $val = $rs['course_id'];
+                $disp = $rs['course_descr'];
+
+                if($course_selected == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $courses_dd .= "<option value='$val' $sel_option>" . $disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $courses_dd;
+    }
+
+    function get_teachers($teacher_selected = 0){
+        global $objmydbcon;
+        $teachers_dd = "";
+
+        $sqlquery = "SELECT * FROM master_users";
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results)>0){
+
+            while($rs = mysqli_fetch_assoc($results)){
+
+                $val = $rs['idx'];
+                $disp = $rs['firstname'] . " " . $rs['last_name'] . " " . $rs['second_surname'];
+
+                if($teacher_selected == $val){
+                    $sel_option = "selected";
+                }else{
+                    $sel_option = "";
+                }
+                $teachers_dd .= "<option value='$val' $sel_option>" . $disp . "</option>";
+            }
+        }else{
+            return 0;
+        }
+        return $teachers_dd;
     }
 
 }

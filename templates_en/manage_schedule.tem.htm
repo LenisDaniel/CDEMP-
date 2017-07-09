@@ -5,14 +5,8 @@
             <i class="fa fa-list"></i>{form_title}
         </div>
         <div class="tools">
-            <a href="javascript:;" class="collapse">
-            </a>
-            <!--<a href="#portlet-config" data-toggle="modal" class="config">-->
-            </a>
-            <a href="javascript:;" class="reload">
-            </a>
-            <!--<a href="javascript:;" class="remove">-->
-            </a>
+            <a href="javascript:;" class="collapse"></a>
+            <a href="javascript:;" class="reload"></a>
         </div>
     </div>
     <div class="portlet-body form">
@@ -31,6 +25,7 @@
                                 </select>
                             </div>
                         </div>
+                        <input type="hidden" value="{selected_grade}" name="selected_grade" id="selected_grade">
                     </div>
                 </div>
                 <div class="row">
@@ -44,6 +39,7 @@
                                 </select>
                             </div>
                         </div>
+                        <input type="hidden" value="{selected_group}" name="selected_group" id="selected_group">
                     </div>
                 </div>
 
@@ -58,6 +54,7 @@
                                 </select>
                             </div>
                         </div>
+                        <input type="hidden" value="{selected_week_day}" name="selected_week_day" id="selected_week_day">
                     </div>
                 </div>
                 <div class="row">
@@ -71,6 +68,7 @@
                                 </select>
                             </div>
                         </div>
+                        <input type="hidden" value="{selected_day_hour}" name="selected_day_hour" id="selected_day_hour">
                     </div>
                 </div>
                 <div class="row">
@@ -84,6 +82,7 @@
                                 </select>
                             </div>
                         </div>
+                        <input type="hidden" value="{selected_course}" name="selected_course" id="selected_course">
                     </div>
                 </div>
                 <div class="row">
@@ -97,6 +96,8 @@
                                 </select>
                             </div>
                         </div>
+                        <input type="hidden" value="{selected_teacher}" name="selected_teacher" id="selected_teacher">
+                        <input type="hidden" value="{is_edit}" id="is_edit">
                     </div>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-offset-3 col-md-9">
-                                <button type="submit" class="btn green">{send_button}</button>
+                                <button type="submit" class="{button_color}">{send_button}</button>
                                 <a href="display_page.php?tpl=manage_schedule&cat=2"><button type="button" class="btn default">Reset</button></a>
                             </div>
                         </div>
@@ -237,6 +238,12 @@
                 }
 
             });
+
+            if($('#is_edit').val() == 1){
+                $('#grade').prop('disabled', true);
+            }else{
+                $('#grade').prop('disabled', false);
+            }
 
             $('#group, #week_day, #week_day, #day_hour, #course, #teacher').prop('disabled', true);
 
