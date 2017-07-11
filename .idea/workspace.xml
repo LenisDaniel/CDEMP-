@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets2/global/css/jquery.timepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets2/global/scripts/jquery.timepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/ajax.set_as_viewed.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/friendly_date.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/display_page.php" afterPath="$PROJECT_DIR$/display_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/course_details.inc.php" afterPath="$PROJECT_DIR$/includes/course_details.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/ajax.create_comment.php" afterPath="$PROJECT_DIR$/includes/ajax.create_comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.appointments.inc.php" afterPath="$PROJECT_DIR$/includes/class.appointments.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.events.inc.php" afterPath="$PROJECT_DIR$/includes/class.events.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.incidents.inc.php" afterPath="$PROJECT_DIR$/includes/class.incidents.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.schedule.inc.php" afterPath="$PROJECT_DIR$/includes/class.schedule.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.scholar_period.inc.php" afterPath="$PROJECT_DIR$/includes/class.scholar_period.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.users.inc.php" afterPath="$PROJECT_DIR$/includes/class.users.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/events.inc.php" afterPath="$PROJECT_DIR$/includes/events.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/global_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/global_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/manage_admins.inc.php" afterPath="$PROJECT_DIR$/includes/manage_admins.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/notifications_items.php" afterPath="$PROJECT_DIR$/includes/notifications_items.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/student_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/student_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/teacher_appointments.inc.php" afterPath="$PROJECT_DIR$/includes/teacher_appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/global_appointments.tem.htm" afterPath="$PROJECT_DIR$/templates_en/global_appointments.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/login.tem.htm" afterPath="$PROJECT_DIR$/templates_en/login.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" afterPath="$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" afterPath="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/template.tem.htm" afterPath="$PROJECT_DIR$/templates_en/template.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,18 +57,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="friendly_date.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/friendly_date.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -197,8 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/manage_teachers.inc.php" />
-        <option value="$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/global_incidents.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/global_notes.tem.htm" />
@@ -212,30 +190,23 @@
         <option value="$PROJECT_DIR$/templates_en/manage_grades.tem.htm" />
         <option value="$PROJECT_DIR$/includes/manage_groups.inc.php" />
         <option value="$PROJECT_DIR$/includes/teacher_events.inc.php" />
-        <option value="$PROJECT_DIR$/includes/events.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.lazy_events.php" />
         <option value="$PROJECT_DIR$/includes/ajax.calendar_events.php" />
         <option value="$PROJECT_DIR$/templates_en/student_appointments.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/class.appointments.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_groups.tem.htm" />
         <option value="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
         <option value="$PROJECT_DIR$/includes/manage_schedule.inc.php" />
         <option value="$PROJECT_DIR$/includes/my_courses.inc.php" />
-        <option value="$PROJECT_DIR$/includes/class.schedule.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_students.tem.htm" />
         <option value="$PROJECT_DIR$/includes/class.config_records.inc.php" />
-        <option value="$PROJECT_DIR$/includes/class.events.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.behavior_issues.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.notes.inc.php" />
-        <option value="$PROJECT_DIR$/includes/class.scholar_period.inc.php" />
-        <option value="$PROJECT_DIR$/includes/class.users.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.validate_schedule.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" />
         <option value="$PROJECT_DIR$/display_page.php" />
         <option value="$PROJECT_DIR$/includes/manage_admins.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/global_appointments.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/global_appointments.inc.php" />
         <option value="$PROJECT_DIR$/includes/teacher_appointments.inc.php" />
         <option value="$PROJECT_DIR$/includes/student_appointments.inc.php" />
         <option value="$PROJECT_DIR$/includes/course_details.inc.php" />
@@ -248,6 +219,15 @@
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/friendly_date.php" />
+        <option value="$PROJECT_DIR$/includes/events.inc.php" />
+        <option value="$PROJECT_DIR$/includes/ajax.create_comment.php" />
+        <option value="$PROJECT_DIR$/includes/class.users.inc.php" />
+        <option value="$PROJECT_DIR$/includes/class.schedule.inc.php" />
+        <option value="$PROJECT_DIR$/includes/class.incidents.inc.php" />
+        <option value="$PROJECT_DIR$/includes/global_appointments.inc.php" />
+        <option value="$PROJECT_DIR$/includes/class.appointments.inc.php" />
+        <option value="$PROJECT_DIR$/includes/class.events.inc.php" />
+        <option value="$PROJECT_DIR$/includes/class.scholar_period.inc.php" />
       </list>
     </option>
   </component>
@@ -338,34 +318,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates_en" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CDEMP-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -585,7 +537,7 @@
       <workItem from="1499692817138" duration="6329000" />
       <workItem from="1499713824126" duration="2201000" />
       <workItem from="1499719772804" duration="1461000" />
-      <workItem from="1499769876892" duration="2592000" />
+      <workItem from="1499769876892" duration="4768000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -612,7 +564,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="571650000" />
+    <option name="totallyTimeSpent" value="573826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,10 +577,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2009" y="-9" width="2018" height="1093" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27033985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1992791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1992791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1791967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -716,52 +667,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/set_day_hours.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-609">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_groups.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2682">
-          <caret line="30" column="80" lean-forward="false" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/assign_courses.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.teachers.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/my_courses.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1518">
           <caret line="69" column="54" lean-forward="true" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.schedule.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="39" column="63" lean-forward="true" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -807,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/global_events.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.behavior_issues.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -849,27 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/set_scholar_period.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="36" lean-forward="false" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="39" column="66" lean-forward="false" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.events.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/teacher_events.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -882,13 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.users.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -990,20 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/global_appointments.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.appointments.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="233" column="9" lean-forward="true" selection-start-line="228" selection-start-column="8" selection-end-line="233" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/notifications_items.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1079,6 +939,191 @@
         <state relative-caret-position="132">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/events.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1068">
+          <caret line="101" column="113" lean-forward="true" selection-start-line="101" selection-start-column="113" selection-end-line="101" selection-end-column="113" />
+          <folding>
+            <marker date="1499773030495" expanded="true" signature="1897:2042" ph="SELECT e.*, events" />
+            <marker date="1499773030495" expanded="true" signature="2292:2604" ph="SELECT ei.in... event_interactions" />
+            <marker date="1499773030495" expanded="true" signature="4269:5587" ph="..." />
+            <marker date="1499773030495" expanded="true" signature="4308:4537" ph="..." />
+            <marker date="1499773030495" expanded="true" signature="4308:5568" ph="..." />
+            <marker date="1499773030495" expanded="true" signature="4383:4437" ph="..." />
+            <marker date="1499773030495" expanded="false" signature="4525:4531" ph=" " />
+            <marker date="1499773030495" expanded="false" signature="4531:4537" ph=" " />
+            <marker date="1499773030495" expanded="true" signature="4631:4693" ph="..." />
+            <marker date="1499773030495" expanded="true" signature="4749:5323" ph="..." />
+            <marker date="1499773030495" expanded="true" signature="4861:5170" ph="..." />
+            <marker date="1499773030495" expanded="true" signature="5391:5456" ph="..." />
+            <marker date="1499773030495" expanded="false" signature="5486:5524" ph="..." />
+            <marker date="1499773030495" expanded="true" signature="5873:5929" ph="SELECT group... students_groups" />
+            <marker date="1499773030495" expanded="true" signature="6248:6294" ph="SELECT role_... master_users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/events.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ajax.create_comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="34" column="81" lean-forward="true" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
+          <folding>
+            <marker date="1499773165435" expanded="true" signature="244:349" ph="INSERT INTO event_interactions... " />
+            <marker date="1499773165435" expanded="true" signature="478:823" ph="SELECT ei.in... event_interactions" />
+            <marker date="1499773165435" expanded="true" signature="2400:2447" ph="SELECT creat... events" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.users.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="62" column="92" lean-forward="true" selection-start-line="62" selection-start-column="92" selection-end-line="62" selection-end-column="92" />
+          <folding>
+            <element signature="e#42#131#0#PHP" expanded="false" />
+            <marker date="1499773505931" expanded="true" signature="502:994" ph="SELECT mu.id... master_users" />
+            <marker date="1499773505931" expanded="true" signature="1037:1345" ph="SELECT mu.id... master_users" />
+            <marker date="1499773505931" expanded="true" signature="3508:4033" ph="UPDATE maste... " />
+            <marker date="1499773505931" expanded="true" signature="4420:4932" ph="INSERT INTO master_users... " />
+            <marker date="1499773505931" expanded="true" signature="5431:5470" ph="SELECT * FRO... master_users" />
+            <marker date="1499773505931" expanded="true" signature="6170:6197" ph="SELECT * FRO... master_cities" />
+            <marker date="1499773505931" expanded="true" signature="6942:6968" ph="SELECT * FRO... master_state" />
+            <marker date="1499773505931" expanded="true" signature="7724:7769" ph="SELECT * FRO... master_zipcode" />
+            <marker date="1499773505931" expanded="true" signature="8518:8545" ph="SELECT * FRO... mast_carriers" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global_incidents.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.schedule.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="56" column="100" lean-forward="true" selection-start-line="56" selection-start-column="100" selection-end-line="56" selection-end-column="100" />
+          <folding>
+            <element signature="e#42#131#0#PHP" expanded="false" />
+            <marker date="1499773636889" expanded="true" signature="486:1504" ph="SELECT st.sc... schedules_teacher" />
+            <marker date="1499773636889" expanded="true" signature="3262:3407" ph="DELETE FROM " />
+            <marker date="1499773636889" expanded="true" signature="3785:3966" ph="INSERT INTO schedules_teacher... " />
+            <marker date="1499773636889" expanded="true" signature="4328:4509" ph="INSERT INTO schedules_teacher... " />
+            <marker date="1499773636889" expanded="true" signature="4896:4948" ph="SELECT * FRO... schedules_teacher" />
+            <marker date="1499773636889" expanded="true" signature="5665:5691" ph="SELECT * FRO... master_grade" />
+            <marker date="1499773636889" expanded="true" signature="6454:6480" ph="SELECT * FRO... master_group" />
+            <marker date="1499773636889" expanded="true" signature="7253:7282" ph="SELECT * FRO... master_week_day" />
+            <marker date="1499773636889" expanded="true" signature="8061:8090" ph="SELECT * FRO... master_day_hour" />
+            <marker date="1499773636889" expanded="true" signature="8862:8889" ph="SELECT * FRO... master_course" />
+            <marker date="1499773636889" expanded="true" signature="9658:9684" ph="SELECT * FRO... master_users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.incidents.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="138" column="63" lean-forward="true" selection-start-line="138" selection-start-column="63" selection-end-line="138" selection-end-column="63" />
+          <folding>
+            <marker date="1499773953015" expanded="true" signature="1631:2482" ph="SELECT dr.da... daily_records" />
+            <marker date="1499773953015" expanded="true" signature="5267:6232" ph="SELECT dr.da... daily_records" />
+            <marker date="1499773953015" expanded="true" signature="9235:9261" ph="SELECT * FRO... master_grade" />
+            <marker date="1499773953015" expanded="true" signature="9304:9361" ph="SELECT * FRO... master_grade" />
+            <marker date="1499773953015" expanded="true" signature="10217:10243" ph="SELECT * FRO... master_group" />
+            <marker date="1499773953015" expanded="true" signature="10286:10343" ph="SELECT * FRO... master_group" />
+            <marker date="1499773953015" expanded="true" signature="11205:11232" ph="SELECT * FRO... master_course" />
+            <marker date="1499773953015" expanded="true" signature="11275:11335" ph="SELECT * FRO... master_course" />
+            <marker date="1499773953015" expanded="true" signature="12228:12284" ph="SELECT * FRO... master_course" />
+            <marker date="1499773953015" expanded="true" signature="13085:13164" ph="SELECT grade... schedules_teacher" />
+            <marker date="1499773953015" expanded="true" signature="13785:13841" ph="SELECT group... students_groups" />
+            <marker date="1499773953015" expanded="true" signature="14319:14376" ph="SELECT cours... schedules_teacher" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global_appointments.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.appointments.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="59" column="99" lean-forward="true" selection-start-line="59" selection-start-column="99" selection-end-line="59" selection-end-column="99" />
+          <folding>
+            <element signature="e#42#130#0#PHP" expanded="false" />
+            <marker date="1499774161116" expanded="true" signature="710:1079" ph="SELECT a.*, appointments" />
+            <marker date="1499774161116" expanded="true" signature="4409:4626" ph="UPDATE appoi... " />
+            <marker date="1499774161116" expanded="true" signature="4904:5196" ph="INSERT INTO appointments... " />
+            <marker date="1499774161116" expanded="true" signature="5576:5626" ph="SELECT * FRO... appointments" />
+            <marker date="1499774161116" expanded="true" signature="6325:6351" ph="SELECT * FRO... master_roles" />
+            <marker date="1499774161116" expanded="true" signature="6906:6932" ph="SELECT * FRO... master_group" />
+            <marker date="1499774161116" expanded="true" signature="7476:7529" ph="SELECT max(u... appointments" />
+            <marker date="1499774161116" expanded="true" signature="7890:7948" ph="UPDATE appoi... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global_events.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.events.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding>
+            <marker date="1499774247037" expanded="true" signature="482:687" ph="SELECT event... events" />
+            <marker date="1499774247037" expanded="true" signature="775:1132" ph="SELECT e.eve... events" />
+            <marker date="1499774247037" expanded="true" signature="2714:2910" ph="UPDATE event... " />
+            <marker date="1499774247037" expanded="true" signature="3177:3424" ph="INSERT INTO events... " />
+            <marker date="1499774247037" expanded="true" signature="3798:3836" ph="SELECT * FRO... events" />
+            <marker date="1499774247037" expanded="true" signature="4750:4808" ph="SELECT * FRO... master_group" />
+            <marker date="1499774247037" expanded="true" signature="5560:5627" ph="SELECT DISTI... schedules_teacher" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/set_scholar_period.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="62" column="36" lean-forward="false" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="35" column="103" lean-forward="false" selection-start-line="35" selection-start-column="103" selection-end-line="35" selection-end-column="103" />
+          <folding>
+            <marker date="1499774377866" expanded="true" signature="430:480" ph="SELECT * FRO... scholar_period" />
+            <marker date="1499774377866" expanded="true" signature="2257:2410" ph="UPDATE schol... " />
+            <marker date="1499774377866" expanded="true" signature="2677:2807" ph="INSERT INTO scholar_period... " />
+            <marker date="1499774377866" expanded="true" signature="3190:3245" ph="SELECT * FRO... scholar_period" />
+            <marker date="1499774377866" expanded="true" signature="3957:4029" ph="UPDATE schol... " />
+          </folding>
         </state>
       </provider>
     </entry>

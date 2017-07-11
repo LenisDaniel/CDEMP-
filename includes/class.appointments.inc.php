@@ -1,5 +1,5 @@
 <?php
-
+require_once ('friendly_date.php');
 /**
  * Created by PhpStorm.
  * User: Lenis Rivera
@@ -57,7 +57,7 @@ class Appointments{
                 }
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[12]. ' ' . $this->appoint_info[13]. "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[3]. "</td>";
-                $this->appoint_td_info .= "<td>" . $this->appoint_info[4]. "</td>";
+                $this->appoint_td_info .= "<td>" . friendly_date($this->appoint_info[4]) . "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[5]. "</td>";
                 $this->appoint_td_info .= "<td>" . $this->appoint_info[6]. "</td>";
 
@@ -68,7 +68,7 @@ class Appointments{
                 }
 
                 $this->appoint_td_info .= "<td>" . $viewed_1 . "</td>";
-                $this->appoint_td_info .= "<td>" . $this->appoint_info[8]. "</td>";
+                $this->appoint_td_info .= "<td>" . friendly_date($this->appoint_info[8]) . "</td>";
                 $this->appoint_td_info .= "</tr>";
 
             }

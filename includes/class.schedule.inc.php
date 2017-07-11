@@ -1,5 +1,5 @@
 <?php
-
+require_once ('friendly_date.php');
 /**
  * Created by PhpStorm.
  * User: Lenis Rivera
@@ -54,7 +54,7 @@ class Schedule{
                 //$this->schedule_td_info .= "<td>MON - FRI</td>";
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[5]. "</td>";
                 $this->schedule_td_info .= "<td>" . $this->schedule_info[6] . " " .  $this->schedule_info[7] . " " .  $this->schedule_info[8]. "</td>";
-                $this->schedule_td_info .= "<td>" . $this->schedule_info[9]. "</td>";
+                $this->schedule_td_info .= "<td>" . friendly_date($this->schedule_info[9]). "</td>";
                 $this->schedule_td_info .= "</tr>";
 
             }

@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ERROR);
 require_once("class.mydbcon.inc.php");
+require_once ("friendly_date.php");
 $objmydbcon = new classmydbcon();
 
 class Incidents{
@@ -81,7 +82,7 @@ class Incidents{
                 $this->incidents_td_info .= "<td>" . $this->incidents_info[6]. "</td>";
                 $this->incidents_td_info .= "<td><span class='label label-$day_color'>" . $this->incidents_info[7] . "</span></td>";
                 $this->incidents_td_info .= "<td><span class='label label-$incident_color'>" . $this->incidents_info[8] . "</span></td>";
-                $this->incidents_td_info .= "<td>" . $this->incidents_info[9]. "</td>";
+                $this->incidents_td_info .= "<td>" . friendly_date($this->incidents_info[9]) . "</td>";
                 $this->incidents_td_info .= "</tr>";
 
             }
@@ -154,7 +155,7 @@ class Incidents{
                 $this->incidents_td_info .= "<td>" . $this->incidents_info[9]. "</td>";
                 $this->incidents_td_info .= "<td><span class='label label-$day_color'>" . $this->incidents_info[10] . "</span></td>";
                 $this->incidents_td_info .= "<td><span class='label label-$incident_color'>" . $this->incidents_info[11] . "</span></td>";
-                $this->incidents_td_info .= "<td>" . $this->incidents_info[12]. "</td>";
+                $this->incidents_td_info .= "<td>" . friendly_date($this->incidents_info[12]). "</td>";
                 $this->incidents_td_info .= "</tr>";
 
             }

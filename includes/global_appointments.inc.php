@@ -38,7 +38,7 @@ if(isset($_GET['edit'])){
         $objtemplate->set_content("option2", "checked");
     }
 
-    //$objappointments->set_as_viewed($idx);
+
 
 }else{
 

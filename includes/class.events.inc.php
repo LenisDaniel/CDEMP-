@@ -1,5 +1,5 @@
 <?php
-
+require_once ("friendly_date.php");
 class Events{
 
     var $events_td_info;
@@ -48,7 +48,7 @@ class Events{
                 $this->events_td_info .= "<td>" . $this->event_info[2]. "</td>";
                 $this->events_td_info .= "<td>" . $this->event_info[3]. "</td>";
                 $this->events_td_info .= "<td>Active</td>";
-                $this->events_td_info .= "<td>" . $this->event_info[5]. "</td>";
+                $this->events_td_info .= "<td>" . friendly_date($this->event_info[5]) . "</td>";
                 $this->events_td_info .= "</tr>";
 
             }

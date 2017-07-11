@@ -1,6 +1,7 @@
 <?php
 require_once('Mobile_Detect.php');
 require_once('get_active_scholar_period.php');
+require_once ('friendly_date.php');
 $detect = new Mobile_Detect;
 
 $limit_date = get_scholar_period();
@@ -70,7 +71,7 @@ if(!$results = $objmydbcon->get_result_set($sqlquery)){
                 $comments[] = '<div class="media" '.$conditional_color.'>
                                 <div class="media-body">
                                     <h4 class="media-heading">'.$name0.'
-                                        <small>'.date('m-d-Y h:i:s', strtotime($c_date)).'</small>
+                                        <small>'.friendly_date($c_date).'</small>
                                     </h4>
                                     '.$msg.'
                                 </div>
@@ -98,7 +99,7 @@ if(!$results = $objmydbcon->get_result_set($sqlquery)){
                     by '.$name.'
                 </p>
                 <hr>
-                <p><span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;'.date('m-d-Y h:i:s', strtotime($created_date)).'</p>
+                <p><span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;'.friendly_date($created_date).'</p>
                 <hr>
                 <div class="fr-view">
                     '.$event_details.'

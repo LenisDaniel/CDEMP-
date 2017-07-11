@@ -1,5 +1,5 @@
 <?php
-
+require_once ('friendly_date.php');
 /**
  * Created by PhpStorm.
  * User: Lenis Rivera
@@ -60,7 +60,7 @@ class Users{
                     $this->user_td_info .= "<td>Active</td>";
                 }
 
-                $this->user_td_info .= "<td>" . $this->user_info[8]. "</td>";
+                $this->user_td_info .= "<td>" . friendly_date($this->user_info[8]). "</td>";
                 $this->user_td_info .= "</tr>";
 
             }

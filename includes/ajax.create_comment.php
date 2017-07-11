@@ -1,6 +1,7 @@
 <?php
 
 require_once("class.mydbcon.inc.php");
+require_once ("friendly_date.php");
 $objmydbcon = new classmydbcon;
 
 if(isset($_POST)){
@@ -31,7 +32,7 @@ if(isset($_POST)){
                     $comments[] = '<div class="media" '.$conditional_color.'>
                                 <div class="media-body">
                                     <h4 class="media-heading">'.$name0.'
-                                        <small>'.$c_date.'</small>
+                                        <small>'.friendly_date($c_date).'</small>
                                     </h4>
                                     '.$msg.'
                                 </div>

@@ -1,5 +1,5 @@
 <?php
-
+require_once ('friendly_date.php');
 class Scholar_Period{
 
     var $scholar_period_td_info;
@@ -32,8 +32,8 @@ class Scholar_Period{
                 $this->scholar_period_td_info .= "<tr id='tr$i' class='odd gradeX'>";
                 $this->scholar_period_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=6&edit=$idu'>" . $this->scholar_period_info[0]. "</a></td>";
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[1]. "</td>";
-                $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[2]. "</td>";
-                $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[3]. "</td>";
+                $this->scholar_period_td_info .= "<td>" . friendly_date($this->scholar_period_info[2]) . "</td>";
+                $this->scholar_period_td_info .= "<td>" . friendly_date($this->scholar_period_info[3]) . "</td>";
                 if($this->scholar_period_info[4] == 1){
                     $this->scholar_period_td_info .= "<td>Active</td>";
                 }else{
