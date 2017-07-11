@@ -22,9 +22,10 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("form_action", "display_page.php?tpl=teacher_appointments&cid=".base64_encode($idx));
     $objtemplate->set_content("form_title", "Update Appointment Info");
     $objtemplate->set_content("send_button", "Update");
-
     $objtemplate->set_content("appoint_descr", $objappointments->get_appointment_info('appointment_descr'));
-    $objtemplate->set_content("appoint_time", $objappointments->get_appointment_info('appointment_time'));
+    $app_date = explode(" ", $objappointments->get_appointment_info('appointment_time'));
+    $objtemplate->set_content("appoint_date", $app_date[0]);
+    $objtemplate->set_content("appoint_time", $app_date[1]);
     $objtemplate->set_content("appoint_place", $objappointments->get_appointment_info('appointment_place'));
     $objtemplate->set_content("appoint_details", $objappointments->get_appointment_info('appointment_details'));
     $objtemplate->set_content("unique_number", $objappointments->get_appointment_info('unique_number'));
@@ -37,7 +38,7 @@ if(isset($_GET['edit'])){
         $objtemplate->set_content("option2", "checked");
     }
 
-    $objappointments->set_as_viewed($idx);
+    //$objappointments->set_as_viewed($idx);
 
 }else{
 
@@ -74,9 +75,15 @@ if(isset($_GET['cid'])) {
         }
     }
 
+    if(substr($_POST['appoint_time'], -2) == 'am'){
+        $appointment_t = $_POST['appoint_date'] . " " . substr($_POST['appoint_time'], 0, -2);
+    }else{
+        $appointment_t = $_POST['appoint_date'] . " " . convert_hour($_POST['appoint_time']);
+    }
+
     $id = base64_decode($_GET['cid']);
     $appoint_descr = $_POST['appoint_descr'];
-    $appoint_time = $_POST['appoint_time'];
+    $appoint_time = $appointment_t;
     $appoint_place = $_POST['appoint_place'];
     $appoint_details = $_POST['appoint_details'];
     $unique_number = $_POST['unique_number'];

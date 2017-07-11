@@ -1,6 +1,7 @@
 <?php
 
 error_reporting(E_ERROR);
+header('Content-Type: text/html; charset=utf-8');
 require_once("class.admins.inc.php");
 
 $objadmins = new Administrator();

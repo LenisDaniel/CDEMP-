@@ -31,7 +31,7 @@ function get_appointment_notifications($id, $role){
             }
 
             $notication_items .=
-                '<li>
+                '<li class="appointments_items" id="'.$appointment_id.'">
 	                <a href="display_page.php?tpl='.$appointment_uri.'&edit='.base64_encode($appointment_id).'&viewed=1">
 		            <span class="label label-sm label-icon label-'.$appointment_label.'">
 		                <i class="fa fa-'.$appointment_icon.'"></i>

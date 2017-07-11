@@ -3,8 +3,9 @@
 error_reporting(E_ERROR);
 require_once ("class.mydbcon.inc.php");
 require_once ("class.template.inc.php");
-require_once ("class.phpmailer.php");
-require_once ("class.smtp.php");
+//require_once ("class.phpmailer.php");
+//require_once ("class.smtp.php");
+require_once ("PHPMailerAutoload.php");
 
 $objmydbcon = new classmydbcon();
 $objtemplate = new classTemplate();
@@ -106,11 +107,11 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
         }
     }
 
-    if(validate_today_info($grade_id, $group_id, $course_id, $teacher_id, $forget_date)){
+    //if(validate_today_info($grade_id, $group_id, $course_id, $teacher_id, $forget_date)){
 
-        header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
+        //header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
 
-    }else{
+    //}else{
 
         for($i = 1; $i <= $counter; $i++){
 
@@ -149,7 +150,7 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
 
         }
 
-    }
+    //}
 
 }
 
@@ -406,16 +407,27 @@ function get_student_contact_info($student_id = 0){
 
 function send_daily_email($contact_info = "", $student_id = 0, $course_id = 0, $teacher_id = 0, $day_status_id = 0, $incident_id = 0){
 
-    if($contact_info['phone_1_carrier'] != "" || $contact_info['phone_1_carrier'] > 1){
+    if($contact_info['phone_1_carrier'] != "" && $contact_info['phone_1_carrier'] > 1){
         $carrier_string_1 = get_carrier($contact_info['phone_1_carrier']);
         $sms_1 = str_replace("-","", $contact_info['phone_1']) . $carrier_string_1;
+    }else{
+        $sms_1 = "";
     }
-    if($contact_info['phone_2_carrier'] != "" || $contact_info['phone_2_carrier'] > 1){
+    if($contact_info['phone_2_carrier'] != "" && $contact_info['phone_2_carrier'] > 1){
         $carrier_string_2 = get_carrier($contact_info['phone_2_carrier']);
         $sms_2 = str_replace("-","", $contact_info['phone_2']) . $carrier_string_2;
+    }else{
+        $sms_2 = "";
     }
 
-    $directions = array($contact_info['email'], $sms_1, $sms_2);
+    if($sms_1 != "" && $sms_2 != ""){
+        $directions = array($contact_info['email'], $sms_1, $sms_2);
+    }else if($sms_1 != "" && $sms_2 == ""){
+        $directions = array($contact_info['email'], $sms_1);
+    }else{
+        $directions = array($contact_info['email']);
+    }
+
     $recipients = array();
 
     for($i = 0; $i < 3; $i++){
@@ -466,15 +478,16 @@ function send_daily_email($contact_info = "", $student_id = 0, $course_id = 0, $
 
 
     $mail = new PHPMailer();
-    //$mail->SMTPDebug = 1;
+    //$mail->SMTPDebug = 2;
     //$mail->isSMTP();
+    //$mail->Mailer = "smtp";
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'mail.smtp2go.com';
     $mail->SMTPAuth = true;
     $mail->Port = 2525;
     $mail->Username = 'lenis.daniel@gmail.com';
     $mail->Password = '2bdrNC0hQ2hw';
-    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPSecure = 'tls';
     $mail->setFrom('info@cdemp-pr.com', 'CDEMP Daily Report');
 
     foreach($recipients as $value){
@@ -491,11 +504,12 @@ function send_daily_email($contact_info = "", $student_id = 0, $course_id = 0, $
     $mail->AltBody = $message_1;
 
     if(!$mail->send()) {
-        //echo 'Message could not be sent.';
-        //echo 'Mailer Error: ' . $mail->ErrorInfo;
+        echo 'Message could not be sent.';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
         //header("location: ../display_page.php?tpl=events&msg=1");
     }
+
 
 }
 

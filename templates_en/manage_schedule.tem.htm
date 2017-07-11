@@ -240,27 +240,28 @@
                 var grade_id = $('#grade').val();
                 var group_id = $('#group').val();
                 var day_hour_id = $('#day_hour').val();
+                if($('#is_edit').val() == 0) {
+                    $.ajax({
+                        url: 'includes/ajax.validate_schedule.php',
+                        method: 'POST',
+                        data: {'grade': grade_id, 'group': group_id, 'day_hour': day_hour_id},
+                        async: false,
 
-                $.ajax({
-                    url: 'includes/ajax.validate_schedule.php',
-                    method: 'POST',
-                    data: {'grade': grade_id, 'group': group_id, 'day_hour': day_hour_id},
-                    async: false,
+                        success: function (response) {
 
-                    success:  function (response) {
-
-                        if(response != "continue"){
-                            alert(response);
-                            trueorfalse = false;
-                        }else{
-                            trueorfalse = true;
+                            if (response != "continue") {
+                                alert(response);
+                                trueorfalse = false;
+                            } else {
+                                trueorfalse = true;
+                            }
                         }
-                    }
 
-                });
-
+                    });
+                }else{
+                    trueorfalse = true;
+                }
                 return trueorfalse;
-
             });
 
             if($('#is_edit').val() == 1){

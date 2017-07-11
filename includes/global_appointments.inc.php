@@ -22,9 +22,10 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("form_action", "display_page.php?tpl=global_appointments&cid=".base64_encode($idx));
     $objtemplate->set_content("form_title", "Update Appointment Info");
     $objtemplate->set_content("send_button", "Update");
-
     $objtemplate->set_content("appoint_descr", $objappointments->get_appointment_info('appointment_descr'));
-    $objtemplate->set_content("appoint_time", $objappointments->get_appointment_info('appointment_time'));
+    $app_date = explode(" ", $objappointments->get_appointment_info('appointment_time'));
+    $objtemplate->set_content("appoint_date", $app_date[0]);
+    $objtemplate->set_content("appoint_time", $app_date[1]);
     $objtemplate->set_content("appoint_place", $objappointments->get_appointment_info('appointment_place'));
     $objtemplate->set_content("appoint_details", $objappointments->get_appointment_info('appointment_details'));
     $objtemplate->set_content("unique_number", $objappointments->get_appointment_info('unique_number'));
@@ -37,7 +38,7 @@ if(isset($_GET['edit'])){
         $objtemplate->set_content("option2", "checked");
     }
 
-    $objappointments->set_as_viewed($idx);
+    //$objappointments->set_as_viewed($idx);
 
 }else{
 
@@ -72,8 +73,16 @@ if(isset($_GET['cid'])) {
         }
     }
 
+    if(substr($_POST['appoint_time'], -2) == 'am'){
+        $appointment_t = $_POST['appoint_date'] . " " . substr($_POST['appoint_time'], 0, -2);
+    }else{
+        $appointment_t = $_POST['appoint_date'] . " " . convert_hour($_POST['appoint_time']);
+    }
+
+    $appointment_time = $appointment_t;
+
     $appoint_descr = $_POST['appoint_descr'];
-    $appoint_time = $_POST['appoint_time'];
+    $appoint_time = $appointment_t;
     $appoint_place = $_POST['appoint_place'];
     $appoint_details = $_POST['appoint_details'];
     $unique_number = $_POST['unique_number'];
@@ -81,5 +90,114 @@ if(isset($_GET['cid'])) {
     $active = $_POST['active'];
 
     $objappointments->manage_appoint_info('global_appointments', $id, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, $list, $unique_number, $creator, $active);
+
+}
+
+
+function convert_hour($comp_hour){
+
+    switch ($comp_hour) {
+
+        case '12:00pm':
+            $comp_hour = "12:00";
+            break;
+
+        case '12:30pm':
+            $comp_hour = "12:30";
+            break;
+
+        case '1:00pm':
+            $comp_hour = "13:00";
+            break;
+
+        case '1:30pm':
+            $comp_hour = "13:30";
+            break;
+
+        case '2:00pm':
+            $comp_hour = "14:00";
+            break;
+
+        case '2:30pm':
+            $comp_hour = "14:30";
+            break;
+
+        case '3:00pm':
+            $comp_hour = "15:00";
+            break;
+
+        case '3:30pm':
+            $comp_hour = "15:30";
+            break;
+
+        case '4:00pm':
+
+            $comp_hour = "16:00";
+            break;
+
+        case '4:30pm':
+
+            $comp_hour = "16:30";
+            break;
+
+        case '5:00pm':
+            $comp_hour = "17:00";
+            break;
+
+        case '5:30pm':
+            $comp_hour = "17:30";
+            break;
+
+        case '6:00pm':
+            $comp_hour = "18:00";
+            break;
+
+        case '6:30pm':
+            $comp_hour = "18:30";
+            break;
+
+        case '7:00pm':
+            $comp_hour = "19:00";
+            break;
+
+        case '7:30pm':
+            $comp_hour = "19:30";
+            break;
+
+        case '8:00pm':
+            $comp_hour = "20:00";
+            break;
+
+        case '8:30pm':
+            $comp_hour = "20:30";
+            break;
+
+        case '9:00pm':
+            $comp_hour = "21:00";
+            break;
+
+        case '9:30pm':
+            $comp_hour = "21:30";
+            break;
+
+        case '10:00pm':
+            $comp_hour = "22:00";
+            break;
+
+        case '10:30pm':
+            $comp_hour = "22:30";
+            break;
+
+        case '11:00pm':
+            $comp_hour = "23:00";
+            break;
+
+        case '11:30pm':
+            $comp_hour = "23:30";
+            break;
+
+    }
+
+    return $comp_hour;
 
 }

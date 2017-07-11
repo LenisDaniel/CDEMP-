@@ -3,7 +3,7 @@
 <html lang="en" class="no-js">
 <!-- BEGIN HEAD -->
 <head>
-	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html" charset=utf-8" />
 	<title>CDEMP | {page_title}</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -41,6 +41,7 @@
 	<link href="assets2/global/css/multi-select-edited.css" rel="stylesheet" type="text/css"/>
 	<link href="assets2/global/css/bootstrap-table.css" rel="stylesheet" type="text/css"/>
 	<link href="assets2/global/css/jquery.datetimepicker.css" rel="stylesheet" type="text/css"/>
+	<link href="assets2/global/css/jquery.timepicker.css" rel="stylesheet" type="text/css"/>
 
 
 	<!-- END PAGE LEVEL PLUGIN STYLES -->
@@ -664,6 +665,7 @@
 <script type="text/javascript" src="assets2/global/scripts/jquery.tinymce.min.js"></script>
 <script type="text/javascript" src="assets2/global/scripts/tinymce.min.js"></script>
 <script type="text/javascript" src="assets2/global/scripts/jquery.table2excel.min.js"></script>
+<script type="text/javascript" src="assets2/global/scripts/jquery.timepicker.min.js"></script>
 
 
 
@@ -703,6 +705,21 @@
 <script>
 
     jQuery(document).ready(function() {
+
+        $('.appointments_items').click(function(){
+            var id = this.id;
+
+            $.ajax({
+				url: 'includes/ajax.set_as_viewed.php',
+				method: 'POST',
+				data: {'id': id},
+
+				success: function(response){
+				    //continue
+				}
+			})
+		})
+
         Metronic.init(); // init metronic core componets
         Layout.init(); // init layout
         QuickSidebar.init(); // init quick sidebar
@@ -725,6 +742,7 @@
 
 
     });
+
 
 </script>
 

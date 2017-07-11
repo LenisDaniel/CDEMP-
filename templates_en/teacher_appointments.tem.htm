@@ -54,6 +54,16 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
+                            <label class="control-label col-md-3">Date:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_date" id="appoint_date" class="form-control" placeholder="" value="{appoint_date}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
                             <label class="control-label col-md-3">Time:</label>
                             <div class="col-md-9">
                                 <input type="text" name="appoint_time" id="appoint_time" class="form-control" placeholder="" value="{appoint_time}" required>
@@ -261,6 +271,12 @@
             });
         });
 
+        $('#appoint_date').datepicker({
+            dateFormat: "yy-mm-dd",
+        });
+
+        $('#appoint_time').timepicker();
+
     });
 
     $('#users_type').change(function(){
@@ -324,11 +340,6 @@
 
             $("#users_list input[type=checkbox]").prop('checked', false);
         }
-
-    });
-
-
-    $('#appoint_time').datetimepicker({
 
     });
 
