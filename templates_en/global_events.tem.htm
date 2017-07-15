@@ -1,4 +1,6 @@
-
+<style>
+    .date_field {position: relative; z-index:100;}
+</style>
 <div class="portlet box red">
     <div class="portlet-title">
         <div class="caption">
@@ -27,14 +29,23 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group required">
-                            <label class="control-label col-md-2">Event Date and Hour:</label>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Date:</label>
                             <div class="col-md-6">
-                                <input type="text" name="event_date" id="event_date" class="form-control"  value="{event_date}" required>
+                                <input type="text" name="event_date" id="event_date" class="form-control date_field" value="{event_date}" required>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Time:</label>
+                            <div class="col-md-6">
+                                <input type="text" name="event_time" id="event_time" class="form-control" value="{event_time}" required>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--/row-->
                 <div class="row">
@@ -167,6 +178,16 @@
 
 <script>
 
+    $(document).ready(function(){
+        $('#event_date').datepicker({
+            dateFormat: "yy-mm-dd",
+
+        });
+
+        $('#event_time').timepicker();
+    });
+
+
     $(function(){
         $('#event_details').froalaEditor({
             toolbarButtons: ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', '|', 'fontFamily', 'fontSize', 'color', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'emoticons', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|', 'print', 'help', 'html', '|', 'undo', 'redo'],
@@ -175,9 +196,6 @@
         })
     });
 
-    $('#event_date').datetimepicker({
-        //hours12: true
-    });
 
     $("#export_to_excel").click(function(event){
         $(".table").table2excel({
