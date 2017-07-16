@@ -107,11 +107,11 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
         }
     }
 
-    //if(validate_today_info($grade_id, $group_id, $course_id, $teacher_id, $forget_date)){
+    if(validate_today_info($grade_id, $group_id, $course_id, $teacher_id, $forget_date)){
 
-        //header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
+        header('location: ../display_page.php?tpl=my_courses&cat=4&process=3');
 
-    //}else{
+    }else{
 
         for($i = 1; $i <= $counter; $i++){
 
@@ -150,7 +150,7 @@ if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
 
         }
 
-    //}
+    }
 
 }
 

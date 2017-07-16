@@ -182,12 +182,121 @@
 
 <script>
 
-    $(function() {
+    $(function(){
+
         $('#event_details').froalaEditor({
             toolbarButtons: ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', '|', 'fontFamily', 'fontSize', 'color', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'emoticons', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|', 'print', 'help', 'html', '|', 'undo', 'redo'],
             pluginsEnabled: null,
-            height: 300
+            height: 300,
+
+            imageUploadParam: 'file',
+            imageUploadURL: 'includes/ajax.fileuploader.php',
+            imageUploadParams: {id: '1'},
+            imageUploadMethod: 'POST',
+            imageMaxSize: 3 * 1024 * 1024,
+            imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+
+            // Set the file upload parameter.
+            fileUploadParam: 'file_param',
+            // Set the file upload URL.
+            fileUploadURL: 'includes/ajax.fileuploader.php',
+            // Additional upload params.
+            fileUploadParams: {id: '2'},
+            // Set request type.
+            fileUploadMethod: 'POST',
+            // Set max file size to 20MB.
+            fileMaxSize: 5 * 1024 * 1024,
+            // Allow to upload any file.
+            fileAllowedTypes: ['*']
         })
+            .on('froalaEditor.image.beforeUpload', function (e, editor, images) {
+                //alert("evento antes de subir la imagen");
+            })
+            .on('froalaEditor.image.uploaded', function (e, editor, response) {
+                //alert(response);
+                //alert(response);
+            })
+            .on('froalaEditor.image.inserted', function (e, editor, $img, response) {
+                //alert('Image was inserted in the editor.');
+            })
+            .on('froalaEditor.image.replaced', function (e, editor, $img, response) {
+                // Image was replaced in the editor.
+                //alert('Image was replaced in the editor.');
+            })
+
+            .on('froalaEditor.image.error', function (e, editor, error, response) {
+                // Bad link.
+                if (error.code == 1){
+                    //alert('bad link');
+                }
+                // No link in upload response.
+                else if (error.code == 2){
+                    //alert('No link in upload response.');
+                }
+                // Error during image upload.
+                else if (error.code == 3){
+                    //alert('Error during image upload.');
+                }
+                // Parsing response failed.
+                else if (error.code == 4){
+                    //alert('Parsing response failed.');
+                }
+                // Image too text-large.
+                else if (error.code == 5){
+                    //alert('Image too text-large.');
+                }
+                // Invalid image type.
+                else if (error.code == 6){
+                    //alert('Invalid image type.');
+                }
+                // Image can be uploaded only to same domain in IE 8 and IE 9.
+                else if (error.code == 7){
+                    //alert('Image can be uploaded only to same domain in IE 8 and IE 9.');
+                }
+                // Response contains the original server response to the request if available.
+            })
+            .on('froalaEditor.file.beforeUpload', function (e, editor, files) {
+                // Return false if you want to stop the file upload.
+                //alert("entre");
+            })
+            .on('froalaEditor.file.uploaded', function (e, editor, response) {
+                // File was uploaded to the server.
+            })
+            .on('froalaEditor.file.inserted', function (e, editor, $file, response) {
+                // File was inserted in the editor.
+            })
+            .on('froalaEditor.file.error', function (e, editor, error, response) {
+                // Bad link.
+                if (error.code == 1){
+                    alert('bad link');
+                }
+                // No link in upload response.
+                else if (error.code == 2){
+                    alert('No link in upload response.');
+                }
+                // Error during file upload.
+                else if (error.code == 3){
+                    alert('Error during file upload.');
+                }
+                // Parsing response failed.
+                else if (error.code == 4){
+                    alert('Parsing response failed.');
+                }
+                // File too text-large.
+                else if (error.code == 5){
+                    alert('File too text-large.');
+                }
+                // Invalid file type.
+                else if (error.code == 6){
+                    alert('Invalid file type.');
+                }
+                // File can be uploaded only to same domain in IE 8 and IE 9.
+                else if (error.code == 7){
+                    alert('File can be uploaded only to same domain in IE 8 and IE 9.');
+                }
+                // Response contains the original server response to the request if available.
+            })
+
     });
 
     $('#group').change(function(){
