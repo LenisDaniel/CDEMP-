@@ -479,12 +479,12 @@ function send_daily_email($contact_info = "", $student_id = 0, $course_id = 0, $
 
     $mail = new PHPMailer();
     //$mail->SMTPDebug = 2;
-    //$mail->isSMTP();
-    //$mail->Mailer = "smtp";
+    $mail->isSMTP();
+    $mail->Mailer = "smtp";
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'mail.smtp2go.com';
     $mail->SMTPAuth = true;
-    $mail->Port = 2525;
+    $mail->Port = 587;
     $mail->Username = 'lenis.daniel@gmail.com';
     $mail->Password = '2bdrNC0hQ2hw';
     $mail->SMTPSecure = 'tls';
@@ -509,8 +509,6 @@ function send_daily_email($contact_info = "", $student_id = 0, $course_id = 0, $
     } else {
         //header("location: ../display_page.php?tpl=events&msg=1");
     }
-
-
 }
 
 function get_carrier($carrier_id = 0){

@@ -29,7 +29,7 @@ class classmydbcon{
 //	var $error="";
 
     var $dbhost="localhost";
-    var $db="cdemp_test";
+    var $db="cdemp_test_1";
     var $uname="root";
     var $pwd="xf6C4FBPqNCMNGRG";
     var $link="";

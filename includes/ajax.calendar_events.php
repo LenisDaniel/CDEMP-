@@ -2,6 +2,7 @@
 session_start();
 require_once("class.mydbcon.inc.php");
 require_once("get_active_scholar_period.php");
+require_once ('friendly_date.php');
 $objmydbcon = new classmydbcon;
 $idx = $_SESSION['loged_user']['idx'];
 $limit_date = get_scholar_period();
@@ -47,8 +48,9 @@ if($type == 'detail'){
         }else if(mysqli_num_rows($result) > 0){
             $rs = mysqli_fetch_assoc($result);
             $data['title'] = $rs['event_descr'];
-            $data['date'] = $rs['event_date'];
-            $data['details'] = strip_tags($rs['event_details']);
+            $data['date'] = friendly_date($rs['event_date']);
+
+            $data['details'] = strip_tags(html_entity_decode($rs['event_details']));
         }else{
             echo $data;
         }
@@ -63,7 +65,7 @@ if($type == 'detail'){
         }else if(mysqli_num_rows($result) > 0){
             $rs = mysqli_fetch_assoc($result);
             $data['title'] = $rs['appointment_descr'];
-            $data['date'] = $rs['appointment_time'];
+            $data['date'] = friendly_date($rs['appointment_time']);
             $data['details'] = $rs['appointment_details'];
         }else{
             echo $data;

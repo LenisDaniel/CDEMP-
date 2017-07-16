@@ -28,7 +28,7 @@ if(isset($_POST)){
 function get_groups($grade = 0){
     global $objmydbcon;
 
-    $sqlquery = "SELECT * FROM master_group WHERE grade_id = $grade";
+    $sqlquery = "SELECT * FROM master_group WHERE grade_id = $grade AND active = 1";
     $text = "--Select Group--";
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
@@ -65,9 +65,9 @@ function get_day_hours($grade = 0, $group = 0, $week_day = 0){
 
     $value_list = substr($values, 0, -1);
     if($filter != 0){
-        $conditional = "WHERE day_hour_id NOT IN(" .$value_list. ")";
+        $conditional = "WHERE day_hour_id NOT IN(" .$value_list. ") AND active = 1";
     }else{
-        $conditional = "";
+        $conditional = "WHERE active = 1";
     }
 
     $sqlquery = "SELECT * FROM master_day_hour $conditional";
@@ -109,13 +109,13 @@ function get_courses($group = 0, $only = 0){
     $value_list = substr($values, 0, -1);
     if($filter != 0){
         if($only == 1){
-            $conditional = "WHERE course_id IN(" .$value_list. ")";
+            $conditional = "WHERE course_id IN(" .$value_list. ") AND active = 1";
         }else{
-            $conditional = "WHERE course_id NOT IN(" .$value_list. ")";
+            $conditional = "WHERE course_id NOT IN(" .$value_list. ") AND active = 1";
         }
 
     }else{
-        $conditional = "";
+        $conditional = "WHERE active = 1";
     }
 
     $sqlquery = "SELECT * FROM master_course $conditional";
@@ -186,7 +186,7 @@ function get_teachers($week_day = 0, $day_hour = 0, $course = 0, $only = 0){
 
     $value_list1 = substr($values1, 0, -1);
 
-    $sqlquery = "SELECT * FROM master_users WHERE idx IN($value_list1) AND role_idx = 3";
+    $sqlquery = "SELECT * FROM master_users WHERE idx IN($value_list1) AND role_idx = 3 AND active = 1";
     $teachers_dd = "";
 
     if(!$results = $objmydbcon->get_result_set($sqlquery)){

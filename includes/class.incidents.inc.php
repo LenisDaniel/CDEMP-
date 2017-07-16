@@ -172,6 +172,7 @@ class Incidents{
                 $label_color = "success";
             break;
             case "Absent":
+            case "Leave Class":
                 $label_color = "danger";
                 break;
             case "Tardiness":
