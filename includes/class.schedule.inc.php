@@ -37,7 +37,6 @@ class Schedule{
                      GROUP BY st.grade_id, st.group_id, st.course_id, st.day_hour_id, st.teacher_id";
 
 
-
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results) > 0){
