@@ -7,6 +7,7 @@ function get_appointment_notifications($id, $role){
     global $objmydbcon;
 
     $sqlquery = "SELECT * FROM appointments WHERE date_with = $id ORDER BY created_date DESC LIMIT 20";
+
     $appointment_uri = get_appointment_uri($role);
     $notication_items = "";
 
