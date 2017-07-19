@@ -91,6 +91,7 @@ if(isset($_GET['grade_id']) && isset($_GET['group_id']) && isset($_GET['course_i
 }
 
 $objtemplate->set_content('grade_identifiers_dd', get_grade_identifiers($grade_id, $group_id, $course_id, $teacher_id));
+$objtemplate->set_content('course_name', get_course_name($course_id));
 
 if(isset($_POST) && $_POST['form_action1'] == 1 && $_POST != ""){
 
