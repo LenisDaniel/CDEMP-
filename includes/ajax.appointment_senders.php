@@ -5,6 +5,7 @@ $objmydbcon = new classmydbcon;
 $get_admins = 0;
 $users_td = "";
 $i = 0;
+
 if(isset($_POST)){
     extract($_POST);
 
@@ -15,16 +16,17 @@ if(isset($_POST)){
             return false;
         }else if(mysqli_num_rows($results) > 0){
             while($rs = mysqli_fetch_assoc($results)){
+                extract($rs);
                 $users_td .= '<tr>
                               <td><input type="checkbox" class="checkbox" name="chk_'.$i.'"></td>
                               <td id="chk_'.$i.'"><input type="hidden" name="txt_name_'.$i.'" value="'.$rs['idx'].'">'.$rs['first_name']. " " . $rs['last_name'] .  '</td>
                               </tr>';
                 $i++;
+                //$users_td .= "<option value='$idx'>".$first_name . " " . $last_name ."</option>";
             }
         }else{
             return 0;
         }
-
 
     }else{
 
@@ -35,11 +37,13 @@ if(isset($_POST)){
             return false;
         }else if(mysqli_num_rows($results) > 0){
             while($rs = mysqli_fetch_assoc($results)){
+                extract($rs);
                 $users_td .= '<tr>
                               <td><input type="checkbox" class="checkbox" name="chk_'.$i.'"></td>
                               <td id="chk_'.$i.'"><input type="hidden" name="txt_name_'.$i.'" value="'.$rs['idx'].'">'.$rs['first_name'].'</td>
                               </tr>';
                 $i++;
+                //$users_td .= "<option value='$idx'>".$first_name . " " . $last_name ."</option>";
             }
         }else{
             return 0;

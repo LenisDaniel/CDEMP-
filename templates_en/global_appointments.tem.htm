@@ -138,6 +138,26 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!--<div class="row">-->
+                    <!--<div class="col-md-6">-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="control-label col-md-3">Sender List:</label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<select class="form-group" name="users_list[]" id="users_list" multiple="multiple">-->
+                                    <!--<option value="-1">&#45;&#45;Select One&#45;&#45;</option>-->
+                                    <!--<option value="2">&#45;&#45;Select One&#45;&#45;</option>-->
+                                    <!--<option value="3">&#45;&#45;Select One&#45;&#45;</option>-->
+                                    <!--<option value="4">&#45;&#45;Select One&#45;&#45;</option>-->
+                                <!--</select>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+
                 <input type="hidden" name="unique_number" value="{unique_number}">
                 <br/>
             </div>
@@ -275,7 +295,14 @@
 
         $('#appoint_time').timepicker();
 
+//        $('#users_list').multiselect({
+//            includeSelectAllOption: true
+//        });
+
     });
+
+
+
 
     $('#users_type').change(function(){
 
@@ -300,7 +327,9 @@
                 method: 'POST',
                 data: {'get_admins': 1, 'user_type': user_type},
 
+
                 success:  function (response) {
+                    //alert(response);
 
                     $('#users_list').html(response);
                 }
@@ -322,9 +351,10 @@
             data: {'get_admins': 0, 'user_type': user_type, 'group_id': group},
 
             success:  function (response) {
-                //alert(response);
+
                 $('#users_list').html(response);
             }
+
         });
 
     });
@@ -340,8 +370,5 @@
         }
 
     });
-
-
-
 
 </script>
