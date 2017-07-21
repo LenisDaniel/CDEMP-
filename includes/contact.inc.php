@@ -24,14 +24,15 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
 
     $mail = new PHPMailer();
     //$mail->SMTPDebug = 1;
-    //$mail->isSMTP();
+    $mail->isSMTP();
+    $mail->Mailer = "smtp";
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'mail.smtp2go.com';
     $mail->SMTPAuth = true;
-    $mail->Port = 2525;
+    $mail->Port = 587;
     $mail->Username = 'lenis.daniel@gmail.com';
     $mail->Password = '2bdrNC0hQ2hw';
-    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPSecure = 'tls';
 
     $mail->setFrom('info@cdemp-pr.com', 'CDEMP Response');
     $mail->addAddress($email);
