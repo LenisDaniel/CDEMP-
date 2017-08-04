@@ -514,8 +514,23 @@ var Charts = function () {
 
         },
 
-        initBarCharts: function () {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        initBarCharts: function () {
             // bar chart:
             var data = GenerateSeries(0);
      
@@ -568,7 +583,7 @@ var Charts = function () {
                 [10, 10], [20, 20], [30, 30], [40, 40], [50, 50]
             ];
          
-            var options = {
+            var optionsss = {
                     series:{
                         bars:{show: true}
                     },
@@ -588,6 +603,21 @@ var Charts = function () {
          
             $.plot($("#chart_1_2"), [data1], options);  
         },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         initPieCharts: function () {
 
