@@ -532,23 +532,39 @@ var Charts = function () {
 
         initBarCharts: function () {
             // bar chart:
-            var data = GenerateSeries(0);
-     
-            function GenerateSeries(added){
+
+            $.ajax({
+                url: 'includes/ajax.graphics.php',
+                method: 'POST',
+                data: {'absences': 1},
+                async:false,
+
+                success: function(response){
+                    absences = jQuery.parseJSON(response);
+                }
+
+            });
+
+            var data = GenerateSeries(0, absences);
+            function GenerateSeries(added, absences){
+
                 var data = [];
                 var start = 100 + added;
                 var end = 200 + added;
-         
-                for(i=1;i<=20;i++){        
-                    var d = Math.floor(Math.random() * (end - start + 1) + start);        
-                    data.push([i, d]);
+                var d = absences;
+                var qty = absences.length;
+
+                for(i = 0; i < qty; i++){
+
+                    //var d = Math.floor(Math.random() * (end - start + 1) + start);
+                    data.push([i, d[i]]);
                     start++;
                     end++;
+
                 }
-         
                 return data;
             }
-         
+
             var options = {
                     series:{
                         bars:{show: true}
@@ -558,13 +574,17 @@ var Charts = function () {
                                     lineWidth: 0, // in pixels
                                     shadowSize: 0,
                                     align: 'left'
-                    },            
-
+                    },
                     grid:{
                          tickColor: "#eee",
                                 borderColor: "#eee",
                                 borderWidth: 1
+                    },
+
+                    xaxis: {
+                        ticks: [[0,'10-1'],[1,'10-2'],[2,'10-3'], [3,'11-1'], [4,'11-2'], [5,'11-3'], [6,'12-1'], [7,'12-2'], [8,'12-3'], [9,'PEA']]
                     }
+
             };
  
             $.plot($("#chart_1_1"),
@@ -577,13 +597,16 @@ var Charts = function () {
              }]
              , options);
 
-            // horizontal bar chart:
 
+
+
+
+            // horizontal bar chart:
             var data1 = [
                 [10, 10], [20, 20], [30, 30], [40, 40], [50, 50]
             ];
          
-            var optionsss = {
+            var options = {
                     series:{
                         bars:{show: true}
                     },
