@@ -148,6 +148,7 @@ if(isset($_SESSION['loged_user'])){
             $objtemplate->set_content("teachers_visible","style='display:none'");
             $objtemplate->set_content("students_visible", "style='display:none'");
             $objtemplate->set_content("settings_visible", "style='display:none'");
+            $objtemplate->set_content("my_profile_visible", "style='display:none'");
             $objtemplate->set_content("appointments_uri", "display_page.php?tpl=global_appointments&cat=3");
             break;
 
@@ -156,6 +157,7 @@ if(isset($_SESSION['loged_user'])){
             $objtemplate->set_content("tecnicians_visible","style='display:none'");
             $objtemplate->set_content("students_visible", "style='display:none'");
             $objtemplate->set_content("settings_visible", "style='display:none'");
+            $objtemplate->set_content("my_profile_visible", "style='display:none'");
             $objtemplate->set_content("appointments_uri", "display_page.php?tpl=teacher_appointments&cat=4");
             break;
 
@@ -164,6 +166,7 @@ if(isset($_SESSION['loged_user'])){
             $objtemplate->set_content("tecnicians_visible","style='display:none'");
             $objtemplate->set_content("teachers_visible", "style='display:none'");
             $objtemplate->set_content("settings_visible", "style='display:none'");
+            $objtemplate->set_content("my_profile_visible", "");
             $objtemplate->set_content("appointments_uri", "display_page.php?tpl=student_appointments&cat=5");
             break;
 
@@ -173,6 +176,7 @@ if(isset($_SESSION['loged_user'])){
             $objtemplate->set_content("teachers_visible","style='display:none'");
             $objtemplate->set_content("students_visible", "style='display:none'");
             $objtemplate->set_content("settings_visible", "");
+            $objtemplate->set_content("my_profile_visible", "style='display:none'");
             $objtemplate->set_content("appointments_uri", "display_page.php?tpl=global_appointments&cat=3");
 
             break;

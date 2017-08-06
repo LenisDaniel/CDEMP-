@@ -1,0 +1,172 @@
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row profile">
+    <div class="col-md-12">
+        <!--BEGIN TABS-->
+        <div class="tabbable tabbable-custom tabbable-full-width">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#tab_1_1" data-toggle="tab">
+                        Student Info </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1_1">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <ul class="list-unstyled profile-nav">
+                                <li>
+                                    <img src="assets2/admin/pages/media/profile/profile-img.png" class="img-responsive" alt=""/>
+                                    <!--<a href="#" class="profile-edit">-->
+                                        <!--edit -->
+                                    <!--</a>-->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-8 profile-info">
+                                    <h1>{student_name}</h1>
+                                    <p>
+                                        {student_address}
+                                    </p>
+                                </div>
+                                <!--end col-md-8-->
+                                <div class="col-md-4">
+                                    <div class="portlet sale-summary">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                Student Status
+                                            </div>
+                                        </div>
+                                        <div class="portlet-body">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <span class="sale-info">
+                                                        Grade <i class="fa fa-img-up"></i>
+                                                    </span>
+                                                    <span class="sale-num">
+                                                        {grade}
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="sale-info">
+                                                        Group <i class="fa fa-img-down"></i>
+                                                    </span>
+                                                    <span class="sale-num">
+                                                        {group}
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="sale-info">
+                                                        Status
+                                                    </span>
+                                                    <span class="sale-num">
+                                                        Active
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="sale-info">
+                                                        Phone
+                                                    </span>
+                                                    <span class="sale-num">
+                                                        {phone}
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end col-md-4-->
+                            </div>
+                            <br/>
+                            <br/>
+                            <!--end row-->
+                            <div class="tabbable tabbable-custom tabbable-custom-profile" >
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#tab_1_11" data-toggle="tab">
+                                            Schedule </a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_1_22" data-toggle="tab">
+                                            Emergency Contacts </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_1_11">
+                                        <div class="portlet-body">
+                                            <table class="table table-striped table-bordered table-advance table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-calendar"></i> Week Days
+                                                    </th>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-clock-o"></i> Hours
+                                                    </th>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-newspaper-o"></i> Course
+                                                    </th>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-user-circle"></i> Teacher
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {schedule_data}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--tab-pane-->
+                                    <div class="tab-pane" id="tab_1_22">
+                                        <div class="tab-pane active" id="tab_1_1_1">
+                                            <table class="table table-striped table-bordered table-advance table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-id-badge"></i> Contact Name
+                                                    </th>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-phone"></i> Primary Phone
+                                                    </th>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-phone"></i> Second Phone
+                                                    </th>
+                                                    <th>
+                                                        &nbsp;<i class="fa fa-envelope"></i> Email
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        {parent_name}
+                                                    </td>
+                                                    <td>
+                                                        {phone1}
+                                                    </td>
+                                                    <td>
+                                                        {phone2}
+                                                    </td>
+                                                    <td>
+                                                        {email}
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--tab-pane-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end tab-pane-->
+            </div>
+        </div>
+        <!--END TABS-->
+    </div>
+</div>

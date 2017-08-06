@@ -53,6 +53,7 @@
 
 	<link href="assets2/global/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
 	<link href="assets2/admin/pages/css/portfolio.css" rel="stylesheet" type="text/css"/>
+	<link href="assets2/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
 	<link href="assets2/global/css/multi-select-edited.css" rel="stylesheet" type="text/css"/>
 	<link href="assets2/global/css/bootstrap-table.css" rel="stylesheet" type="text/css"/>
 	<link href="assets2/global/css/jquery.datetimepicker.css" rel="stylesheet" type="text/css"/>
@@ -159,10 +160,10 @@
 						<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<!--<li>-->
-							<!--<a href="display_page.php?tpl=my_profile">-->
-								<!--<i class="icon-user"></i> My Profile </a>-->
-						<!--</li>-->
+						<li {my_profile_visible}>
+							<a href="display_page.php?tpl=my_profile">
+								<i class="icon-user"></i> My Profile </a>
+						</li>
 						<li>
 							<a href="display_page.php?tpl=calendar&cat=1">
 								<i class="icon-calendar"></i> My Calendar </a>
