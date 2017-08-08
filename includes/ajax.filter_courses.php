@@ -27,12 +27,12 @@ function get_courses($group_id = 0, $teacher_id = 0, $course_id = 0){
     $text = "--Select Course--";
 
     //    if($group_id != "-1"){
-//        $sqlquery = "SELECT * FROM schedules_teacher WHERE group_id = $group_id AND teacher_id = $teacher_id";
-//        $text = "--Select one Course--";
-//    }else{
-//        $sqlquery = "SELECT * FROM master_zipcode ORDER BY zip ASC";
-//        $text = "--Select one city first--";
-//    }
+    //        $sqlquery = "SELECT * FROM schedules_teacher WHERE group_id = $group_id AND teacher_id = $teacher_id";
+    //        $text = "--Select one Course--";
+    //    }else{
+    //        $sqlquery = "SELECT * FROM master_zipcode ORDER BY zip ASC";
+    //        $text = "--Select one city first--";
+    //    }
 
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;

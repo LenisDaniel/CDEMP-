@@ -4,7 +4,6 @@ error_reporting(E_ERROR);
 require_once("class.config_records.inc.php");
 
 $objconfig = new ConfigRecords();
-
 $objtemplate->set_content("states_td", $objconfig->get_all_config('set_states', 'state', 6));
 
 if(isset($_GET['edit'])){

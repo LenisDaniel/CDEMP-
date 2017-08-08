@@ -43,7 +43,7 @@ class Events{
                 $idu = base64_encode($this->event_info[0]);
 
                 $this->events_td_info .= "<tr id='tr$i' class='odd gradeX'>";
-                $this->events_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=6&edit=$idu'>" . $this->event_info[0]. "</a></td>";
+                $this->events_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=3&edit=$idu'>" . $this->event_info[0]. "</a></td>";
                 $this->events_td_info .= "<td>" . $this->event_info[1]. "</td>";
                 $this->events_td_info .= "<td>" . $this->event_info[2]. "</td>";
                 $this->events_td_info .= "<td>" . $this->event_info[3]. "</td>";
