@@ -21,7 +21,7 @@ class My_Profile
                      JOIN master_group mgrp ON mgrp.group_id = sg.group_id
                      JOIN master_grade mgde ON mgde.grade_id = mgrp.grade_id
                      JOIN master_cities mc ON mc.city_id = mu.city
-                     JOIN master_state ms ON ms.state_idx = mu.state
+                     JOIN master_state ms ON ms.state_id = mu.state
                      JOIN master_zipcode mz ON mz.zip_id = mu.zipcode
                      WHERE mu.idx = $student_id";
 
@@ -41,7 +41,6 @@ class My_Profile
         }else{
             return 0;
         }
-
         return $student_info;
     }
 
@@ -49,7 +48,6 @@ class My_Profile
         global $objmydbcon;
 
         $sqlquery = "SELECT group_id FROM students_groups WHERE student_id = 4";
-
         if(!$result = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($result) > 0){
@@ -89,7 +87,6 @@ class My_Profile
         }else{
             return 0;
         }
-
         return $this->schedule_td;
     }
 

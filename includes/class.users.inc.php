@@ -205,7 +205,7 @@ class Users{
             return false;
         }else if(mysqli_num_rows($results)>0){
             while($rs = mysqli_fetch_assoc($results)){
-                $val = $rs['state_idx'];
+                $val = $rs['state_id'];
                 $disp = $rs['state_descr'];
 
                 if($user_state == $val){

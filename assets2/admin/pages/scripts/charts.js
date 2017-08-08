@@ -570,7 +570,7 @@ var Charts = function () {
                         bars:{show: true}
                     },
                     bars:{
-                                    barWidth: 0.8,
+                                    barWidth: 0.5,
                                     lineWidth: 0, // in pixels
                                     shadowSize: 0,
                                     align: 'left'
