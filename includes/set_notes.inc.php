@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.notes.inc.php");
 
 $objbehavior = new Notes();

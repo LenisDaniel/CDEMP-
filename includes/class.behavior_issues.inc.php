@@ -33,7 +33,7 @@ class Behaviors{
                 $this->behavior_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=6&edit=$idu'>" . $this->behavior_info[0]. "</a></td>";
                 $this->behavior_td_info .= "<td>" . $this->behavior_info[1]. "</td>";
                 $this->behavior_td_info .= "<td>" . $this->behavior_info[2]. "</td>";
-                $this->behavior_td_info .= "<td>" . $this->behavior_info[3]. "</td>";
+                $this->behavior_td_info .= "<td>Active</td>";
                 $this->behavior_td_info .= "</tr>";
 
             }
@@ -57,7 +57,9 @@ class Behaviors{
 //        echo $active . "<br>";//
 //        exit;
 
-        if(!$active == "1"){
+        if($active == 1){
+            $active = 1;
+        }else{
             $active = 0;
         }
 
@@ -66,7 +68,7 @@ class Behaviors{
             $sqlupdate = "UPDATE master_incidents SET incident_descr = '$behavior', classification_id = $classification_dd, active = '$active' WHERE incident_id = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=6");
                 return true;
             }else{
                 return false;
@@ -78,7 +80,7 @@ class Behaviors{
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2&edit=" . base64_encode($last_id));
+                header("location: display_page.php?tpl=$tpl_uri&cat=6");
                 return true;
             }else{
                 return false;

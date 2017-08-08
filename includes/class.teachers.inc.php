@@ -42,12 +42,12 @@ class Teachers extends Users {
         return $teachers_dd;
     }
 
-    function get_teacher_selected_courses($teacher_id){
+    function get_teacher_selected_courses($teacher_id, $limit_start = '', $limit_end = ''){
         global $objmydbcon;
         $course_id = array();
         $i = 0;
 
-        $sqlquery = "SELECT course_id FROM course_teacher WHERE teacher_id = $teacher_id";
+        $sqlquery = "SELECT course_id FROM course_teacher WHERE teacher_id = $teacher_id AND created_date >= '$limit_start' AND created_date <= '$limit_end'";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return "Connection Problems";

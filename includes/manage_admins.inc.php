@@ -1,35 +1,39 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
+header('Content-Type: text/html; charset=utf-8');
 require_once("class.admins.inc.php");
 
-$objadministrator = new Administrator();
+$objadmins = new Administrator();
 
-$objtemplate->set_content("administrator_td", $objadministrator->get_all_users($role = 1, $tpl_uri = 'manage_admins'));
+$objtemplate->set_content("administrator_td", $objadmins->get_all_users($role = 1, $tpl_uri = 'manage_admins'));
 
 if(isset($_GET['edit'])){
 
     $idx = base64_decode($_GET['edit']);
-    $objadministrator->get_user($idx);
+    $objadmins->get_user($idx);
     $objtemplate->set_content("form_action", "display_page.php?tpl=manage_admins&cid=".base64_encode($idx));
     $objtemplate->set_content("form_title", "Update Administrators Info");
     $objtemplate->set_content("send_button", "Update");
 
     //aqui llenamos el formulario con la info de la base de datos
-    $objtemplate->set_content("first_name", $objadministrator->get_user_info('first_name'));
-    $objtemplate->set_content("last_name", $objadministrator->get_user_info('last_name'));
-    $objtemplate->set_content("second_surname", $objadministrator->get_user_info('second_surname'));
-    $objtemplate->set_content("email", $objadministrator->get_user_info('email'));
-    $objtemplate->set_content("password", $objadministrator->get_user_info('password'));
-    $objtemplate->set_content("address1", $objadministrator->get_user_info('address1'));
-    $objtemplate->set_content("address2", $objadministrator->get_user_info('address2'));
-    $objtemplate->set_content("cities_dd", $objadministrator->get_cities($objadministrator->get_user_info('city')));
-    $objtemplate->set_content("states_dd", $objadministrator->get_state($objadministrator->get_user_info('state')));
-    $objtemplate->set_content("phone_1", $objadministrator->get_user_info('phone_1'));
-    $objtemplate->set_content("phone_2", $objadministrator->get_user_info('phone_2'));
-    $objtemplate->set_content("zipcodes_dd", $objadministrator->get_zipcodes($objadministrator->get_user_info('zipcode')));
+    $objtemplate->set_content("first_name", $objadmins->get_user_info('first_name'));
+    $objtemplate->set_content("last_name", $objadmins->get_user_info('last_name'));
+    $objtemplate->set_content("second_surname", $objadmins->get_user_info('second_surname'));
+    $objtemplate->set_content("email", $objadmins->get_user_info('email'));
+    $objtemplate->set_content("username", $objadmins->get_user_info('username'));
+    $objtemplate->set_content("db_username", $objadmins->get_user_info('username'));
+    $objtemplate->set_content("username_validate", 1);
+    $objtemplate->set_content("password", $objadmins->get_user_info('password'));
+    $objtemplate->set_content("address1", $objadmins->get_user_info('address1'));
+    $objtemplate->set_content("address2", $objadmins->get_user_info('address2'));
+    $objtemplate->set_content("cities_dd", $objadmins->get_cities($objadmins->get_user_info('city')));
+    $objtemplate->set_content("states_dd", $objadmins->get_state($objadmins->get_user_info('state')));
+    $objtemplate->set_content("phone_1", $objadmins->get_user_info('phone_1'));
+    $objtemplate->set_content("phone_2", $objadmins->get_user_info('phone_2'));
+    $objtemplate->set_content("zipcodes_dd", $objadmins->get_zipcodes($objadmins->get_user_info('zipcode')));
 
-    if($objadministrator->get_user_info('active') == 1){
+    if($objadmins->get_user_info('active') == 1){
         $objtemplate->set_content("option1", "checked");
     }else{
         $objtemplate->set_content("option2", "checked");
@@ -38,9 +42,9 @@ if(isset($_GET['edit'])){
 }else{
 
     $objtemplate->set_content("form_action", "display_page.php?tpl=manage_admins&cid=".base64_encode(0));
-    $objtemplate->set_content("cities_dd", $objadministrator->get_cities(0));
-    $objtemplate->set_content("states_dd", $objadministrator->get_state(0));
-    $objtemplate->set_content("zipcodes_dd", $objadministrator->get_zipcodes(0));
+    $objtemplate->set_content("cities_dd", $objadmins->get_cities(0));
+    $objtemplate->set_content("states_dd", $objadmins->get_state(0));
+    $objtemplate->set_content("zipcodes_dd", $objadmins->get_zipcodes(0));
     $objtemplate->set_content("form_title", "Create New Administrator");
     $objtemplate->set_content("send_button", "Submit");
     $objtemplate->set_content("option1", "checked");
@@ -70,6 +74,7 @@ if(isset($_GET['cid'])) {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $second_surname = $_POST['second_surname'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
     $address1 = $_POST['address1'];
@@ -82,5 +87,5 @@ if(isset($_GET['cid'])) {
     $active = $_POST['active'];
     $role_idx = 1;
 
-    $objadministrator->manage_user_info('manage_admins', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
+    $objadmins->manage_user_info('manage_admins', $id, $first_name, $last_name, $second_surname, $username, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
 }

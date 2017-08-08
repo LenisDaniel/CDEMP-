@@ -1,6 +1,4 @@
 var Calendar = function () {
-
-
     return {
         //main function to initiate the module
         init: function () {
@@ -78,6 +76,8 @@ var Calendar = function () {
                 initDrag(html);
             }
 
+
+
             $('#external-events div.external-event').each(function () {
                 initDrag($(this))
             });
@@ -95,6 +95,18 @@ var Calendar = function () {
             addEvent("My Event 4");
             addEvent("My Event 5");
             addEvent("My Event 6");
+
+
+            $.ajax({
+                url: 'includes/ajax.calendar_events.php',
+                type: 'POST', // Send post data
+                data: 'type=fetch',
+                async: false,
+                success: function(response){
+                    //alert(response);
+                    json_events = response;
+                }
+            });
 
             $('#calendar').fullCalendar('destroy'); // destroy the calendar
             $('#calendar').fullCalendar({ //re-initialize the calendar
@@ -125,49 +137,85 @@ var Calendar = function () {
                         $(this).remove();
                     }
                 },
-                events: [{
-                        title: 'All Day Event',                        
-                        start: new Date(y, m, 1),
-                        backgroundColor: Metronic.getBrandColor('yellow')
-                    }, {
-                        title: 'Long Event',
-                        start: new Date(y, m, d - 5),
-                        end: new Date(y, m, d - 2),
-                        backgroundColor: Metronic.getBrandColor('green')
-                    }, {
-                        title: 'Repeating Event',
-                        start: new Date(y, m, d - 3, 16, 0),
-                        allDay: false,
-                        backgroundColor: Metronic.getBrandColor('red')
-                    }, {
-                        title: 'Repeating Event',
-                        start: new Date(y, m, d + 4, 16, 0),
-                        allDay: false,
-                        backgroundColor: Metronic.getBrandColor('green')
-                    }, {
-                        title: 'Meeting',
-                        start: new Date(y, m, d, 10, 30),
-                        allDay: false,
-                    }, {
-                        title: 'Lunch',
-                        start: new Date(y, m, d, 12, 0),
-                        end: new Date(y, m, d, 14, 0),
-                        backgroundColor: Metronic.getBrandColor('grey'),
-                        allDay: false,
-                    }, {
-                        title: 'Birthday Party',
-                        start: new Date(y, m, d + 1, 19, 0),
-                        end: new Date(y, m, d + 1, 22, 30),
-                        backgroundColor: Metronic.getBrandColor('purple'),
-                        allDay: false,
-                    }, {
-                        title: 'Click for Google',
-                        start: new Date(y, m, 28),
-                        end: new Date(y, m, 29),
-                        backgroundColor: Metronic.getBrandColor('yellow'),
-                        url: 'http://google.com/',
-                    }
-                ]
+
+                events: JSON.parse(json_events),
+                // events: [{
+                //         title: 'All Day Event',
+                //         start: new Date(y, m, 1),
+                //         backgroundColor: Metronic.getBrandColor('yellow')
+                //     }, {
+                //         title: 'Long Event',
+                //         start: new Date(y, m, d - 5),
+                //         end: new Date(y, m, d - 2),
+                //         backgroundColor: Metronic.getBrandColor('green')
+                //     }, {
+                //         title: 'Repeating Event',
+                //         start: new Date(y, m, d - 3, 16, 0),
+                //         allDay: false,
+                //         backgroundColor: Metronic.getBrandColor('red')
+                //     }, {
+                //         title: 'Repeating Event',
+                //         start: new Date(y, m, d + 4, 16, 0),
+                //         allDay: false,
+                //         backgroundColor: Metronic.getBrandColor('green')
+                //     }, {
+                //         title: 'Meeting',
+                //         start: new Date(y, m, d, 10, 30),
+                //         allDay: false,
+                //     }, {
+                //         title: 'Lunch',
+                //         start: new Date(y, m, d, 12, 0),
+                //         end: new Date(y, m, d, 14, 0),
+                //         backgroundColor: Metronic.getBrandColor('grey'),
+                //         allDay: false,
+                //     }, {
+                //         title: 'Birthday Party',
+                //         start: new Date(y, m, d + 1, 19, 0),
+                //         end: new Date(y, m, d + 1, 22, 30),
+                //         backgroundColor: Metronic.getBrandColor('purple'),
+                //         allDay: false,
+                //     }, {
+                //         title: 'Click for Google',
+                //         start: new Date(y, m, 28),
+                //         end: new Date(y, m, 29),
+                //         backgroundColor: Metronic.getBrandColor('yellow'),
+                //         url: 'http://google.com/',
+                //     },
+                //     {
+                //         title: 'test',
+                //         start: '2017-06-25 12:00',
+                //         end: '2017-06-25T07:00',
+                //         backgroundColor: Metronic.getBrandColor('yellow'),
+                //         allDay:false,
+                //     }
+                // ]
+
+                eventClick: function(event){
+
+                    var type_id = event.type_id;
+                    var id = event.id;
+
+                    $.ajax({
+                        url: 'includes/ajax.calendar_events.php',
+                        type: 'POST',
+                        data: {'type': 'detail', 'type_id': type_id, 'event_id': id},
+
+                        success: function(response){
+
+                            var data = JSON.parse(response)
+
+
+                            $('#myModal').modal('show');
+                            $('#title').val(data['title']);
+                            $('#date').val(data['date']);
+                            $('#description').text(data['details']);
+
+                        }
+
+                    });
+
+                }
+
             });
 
         }

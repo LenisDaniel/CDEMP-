@@ -1,5 +1,5 @@
 <?php
-
+require_once ('friendly_date.php');
 /**
  * Created by PhpStorm.
  * User: Lenis Rivera
@@ -23,10 +23,20 @@ class Users{
         global $objmydbcon;
 
         $i = 0;
-        $sqlquery = "SELECT mu.idx, mu.first_name, mu.last_name, mu.second_surname, mu.email, mu.phone_1, mc.name, mu.active, mu.created_date 
-                     FROM master_users mu 
-                     INNER JOIN master_cities mc on mc.city_id = mu.city
-                     WHERE role_idx = $role";
+        if($role == 4){
+            $sqlquery = "SELECT mu.idx, mu.first_name, mu.last_name, mu.second_surname, mu.email, mu.phone_1, mc.name, mu.active, mu.created_date, sg.group_id, mg.group_descr
+                         FROM master_users mu 
+                         INNER JOIN master_cities mc on mc.city_id = mu.city
+                         JOIN students_groups sg ON sg.student_id = mu.idx
+                         JOIN master_group mg ON mg.group_id = sg.group_id
+                         WHERE mu.role_idx = $role AND mu.active = 1";
+        }else{
+            $sqlquery = "SELECT mu.idx, mu.first_name, mu.last_name, mu.second_surname, mu.email, mu.phone_1, mc.name, mu.active, mu.created_date 
+                         FROM master_users mu 
+                         INNER JOIN master_cities mc on mc.city_id = mu.city
+                         WHERE role_idx = $role AND active = 1";
+        }
+
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
@@ -43,8 +53,14 @@ class Users{
                 $this->user_td_info .= "<td>" . $this->user_info[4]. "</td>";
                 $this->user_td_info .= "<td>" . $this->user_info[5]. "</td>";
                 $this->user_td_info .= "<td>" . $this->user_info[6]. "</td>";
-                $this->user_td_info .= "<td>" . $this->user_info[7]. "</td>";
-                $this->user_td_info .= "<td>" . $this->user_info[8]. "</td>";
+                if($role == 4){
+                    $this->user_td_info .= "<td>" . $this->user_info[10]. "</td>";
+                    $this->user_td_info .= "<td>Active</td>";
+                }else{
+                    $this->user_td_info .= "<td>Active</td>";
+                }
+
+                $this->user_td_info .= "<td>" . friendly_date($this->user_info[8]). "</td>";
                 $this->user_td_info .= "</tr>";
 
             }
@@ -59,57 +75,49 @@ class Users{
 
     }
 
-    function manage_user_info($tpl_uri = 0, $id = 0, $first_name = "", $last_name = "", $second_surname = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0, $parent_1 = "", $parent_2 = "", $phone_1_carrier = "", $phone_2_carrier = ""){
+    function manage_user_info($tpl_uri = 0, $id = 0, $first_name = "", $last_name = "", $second_surname = "", $username = "", $password = "", $email = "", $address1 = "", $address2 = "", $phone_1 = "", $phone_2 = "", $cities_dd = "", $states_dd = "", $zipcode = "", $active = 0, $role_idx = 0, $parent_1 = "", $parent_2 = "", $phone_1_carrier = "", $phone_2_carrier = ""){
         global $objmydbcon;
 
-//        echo $id . "<br/>";
-//        echo $first_name . "<br/>";
-//        echo $last_name . "<br/>";
-//        echo $second_surname . "<br/>";
-//        echo $password . "<br/>";
-//        echo $email . "<br/>";
-//        echo $address1 . "<br/>";
-//        echo $address2 . "<br/>";
-//        echo $phone_1 . "<br/>";
-//        echo $phone_2 . "<br/>";
-//        echo $cities_dd . "<br/>";
-//        echo $states_dd . "<br/>";
-//        echo $zipcode . "<br/>";
-//        echo $active . "<br/>";
-//        echo $role_idx . "<br/>";//
-//        exit;
-
-        if(!$active == "1"){
+        if($active == 1){
+            $active = 1;
+        }else{
             $active = 0;
         }
 
-        if(strlen($password) != 32){
-            $password = md5($password);
-        }
+//        if(strlen($password) != 32){
+//            $password = md5($password);
+//        }
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE master_users SET first_name = '$first_name', last_name = '$last_name', second_surname = '$second_surname', password = '$password', email = '$email',
+            $sqlupdate = "UPDATE master_users SET first_name = '$first_name', last_name = '$last_name', second_surname = '$second_surname', username = '$username', password = '$password', email = '$email',
 			address1 = '$address1', address2 = '$address2', phone_1 = '$phone_1', phone_2 = '$phone_2', city = '$cities_dd', state = '$states_dd', zipcode = '$zipcode', active = '$active', role_idx = '$role_idx',
 			parent_1 = '$parent_1', parent_2 = '$parent_2', phone_1_carrier = '$phone_1_carrier', phone_2_carrier = '$phone_2_carrier'
 			WHERE idx = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
-                header("location: display_page.php?tpl=$tpl_uri&cat=2");
-                return true;
+                if($role_idx == 1 || $role_idx == 2 || $role_idx == 3){
+                    header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                }else{
+                    return $id;
+                }
             }else{
                 return false;
             }
 
         }else{
 
-            $sqlinsert = "INSERT INTO master_users (first_name, last_name, second_surname, password, email, address1, address2, phone_1, phone_2, zipcode, city, state, active, role_idx, parent_1, parent_2, phone_1_carrier, phone_2_carrier) 
-			              VALUES('$first_name', '$last_name', '$second_surname', '$password', '$email', '$address1', '$address2', '$phone_1', '$phone_2', '$zipcode', '$cities_dd', '$states_dd', '$active', '$role_idx', '$parent_1', '$parent_2', '$phone_1_carrier', '$phone_2_carrier')";
+            $sqlinsert = "INSERT INTO master_users (first_name, last_name, second_surname, username, password, email, address1, address2, phone_1, phone_2, zipcode, city, state, active, role_idx, parent_1, parent_2, phone_1_carrier, phone_2_carrier) 
+			              VALUES('$first_name', '$last_name', '$second_surname', '$username', '$password', '$email', '$address1', '$address2', '$phone_1', '$phone_2', '$zipcode', '$cities_dd', '$states_dd', '$active', '$role_idx', '$parent_1', '$parent_2', '$phone_1_carrier', '$phone_2_carrier')";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
-                header("location: display_page.php?tpl=$tpl_uri&cat=2");
-                return true;
+                if($role_idx == 1 || $role_idx == 2 || $role_idx == 3){
+                    header("location: display_page.php?tpl=$tpl_uri&cat=2");
+                }else{
+                    return $last_id;
+                }
+
             }else{
                 return false;
             }

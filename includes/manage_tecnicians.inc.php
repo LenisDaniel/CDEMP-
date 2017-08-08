@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.tecnicians.inc.php");
 
 $objtecnicians = new Tecnicians();
@@ -20,6 +20,9 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("last_name", $objtecnicians->get_user_info('last_name'));
     $objtemplate->set_content("second_surname", $objtecnicians->get_user_info('second_surname'));
     $objtemplate->set_content("email", $objtecnicians->get_user_info('email'));
+    $objtemplate->set_content("username", $objtecnicians->get_user_info('username'));
+    $objtemplate->set_content("db_username", $objtecnicians->get_user_info('username'));
+    $objtemplate->set_content("username_validate", 1);
     $objtemplate->set_content("password", $objtecnicians->get_user_info('password'));
     $objtemplate->set_content("address1", $objtecnicians->get_user_info('address1'));
     $objtemplate->set_content("address2", $objtecnicians->get_user_info('address2'));
@@ -41,28 +44,12 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("cities_dd", $objtecnicians->get_cities(0));
     $objtemplate->set_content("states_dd", $objtecnicians->get_state(0));
     $objtemplate->set_content("zipcodes_dd", $objtecnicians->get_zipcodes(0));
+    $objtemplate->set_content("username_validate", 0);
     $objtemplate->set_content("form_title", "Create New Technician");
     $objtemplate->set_content("send_button", "Submit");
     $objtemplate->set_content("option1", "checked");
 
 }
-
-//    if(isset($_GET['delete'])){
-//        $idx = base64_decode($_GET['delete']);
-//        header("location: display_page.php?tpl=manage_admins&id=".base64_encode($idx)."&del=1");
-//    }
-//
-//    if(isset($_GET['del'])){
-//
-//        $del = $_GET['del'];
-//        $id = base64_decode($_GET['id']);
-//        $role = 1;
-//
-//        if($del == 2){
-//            $objusers->update_user_active($id, $role);
-//        }
-//
-//    }
 
 if(isset($_GET['cid'])){
 
@@ -72,6 +59,7 @@ if(isset($_GET['cid'])){
     $second_surname = $_POST['second_surname'];
     $password = $_POST['password'];
     $email = $_POST['email'];
+    $username = $_POST['username'];
     $address1 = $_POST['address1'];
     $address2 = $_POST['address2'];
     $phone_1 = $_POST['phone_1'];
@@ -82,6 +70,6 @@ if(isset($_GET['cid'])){
     $active = $_POST['active'];
     $role_idx = 2;
 
-    $objtecnicians->manage_user_info('manage_tecnicians', $id, $first_name, $last_name, $second_surname, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
+    $objtecnicians->manage_user_info('manage_tecnicians', $id, $first_name, $last_name, $second_surname, $username, $password, $email, $address1, $address2, $phone_1, $phone_2, $cities_dd, $states_dd, $zipcode, $active, $role_idx, $parent_1, $parent_2, 1, 1);
 
 }

@@ -1,0 +1,56 @@
+<div class="container" id="contenido">
+    {contenido}
+</div>
+<input type="hidden" id="mobile" value="{mobile}"/>
+
+<script>
+
+    $(document).ready(function(){
+
+        $('.comment_number').click(function(){
+            var id = this.id;
+
+            var event_id = $('#event_id_'+id).val();
+            var user_id = $('#user_id_'+id).val();
+            var message = $('#message_text_'+id).val();
+
+            $.ajax({
+                url: "includes/ajax.create_comment.php",
+                method: "POST",
+                data: {'event_id': event_id, 'user_id': user_id, 'message_text': message},
+
+                success: function(response){
+
+                    $('#comments_div_'+id).prepend(response);
+                    $('#message_text_'+id).val("");
+
+                }
+
+            })
+        });
+
+        if( $("#mobile").val() == 0 ){
+            var load = 0;
+            $(window).scroll(function() {
+                if($(window).scrollTop() + $(window).height() == $(document).height()) {
+
+                    load++;
+                    $.ajax({
+                        url: "includes/ajax.lazy_events.php",
+                        method: "POST",
+                        data: {'load': load},
+
+                        success: function(response){
+                            //alert(response);
+                            $('#contenido').append(response);
+                        }
+
+                    });
+
+                }
+            });
+        }
+
+    });
+
+</script>

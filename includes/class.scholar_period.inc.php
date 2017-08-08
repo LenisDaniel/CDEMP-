@@ -1,5 +1,5 @@
 <?php
-
+require_once ('friendly_date.php');
 class Scholar_Period{
 
     var $scholar_period_td_info;
@@ -18,7 +18,7 @@ class Scholar_Period{
         $i = 0;
         $sqlquery = "SELECT * 
                      FROM scholar_period                      
-                     WHERE active = 1";
+                     ";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
@@ -32,9 +32,14 @@ class Scholar_Period{
                 $this->scholar_period_td_info .= "<tr id='tr$i' class='odd gradeX'>";
                 $this->scholar_period_td_info .= "<td id='td$i'><a href='display_page.php?tpl=$tpl_uri&cat=6&edit=$idu'>" . $this->scholar_period_info[0]. "</a></td>";
                 $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[1]. "</td>";
-                $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[2]. "</td>";
-                $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[3]. "</td>";
-                $this->scholar_period_td_info .= "<td>" . $this->scholar_period_info[4]. "</td>";
+                $this->scholar_period_td_info .= "<td>" . friendly_date($this->scholar_period_info[2]) . "</td>";
+                $this->scholar_period_td_info .= "<td>" . friendly_date($this->scholar_period_info[3]) . "</td>";
+                if($this->scholar_period_info[4] == 1){
+                    $this->scholar_period_td_info .= "<td>Active</td>";
+                }else{
+                    $this->scholar_period_td_info .= "<td>Inactive</td>";
+                }
+
                 $this->scholar_period_td_info .= "</tr>";
 
             }
@@ -46,25 +51,18 @@ class Scholar_Period{
 
     }
 
-    function manage_scholar_period_info($tpl_uri = 0, $id = 0, $semester= "", $start_date = "", $end_date = 0, $active = 0){
+    function manage_scholar_period_info($tpl_uri = 0, $id = 0, $scholar_year= "", $start_date = "", $end_date = 0, $active = 0){
         global $objmydbcon;
 
-        //        echo $table . "<br>";
-        //        echo $field1 . "<br>";
-        //        echo $field2 . "<br>";
-        //        echo $tpl_uri . "<br>";
-        //        echo $descr . "<br>";
-        //        echo $id . "<br>";
-        //        echo $active . "<br>";
-        //        exit;
-
-        if(!$active == "1"){
+        if($active == 1){
+            $this->set_inactive_the_others($id);
+        }else{
             $active = 0;
         }
 
         if($id > 0){
 
-            $sqlupdate = "UPDATE scholar_period SET semester = '$semester', start_date = '$start_date', end_date = '$end_date', active = '$active' WHERE scholar_period_id = $id";
+            $sqlupdate = "UPDATE scholar_period SET scholar_year = '$scholar_year', start_date = '$start_date', end_date = '$end_date', active = $active WHERE scholar_period_id = $id";
 
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=6");
@@ -75,7 +73,7 @@ class Scholar_Period{
 
         }else{
 
-            $sqlinsert = "INSERT INTO scholar_period(semester, start_date, end_date, active)VALUES('$semester', '$start_date', '$end_date', $active)";
+            $sqlinsert = "INSERT INTO scholar_period(scholar_year, start_date, end_date, active)VALUES('$scholar_year', '$start_date', '$end_date', $active)";
 
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
@@ -122,6 +120,17 @@ class Scholar_Period{
 
         }
 
+    }
+
+    function set_inactive_the_others($id = 0){
+        global $objmydbcon;
+
+        $sqlupdate = "UPDATE scholar_period SET active = 0 WHERE scholar_period_id NOT IN($id)";
+        if($objmydbcon->set_query($sqlupdate)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }

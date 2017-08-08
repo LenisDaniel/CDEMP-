@@ -1,1 +1,420 @@
-<h3>Global Notes</h3>
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue-hoki">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-book"></i>Student Grades
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+
+                    <a href="javascript:;" class="reload"></a>
+
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="form-group">
+                            <form id="filter_fields" action="display_page.php?tpl=global_notes&filter=1" method="post">
+                                <div class="col-md-2 form-group">
+                                    <select class="form-control" id="sel_grade" name="sel_grade">
+                                        <option value="-1">Grade</option>
+                                        {grades_dd}
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <select class="form-control" id="sel_group" name="sel_group">
+                                        <option value="-1">Group</option>
+                                        {groups_dd}
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <select class="form-control" id="sel_course" name="sel_course">
+                                        <option value="-1">--Course--</option>
+                                        {courses_dd}
+                                    </select>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <select class="form-control" id="sel_teacher" name="sel_teacher">
+                                        <option value="-1">--Teacher--</option>
+                                        {teachers_dd}
+                                    </select>
+                                </div>
+                                <div class="col-md-1 form-group">
+                                    <input type="submit" class="btn btn-primary" value="Filter" style="width: 100%">
+                                </div>
+                            </form>
+                            <div class="col-md-1">
+                                <div class="btn-group pull-right">
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li id="export_to_excel">
+                                            <a>Export to Excel</a>
+                                        </li>
+                                        <!--<li>-->
+                                        <!--<a>Save as PDF</a>-->
+                                        <!--</li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="overflow: scroll">
+                    <table class="table table-striped table-bordered table-hover table-responsive" data-toggle="table" data-pagination="true" id="grades_table">
+                        <thead>
+                        <tr>
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Student Name
+                            </th>
+                            {header_columns}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {students_grades}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        (function($) {
+            $.get = function(key)   {
+                key = key.replace(/[\[]/, '\\[');
+                key = key.replace(/[\]]/, '\\]');
+                var pattern = "[\\?&]" + key + "=([^&#]*)";
+                var regex = new RegExp(pattern);
+                var url = unescape(window.location.href);
+                var results = regex.exec(url);
+                if (results === null) {
+                    return null;
+                } else {
+                    return results[1];
+                }
+            }
+        })(jQuery);
+
+        var grade_insert =$.get("grade_insert");
+
+        if(grade_insert == 1){
+            alert("Grade assingned succesfully");
+        }
+        if(grade_insert == 2){
+            alert("Problems in process, try again");
+        }
+
+
+        $('.valor_value').mask('000');
+
+        $("#export_to_excel").click(function(event){
+            $(".table").table2excel({
+                name: "Global Grades List",
+                filename: "global_grades_list",
+                fileext: ".xls"
+            });
+        });
+
+    });
+
+    function insert_grade(id){
+
+        grade0 = $('#grade').val();
+        group0 = $('#group').val();
+        course0 = $('#course').val();
+        teacher0 = $('#teacher').val();
+        student0 = $('#td_'+id).text();
+
+        $('#grade0').val(grade0);
+        $('#group0').val(group0);
+        $('#course0').val(course0);
+        $('#teacher0').val(teacher0);
+        $('#student0').val(student0);
+        $('#create_grade').modal('show');
+
+    }
+
+    //Calculate grade
+    $("#punctuation").blur(function(){
+
+        punctuation = $(this).val();
+        valor = $('#valor').val();
+        var pct = (punctuation / valor) * 100;
+
+        if(pct >= 90){
+            grade_descr = "A";
+        }else if(pct >= 80 && pct < 90){
+            grade_descr = "B";
+        }else if(pct >= 70 && pct < 80){
+            grade_descr = "C";
+        }else if(pct >= 60 && pct < 70){
+            grade_descr = "D";
+        }else{
+            grade_descr = "F";
+        }
+
+        $('#txt_grade').val(grade_descr);
+
+    });
+
+    //Calculate grade
+    $("#punctuation_1").blur(function(){
+
+        punctuation = $(this).val();
+        valor = $('#valor_1').val();
+        var pct = (punctuation / valor) * 100;
+
+        if(pct >= 90){
+            grade_descr = "A";
+        }else if(pct >= 80 && pct < 90){
+            grade_descr = "B";
+        }else if(pct >= 70 && pct < 80){
+            grade_descr = "C";
+        }else if(pct >= 60 && pct < 70){
+            grade_descr = "D";
+        }else{
+            grade_descr = "F";
+        }
+
+        $('#txt_grade_1').val(grade_descr);
+
+    });
+
+    $('#create_grade_name_btn').click(function(){
+        $('#create_grade_name').modal('show');
+    });
+
+    $('#submit_grade_name').click(function(){
+
+        if( $('#grade_name').val() == "" ){
+            alert("Grade name is required");
+            return false;
+        }
+
+        grade = $('#grade').val();
+        group = $('#group').val();
+        course = $('#course').val();
+        teacher = $('#teacher').val();
+        grade_name = $('#grade_name').val();
+        grade_valor = $('#grade_valor').val();
+
+        $.ajax({
+
+            url: "includes/ajax.grade_identifier.php",
+            method: "POST",
+            data: {'action': 'insert', 'grade': grade, 'group': group, 'course': course, 'teacher': teacher, 'grade_name': grade_name, 'grade_valor': grade_valor},
+
+            success: function(response){
+
+                if(response){
+                    $('#create_grade_name').modal('hide');
+                    $('#grade_name').val("");
+                    $('#grade_valor').val("");
+
+                    $.ajax({
+                        url: "includes/ajax.grade_identifier.php",
+                        method: "POST",
+                        data: {'action': 'recreate', 'grade': grade, 'group': group, 'course': course, 'teacher': teacher},
+
+                        success: function(response){
+                            $('#grade_identifiers').html(response);
+                        }
+                    })
+
+                }else{
+                    alert("Problems creating, try again!");
+                }
+
+            }
+
+        });
+
+    });
+
+    $('#grade_identifiers').change(function(){
+
+        if( $('#grade_identifiers').val() > 0 ){
+
+            id = $('#grade_identifiers').val();
+            $.ajax({
+
+                url: "includes/ajax.get_valor.php",
+                method: "POST",
+                data: {'id': id},
+
+                success: function(response){
+                    $('#valor').val(response);
+                }
+
+            });
+
+        }
+
+    });
+
+    $('#course_details_form').submit(function(){
+
+        if($('#grade_identifiers').val() === '-1'){
+            alert('Grade Identifier is required');
+            return false;
+        }
+
+        if($('#punctuation').val() === ''){
+            alert('Punctuation is required');
+            return false;
+        }
+
+        if($('#valor').val() === ''){
+            alert('Valor is required');
+            return false;
+        }
+
+        if($('#txt_grade').val() === ''){
+            alert('Grade is required');
+            return false;
+        }
+
+    });
+
+    $('#clear_grades').click(function(){
+        $('#grade_identifiers').val('');
+        $('#punctuation').val('');
+        $('#valor').val('');
+        $('#txt_grade').val('');
+    });
+
+    $('#clear_grade_name').click(function(){
+        $('#grade_name').val('');
+        $('#grade_valor').val('');
+
+    });
+
+    $(document).on('click','.grade_selector', function(){
+
+        var grade_id = this.id;
+        $("#hdn_grade_1").val(grade_id);
+        $("#edit_grade").modal("show");
+
+        $.ajax({
+            url: "includes/ajax.edit_grades.php",
+            method: "POST",
+            data: {'action': 1, 'id': grade_id},
+
+            success: function(response){
+
+                obj = jQuery.parseJSON(response);
+                $("#student_name_1").val(obj[0]);
+                $("#grade_identifier_1").val(obj[1]);
+                $("#punctuation_1").val(obj[2]);
+                $("#valor_1").val(obj[3]);
+                $("#txt_grade_1").val(obj[4]);
+
+            }
+
+        });
+
+    });
+
+    $("#btn_edit_grade").click(function(){
+
+        grades_1 = $('#grade').val();
+        group_1 = $('#group').val();
+        course_1 = $('#course').val();
+
+        var grade_id = $("#hdn_grade_1").val();
+        var punctuation_1 = $("#punctuation_1").val();
+        var valor_1 = $("#valor_1").val();
+        var grade_1 = $("#txt_grade_1").val();
+
+        $.ajax({
+            url: "includes/ajax.edit_grades.php",
+            method: "POST",
+            data: {'action': 2, 'id': grade_id, 'punctuation_1': punctuation_1, 'valor_1': valor_1, 'grade_1': grade_1},
+
+            success: function(response){
+                //alert(response);
+                if(response === "done"){
+                    window.location.replace("display_page.php?tpl=course_details&grade_id="+grades_1+"&group_id="+group_1+"&course_id="+course_1);
+                }
+            }
+
+        });
+
+    });
+
+    $('#sel_grade').change(function(){
+
+        if($('#sel_grade').val() !== '-1'){
+
+            var grade = $('#sel_grade').val();
+            $.ajax({
+                url: 'includes/ajax.manage_schedule.php',
+                method: 'POST',
+                data: {'action': 'get_groups', 'grade': grade},
+
+                success:  function (response) {
+
+                    $('#sel_group').html(response);
+
+                }
+            });
+        }
+
+    });
+
+    $('#sel_group').change(function(){
+
+        if($('#sel_group').val() !== '-1'){
+
+            var group = $('#sel_group').val();
+
+            $.ajax({
+                url: 'includes/ajax.manage_schedule.php',
+                method: 'POST',
+                data: {'action': 'get_courses', 'group': group, 'only': 1},
+
+                success:  function (response) {
+
+                    $('#sel_course').html(response);
+
+                }
+            });
+        }
+
+    });
+
+    $('#sel_course').change(function(){
+
+        if($('#sel_course').val() !== '-1'){
+
+            var course = $('#sel_course').val();
+
+            $.ajax({
+                url: 'includes/ajax.manage_schedule.php',
+                method: 'POST',
+                data: {'action': 'get_teachers', 'week_day': 1, 'day_hour': 1, 'course': course, 'only': 1},
+
+                success:  function (response) {
+
+                    $('#sel_teacher').html(response);
+
+                }
+            });
+        }
+
+    });
+
+
+</script>

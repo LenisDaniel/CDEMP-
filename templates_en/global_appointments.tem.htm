@@ -1,1 +1,374 @@
-<h3>Global Appointments</h3>
+
+<div class="portlet box red">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-list"></i>{form_title}
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse"></a>
+            <a href="javascript:;" class="reload"></a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <form id="appointments_form" action="{form_action}" method="POST" class="form-horizontal">
+
+            <div class="form-body">
+
+                <h3 class="form-section">Appointment Info</h3>
+                <div class="row" {users_type}>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Users Type:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="users_type" id="users_type" required>
+                                    <option value="-1">--Select One--</option>
+                                    {users_type_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" id="group_div" style="display:none">
+                            <label class="control-label col-md-3">Group:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="group" id="group" required>
+                                    <option value="-1">--Select One--</option>
+                                    {groups_dd}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Appointment Title:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_descr" id="appoint_descr" class="form-control" placeholder="" value="{appoint_descr}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Date:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_date" id="appoint_date" class="form-control" placeholder="" value="{appoint_date}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Time:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_time" id="appoint_time" class="form-control" placeholder="" value="{appoint_time}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Place:</label>
+                            <div class="col-md-9">
+                                <input type="text" name="appoint_place" id="appoint_place" class="form-control" placeholder="" value="{appoint_place}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Appointment Details:</label>
+                            <div class="col-md-9">
+                                <textarea name="appoint_details" id="appoint_details" rows="5" class="form-control" placeholder="" required>{appoint_details}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Active?:</label>
+                            <div class="col-md-9">
+                                <div class="radio-list">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="active" value="1" {option1}/>
+                                        Yes
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="active" value="2" {option2}/>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row" {user_list}>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Sender List:</label>
+                            <div class="col-md-9">
+                                <table class="table table-striped" >
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" class="checkbox" id="select_all">
+                                        </th>
+                                        <th>
+                                            User Name
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="users_list">
+                                    <tr>
+                                        <td><input type="checkbox" class="checkbox"></td>
+                                        <td>No User</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--<div class="row">-->
+                    <!--<div class="col-md-6">-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="control-label col-md-3">Sender List:</label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<select class="form-group" name="users_list[]" id="users_list" multiple="multiple">-->
+                                    <!--<option value="-1">&#45;&#45;Select One&#45;&#45;</option>-->
+                                    <!--<option value="2">&#45;&#45;Select One&#45;&#45;</option>-->
+                                    <!--<option value="3">&#45;&#45;Select One&#45;&#45;</option>-->
+                                    <!--<option value="4">&#45;&#45;Select One&#45;&#45;</option>-->
+                                <!--</select>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+
+                <input type="hidden" name="unique_number" value="{unique_number}">
+                <br/>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn green">{send_button}</button>
+                                <a href="display_page.php?tpl=global_appointments&cat=3"><button type="button" class="btn default">Cancel</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-globe"></i>Appointments List
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+                    <a href="javascript:;" class="reload"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <div class="btn-group">
+                                <button id="sample_editable_1_new" class="btn green">
+                                Add New <i class="fa fa-plus"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li id="export_to_excel">
+                                        <a>Export to Excel</a>
+                                    </li>
+                                    <!--<li>-->
+                                    <!--<a>Save as PDF</a>-->
+                                    <!--</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover" data-toggle="table" data-pagination="true">
+                    <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Date With
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Time
+                        </th>
+                        <th>
+                            Place
+                        </th>
+                        <th>
+                            Details
+                        </th>
+                        <th>
+                            Viewed?
+                        </th>
+                        <th>
+                            Created Date
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {appointments_td}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+
+
+<script>
+
+    $(document).ready(function(){
+        (function($) {
+            $.get = function(key)   {
+                key = key.replace(/[\[]/, '\\[');
+                key = key.replace(/[\]]/, '\\]');
+                var pattern = "[\\?&]" + key + "=([^&#]*)";
+                var regex = new RegExp(pattern);
+                var url = unescape(window.location.href);
+                var results = regex.exec(url);
+                if (results === null) {
+                    return null;
+                } else {
+                    return results[1];
+                }
+            }
+        })(jQuery);
+        var no_user = $.get("no_users");
+        if(no_user == 1){
+            alert("Please select almost one user to send the appointment");
+        }
+
+        $("#export_to_excel").click(function(event){
+            $(".table").table2excel({
+                name: "Global Appointments List",
+                filename: "global_appointments_list",
+                fileext: ".xls"
+            });
+        });
+
+        $('#appoint_date').datepicker({
+            dateFormat: "yy-mm-dd",
+        });
+
+        $('#appoint_time').timepicker();
+
+//        $('#users_list').multiselect({
+//            includeSelectAllOption: true
+//        });
+
+    });
+
+
+
+
+    $('#users_type').change(function(){
+
+        var user_type = $('#users_type').val();
+
+        if(user_type == 4){
+
+            $('#group_div').show();
+
+        }else if(user_type == -1){
+            //ocultas la tabla que se va a generar
+            $('#group_div').hide();
+
+
+        }else{
+
+            $('#group_div').hide();
+
+            $.ajax({
+
+                url: 'includes/ajax.appointment_senders.php',
+                method: 'POST',
+                data: {'get_admins': 1, 'user_type': user_type},
+
+
+                success:  function (response) {
+                    //alert(response);
+
+                    $('#users_list').html(response);
+                }
+            });
+
+        }
+
+    });
+
+    $('#group').change(function(){
+
+        var group = $("#group").val();
+        var user_type = $('#users_type').val();
+
+        $.ajax({
+
+            url: 'includes/ajax.appointment_senders.php',
+            method: 'POST',
+            data: {'get_admins': 0, 'user_type': user_type, 'group_id': group},
+
+            success:  function (response) {
+
+                $('#users_list').html(response);
+            }
+
+        });
+
+    });
+
+    $('#select_all').on("click", function(){
+
+        if ($(this).is(':checked')) {
+
+            $("#users_list input[type=checkbox]").prop('checked', true);
+        } else {
+
+            $("#users_list input[type=checkbox]").prop('checked', false);
+        }
+
+    });
+
+</script>

@@ -1,0 +1,45 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="assets2/global/css/materialize.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="assets2/global/scripts/materialize.min.js"></script>
+
+
+{courses_cards}
+
+<script>
+
+    $(document).ready(function(){
+
+        (function($) {
+            $.get = function(key)   {
+                key = key.replace(/[\[]/, '\\[');
+                key = key.replace(/[\]]/, '\\]');
+                var pattern = "[\\?&]" + key + "=([^&#]*)";
+                var regex = new RegExp(pattern);
+                var url = unescape(window.location.href);
+                var results = regex.exec(url);
+                if (results === null) {
+                    return null;
+                } else {
+                    return results[1];
+                }
+            }
+        })(jQuery);
+
+        var process = $.get("process");
+
+        if(process == 1){
+            alert("Daily incidents created succesfully");
+        }
+        if(process == 2){
+            alert("Problems in process, try again");
+        }
+        if(process == 3){
+            alert("Today incidents already exist");
+        }
+
+    });
+
+</script>
+

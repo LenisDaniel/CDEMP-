@@ -2399,7 +2399,7 @@ Input icons
   padding-left: 12px;
 }
 .input-icon.right > i {
-  right: 8px;
+  right: 20px;
   float: right;
 }
 
@@ -4805,6 +4805,7 @@ Custimized Bootstrap Wells
 .well {
   background-color: #eee;
   border: 0;
+  height: 260px;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
@@ -9495,6 +9496,16 @@ Transparent Button
 .btn-transparent.btn {
   background: transparent;
   color: #888;
+}
+
+.ajax_loader{
+  margin: auto;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 

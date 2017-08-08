@@ -1,1 +1,392 @@
-<h3>Manage Schedule</h3>
+
+<div class="portlet box red">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-list"></i>{form_title}
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse"></a>
+            <a href="javascript:;" class="reload"></a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form id="schedule_form" action="{form_action}" method="POST" class="form-horizontal">
+            <div class="form-body">
+                <h3 class="form-section">Set Schedule</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Grade:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="grade" id="grade" required>
+                                    <option value="-1">--Select Grade--</option>
+                                    {grades_dd}
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" value="{selected_grade}" name="selected_grade" id="selected_grade">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Group:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="group" id="group" required>
+                                    <option value="-1">--Select Grade First--</option>
+                                    {groups_dd}
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" value="{selected_group}" name="selected_group" id="selected_group">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Week Day:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="week_day" id="week_day" required>
+                                    <option value="-1">--Select Week Day--</option>
+                                    {week_days_dd}
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" value="{selected_week_day}" name="selected_week_day" id="selected_week_day">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Day Hour:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="day_hour" id="day_hour" required>
+                                    <option value="-1">--Select the options above first--</option>
+                                    {day_hours_dd}
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" value="{selected_day_hour}" name="selected_day_hour" id="selected_day_hour">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Course:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="course" id="course" required>
+                                    <option value="-1">--Select the options above first--</option>
+                                    {courses_dd}
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" value="{selected_course}" name="selected_course" id="selected_course">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Teacher:</label>
+                            <div class="col-md-9">
+                                <select class="form-control" name="teacher" id="teacher" required>
+                                    <option value="-1">--Select All to filter available teachers--</option>
+                                    {teachers_dd}
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" value="{selected_teacher}" name="selected_teacher" id="selected_teacher">
+                        <input type="hidden" value="{is_edit}" id="is_edit">
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="{button_color}">{send_button}</button>
+                                <a href="display_page.php?tpl=manage_schedule&cat=2"><button type="button" class="btn default">Reset</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-globe"></i>Schedule List
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+
+                    <a href="javascript:;" class="reload"></a>
+
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <div class="btn-group">
+                                <button id="sample_editable_1_new" class="btn green">
+                                Add New <i class="fa fa-plus"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li id="export_to_excel">
+                                        <a>Export to Excel</a>
+                                    </li>
+                                    <!--<li>-->
+                                    <!--<a>Save as PDF</a>-->
+                                    <!--</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover" id="sample_1" data-toggle="table" data-show-columns="true" data-pagination="true" data- data-search="true">
+                    <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Grade
+                        </th>
+                        <th>
+                            Group
+                        </th>
+                        <th>
+                            Course
+                        </th>
+                        <th>
+                            Week Day
+                        </th>
+                        <th>
+                            Day Hour
+                        </th>
+                        <th>
+                            Teacher
+                        </th>
+                        <th>
+                            Created Date
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {schedules_td}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#schedule_form').submit(function(){
+
+                if($('#grade').val() === '-1'){
+                    alert('Please select one grade!');
+                    return false;
+                }
+
+                if($('#group').val() === '-1'){
+                    alert('Please select one group!');
+                    return false;
+                }
+
+                if($('#course').val() === '-1'){
+                    alert('Please select one course!');
+                    return false;
+                }
+
+                if($('#week_day').val() === '-1'){
+                    alert('Please select one week day!');
+                    return false;
+                }
+
+                if($('#day_hour').val() === '-1'){
+                    alert('Please select one day hour!');
+                    return false;
+                }
+
+                if($('#teacher').val() === '-1'){
+                    alert('Please select one teacher!');
+                    return false;
+                }
+
+                var grade_id = $('#grade').val();
+                var group_id = $('#group').val();
+                var day_hour_id = $('#day_hour').val();
+                if($('#is_edit').val() == 0) {
+                    $.ajax({
+                        url: 'includes/ajax.validate_schedule.php',
+                        method: 'POST',
+                        data: {'grade': grade_id, 'group': group_id, 'day_hour': day_hour_id},
+                        async: false,
+
+                        success: function (response) {
+
+                            if (response != "continue") {
+                                alert(response);
+                                trueorfalse = false;
+                            } else {
+                                trueorfalse = true;
+                            }
+                        }
+
+                    });
+                }else{
+                    trueorfalse = true;
+                }
+                return trueorfalse;
+            });
+
+            if($('#is_edit').val() == 1){
+                $('#grade').prop('disabled', true);
+            }else{
+                $('#grade').prop('disabled', false);
+            }
+
+            $('#group, #week_day, #week_day, #day_hour, #course, #teacher').prop('disabled', true);
+
+            $('#grade').change(function(){
+
+                if($('#grade').val() !== '-1'){
+
+                    $('#week_day, #week_day, #day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                    $('#group').prop('disabled', false).val('-1');
+
+                    var grade = $('#grade').val();
+                    $.ajax({
+                        url: 'includes/ajax.manage_schedule.php',
+                        method: 'POST',
+                        data: {'action': 'get_groups', 'grade': grade},
+
+                        success:  function (response) {
+
+                            $('#group').html(response);
+
+                        }
+                    });
+                }else{
+                    $('#group, #week_day, #week_day, #day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                }
+
+            });
+
+            $('#group').change(function(){
+                if($('#group').val() !== '-1'){
+                    $('#week_day').prop('disabled', false).val('-1');
+                    $('#day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                }else{
+                    $('#week_day, #day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                }
+            });
+
+            $('#week_day').change(function(){
+
+                 var grade = $('#grade').val();
+                 var group = $('#group').val();
+                 var week_day = $('#week_day').val();
+
+                 if(week_day !== '-1'){
+                     $('#day_hour').prop('disabled', false).val('-1');
+                     $('#course, #teacher').prop('disabled', true).val('-1');
+                     $.ajax({
+                         url: 'includes/ajax.manage_schedule.php',
+                         method: 'POST',
+                         data: {'action': 'get_day_hours', 'grade': grade, 'group': group, 'week_day': week_day},
+
+                         success:  function (response) {
+
+                             $('#day_hour').html(response);
+
+                         }
+                     });
+                 }else{
+                     $('#day_hour, #course, #teacher').prop('disabled', true).val('-1');
+                 }
+            });
+
+            $('#day_hour').change(function(){
+
+                var group = $('#group').val();
+
+                if($('#day_hour').val() !== '-1'){
+                    $('#course').prop('disabled', false);
+                    $('#teacher').prop('disabled', true).val('-1');
+                    $.ajax({
+                        url: 'includes/ajax.manage_schedule.php',
+                        method: 'POST',
+                        data: {'action': 'get_courses', 'group': group, 'only': 0},
+
+                        success:  function (response) {
+
+                            $('#course').html(response);
+
+                        }
+                    });
+                }else{
+                    $('#course, #teacher').prop('disabled', true).val('-1');
+                }
+            });
+
+            $('#course').change(function(){
+
+                var week_day = $('#week_day').val();
+                var day_hour = $('#day_hour').val();
+                var course = $('#course').val();
+
+                if(course !== '-1' && week_day !== '-1' && day_hour !== '-1' && course !== '-1'){
+                    $('#teacher').prop('disabled', false);
+                    $.ajax({
+                        url: 'includes/ajax.manage_schedule.php',
+                        method: 'POST',
+                        data: {'action': 'get_teachers', 'week_day': week_day, 'day_hour': day_hour, 'course': course, 'only':0},
+
+                        success:  function (response) {
+                            //alert(response);
+                           $('#teacher').html(response);
+
+                        }
+                    });
+                }else{
+                    $('#teacher').prop('disabled', true).val('-1');
+                }
+            });
+
+            $("#export_to_excel").click(function(event){
+                $(".table").table2excel({
+                    name: "System Group Schedule",
+                    filename: "system_group_schedule",
+                    fileext: ".xls"
+                });
+            });
+
+        });
+
+    </script>
+</div>

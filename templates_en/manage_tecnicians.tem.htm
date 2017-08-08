@@ -6,14 +6,8 @@
             <i class="fa fa-list"></i>{form_title}
         </div>
         <div class="tools">
-            <a href="javascript:;" class="collapse">
-            </a>
-            <a href="#portlet-config" data-toggle="modal" class="config">
-            </a>
-            <a href="javascript:;" class="reload">
-            </a>
-            <a href="javascript:;" class="remove">
-            </a>
+            <a href="javascript:;" class="collapse"></a>
+            <a href="javascript:;" class="reload"></a>
         </div>
     </div>
     <div class="portlet-body form">
@@ -33,7 +27,7 @@
                     </div>
                     <!--/span-->
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">Last Name:</label>
                             <div class="col-md-9">
                                 <input type="text" name="last_name" id="last_name" class="form-control" value="{last_name}" required>
@@ -56,7 +50,7 @@
                     </div>
                     <!--/span-->
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">Email:</label>
                             <div class="col-md-9">
                                 <input type="email" name="email" id="email" class="form-control" placeholder="" value="{email}" required>
@@ -65,41 +59,52 @@
                     </div>
                     <!--/span-->
                 </div>
-                <!--/row-->
+
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
+                            <label class="control-label col-md-3">Username:</label>
+                            <div class="col-md-9 input-icon right">
+                                <i id="username_icon"></i>
+                                <input type="text" name="username" id="username" class="form-control" placeholder="" value="{username}" required >
+                                <input type="hidden" id="username_validate" value="{username_validate}">
+                                <input type="hidden" id="db_username" value="{db_username}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">Password:</label>
                             <div class="col-md-9">
                                 <input type="text" name="password" id="password" class="form-control" placeholder="" value="{password}" required>
                             </div>
                         </div>
                     </div>
-                    <!--/span-->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Active?:</label>
-                            <div class="col-md-9">
-                                <div class="radio-list">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="active" value="1" {option1}/>
-                                        Yes
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="active" value="2" {option2}/>
-                                        No
-                                    </label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group required">
+                                <label class="control-label col-md-3">Active?:</label>
+                                <div class="col-md-9">
+                                    <div class="radio-list">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="active" value="1" {option1}/>
+                                            Yes
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="active" value="2" {option2}/>
+                                            No
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--/span-->
                 </div>
                 <h3 class="form-section">Contact Info</h3>
                 <!--/row-->
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">Address 1:</label>
                             <div class="col-md-9">
                                 <input type="text" name="address1" id="address1" class="form-control" value="{address1}" required>
@@ -117,7 +122,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">City:</label>
                             <div class="col-md-9">
                                 <select class="form-control" name="city" id="city" required>
@@ -129,7 +134,7 @@
                     </div>
                     <!--/span-->
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">State:</label>
                             <div class="col-md-9">
                                 <select class="form-control" name="state" id="state" required>
@@ -144,7 +149,7 @@
                 <!--/row-->
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">Phone 1:</label>
                             <div class="col-md-9">
                                 <input type="text" name="phone_1" id="phone_1" class="form-control phone_mask" value="{phone_1}" required>
@@ -166,7 +171,7 @@
                 <!--/row-->
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="control-label col-md-3">Zipcode:</label>
                             <div class="col-md-9">
                                 <select class="form-control" name="zipcode" id="zipcode" required>
@@ -209,11 +214,11 @@
                 <div class="tools">
                     <a href="javascript:;" class="collapse">
                     </a>
-                    <a href="#portlet-config" data-toggle="modal" class="config">
+                    <!--<a href="#portlet-config" data-toggle="modal" class="config">-->
                     </a>
                     <a href="javascript:;" class="reload">
                     </a>
-                    <a href="javascript:;" class="remove">
+                    <!--<a href="javascript:;" class="remove">-->
                     </a>
                 </div>
             </div>
@@ -232,24 +237,18 @@
                                 <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
                                 </button>
                                 <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="#">
-                                            Print </a>
+                                    <li id="export_to_excel">
+                                        <a>Export to Excel</a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Export to Excel </a>
-                                    </li>
+                                    <!--<li>-->
+                                    <!--<a>Save as PDF</a>-->
+                                    <!--</li>-->
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <table class="table table-striped table-bordered table-hover" id="sample_1">
+                <table class="table table-striped table-bordered table-hover" id="sample_1" data-search="true" data-toggle="table" data-pagination="true">
                     <thead>
                     <tr>
                         <th>
@@ -310,6 +309,11 @@
                     return false;
                 }
 
+                if($('#username_validate').val() == 0){
+                    alert('The username is not available');
+                    return false;
+                }
+
             });
 
             $('#city').change(function(){
@@ -330,6 +334,51 @@
 
                 });
 
+            });
+
+            $('#username').blur(function(){
+
+                var username = $(this).val();
+                var db_username = $('#db_username').val();
+
+                if(username != ""){
+
+                    $('#username_icon').removeClass();
+
+                    if(username !== db_username){
+                        $.ajax({
+                            url: "includes/ajax.verify_username.php",
+                            method: "POST",
+                            data: {'username': username},
+
+                            success: function(response){
+
+                                if(response == 1){
+                                    $('#username_icon').addClass('fa fa-exclamation tooltips').css('color', 'red');
+                                    $('#username_validate').val(0);
+                                }else{
+                                    $('#username_icon').addClass('fa fa-check tooltips').css('color', 'blue');
+                                    $('#username_validate').val(1);
+                                }
+
+                            }
+                        });
+                    }else{
+                        $('#username_validate').val(1);
+                    }
+                }else{
+                    $('#username_icon').removeClass();
+                    $('#username_validate').val(0);
+                }
+
+            });
+
+            $("#export_to_excel").click(function(event){
+                $(".table").table2excel({
+                    name: "System Technicians List",
+                    filename: "system_technicians_list",
+                    fileext: ".xls"
+                });
             });
 
         });

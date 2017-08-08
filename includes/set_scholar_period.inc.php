@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 require_once("class.scholar_period.inc.php");
 
 $objbehavior = new Scholar_Period();
@@ -15,14 +15,7 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("form_title", "Update Scholar Period Dates");
     $objtemplate->set_content("send_button", "Update");
 
-    if($objbehavior->get_scholar_period_info('semester') == "Semester 1"){
-        $objtemplate->set_content("selected1", "selected");
-    }else{
-        $objtemplate->set_content("selected2", "selected");
-    }
-
-
-
+    $objtemplate->set_content("scholar_year", $objbehavior->get_scholar_period_info('scholar_year'));
     $objtemplate->set_content("start_date", $objbehavior->get_scholar_period_info('start_date'));
     $objtemplate->set_content("end_date", $objbehavior->get_scholar_period_info('end_date'));
 
@@ -37,8 +30,7 @@ if(isset($_GET['edit'])){
     $objtemplate->set_content("form_action", "display_page.php?tpl=set_scholar_period&cid=".base64_encode(0));
     $objtemplate->set_content("form_title", "Create New Scholar Period");
     $objtemplate->set_content("send_button", "Submit");
-    $objtemplate->set_content("option1", "checked");
-    $objtemplate->set_content("semester", "");
+    $objtemplate->set_content("option2", "checked");
 
 }
 
@@ -63,11 +55,11 @@ if(isset($_GET['cid'])) {
 
     $id = base64_decode($_GET['cid']);
 
-    $semester = $_POST['semester'];
+    $scholar_year = $_POST['scholar_year'];
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date'];
     $active = $_POST['active'];
 
-    $objbehavior->manage_scholar_period_info('set_scholar_period', $id, $semester, $start_date, $end_date, $active);
+    $objbehavior->manage_scholar_period_info('set_scholar_period', $id, $scholar_year, $start_date, $end_date, $active);
 
 }

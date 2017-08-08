@@ -1,4 +1,5 @@
 <?php
+
 //error_reporting(E_ALL);
 /**
  * Created by PhpStorm.
@@ -9,7 +10,8 @@
 
 require_once("class.phpmailer.php");
 require_once("class.smtp.php");
-require("PHPMailerAutoload.php");
+
+
 
 $email = $name = $message = $subject = "";
 
@@ -22,14 +24,15 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
 
     $mail = new PHPMailer();
     //$mail->SMTPDebug = 1;
-    //$mail->isSMTP();
+    $mail->isSMTP();
+    $mail->Mailer = "smtp";
     $mail->CharSet = 'UTF-8';
-    $mail->Host = 'mail.cdemp-pr.com';
+    $mail->Host = 'mail.smtp2go.com';
     $mail->SMTPAuth = true;
-    $mail->Port = 25;
-    $mail->Username = 'info@cdemp-pr.com';
-    $mail->Password = 'cdemp2017';
-    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 587;
+    $mail->Username = 'lenis.daniel@gmail.com';
+    $mail->Password = '2bdrNC0hQ2hw';
+    $mail->SMTPSecure = 'tls';
 
     $mail->setFrom('info@cdemp-pr.com', 'CDEMP Response');
     $mail->addAddress($email);
@@ -52,6 +55,8 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
     }
 
 }
+
+
 
 
 

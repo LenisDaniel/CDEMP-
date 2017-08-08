@@ -5,14 +5,8 @@
             <i class="fa fa-list"></i>{form_title}
         </div>
         <div class="tools">
-            <a href="javascript:;" class="collapse">
-            </a>
-            <a href="#portlet-config" data-toggle="modal" class="config">
-            </a>
-            <a href="javascript:;" class="reload">
-            </a>
-            <a href="javascript:;" class="remove">
-            </a>
+            <a href="javascript:;" class="collapse"></a>
+            <a href="javascript:;" class="reload"></a>
         </div>
     </div>
     <div class="portlet-body form">
@@ -26,14 +20,11 @@
                             <label class="control-label col-md-3">Grade:</label>
                             <div class="col-md-9">
                                 <input type="text" name="grade" id="grade" class="form-control" placeholder="Grade" value="{grade}" required>
-
+                                <input type="hidden" id="grade_idx" value="{grade_idx}">
                             </div>
                         </div>
                     </div>
-                    <!--/span-->
                 </div>
-
-                <!--/row-->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group required">
@@ -54,15 +45,13 @@
                     </div>
                 </div>
             </div>
-                    <!--/span-->
-
-
             <div class="form-actions">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-offset-3 col-md-9">
                                 <button type="submit" class="btn green">{send_button}</button>
+                                <button type="button" id="delete_button" class="btn red">Delete Grade</button>
                                 <button type="button" class="btn default">Cancel</button>
                             </div>
                         </div>
@@ -84,14 +73,8 @@
                     <i class="fa fa-globe"></i>Grades List
                 </div>
                 <div class="tools">
-                    <a href="javascript:;" class="collapse">
-                    </a>
-                    <a href="#portlet-config" data-toggle="modal" class="config">
-                    </a>
-                    <a href="javascript:;" class="reload">
-                    </a>
-                    <a href="javascript:;" class="remove">
-                    </a>
+                    <a href="javascript:;" class="collapse"></a>
+                    <a href="javascript:;" class="reload"></a>
                 </div>
             </div>
             <div class="portlet-body">
@@ -105,28 +88,28 @@
                             </div> -->
                         </div>
                         <div class="col-md-6">
-                            <div class="btn-group pull-right">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="#">
-                                            Print </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Export to Excel </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <!--<div class="btn-group pull-right">-->
+                                <!--<button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>-->
+                                <!--</button>-->
+                                <!--<ul class="dropdown-menu pull-right">-->
+                                    <!--<li>-->
+                                        <!--<a href="#">-->
+                                            <!--Print </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">-->
+                                            <!--Save as PDF </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#">-->
+                                            <!--Export to Excel </a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
-                <table class="table table-striped table-bordered table-hover" >
+                <table class="table table-striped table-bordered table-hover" data-toggle="table" data-pagination="true">
                     <thead>
                     <tr>
                         <th>
@@ -194,6 +177,61 @@
                     }
 
                 });
+
+            });
+
+            $("#delete_button").click(function(){
+
+                var grade_id = $("#grade_idx").val();
+                var table = "master_grade";
+
+                swal({
+
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+
+                }).then(function () {
+
+                    $.ajax({
+                        url: "includes/ajax.delete_records.php",
+                        method: "POST",
+                        data: {'table': table, 'id': grade_id},
+
+                        success: function(response){
+                            if(response == 'done'){
+
+                                swal({
+                                    title: 'Deleted!',
+                                    text: "",
+                                    type: 'success',
+                                    showCancelButton: false,
+                                    confirmButtonColor: '#3085d6',
+                                    cancelButtonColor: '#d33',
+                                    confirmButtonText: 'Ok!'
+                                }).then(function () {
+                                    swal(
+                                        location.replace("display_page.php?tpl=manage_grades&cat=2")
+                                    )
+                                })
+
+                            }else{
+                                swal(
+                                    'Problems!',
+                                    'Try again',
+                                    'error'
+                                )
+                            }
+
+                        }
+
+                    })
+
+                })
 
             });
 

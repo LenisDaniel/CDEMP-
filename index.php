@@ -1,3 +1,4 @@
+
 <?php
 error_reporting(E_ERROR);
 
@@ -34,8 +35,8 @@ if (isset($_SESSION['errmsg'])){
 $content = $objtemplate->open("templates_en/login.tem.htm");
 $vdisclaimer = "";
 //****************************************************************************************************************************************
-if(isset($_COOKIE['email'])){
-	$objtemplate->set_content("email", $_COOKIE['email']);
+if(isset($_COOKIE['username'])){
+	$objtemplate->set_content("username", $_COOKIE['username']);
 }
 if(isset($_COOKIE['pass'])){
 	$objtemplate->set_content("pass", $_COOKIE['pass']);
