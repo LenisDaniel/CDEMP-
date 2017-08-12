@@ -14,12 +14,10 @@ if(isset($_POST) && $_POST != "" && $_POST['id'] > 0){
         }else if(mysqli_num_rows($results)>0){
             while($rs = mysqli_fetch_assoc($results)){
                 extract($rs);
-
             }
         }else{
             return 0;
         }
-
         echo get_edit_info($student_id, $day_status_id, $incident_id);
 
     }else{

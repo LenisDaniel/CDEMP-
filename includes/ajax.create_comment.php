@@ -9,6 +9,8 @@ if(isset($_POST)){
 
     if($event_id != "" && $user_id != "" && $message_text != ""){
 
+        $div_ids = $div_id;
+
         $sqlquery = "INSERT INTO event_interactions (event_id, user_id, message) VALUES ($event_id, $user_id, '$message_text')";
         if($objmydbcon->set_query($sqlquery)){
 
@@ -29,12 +31,14 @@ if(isset($_POST)){
                     }else{
                         $conditional_color = 'style="padding-left: 10px;border-left: 3px solid #a21b24;margin-bottom: 30px;"';
                     }
-                    $comments[] = '<div class="media" '.$conditional_color.'>
-                                <div class="media-body">
+                    $comments[] = '<div class="media"  '.$conditional_color.'>
+                                <div id="example_'.$last_id. '-' .$uid.'" class="media-body comment_line">
                                     <h4 class="media-heading">'.$name0.'
                                         <small>'.friendly_date($c_date).'</small>
+                                        <i class="fa fa-times pull-right edit_x_'.$div_ids.'" id="delete_'.$last_id. '-' .$uid.'" style="display:none; color: #999999;"></i>
+                                        <i class="fa fa-ellipsis-h pull-right edit_points_'.$div_ids.'" id="edit_'.$last_id. '-' .$uid.'" style="display:none; color: #999999;"></i>                                        
                                     </h4>
-                                    '.$msg.'
+                                    <span>'.$msg.'</span>
                                 </div>
                               </div>';
                 }

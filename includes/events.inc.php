@@ -9,6 +9,7 @@ $limit_start = $limit_date['start'];
 $limit_end = $limit_date['end'];
 
 $user_ids = $_SESSION['loged_user']['idx'];
+$objtemplate->set_content('user_id', $user_ids);
 
 if($detect->isMobile()){
 
@@ -37,11 +38,9 @@ if($detect->isMobile()){
 }
 
 $i = 1;
+
 $sqlquery = "SELECT e.*, mu.first_name, mu.last_name, mu.second_surname FROM events e JOIN master_users mu ON mu.idx = e.created_by             
              $conditional";
-
-//echo $sqlquery;
-//exit;
 
 if(!$results = $objmydbcon->get_result_set($sqlquery)){
     return false;
@@ -49,7 +48,7 @@ if(!$results = $objmydbcon->get_result_set($sqlquery)){
     while($rs = mysqli_fetch_assoc($results)){
         extract($rs);
 
-        $sqlquery0 = "SELECT ei.interaction_id, ei.event_id AS ev_id, ei.user_id AS uid, ei.message AS msg, ei.created_date AS c_date, m.first_name AS fname, m.last_name AS lname, m.second_surname AS sname FROM event_interactions ei JOIN master_users m ON m.idx = ei.user_id WHERE ei.event_id = $event_id ORDER BY ei.created_date DESC";
+        $sqlquery0 = "SELECT ei.interaction_id AS interaction, ei.event_id AS ev_id, ei.user_id AS uid, ei.message AS msg, ei.created_date AS c_date, m.first_name AS fname, m.last_name AS lname, m.second_surname AS sname FROM event_interactions ei JOIN master_users m ON m.idx = ei.user_id WHERE ei.event_id = $event_id ORDER BY ei.created_date DESC";
         $comments = array();
         if(!$results0 = $objmydbcon->get_result_set($sqlquery0)){
             return false;
@@ -68,12 +67,14 @@ if(!$results = $objmydbcon->get_result_set($sqlquery)){
                     }
 
                 }
-                $comments[] = '<div class="media" '.$conditional_color.'>
-                                <div class="media-body">
+                $comments[] = '<div class="media"  '.$conditional_color.'>
+                                <div id="example_'.$interaction. '-' .$uid.'" class="media-body comment_line">
                                     <h4 class="media-heading">'.$name0.'
                                         <small>'.friendly_date($c_date).'</small>
+                                        <i class="fa fa-times pull-right edit_x_'.$i.'" id="delete_'.$interaction. '-' .$uid.'" style="display:none; color: #999999;"></i>
+                                        <i class="fa fa-ellipsis-h pull-right edit_points_'.$i.'" id="edit_'.$interaction. '-' .$uid.'" style="display:none; color: #999999;"></i>                                        
                                     </h4>
-                                    '.$msg.'
+                                    <span>'.$msg.'</span>
                                 </div>
                               </div>';
 
@@ -115,7 +116,7 @@ if(!$results = $objmydbcon->get_result_set($sqlquery)){
                      <button type="button" id="'.$i.'" class="btn btn-primary comment_number">Submit</button>                    
                 </div>
                 <hr>
-                <div id="comments_div_'.$i.'">
+                <div class="comments_div_identification" id="comments_div_'.$i.'">
                 '.$insert_comments.'     
                 </div> 
                 <hr style="height:20px; background-color: #EEEEEE">                        

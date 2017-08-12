@@ -1,15 +1,44 @@
 <div class="container" id="contenido">
     {contenido}
 </div>
-<input type="hidden" id="mobile" value="{mobile}"/>
 
+<!-- Large modal -->
+
+
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Edit Comment</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label">Comment:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <input type="hidden" id="position_info" value="">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="save_btn" class="btn btn-primary">Edit and Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<input type="hidden" id="mobile" value="{mobile}"/>
+<input type="hidden" id="user_id" value="{user_id}" />
 <script>
 
     $(document).ready(function(){
 
         $('.comment_number').click(function(){
-            var id = this.id;
 
+            var id = this.id;
             var event_id = $('#event_id_'+id).val();
             var user_id = $('#user_id_'+id).val();
             var message = $('#message_text_'+id).val();
@@ -17,7 +46,7 @@
             $.ajax({
                 url: "includes/ajax.create_comment.php",
                 method: "POST",
-                data: {'event_id': event_id, 'user_id': user_id, 'message_text': message},
+                data: {'event_id': event_id, 'user_id': user_id, 'message_text': message, 'div_id': id},
 
                 success: function(response){
 
@@ -50,6 +79,93 @@
                 }
             });
         }
+
+        $('.comments_div_identification').mouseover(function(){
+
+            var cb = this.id.split('_');
+
+            $('.comment_line').mouseover(function(){
+
+                var comment_ids = $(this).attr('id').split('-');
+
+                var interaction_id = comment_ids[0];
+                var comment_user = comment_ids[1];
+                var user_id = $('#user_id').val();
+
+                if(comment_user == user_id){
+                    $(this).find('.edit_points_'+cb[2]).show();
+                    $(this).find('.edit_x_'+cb[2]).show();
+                }
+
+            });
+
+            $('.comment_line').mouseout(function(){
+                $(this).find('.edit_points_'+cb[2]).hide();
+                $(this).find('.edit_x_'+cb[2]).hide();
+            });
+
+
+            $('.edit_points_'+cb[2]).click(function(){
+
+                ids_edit = this.id.split("_");
+                comment = $('#example_'+ids_edit[1]).find('span').text()
+
+                $('#myModal').modal()
+                $('#message-text').val(comment);
+                $('#position_info').val(ids_edit[1]);
+
+            });
+
+            $('.edit_x_'+cb[2]).click(function(){
+
+                ids = this.id.split("_");
+
+                $.ajax({
+                    url: "includes/ajax.update_comment.php",
+                    method: "POST",
+                    data: {'action': 'delete', 'comment_info': ids},
+
+                    success: function(response){
+                        if(response == 'funciono'){
+                            $('#example_'+ids[1]).remove();
+                        }else{
+                            alert('try again');
+                        }
+                    }
+
+                })
+
+            });
+
+        });
+
+        $('#save_btn').click(function(){
+
+            var ids_edit = $('#position_info').val();
+            var msg = $('#message-text').val();
+
+            $.ajax({
+                url: "includes/ajax.update_comment.php",
+                method: "POST",
+                data: {'action': 'edit', 'comment_info': ids_edit, 'msg': msg},
+
+                success: function(response){
+
+                    if(response !== 'fallo'){
+
+                        $('#example_'+ids_edit).find('span').text(response);
+                        $('#message-text').val("");
+                        $('#myModal').modal('hide');
+
+                    }else{
+                        alert('try again');
+                    }
+
+                }
+
+            })
+
+        });
 
     });
 
