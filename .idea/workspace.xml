@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/ajax.update_comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js" afterPath="$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/ajax.create_comment.php" afterPath="$PROJECT_DIR$/includes/ajax.create_comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/ajax.edit_incident.php" afterPath="$PROJECT_DIR$/includes/ajax.edit_incident.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/events.inc.php" afterPath="$PROJECT_DIR$/includes/events.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/events.tem.htm" afterPath="$PROJECT_DIR$/templates_en/events.tem.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_en/template.tem.htm" afterPath="$PROJECT_DIR$/templates_en/template.tem.htm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,12 +37,31 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="demo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="211" column="9" lean-forward="true" selection-start-line="211" selection-start-column="9" selection-end-line="211" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.tem.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10920">
+              <caret line="101" column="49" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fr-fek</find>
-      <find>\	\&lt;link href\=\&quot;assets2\/global\/plugins\/simple\-line\-icons\/simple\-line\-icons\.min\.css\&quot; rel\=\&quot;stylesheet\&quot; type\=\&quot;text\/css\&quot;\/\&gt;\n</find>
       <find>FROALA_EDITOR_OPTIONS</find>
       <find>froala</find>
       <find>images</find>
@@ -77,6 +90,8 @@
       <find>sidebar</find>
       <find>message-text</find>
       <find>message_text</find>
+      <find>fixed</find>
+      <find>page-sidebar-fixed</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -219,12 +234,12 @@
         <option value="$PROJECT_DIR$/includes/class.my_profile.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.filter_courses.php" />
         <option value="$PROJECT_DIR$/includes/ajax.edit_incident.php" />
-        <option value="$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js" />
-        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/includes/events.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.create_comment.php" />
         <option value="$PROJECT_DIR$/includes/ajax.update_comment.php" />
         <option value="$PROJECT_DIR$/templates_en/events.tem.htm" />
+        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
+        <option value="$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js" />
       </list>
     </option>
   </component>
@@ -271,7 +286,7 @@
       <path value="C:\xampp\htdocs\CDEMP-\CDEMP-" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1911" />
     <option name="y" value="-9" />
     <option name="width" value="1458" />
@@ -319,6 +334,32 @@
             <path>
               <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
               <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
@@ -576,7 +617,7 @@
       <workItem from="1502216682897" duration="733000" />
       <workItem from="1502217893165" duration="2507000" />
       <workItem from="1502470972435" duration="1286000" />
-      <workItem from="1502528557373" duration="31737000" />
+      <workItem from="1502528557373" duration="32927000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -603,7 +644,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="724052000" />
+    <option name="totallyTimeSpent" value="725242000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,7 +656,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1458" height="878" extended-state="7" />
+    <frame x="1911" y="-9" width="1458" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -624,7 +666,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46831957" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26898327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027259" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027259" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17824967" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -706,13 +748,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates_en/login.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="63" column="46" lean-forward="false" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/global_events.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
@@ -1061,22 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="546" column="39" lean-forward="true" selection-start-line="546" selection-start-column="39" selection-end-line="546" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/ajax.create_comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -1146,8 +1165,32 @@
         <state relative-caret-position="306">
           <caret line="118" column="49" lean-forward="true" selection-start-line="118" selection-start-column="49" selection-end-line="118" selection-end-column="49" />
           <folding>
-            <element signature="e#456#463#1" expanded="true" />
+            <element signature="e#456#463#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets2/global/plugins/datatables/examples/resources/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="211" column="9" lean-forward="true" selection-start-line="211" selection-start-column="9" selection-end-line="211" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10920">
+          <caret line="101" column="49" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -13,7 +13,7 @@ var Demo = function () {
             $('.layout-option', panel).val("fluid");
         }
 
-        $('.sidebar-option', panel).val("fixed");
+        $('.sidebar-option', panel).val("default");
         $('.page-header-option', panel).val("fixed");
         $('.page-footer-option', panel).val("default");
         if ($('.sidebar-pos-option').attr("disabled") === false) {
@@ -25,7 +25,7 @@ var Demo = function () {
             $("body").
             removeClass("page-boxed").
             removeClass("page-footer-fixed").
-            removeClass("page-sidebar-fixed").
+            //removeClass("page-sidebar-fixed").
             removeClass("page-header-fixed").
             removeClass("page-sidebar-reversed");
 
@@ -102,12 +102,12 @@ var Demo = function () {
             //sidebar
             if ($('body').hasClass('page-full-width') === false) {
                 if (sidebarOption === 'fixed') {
-                    $("body").addClass("page-sidebar-fixed");
+                    //$("body").addClass("page-sidebar-fixed");
                     $("page-sidebar-menu").addClass("page-sidebar-menu-fixed");
                     $("page-sidebar-menu").removeClass("page-sidebar-menu-default");
                     Layout.initFixedSidebarHoverEffect();
                 } else {
-                    $("body").removeClass("page-sidebar-fixed");
+                    //$("body").removeClass("page-sidebar-fixed");
                     $("page-sidebar-menu").addClass("page-sidebar-menu-default");
                     $("page-sidebar-menu").removeClass("page-sidebar-menu-fixed");
                     $('.page-sidebar-menu').unbind('mouseenter').unbind('mouseleave');
