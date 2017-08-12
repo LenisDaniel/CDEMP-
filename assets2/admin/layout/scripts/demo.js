@@ -24,7 +24,7 @@ var Demo = function () {
         var resetLayout = function () {
             $("body").
             removeClass("page-boxed").
-            removeClass("page-footer-fixed").
+            //removeClass("page-footer-fixed").
             //removeClass("page-sidebar-fixed").
             removeClass("page-header-fixed").
             removeClass("page-sidebar-reversed");
@@ -118,7 +118,7 @@ var Demo = function () {
             if (footerOption === 'fixed') {
                 $("body").addClass("page-footer-fixed");
             } else {
-                $("body").removeClass("page-footer-fixed");
+                //$("body").removeClass("page-footer-fixed");
             }
 
             //sidebar style

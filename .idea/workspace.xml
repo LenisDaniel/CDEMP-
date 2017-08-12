@@ -41,8 +41,8 @@
       <file leaf-file-name="demo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="211" column="9" lean-forward="true" selection-start-line="211" selection-start-column="9" selection-end-line="211" selection-end-column="9" />
+            <state relative-caret-position="2291">
+              <caret line="133" column="67" lean-forward="false" selection-start-line="133" selection-start-column="58" selection-end-line="133" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -51,9 +51,11 @@
       <file leaf-file-name="template.tem.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10920">
-              <caret line="101" column="49" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="357">
+              <caret line="215" column="21" lean-forward="true" selection-start-line="215" selection-start-column="21" selection-end-line="215" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FROALA_EDITOR_OPTIONS</find>
-      <find>froala</find>
       <find>images</find>
       <find>cdemp_test</find>
       <find>send_daily_email</find>
@@ -92,6 +92,8 @@
       <find>message_text</find>
       <find>fixed</find>
       <find>page-sidebar-fixed</find>
+      <find>page-footer-fixed</find>
+      <find>accordion</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -238,8 +240,8 @@
         <option value="$PROJECT_DIR$/includes/ajax.create_comment.php" />
         <option value="$PROJECT_DIR$/includes/ajax.update_comment.php" />
         <option value="$PROJECT_DIR$/templates_en/events.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js" />
+        <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
       </list>
     </option>
   </component>
@@ -339,32 +341,6 @@
               <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
               <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates_en" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -617,7 +593,7 @@
       <workItem from="1502216682897" duration="733000" />
       <workItem from="1502217893165" duration="2507000" />
       <workItem from="1502470972435" duration="1286000" />
-      <workItem from="1502528557373" duration="32927000" />
+      <workItem from="1502528557373" duration="34293000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -644,7 +620,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="725242000" />
+    <option name="totallyTimeSpent" value="726608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -657,7 +633,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1458" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -666,7 +641,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46831957" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26898327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027259" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027259" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17824967" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1180,17 +1155,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="211" column="9" lean-forward="true" selection-start-line="211" selection-start-column="9" selection-end-line="211" selection-end-column="9" />
+        <state relative-caret-position="2291">
+          <caret line="133" column="67" lean-forward="false" selection-start-line="133" selection-start-column="58" selection-end-line="133" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10920">
-          <caret line="101" column="49" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="49" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="215" column="21" lean-forward="true" selection-start-line="215" selection-start-column="21" selection-end-line="215" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
