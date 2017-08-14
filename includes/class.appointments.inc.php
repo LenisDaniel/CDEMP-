@@ -1,5 +1,9 @@
 <?php
 require_once ('friendly_date.php');
+require_once ("class.phpmailer.php");
+require_once ("class.smtp.php");
+require_once ("PHPMailerAutoload.php");
+
 /**
  * Created by PhpStorm.
  * User: Lenis Rivera
@@ -95,37 +99,30 @@ class Appointments{
         }
 
         if(strpos($users_list, ',')){
-
             $list = explode(',', $users_list);
-
             foreach($list as $value){
                 $this->insert_appointments($tpl_uri,$id, $value, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, 0, $unique_number, $creator, $active);
             }
-
         }else{
             $this->insert_appointments($tpl_uri, $id, $users_list, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, 0, $unique_number, $creator, $active);
         }
+        $this->send_appointment_emails($users_list, $appoint_descr, $appoint_time, $appoint_place, $appoint_details, $creator);
+
 
     }
 
     function insert_appointments($tpl_uri = "", $id = 0, $users_list = 0, $appoint_descr = "", $appoint_time = "", $appoint_place = "", $appoint_details = "", $viewed = 0, $unique_number = 0, $creator = 0, $active = 0){
         global $objmydbcon;
-
         if($id > 0){
-
             $sqlupdate = "UPDATE appointments SET appointment_descr = '$appoint_descr', appointment_time = '$appoint_time', appointment_place = '$appoint_place', appointment_details = '$appoint_details', active = $active WHERE unique_number = $unique_number";
-
             if($objmydbcon->set_query($sqlupdate)){
                 header("location: display_page.php?tpl=$tpl_uri&cat=4");
                 return true;
             }else{
                 return false;
             }
-
         }else{
-
             $sqlinsert = "INSERT INTO appointments(unique_number, date_with, appointment_descr, appointment_time, appointment_place, appointment_details, viewed, created_by, active)VALUES($unique_number,'$users_list', '$appoint_descr', '$appoint_time', '$appoint_place', '$appoint_details', $viewed, $creator, $active)";
-
             if($objmydbcon->set_query($sqlinsert)){
                 $last_id = $objmydbcon->get_last_id();
                 header("location: display_page.php?tpl=$tpl_uri&cat=4");
@@ -134,7 +131,6 @@ class Appointments{
                 return false;
             }
         }
-
     }
 
     function get_appointment($idx){
@@ -232,6 +228,79 @@ class Appointments{
         }else{
             return false;
         }
+    }
+
+    function get_creator_name($creator = 0){
+        global $objmydbcon;
+
+        $sqlquery = "SELECT first_name, last_name, second_surname FROM  master_users WHERE idx = $creator";
+        if(!$result = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($result) > 0){
+            $rs = mysqli_fetch_assoc($result);
+            extract($rs);
+            $organizer = $first_name . " " . $last_name . " " . $second_surname;
+        }else{
+            return 0;
+        }
+        return $organizer;
+    }
+
+    function send_appointment_emails($user_list = "", $appoint_descr = "", $appoint_time = "", $appoint_place = "", $appoint_details = "", $creator = 0){
+        global $objmydbcon;
+
+        $sqlquery = "SELECT email FROM master_users WHERE idx IN($user_list, $creator)";
+        $emails = array();
+
+        if(!$results = $objmydbcon->get_result_set($sqlquery)){
+            return false;
+        }else if(mysqli_num_rows($results) > 0){
+            while($rs = mysqli_fetch_assoc($results)){
+                $emails[] = $rs['email'];
+            }
+        }else{
+            return 0;
+        }
+
+        $message  = "<h2>Appointment Info</h2> <br/>";
+        $message .= "<strong>Title:</strong> $appoint_descr  <br/>";
+        $message .= "<strong>Date:</strong> " . friendly_date($appoint_time) .  " <br/>";
+        $message .= "<strong>Place:</strong> $appoint_place  <br/>";
+        $message .= "<strong>Details:</strong> $appoint_details  <br/>";
+        $message .= "<strong>Orzanizer:</strong> " . $this->get_creator_name($creator) . " <br/>";
+
+        $mail = new PHPMailer();
+        //$mail->SMTPDebug = 2;
+        $mail->isSMTP();
+        $mail->Mailer = "smtp";
+        $mail->CharSet = 'UTF-8';
+        $mail->Host = 'mail.smtp2go.com';
+        $mail->SMTPAuth = true;
+        $mail->Port = 587;
+        $mail->Username = 'lenis.daniel@gmail.com';
+        $mail->Password = '2bdrNC0hQ2hw';
+        $mail->SMTPSecure = 'tls';
+        $mail->setFrom('info@cdemp-pr.com', 'CDEMP Appointment System');
+
+        foreach($emails as $value){
+            $mail->addAddress($value);
+        }
+
+        //$mail->addAddress('lenis.daniel@gmail.com');
+        $mail->addReplyTo('info@cdemp-pr.com', 'Information');
+        $mail->isHTML(true);
+
+        $mail->Subject = "New Appointment Created";
+        $mail->Body    = $message;
+        //$mail->AltBody = $message_1;
+
+        if(!$mail->send()) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        } else {
+            //header("location: ../display_page.php?tpl=events&msg=1");
+        }
+
     }
 
 }
