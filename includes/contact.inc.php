@@ -29,7 +29,7 @@ if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'mail.smtp2go.com';
     $mail->SMTPAuth = true;
-    $mail->Port = 587;
+    $mail->Port = 2525;
     $mail->Username = 'lenis.daniel@gmail.com';
     $mail->Password = '2bdrNC0hQ2hw';
     $mail->SMTPSecure = 'tls';

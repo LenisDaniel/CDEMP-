@@ -217,7 +217,7 @@ function send_friday_email($monday_date_1 = "", $today_date_1 = "", $absent = ""
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'mail.smtp2go.com';
     $mail->SMTPAuth = true;
-    $mail->Port = 587;
+    $mail->Port = 2525;
     $mail->Username = 'lenis.daniel@gmail.com';
     $mail->Password = '2bdrNC0hQ2hw';
     $mail->SMTPSecure = 'tls';

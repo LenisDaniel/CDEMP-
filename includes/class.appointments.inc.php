@@ -35,7 +35,6 @@ class Appointments{
             $cat = 5;
         }
 
-
         $sqlquery = "SELECT a.*, mu.first_name, mu.last_name, mu.second_surname FROM appointments a JOIN master_users mu ON mu.idx = a.date_with WHERE date_with = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end' AND a.active = 1 OR created_by = $creator AND a.appointment_time >= '$limit_start' AND a.appointment_time <= '$limit_end' AND a.active = 1";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
@@ -276,7 +275,7 @@ class Appointments{
         $mail->CharSet = 'UTF-8';
         $mail->Host = 'mail.smtp2go.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 587;
+        $mail->Port = 2525;
         $mail->Username = 'lenis.daniel@gmail.com';
         $mail->Password = '2bdrNC0hQ2hw';
         $mail->SMTPSecure = 'tls';
