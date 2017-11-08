@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/6d523129-df50-428f-aa00-5a6695a82988.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/6d523129-df50-428f-aa00-5a6695a82988.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/6d523129-df50-428f-aa00-5a6695a82988.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/behaviors_report.php" afterPath="$PROJECT_DIR$/includes/behaviors_report.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.appointments.inc.php" afterPath="$PROJECT_DIR$/includes/class.appointments.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" afterPath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/contact.inc.php" afterPath="$PROJECT_DIR$/includes/contact.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/course_details.inc.php" afterPath="$PROJECT_DIR$/includes/course_details.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/groups_daily_report.php" afterPath="$PROJECT_DIR$/includes/groups_daily_report.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,19 +35,43 @@
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="cdemp_test_1@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="u186334426_cdemp" type="e3449647:DbNodeDescriptor" />
+        <item name="cdemp_test_1" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="cdemp_test_1@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="cdemp_test_1" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="course_details.tem.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="157" column="14" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global_events.tem.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates_en/global_events.tem.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1909">
+              <caret line="55" column="96" lean-forward="false" selection-start-line="55" selection-start-column="83" selection-end-line="55" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$course_name</find>
-      <find>users_list</find>
-      <find>$mail-&gt;isSMTP();</find>
       <find>chart</find>
       <find>admin/pages/scripts/charts.js</find>
       <find>layou</find>
@@ -78,6 +99,9 @@
       <find>$emails</find>
       <find>frie</find>
       <find>$mail-&gt;Port</find>
+      <find>json_events</find>
+      <find>async:false</find>
+      <find>event_details</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -91,86 +115,86 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/validate_user.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/display_page.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.behavior_issues.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.edit_grades.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.get_valor.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.students.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.appointment_senders.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/teacher_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.validate_schedule.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.set_as_viewed.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/calendar.tem.htm" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates_en/events.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.create_comment.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/student_incidents.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/global_notes.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/teacher_incidents.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/my_profile.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/set_states.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/global_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/dashboard.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/login.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/manage_grades.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/student_notes.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/teacher_events.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/my_courses.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/manage_groups.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/manage_students.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.users.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/global_incidents.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/dashboard.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.manage_schedule.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/assign_courses.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.incidents.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/my_courses.inc.php" root0="SKIP_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.schedule.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/manage_schedule.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/course_details.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/login.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/global_events.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/template.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/charts.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/assets2/global/css/components.css" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/calendar.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/notifications_items.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.update_comment.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/global_appointments.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.graphics.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/teacher_events.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/assets2/admin/layout/scripts/demo.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/dashboard.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/display_page.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/validate_user.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/index.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/update_cities.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/groups_daily_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/course_details.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/behaviors_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/get_active_scholar_period.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.lazy_events.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/class.teachers.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/groups_daily_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/manage_schedule.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.delete_records.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/student_notes.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/behaviors_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/teacher_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/teacher_incidents.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.schedule.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/events.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/global_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.grade_identifier.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.verify_username.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.filter_courses.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/template.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/global_notes.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.manage_schedule.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/manage_clients.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.update_comment.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.create_comment.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/global_appointments.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.filter_zipcodes.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.assign_courses.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/manage_teachers.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.config_records.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/update_cities.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.edit_incident.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/index.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/dashboard.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.filter_courses.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.assign_courses.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/manage_teachers.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/calendar.tem.htm" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/includes/notifications_items.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/set_states.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/my_courses.inc.php" root0="SKIP_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.config_records.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/my_profile.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/assign_courses.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/calendar.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.users.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.behavior_issues.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.incidents.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/manage_students.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.set_as_viewed.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.edit_grades.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/charts.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.get_valor.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.students.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.graphics.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.appointment_senders.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.validate_schedule.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/student_incidents.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/global_incidents.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/global_notes.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/global_events.tem.htm" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -273,10 +297,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2009" />
-    <option name="y" value="-9" />
-    <option name="width" value="2018" />
-    <option name="height" value="1093" />
+    <option name="x" value="-1609" />
+    <option name="y" value="-209" />
+    <option name="width" value="1618" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -312,8 +336,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,16 +343,28 @@
               <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
               <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates_en" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Pictures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
@@ -575,6 +609,13 @@
       <workItem from="1502528557373" duration="34857000" />
       <workItem from="1502708277803" duration="10515000" />
       <workItem from="1502794945140" duration="13391000" />
+      <workItem from="1505391840877" duration="906000" />
+      <workItem from="1505397676640" duration="681000" />
+      <workItem from="1505421649648" duration="55000" />
+      <workItem from="1505431178698" duration="367000" />
+      <workItem from="1505478202495" duration="30000" />
+      <workItem from="1508933900135" duration="682000" />
+      <workItem from="1508952745841" duration="678000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -601,7 +642,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="751078000" />
+    <option name="totallyTimeSpent" value="754477000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -613,25 +654,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1609" y="-9" width="1618" height="878" extended-state="6" />
+    <frame x="-1609" y="-209" width="1618" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26745436" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19584955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32700893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46831957" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26898327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18018018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17824967" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1772288" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32627118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46831957" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41184574" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -704,41 +746,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates_en/set_day_status.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="32" column="93" lean-forward="false" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="198" column="96" lean-forward="false" selection-start-line="198" selection-start-column="96" selection-end-line="198" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/teacher_events.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="146" column="96" lean-forward="false" selection-start-line="146" selection-start-column="96" selection-end-line="146" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="312" column="114" lean-forward="false" selection-start-line="312" selection-start-column="114" selection-end-line="312" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -771,13 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/calendar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="113" column="147" lean-forward="false" selection-start-line="113" selection-start-column="89" selection-end-line="113" selection-end-column="147" />
         </state>
       </provider>
     </entry>
@@ -992,13 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-          <folding>
-            <marker date="1502219199519" expanded="true" signature="225:314" ph="SELECT stude... daily_records" />
-            <marker date="1502219199519" expanded="true" signature="708:810" ph="UPDATE daily... " />
-            <marker date="1502219199519" expanded="true" signature="1148:1179" ph="SELECT * FRO... master_day_status" />
-            <marker date="1502219199519" expanded="true" signature="1745:1775" ph="SELECT * FRO... master_incidents" />
-            <marker date="1502219199519" expanded="true" signature="2337:2412" ph="SELECT first... master_users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,11 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <marker date="1502571567450" expanded="true" signature="273:378" ph="INSERT INTO event_interactions... " />
-            <marker date="1502571567450" expanded="true" signature="507:852" ph="SELECT ei.in... event_interactions" />
-            <marker date="1502571567450" expanded="true" signature="2887:2934" ph="SELECT creat... events" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,15 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
           <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding>
-            <marker date="1502576156844" expanded="true" signature="291:345" ph="DELETE FROM " />
-            <marker date="1502576156844" expanded="true" signature="291:346" ph="DELETE FROM " />
-            <marker date="1502576156844" expanded="true" signature="648:687" ph="UPDATE event... " />
-            <marker date="1502576156844" expanded="true" signature="648:698" ph="UPDATE event... " />
-            <marker date="1502576156844" expanded="true" signature="648:704" ph="UPDATE event... " />
-            <marker date="1502576156844" expanded="true" signature="648:721" ph="UPDATE event... " />
-            <marker date="1502576156844" expanded="true" signature="648:722" ph="UPDATE event... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,7 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,27 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="102" column="107" lean-forward="false" selection-start-line="102" selection-start-column="79" selection-end-line="102" selection-end-column="107" />
-          <folding>
-            <marker date="1502571551029" expanded="true" signature="1947:2092" ph="SELECT e.*, events" />
-            <marker date="1502571551029" expanded="true" signature="2315:2642" ph="SELECT ei.in... event_interactions" />
-            <marker date="1502571551029" expanded="true" signature="3633:4465" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="3744:4428" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="3807:4331" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="4036:4065" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="4215:4244" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="4765:6119" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="4804:6100" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="4879:4933" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="5021:5027" ph=" " />
-            <marker date="1502571551029" expanded="true" signature="5027:5033" ph=" " />
-            <marker date="1502571551029" expanded="true" signature="5127:5189" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="5245:5819" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="5357:5666" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="5923:5988" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="6018:6056" ph="..." />
-            <marker date="1502571551029" expanded="true" signature="6405:6461" ph="SELECT group... students_groups" />
-            <marker date="1502571551029" expanded="true" signature="6780:6826" ph="SELECT role_... master_users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1098,9 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="85" column="45" lean-forward="true" selection-start-line="85" selection-start-column="45" selection-end-line="85" selection-end-column="45" />
-          <folding>
-            <element signature="n#convert_hour#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,19 +1065,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/display_page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,7 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,18 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="281" column="72" lean-forward="true" selection-start-line="281" selection-start-column="72" selection-end-line="281" selection-end-column="72" />
-          <folding>
-            <marker date="1502721927386" expanded="true" signature="821:1190" ph="SELECT a.*, appointments" />
-            <marker date="1502721927386" expanded="true" signature="4644:4861" ph="UPDATE appoi... " />
-            <marker date="1502721927386" expanded="true" signature="5136:5428" ph="INSERT INTO appointments... " />
-            <marker date="1502721927386" expanded="true" signature="5806:5856" ph="SELECT * FRO... appointments" />
-            <marker date="1502721927386" expanded="true" signature="6555:6581" ph="SELECT * FRO... master_roles" />
-            <marker date="1502721927386" expanded="true" signature="7136:7162" ph="SELECT * FRO... master_group" />
-            <marker date="1502721927386" expanded="true" signature="7706:7759" ph="SELECT max(u... appointments" />
-            <marker date="1502721927386" expanded="true" signature="8120:8178" ph="UPDATE appoi... " />
-            <marker date="1502721927386" expanded="true" signature="8411:8487" ph="SELECT first... master_users" />
-            <marker date="1502721927386" expanded="true" signature="9074:9139" ph="SELECT email... master_users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1158,26 +1090,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="578" column="42" lean-forward="true" selection-start-line="578" selection-start-column="42" selection-end-line="578" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a078d035-6054-45ee-91b3-7d6a26e27f6e/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/a078d035-6054-45ee-91b3-7d6a26e27f6e">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>a078d035-6054-45ee-91b3-7d6a26e27f6e</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.38479697828139753" x="2704.0" y="1263.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
-            <marker date="1502819084856" expanded="true" signature="2037:2211" ph="SELECT tn.no... trans_notes" />
-            <marker date="1502819084856" expanded="true" signature="4934:5199" ph="INSERT INTO daily_records... " />
-            <marker date="1502819084856" expanded="true" signature="5408:5644" ph="INSERT INTO daily_records... " />
-            <marker date="1502819084856" expanded="true" signature="6878:7106" ph="INSERT INTO trans_notes... " />
-            <marker date="1502819084856" expanded="true" signature="8009:8065" ph="SELECT stude... students_groups" />
-            <marker date="1502819084856" expanded="true" signature="8456:8531" ph="SELECT first... master_users" />
-            <marker date="1502819084856" expanded="true" signature="8956:8986" ph="SELECT * FRO... master_incidents" />
-            <marker date="1502819084856" expanded="true" signature="9800:9831" ph="SELECT * FRO... master_day_status" />
-            <marker date="1502819084856" expanded="true" signature="10696:10823" ph="SELECT * FRO... grade_identifier" />
-            <marker date="1502819084856" expanded="true" signature="11569:11756" ph="SELECT daily... daily_records" />
-            <marker date="1502819084856" expanded="true" signature="12196:12324" ph="SELECT grade... grade_identifier" />
-            <marker date="1502819084856" expanded="true" signature="12774:12935" ph="SELECT punct... trans_notes" />
-            <marker date="1502819084856" expanded="true" signature="13592:13687" ph="SELECT email... master_users" />
-            <marker date="1502819084856" expanded="true" signature="17977:18028" ph="SELECT email... mast_carriers" />
-            <marker date="1502819084856" expanded="true" signature="18363:18420" ph="SELECT cours... master_course" />
-            <marker date="1502819084856" expanded="true" signature="18758:18827" ph="SELECT day_s... master_day_status" />
-            <marker date="1502819084856" expanded="true" signature="19173:19237" ph="SELECT incid... master_incidents" />
-            <marker date="1502819084856" expanded="true" signature="19594:19770" ph="SELECT * FRO... absence_or_cut" />
+            <marker date="1505391175501" expanded="true" signature="448:614" ph="SELECT event... events" />
+            <marker date="1505391175501" expanded="true" signature="448:928" ph="SELECT event... " />
+            <marker date="1505391175501" expanded="true" signature="621:928" ph="SELECT appoi... appointments" />
+            <marker date="1505391175501" expanded="true" signature="1531:1606" ph="SELECT event... events" />
+            <marker date="1505391175501" expanded="true" signature="2138:2243" ph="SELECT appoi... appointments" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="157" column="14" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/global_events.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1909">
+          <caret line="55" column="96" lean-forward="false" selection-start-line="55" selection-start-column="83" selection-end-line="55" selection-end-column="96" />
+          <folding />
         </state>
       </provider>
     </entry>
