@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="CDEMP HOSTGATOR">
+  <component name="PublishConfigData" serverName="Localhost Laragon">
     <serverData>
-      <paths name="Accion Social">
+      <paths name="BMJ FTP">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="BMJ Portal">
+      <paths name="Bluewaters">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -19,25 +19,25 @@
       <paths name="CDEMP HOSTGATOR">
         <serverdata>
           <mappings>
-            <mapping deploy="/CDEMP-" local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="GHK Helpdesk">
+      <paths name="Localhost Laragon">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="cdemp" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Okiedokie">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Lenis Web Server">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Okie Dokie">
+      <paths name="okiedokie">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
