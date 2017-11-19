@@ -14,7 +14,7 @@ if(isset($_POST)){
 
         if(move_uploaded_file($_FILES['file']['tmp_name'] , $path.$file_name))
         {
-            echo '{"link": "http://localhost:8080/CDEMP-/images/'.$file_name.'"}';
+            echo '{"link": "http://localhost/CDEMP-/images/'.$file_name.'"}';
         }
         else
         {
@@ -31,7 +31,7 @@ if(isset($_POST)){
 
         if(move_uploaded_file($_FILES['file_param']['tmp_name'] , $path.$file_name))
         {
-            echo '{"link": "http://localhost:8080/CDEMP-/files/'.$file_name.'"}';
+            echo '{"link": "http://localhost/CDEMP-/files/'.$file_name.'"}';
         }
         else
         {
