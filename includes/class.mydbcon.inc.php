@@ -1,9 +1,5 @@
 <?php
-/*
-filename : class.mydbcon.inc.php
-Programed by : Luis R. Martinez Rojas
-Date : 2006.11.27  Time : 1:00 pm
-*/
+
 
 class classmydbcon{
 
