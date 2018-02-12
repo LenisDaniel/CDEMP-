@@ -26,7 +26,7 @@ function get_date($lang,$months,$wdays){
 $provider = "";
 
 if (!isset($_SESSION['portalconfig'])){
-    $_SESSION['portalconfig']['valid_domain'] = "localhost:8080/cdemp-/";
+    $_SESSION['portalconfig']['valid_domain'] = "localhost/cdemp-/";
     $_SESSION['portalconfig']['root_path'] = "/cdemp-/";
 } // if !isset session portalconfig
 

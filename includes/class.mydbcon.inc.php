@@ -6,9 +6,9 @@ class classmydbcon{
 
 
     var $dbhost="localhost";
-    var $db="cdemp_test_1";
+    var $db="cdemp";
     var $uname="root";
-    var $pwd="xf6C4FBPqNCMNGRG";
+    var $pwd="";
     var $link="";
     var $error="";
 
