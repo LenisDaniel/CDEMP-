@@ -99,14 +99,10 @@ if(isset($_SESSION['loged_user'])){
 
     /** @var TYPE_NAME $objtemplate */
     $objtemplate->set_content($category_active, "start active open");
-
     $objtemplate->set_content($category_active, "start active open");
 
-
     if(isset($link_active)){
-
         $objtemplate->set_content($link_active, "active");
-
     }
 
     $tpl = sanitize($_GET['tpl']);
