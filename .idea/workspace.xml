@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/display_page.php" afterPath="$PROJECT_DIR$/display_page.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +39,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="template.tem.htm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="template.tem.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -50,10 +51,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="class.mydbcon.inc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="display_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/display_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2140">
+            <state relative-caret-position="2247">
               <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
               <folding />
             </state>
@@ -107,84 +118,84 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/templates_en/my_profile.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/assign_courses.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.verify_username.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.manage_schedule.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/behaviors_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/global_notes.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/manage_clients.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.config_records.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.filter_zipcodes.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/charts.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/manage_teachers.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.filter_courses.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.assign_courses.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/global_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/global_appointments.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/course_details.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/teacher_incidents.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/dashboard.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/dashboard.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.graphics.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.incidents.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/class.users.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.edit_incident.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/calendar.tem.htm" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/assign_courses.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/my_profile.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/display_page.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/behaviors_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.config_records.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/set_states.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/template.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.behavior_issues.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/index.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/manage_students.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/calendar.tem.htm" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/includes/my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/update_cities.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.set_as_viewed.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/display_page.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.my_profile.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/index.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.filter_courses.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/validate_user.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/global_events.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/get_active_scholar_period.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.lazy_events.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.teachers.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/groups_daily_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.delete_records.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/student_notes.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/teacher_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/assets2/global/css/components.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.grade_identifier.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.verify_username.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/global_notes.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.manage_schedule.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/manage_clients.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.filter_zipcodes.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.assign_courses.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/manage_teachers.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.edit_incident.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/my_courses.inc.php" root0="SKIP_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.scholar_period.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/class.behavior_issues.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/manage_students.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/includes/ajax.set_as_viewed.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.edit_grades.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.get_valor.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/class.students.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/charts.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.appointment_senders.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.create_comment.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/calendar.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/ajax.validate_schedule.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/student_incidents.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/events.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/global_notes.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/global_incidents.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/global_notes.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/manage_grades.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/my_courses.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/student_notes.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/my_courses.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/manage_groups.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.calendar_events.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/assets2/global/css/components.css" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/class.schedule.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/my_courses.inc.php" root0="SKIP_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/manage_schedule.inc.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/global_events.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/login.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/includes/notifications_items.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/teacher_events.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/teacher_events.tem.htm" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/get_active_scholar_period.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/global_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.lazy_events.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/global_appointments.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.teachers.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/teacher_incidents.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/groups_daily_report.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/course_details.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/assets2/admin/pages/scripts/calendar.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.delete_records.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/dashboard.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/events.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/student_notes.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/dashboard.tem.htm" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/teacher_appointments.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.graphics.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/class.incidents.inc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/includes/ajax.grade_identifier.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates_en/manage_admins.tem.htm" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -326,6 +337,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,8 +360,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -591,6 +602,7 @@
       <workItem from="1518447041793" duration="1241000" />
       <workItem from="1518531618277" duration="1761000" />
       <workItem from="1518535517081" duration="8000" />
+      <workItem from="1519047104466" duration="1270000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -617,7 +629,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="689521000" />
+    <option name="totallyTimeSpent" value="690791000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,11 +641,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2009" y="-9" width="2018" height="1093" extended-state="6" />
+    <frame x="-2009" y="206" width="2018" height="1093" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26898327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1822863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18486097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17824967" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -648,7 +662,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1075,18 +1088,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/51MWjGVmbcL._SX359_BO1,204,203,200_.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/51MWjGVmbcL._SX359_BO1,204,203,200_.jpg" />
     <entry file="file://$PROJECT_DIR$/includes/ajax.fileuploader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1104,7 +1106,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/display_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2140">
+        <state relative-caret-position="2247">
           <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
           <folding />
         </state>
@@ -1117,6 +1119,14 @@
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
