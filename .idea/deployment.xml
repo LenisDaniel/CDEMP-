@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Localhost">
+  <component name="PublishConfigData" serverName="Localhost Server">
     <serverData>
       <paths name="CDEMP HOSTGATOR">
         <serverdata>
@@ -9,10 +9,10 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Localhost">
+      <paths name="Localhost Server">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="cdemp" />
+            <mapping local="$PROJECT_DIR$" web="CDEMP-" />
           </mappings>
         </serverdata>
       </paths>
