@@ -100,7 +100,7 @@
 
 </head>
 
-<body class="page-header-fixed page-quick-sidebar-over-content">
+<body class="page-header-fixed page-sidebar-fixed page-footer-fixed page-quick-sidebar-over-content">
 <!-- BEGIN HEADER -->
 <div class="page-header navbar navbar-fixed-top">
 	<!-- BEGIN HEADER INNER -->
@@ -212,8 +212,7 @@
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
 				<li class="sidebar-toggler-wrapper">
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-					<div class="sidebar-toggler">
-					</div>
+					<div class="sidebar-toggler" style="display:none"></div>
 					<!-- END SIDEBAR TOGGLER BUTTON -->
 				</li>
 				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
@@ -243,6 +242,11 @@
 							<a href="display_page.php?tpl=contact&cat=1">
 								<i class="icon-envelope-open"></i>
 								Contact Us</a>
+						</li>
+						<li class="{store}">
+							<a href="http://cdemp-pr.com/CDEMP-/payments/index.php?route=common/home">
+								<i class="fa fa-credit-card"></i>
+								CDEMP Store</a>
 						</li>
 					</ul>
 				</li>
@@ -321,7 +325,7 @@
 						<li class="{global_notes}">
 							<a href="display_page.php?tpl=global_notes&cat=3">
 								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-								Global Notes
+								Global Grades
 							</a>
 						</li>
 						<li class="{global_appointments}">
@@ -387,7 +391,7 @@
 						<li class="{student_notes}">
 							<a href="display_page.php?tpl=student_notes&cat=5">
 								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-								My Notes
+								My Grades
 							</a>
 						</li>
 						<li class="{student_incidents}">
@@ -424,7 +428,7 @@
 						<li class="{set_notes}">
 							<a href="display_page.php?tpl=set_notes&cat=6">
 								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-								Set Notes
+								Set Grades
 							</a>
 						</li>
 
@@ -502,88 +506,88 @@
 
 
 			<!-- BEGIN STYLE CUSTOMIZER -->
-			<div class="theme-panel hidden-xs hidden-sm">
-				<div class="toggler">
-				</div>
-				<div class="toggler-close">
-				</div>
-				<div class="theme-options">
-					<div class="theme-option theme-colors clearfix">
-						<span>
-						THEME COLOR </span>
-						<ul>
-							<li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default">
-							</li>
-							<li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue">
-							</li>
-							<li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue">
-							</li>
-							<li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey">
-							</li>
-							<li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light">
-							</li>
-							<li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2">
-							</li>
-						</ul>
-					</div>
-					<div class="theme-option">
-						<span>
-						Layout </span>
-						<select class="layout-option form-control input-small">
-							<option value="fluid" selected="selected">Fluid</option>
-							<option value="boxed">Boxed</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Header </span>
-						<select class="page-header-option form-control input-small">
-							<option value="fixed" selected="selected">Fixed</option>
-							<option value="default">Default</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Mode</span>
-						<select class="sidebar-option form-control input-small">
-							<option value="fixed">Fixed</option>
-							<option value="default" selected="selected">Default</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Menu </span>
-						<select class="sidebar-menu-option form-control input-small">
-							<option value="accordion" selected="selected">Accordion</option>
-							<option value="hover">Hover</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Style </span>
-						<select class="sidebar-style-option form-control input-small">
-							<option value="default" selected="selected">Default</option>
-							<option value="light">Light</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Position </span>
-						<select class="sidebar-pos-option form-control input-small">
-							<option value="left" selected="selected">Left</option>
-							<option value="right">Right</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Footer </span>
-						<select class="page-footer-option form-control input-small">
-							<option value="fixed">Fixed</option>
-							<option value="default" selected="selected">Default</option>
-						</select>
-					</div>
-				</div>
-			</div>
+			<!--<div class="theme-panel hidden-xs hidden-sm">-->
+				<!--<div class="toggler">-->
+				<!--</div>-->
+				<!--<div class="toggler-close">-->
+				<!--</div>-->
+				<!--<div class="theme-options">-->
+					<!--<div class="theme-option theme-colors clearfix">-->
+						<!--<span>-->
+						<!--THEME COLOR </span>-->
+						<!--<ul>-->
+							<!--<li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default">-->
+							<!--</li>-->
+							<!--<li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue">-->
+							<!--</li>-->
+							<!--<li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue">-->
+							<!--</li>-->
+							<!--<li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey">-->
+							<!--</li>-->
+							<!--<li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light">-->
+							<!--</li>-->
+							<!--<li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2">-->
+							<!--</li>-->
+						<!--</ul>-->
+					<!--</div>-->
+					<!--<div class="theme-option">-->
+						<!--<span>-->
+						<!--Layout </span>-->
+						<!--<select class="layout-option form-control input-small">-->
+							<!--<option value="fluid" selected="selected">Fluid</option>-->
+							<!--<option value="boxed">Boxed</option>-->
+						<!--</select>-->
+					<!--</div>-->
+					<!--<div class="theme-option">-->
+						<!--<span>-->
+						<!--Header </span>-->
+						<!--<select class="page-header-option form-control input-small">-->
+							<!--<option value="fixed" selected="selected">Fixed</option>-->
+							<!--<option value="default">Default</option>-->
+						<!--</select>-->
+					<!--</div>-->
+					<!--<div class="theme-option">-->
+						<!--<span>-->
+						<!--Sidebar Mode</span>-->
+						<!--<select class="sidebar-option form-control input-small">-->
+							<!--<option value="fixed">Fixed</option>-->
+							<!--<option value="default">Default</option>-->
+						<!--</select>-->
+					<!--</div>-->
+					<!--<div class="theme-option">-->
+						<!--<span>-->
+						<!--Sidebar Menu </span>-->
+						<!--<select class="sidebar-menu-option form-control input-small">-->
+							<!--<option value="accordion" selected="selected">Accordion</option>-->
+							<!--<option value="hover">Hover</option>-->
+						<!--</select>-->
+					<!--</div>-->
+					<!--<div class="theme-option">-->
+						<!--<span>-->
+						<!--Sidebar Style </span>-->
+						<!--<select class="sidebar-style-option form-control input-small">-->
+							<!--<option value="default" selected="selected">Default</option>-->
+							<!--<option value="light">Light</option>-->
+						<!--</select>-->
+					<!--</div>-->
+					<!--<div class="theme-option">-->
+						<!--<span>-->
+						<!--Sidebar Position </span>-->
+						<!--<select class="sidebar-pos-option form-control input-small">-->
+							<!--<option value="left" selected="selected">Left</option>-->
+							<!--<option value="right">Right</option>-->
+						<!--</select>-->
+					<!--</div>-->
+					<!--<div class="theme-option">-->
+						<!--<span>-->
+						<!--Footer </span>-->
+						<!--<select class="page-footer-option form-control input-small">-->
+							<!--<option value="fixed">Fixed</option>-->
+							<!--<option value="default" selected="selected">Default</option>-->
+						<!--</select>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
 			<!-- END STYLE CUSTOMIZER -->
 
 			<!-- BEGIN PAGE HEADER-->
@@ -619,7 +623,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		{dinamic_year} &copy; <span>CDEMP Comunicación Directa entre Maestros y Padres. Powered by <a href="http://prcomputer.net">PR Computer Service Corp.</a></span>
+		{dinamic_year} &copy; <span>CDEMP DIRECT COMMUNICATION BETWEEN TEACHERS AND PARENTS. &nbsp;&nbsp;FOR MORE INFORMATION <a href="http://cdemp-pr.com">VISIT OUR WEBSITE</a></span>
 	</div>
 	<div class="page-footer-tools">
 		<span class="go-top">

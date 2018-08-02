@@ -3,11 +3,11 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="38abd789-12d3-4ce4-bffd-efb484180e54" name="CDEMP HOSTGATOR" url="http://cdemp-pr.com/CDEMP-/">
-        <fileTransfer host="ftp.cdemp-pr.com" port="21">
+        <fileTransfer host="ftp.cdemp-pr.com" port="2222" rootFolder="/home2/cdempadmin/public_html/CDEMP-" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
-          <option name="port" value="21" />
+          <option name="port" value="2222" />
         </fileTransfer>
       </webServer>
     </option>
