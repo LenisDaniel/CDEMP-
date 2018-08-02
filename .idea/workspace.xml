@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_en/template.tem.htm" beforeDir="false" afterPath="$PROJECT_DIR$/templates_en/template.tem.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_en/contact.tem.htm" beforeDir="false" afterPath="$PROJECT_DIR$/templates_en/contact.tem.htm" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,23 +39,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="template.tem.htm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates_en/template.tem.htm">
+      <file leaf-file-name="contact.tem.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="625" column="105" selection-start-line="625" selection-start-column="105" selection-end-line="625" selection-end-column="105" />
-              <folding>
-                <element signature="e#10365#10385#0" expanded="true" />
-                <element signature="e#23976#23982#0" expanded="true" />
-                <element signature="e#24069#24075#0" expanded="true" />
-                <element signature="e#24075#24081#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.tem.htm" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/template.tem.htm">
+      <file leaf-file-name="contact.tem.htm" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/contact.tem.htm">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -189,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/class.schedule.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" />
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/includes/class.mydbcon.inc.php" />
         <option value="$PROJECT_DIR$/includes/notifications_items.php" />
@@ -218,7 +210,6 @@
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/includes/class.events.inc.php" />
         <option value="$PROJECT_DIR$/includes/set_states.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/set_states.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/contact.tem.htm" />
         <option value="$PROJECT_DIR$/includes/my_profile.inc.php" />
         <option value="$PROJECT_DIR$/includes/class.my_profile.inc.php" />
         <option value="$PROJECT_DIR$/includes/ajax.filter_courses.php" />
@@ -238,8 +229,10 @@
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/en/why-cdemp.html" />
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/contact.php" />
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/en/contact.php" />
-        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/template.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/template.tem.htm" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/contact.tem.htm" />
+        <option value="$PROJECT_DIR$/templates_en/contact.tem.htm" />
       </list>
     </option>
   </component>
@@ -587,7 +580,7 @@
       <workItem from="1530196400727" duration="2898000" />
       <workItem from="1533161633176" duration="3479000" />
       <workItem from="1533216217930" duration="34000" />
-      <workItem from="1533225549620" duration="1547000" />
+      <workItem from="1533225549620" duration="3012000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -614,7 +607,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="711492000" />
+    <option name="totallyTimeSpent" value="712957000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,8 +628,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32842582" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295583" />
-      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.18657719" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19060403" />
+      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.18657719" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19060403" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.17824967" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
@@ -988,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="65" lean-forward="true" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/my_profile.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1085,6 +1071,13 @@
             <element signature="e#24069#24075#0" expanded="true" />
             <element signature="e#24075#24081#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
         </state>
       </provider>
     </entry>
