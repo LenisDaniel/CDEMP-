@@ -1,5 +1,11 @@
 <?php
 require_once ("friendly_date.php");
+require_once('get_active_scholar_period.php');
+
+$limit_date = get_scholar_period();
+$limit_start = $limit_date['start'];
+$limit_end = $limit_date['end'];
+
 class Events{
 
     var $events_td_info;
@@ -14,17 +20,20 @@ class Events{
 
     function get_all_events($tpl_uri = "", $created_by = 0, $role = 0){
         global $objmydbcon;
+        global $limit_date;
+        global $limit_start;
+        global $limit_end;
 
         $i = 0;
         if($role == 1){
-            $conditional = "OR role_idx = 1";
+            $conditional = "OR role_idx = 1 AND created_date >= '$limit_start' AND created_date <= '$limit_end'";
             $sqlquery = "SELECT event_id, group_id, course_id, event_descr, active, created_date
                          FROM events                         
-                         WHERE active = 1 AND created_by = $created_by $conditional";
+                         WHERE active = 1 AND created_by = $created_by AND created_date >= '$limit_start' AND created_date <= '$limit_end' $conditional";
 
         }else{
 
-            $conditional = "";
+            $conditional = "AND created_date >= '$limit_start' AND created_date <= '$limit_end'";
             $sqlquery = "SELECT e.event_id, mg.group_descr, mc.course_descr, e.event_descr, e.active, e.created_date
                          FROM events e
                          JOIN master_group mg ON mg.group_id = e.group_id
@@ -68,6 +77,9 @@ class Events{
         }else{
             $active = 0;
         }
+
+        //echo $event_date;
+        //exit;
 
         if($id > 0){
 

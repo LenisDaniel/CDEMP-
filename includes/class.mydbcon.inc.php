@@ -7,8 +7,8 @@ class classmydbcon{
 
     var $dbhost="localhost";
     var $db="cdemp";
-    var $uname="root";
-    var $pwd="";
+    var $uname="ebusiness";
+    var $pwd="pltsql0494";
     var $link="";
     var $error="";
 

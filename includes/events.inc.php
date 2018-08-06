@@ -13,10 +13,11 @@ $user_ids = $_SESSION['loged_user']['idx'];
 if($detect->isMobile()){
 
     if($_SESSION['loged_user']['role_idx'] == 4){
+
         $grp = get_student_group($user_ids);
-        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 30";
+        $conditional = "WHERE e.role_idx = 1 AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 OR e.group_id = $grp AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 30";
     }else if($_SESSION['loged_user']['role_idx'] == 3){
-        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 30";
+        $conditional = "WHERE e.role_idx = 1 AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 OR e.created_by = $user_ids AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 30";
     }else{
         $conditional = "WHERE e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 30";
     }
@@ -26,9 +27,9 @@ if($detect->isMobile()){
 
     if($_SESSION['loged_user']['role_idx'] == 4){
         $grp = get_student_group($user_ids);
-        $conditional = "WHERE e.role_idx = 1 OR e.group_id = $grp AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 0,5";
+        $conditional = "WHERE e.role_idx = 1 AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 OR e.group_id = $grp AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 0,5";
     }else if($_SESSION['loged_user']['role_idx'] == 3){
-        $conditional = "WHERE e.role_idx = 1 OR e.created_by = $user_ids AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 0,5";
+        $conditional = "WHERE e.role_idx = 1 AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 OR e.created_by = $user_ids AND e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 0,5";
     }else{
         $conditional = "WHERE e.created_date >= '$limit_start' AND e.created_date <= '$limit_end' AND e.active = 1 ORDER BY e.created_date DESC LIMIT 0,5";
     }

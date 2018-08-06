@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="1c810c2d-e9d7-49ed-b050-25e93631705f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/ajax.filter_courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ajax.filter_courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/ajax.manage_schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ajax.manage_schedule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class.config_records.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class.config_records.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class.events.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class.events.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class.incidents.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class.incidents.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class.mydbcon.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_en/contact.tem.htm" beforeDir="false" afterPath="$PROJECT_DIR$/templates_en/contact.tem.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class.schedule.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class.schedule.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/events.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/events.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/global_events.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/global_events.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/global_notes.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/global_notes.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/student_notes.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/student_notes.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/teacher_events.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/teacher_events.inc.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,28 +48,10 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="contact.tem.htm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates_en/contact.tem.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.tem.htm" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/contact.tem.htm">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>\	\&lt;link href\=\&quot;assets2\/global\/plugins\/simple\-line\-icons\/simple\-line\-icons\.min\.css\&quot; rel\=\&quot;stylesheet\&quot; type\=\&quot;text\/css\&quot;\/\&gt;\n</find>
-      <find>FROALA_EDITOR_OPTIONS</find>
-      <find>images</find>
       <find>cdemp_test</find>
       <find>send_daily_email</find>
       <find>$course_name</find>
@@ -78,15 +70,18 @@
       <find>xf6C4FBPqNCMNGRG</find>
       <find>froala</find>
       <find>.froalaEditor(</find>
-      <find>localhost:8080</find>
       <find>scroller</find>
       <find>root</find>
-      <find>localhost</find>
       <find>$PROJECT_DIR$/..</find>
       <find>All Rights Reserved</find>
       <find>version 3.0.</find>
       <find>icon icon-Phone2</find>
       <find>PR Computer</find>
+      <find>localhost:8080</find>
+      <find>localhost</find>
+      <find>OR</find>
+      <find>courses_dd</find>
+      <find>SELECT * FROM master_course</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -182,23 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates_en/manage_schedule.tem.htm" />
-        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/includes/class.mydbcon.inc.php" />
-        <option value="$PROJECT_DIR$/includes/notifications_items.php" />
-        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/includes/notifications_items.php" />
-        <option value="$PROJECT_DIR$/templates_en/global_appointments.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/set_day_status.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/set_week_days.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/course_details.inc.php" />
-        <option value="$PROJECT_DIR$/templates_en/course_details.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/teacher_events.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/manage_admins.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/manage_students.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/manage_teachers.tem.htm" />
-        <option value="$PROJECT_DIR$/templates_en/manage_tecnicians.tem.htm" />
-        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/display_page.php" />
-        <option value="$PROJECT_DIR$/templates_en/teacher_incidents.tem.htm" />
         <option value="$PROJECT_DIR$/includes/dashboard.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/dashboard.tem.htm" />
         <option value="$PROJECT_DIR$/includes/ajax.graphics.php" />
@@ -206,7 +184,6 @@
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/assets2/admin/pages/scripts/charts.js" />
         <option value="$PROJECT_DIR$/assets2/admin/pages/scripts/charts.js" />
         <option value="$PROJECT_DIR$/templates_en/calendar.tem.htm" />
-        <option value="$PROJECT_DIR$/includes/class.events.inc.php" />
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/CDEMP-/includes/class.events.inc.php" />
         <option value="$PROJECT_DIR$/includes/set_states.inc.php" />
         <option value="$PROJECT_DIR$/templates_en/set_states.tem.htm" />
@@ -231,8 +208,26 @@
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/en/contact.php" />
         <option value="$PROJECT_DIR$/templates_en/template.tem.htm" />
         <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/template.tem.htm" />
-        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/contact.tem.htm" />
         <option value="$PROJECT_DIR$/templates_en/contact.tem.htm" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/templates_en/contact.tem.htm" />
+        <option value="$PROJECT_DIR$/includes/global_events.inc.php" />
+        <option value="$PROJECT_DIR$/includes/teacher_events.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/global_events.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/teacher_events.inc.php" />
+        <option value="$PROJECT_DIR$/includes/events.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/events.inc.php" />
+        <option value="$PROJECT_DIR$/includes/class.config_records.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/class.config_records.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/student_notes.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/class.schedule.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/global_notes.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/ajax.manage_schedule.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/class.incidents.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/ajax.filter_courses.php" />
+        <option value="$PROJECT_DIR$/includes/ajax.manage_schedule.php" />
+        <option value="$PROJECT_DIR$/includes/class.schedule.inc.php" />
+        <option value="$PROJECT_DIR$/includes/class.events.inc.php" />
+        <option value="&lt;38abd789-12d3-4ce4-bffd-efb484180e54&gt;/includes/class.events.inc.php" />
       </list>
     </option>
   </component>
@@ -272,8 +267,10 @@
           <mapping local-root="$PROJECT_DIR$" remote-root="C:/xampp/htdocs" />
         </path_mappings>
       </server>
+      <server host="localhost" id="f1bfd234-b555-4692-8c70-fecbbaa570fe" name="localhost (1)" />
     </servers>
   </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="C:\laragon\www\CDEMP-" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost/CDEMP-/" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="C:/xampp/htdocs/CDEMP-/CDEMP-" />
@@ -315,6 +312,11 @@
             <path>
               <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
               <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDEMP-" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="CDEMP-" type="b2602c69:ProjectViewProjectNode" />
@@ -580,7 +582,8 @@
       <workItem from="1530196400727" duration="2898000" />
       <workItem from="1533161633176" duration="3479000" />
       <workItem from="1533216217930" duration="34000" />
-      <workItem from="1533225549620" duration="3012000" />
+      <workItem from="1533225549620" duration="5332000" />
+      <workItem from="1533476297166" duration="12077000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el view y la tabla para los asociar maestros a los cursos">
       <created>1495276895790</created>
@@ -607,7 +610,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="712957000" />
+    <option name="totallyTimeSpent" value="727354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,7 +623,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295583" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3295583" />
@@ -628,13 +630,13 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32842582" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295583" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.18657719" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19060403" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.18657719" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1932886" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.17824967" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41184574" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4116809" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -653,13 +655,13 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295583" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32842582" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
       <window_info anchor="right" id="Database" order="4" weight="0.17883995" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295583" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3295583" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32842582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.54246885" />
       <window_info anchor="bottom" id="File Transfer" order="10" weight="0.3227633" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -708,60 +710,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="62" />
+      <option name="time" value="63" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/payments/index.php" />
-    <entry file="file://$PROJECT_DIR$/templates_en/login.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/notifications_items.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/set_week_days.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/set_day_status.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/course_details.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="32" column="93" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/teacher_appointments.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="198" column="96" selection-start-line="198" selection-start-column="96" selection-end-line="198" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates_en/teacher_events.tem.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="146" column="96" selection-start-line="146" selection-start-column="96" selection-end-line="146" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates_en/manage_students.tem.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -815,13 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="113" column="147" selection-start-line="113" selection-start-column="89" selection-end-line="113" selection-end-column="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/events.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="137" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="137" />
         </state>
       </provider>
     </entry>
@@ -888,24 +833,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/global_events.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/behaviors_report.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="117" column="22" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.config_records.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
@@ -962,7 +893,7 @@
           <settings layout="Hierarchic Group" zoom="0.8276283618581907" x="1282.0" y="364.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
+            <Category />
             <Category>Columns</Category>
           </Categories>
           <SCOPE>All</SCOPE>
@@ -1017,27 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.events.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="96" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2247">
-          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.users.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-187">
@@ -1078,6 +988,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/teacher_events.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/bolanavidad.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="152" column="83" lean-forward="true" selection-start-line="152" selection-start-column="83" selection-end-line="152" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.config_records.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="139" column="74" lean-forward="true" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/assign_courses.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ajax.assign_courses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates_en/manage_schedule.tem.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="80" column="47" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global_notes.inc.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.mydbcon.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ajax.manage_schedule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/manage_schedule.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="64" lean-forward="true" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.schedule.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/events.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.events.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="97" lean-forward="true" selection-start-line="35" selection-start-column="97" selection-end-line="35" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global_events.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding>
+            <element signature="n#convert_hour#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

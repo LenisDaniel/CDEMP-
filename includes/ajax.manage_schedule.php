@@ -50,7 +50,7 @@ function get_groups($grade = 0){
 function get_day_hours($grade = 0, $group = 0, $week_day = 0){
     global $objmydbcon;
 
-    $sqlquery_schedule = "SELECT day_hour_id FROM schedules_teacher WHERE grade_id = $grade AND group_id = $group AND week_day_id = $week_day";
+    $sqlquery_schedule = "SELECT DISTINCT day_hour_id FROM schedules_teacher WHERE grade_id = $grade AND group_id = $group AND week_day_id = $week_day";
     if(!$results0 = $objmydbcon->get_result_set($sqlquery_schedule)){
         return false;
     }else if(mysqli_num_rows($results0)>0){
@@ -109,13 +109,13 @@ function get_courses($group = 0, $only = 0){
     $value_list = substr($values, 0, -1);
     if($filter != 0){
         if($only == 1){
-            $conditional = "WHERE course_id IN(" .$value_list. ") AND active = 1";
+            $conditional = "WHERE course_id IN(" .$value_list. ") AND active = 1 ORDER BY course_descr ASC";
         }else{
-            $conditional = "WHERE course_id NOT IN(" .$value_list. ") AND active = 1";
+            $conditional = "WHERE course_id NOT IN(" .$value_list. ") AND active = 1 ORDER BY course_descr ASC";
         }
 
     }else{
-        $conditional = "WHERE active = 1";
+        $conditional = "WHERE active = 1 ORDER BY course_descr ASC";
     }
 
     $sqlquery = "SELECT * FROM master_course $conditional";

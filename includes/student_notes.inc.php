@@ -187,7 +187,7 @@ function get_filter_courses($course_id = 0, $group_courses = ""){
     global $objmydbcon;
 
     $courses_dd = "";
-    $sqlquery = "SELECT * FROM master_course WHERE course_id IN($group_courses)";
+    $sqlquery = "SELECT * FROM master_course WHERE course_id IN($group_courses) ORDER BY course_descr ASC";
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
     }else if(mysqli_num_rows($results)>0){

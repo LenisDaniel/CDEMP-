@@ -228,7 +228,7 @@ function get_filter_courses($course_id = 0){
     global $objmydbcon;
 
     $courses_dd = "";
-    $sqlquery = "SELECT * FROM master_course";
+    $sqlquery = "SELECT * FROM master_course ORDER BY course_descr ASC";
     if(!$results = $objmydbcon->get_result_set($sqlquery)){
         return false;
     }else if(mysqli_num_rows($results)>0){

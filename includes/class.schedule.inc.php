@@ -36,6 +36,8 @@ class Schedule{
                      WHERE st.created_date > sp.start_date AND st.created_date < sp.end_date
                      GROUP BY st.grade_id, st.group_id, st.course_id, st.day_hour_id, st.teacher_id";
 
+        //echo $sqlquery;
+        //exit;
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
@@ -272,7 +274,7 @@ class Schedule{
         global $objmydbcon;
         $courses_dd = "";
 
-        $sqlquery = "SELECT * FROM master_course";
+        $sqlquery = "SELECT * FROM master_course ORDER BY course_descr ASC";
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;

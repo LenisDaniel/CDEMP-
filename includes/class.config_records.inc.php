@@ -137,7 +137,7 @@ class ConfigRecords
         global $objmydbcon;
         $courses_dd = "";
 
-        $sqlquery = "SELECT * FROM master_course";
+        $sqlquery = "SELECT * FROM master_course ORDER BY course_descr ASC";
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results)>0){

@@ -23,7 +23,7 @@ function get_courses($group_id = 0, $teacher_id = 0, $course_id = 0){
     }
     $course_list = substr($course_list, 0, -1);
 
-    $sqlquery = "SELECT * FROM master_course WHERE course_id IN($course_list)";
+    $sqlquery = "SELECT * FROM master_course WHERE course_id IN($course_list) ORDER BY course_descr ASC";
     $text = "--Select Course--";
 
     //    if($group_id != "-1"){

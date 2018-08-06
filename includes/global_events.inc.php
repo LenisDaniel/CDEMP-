@@ -50,11 +50,18 @@ if(isset($_GET['cid'])) {
     $event_descr = $_POST['event_descr'];
     $event_details = $_POST['event_details'];
 
-    if(substr($_POST['appoint_time'], -2) == 'am'){
+//    echo "<pre>";
+//    print_r($_POST);
+//    echo "</pre>";
+//    exit;
+
+    if(substr($_POST['event_time'], -2) == 'am'){
         $event_t = $_POST['event_date'] . " " . substr($_POST['event_time'], 0, -2);
     }else{
         $event_t = $_POST['event_date'] . " " . convert_hour($_POST['event_time']);
     }
+
+
 
     $event_date = $event_t;
     $active = $_POST['active'];

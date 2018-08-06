@@ -172,7 +172,7 @@ class Incidents{
                 $label_color = "success";
             break;
             case "Absent":
-            case "Leave Class":
+            case "Class Cut":
                 $label_color = "danger";
                 break;
             case "Tardiness":
@@ -274,9 +274,9 @@ class Incidents{
         $courses_dd = "";
 
         if($id == 0){
-            $sqlquery = "SELECT * FROM master_course";
+            $sqlquery = "SELECT * FROM master_course ORDER BY course_descr ASC";
         }else{
-            $sqlquery = "SELECT * FROM master_course WHERE course_id IN($course_list)";
+            $sqlquery = "SELECT * FROM master_course WHERE course_id IN($course_list) ORDER BY course_descr ASC";
         }
 
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
@@ -309,7 +309,7 @@ class Incidents{
         $group = $this->get_student_group1($id);
         $courses = $this->get_student_courses($group);
 
-        $sqlquery = "SELECT * FROM master_course WHERE course_id IN($courses)";
+        $sqlquery = "SELECT * FROM master_course WHERE course_id IN($courses) ORDER BY course_descr ASC";
         if(!$results = $objmydbcon->get_result_set($sqlquery)){
             return false;
         }else if(mysqli_num_rows($results)>0){
