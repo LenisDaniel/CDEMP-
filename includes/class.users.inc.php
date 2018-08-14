@@ -84,9 +84,9 @@ class Users{
             $active = 0;
         }
 
-//        if(strlen($password) != 32){
-//            $password = md5($password);
-//        }
+        //        if(strlen($password) != 32){
+        //            $password = md5($password);
+        //        }
 
         if($id > 0){
 
